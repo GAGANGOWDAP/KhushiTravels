@@ -17,7 +17,7 @@ npm install sharp
 #    Edit address, GPS, size limits, quality settings
 
 # 3. Run the pipeline (keeps original filenames intact)
-node master_seo_pipeline.js
+node scripts/master_seo_pipeline.js
 ```
 
 All optimized images go to `optimized/` folder. Original images are never modified.
@@ -76,30 +76,44 @@ All optimized images go to `optimized/` folder. Original images are never modifi
 | `business.geo.latitude` | Your office latitude (auto-fetched) | 13.0624156 |
 | `business.geo.longitude` | Your office longitude | 77.5742089 |
 
-## 📂 Folder Structure After Running
+## 📂 Project Folder Structure
 
 ```
 khushitravel.in/
-├── config.json              ← Your configuration
-├── master_seo_pipeline.js   ← Main pipeline script
-├── README.md                ← This file
-├── images/                  ← Original images (never modified)
+├── index.html                           ← Homepage
+├── best-tempo-traveller-fleet-bangalore.html
+├── tour-packages-from-bangalore.html
+├── tempo-traveller-rent-price-bangalore.html
+├── hire-tempo-traveller-bangalore.html
+├── spiritual-pilgrimage-tours.html
+├── pilgrimage-packages.html
+├── terms.html & privacy.html
+├── 404.html                             ← Custom 404 error page
+├── config.json                          ← Business & SEO configuration
+├── sitemap.xml & image-sitemap.xml      ← Search engine sitemaps
+├── robots.txt                           ← Crawler rules
+├── AGENTS.md & README.md                ← Guidelines & documentation
+├── assets/                              ← CSS, JS, and Fonts
+│   ├── css/
+│   ├── js/
+│   └── fonts/
+├── images/                              ← Original image assets
 │   ├── destinations/
 │   ├── fleet/
 │   └── hero-bg.webp
-├── optimized/               ← Generated optimized images
-│   ├── destinations/
-│   │   ├── tirupati.webp
-│   │   ├── tirupati-480w.webp
-│   │   ├── tirupati-768w.webp
-│   │   └── tirupati-1200w.webp
-│   ├── seo-image-snippets.json
-│   ├── image-jsonld.json
-│   ├── social-meta-tags.txt
-│   └── social-meta-tags.json
-├── image-sitemap.xml        ← Google Image Sitemap
-├── image-seo-audit.csv      ← Performance audit report
-└── image-duplicates.json    ← Duplicate detection report
+├── optimized/                           ← Responsive WebP images
+├── fleet/                               ← Detailed vehicle landing pages
+├── routes/                              ← Outstation route pages
+├── services/                            ← Special service pages
+├── localities/                          ← Bangalore locality pages
+├── scripts/                             ← Automation & maintenance tools
+│   ├── master_seo_pipeline.js           ← Main image SEO pipeline
+│   ├── seo_audit_all_pages.js           ← Site-wide SEO audit
+│   └── ...
+└── docs/                                ← Internal documentation & audit data
+    ├── PLAN.md & WORKBOOK.md
+    ├── image-seo-audit.csv
+    └── ...
 ```
 
 ## 🔧 Troubleshooting

@@ -24,9 +24,11 @@ const https = require('https');
 const sharp = require('sharp');
 
 // ─── Load Config ────────────────────────────────────────────────────────────
-const configPath = path.join(__dirname, 'config.json');
+const configPath = fs.existsSync(path.join(__dirname, 'config.json'))
+  ? path.join(__dirname, 'config.json')
+  : path.join(__dirname, '..', 'config.json');
 if (!fs.existsSync(configPath)) {
-  console.error('ERROR: config.json not found.');
+  console.error('ERROR: config.json not found in scripts/ or project root.');
   process.exit(1);
 }
 const CONFIG = JSON.parse(fs.readFileSync(configPath, 'utf8'));
