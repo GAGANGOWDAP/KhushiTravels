@@ -68,9 +68,23 @@
 
     /* Hero Fleet Section */
     .hero-fleet-section {
-      background: radial-gradient(circle at 80% 20%, rgba(26, 60, 114, 0.45) 0%, transparent 60%),
-                  radial-gradient(circle at 20% 80%, rgba(15, 35, 70, 0.5) 0%, transparent 65%),
-                  linear-gradient(180deg, #091526 0%, #0d2140 50%, #122b52 100%);
+      background-image: url('images/hero-bg.webp');
+      background-position: center 25%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .hero-overlay {
+      background: linear-gradient(180deg, 
+        rgba(10, 24, 46, 0.85) 0%, 
+        rgba(13, 27, 50, 0.72) 35%, 
+        rgba(10, 24, 46, 0.88) 72%, 
+        rgba(10, 24, 46, 0.98) 100%
+      );
+    }
+    @media (max-width: 768px) {
+      .hero-fleet-section {
+        background-position: center 18%;
+      }
     }
 
     .hero-heading {
@@ -304,6 +318,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- ===== HERO ===== -->
   <section class="hero-fleet-section relative overflow-hidden flex items-center min-h-[560px] lg:min-h-[640px] pt-32 pb-16 sm:pt-36 sm:pb-20 md:pt-40 md:pb-20 lg:pt-44 lg:pb-24">
+    <!-- Carefully balanced navy overlay ensuring temple and coach are visible while text contrast is pristine -->
+    <div class="absolute inset-0 z-0 hero-overlay"></div>
+
     <div class="container-custom relative z-10 w-full">
       <div class="max-w-3xl">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/8 border border-white/12 text-amber-400 text-xs sm:text-sm font-semibold mb-6 backdrop-blur-sm">
