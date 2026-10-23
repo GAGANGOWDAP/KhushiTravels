@@ -1,0 +1,626 @@
+<!-- Social Meta Tags for Khushi Tours And Travels -->
+<!-- Generated: 2026-07-01 11:27:24 -->
+
+  <!-- destination-bengaluru-aihole -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-aihole-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="727" />
+  <meta property="og:image:alt" content="destination bengaluru aihole - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-aihole-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru aihole - Khushi Travels" />
+
+  <!-- destination-bengaluru-bandipur -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-bandipur-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru bandipur - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-bandipur-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru bandipur - Khushi Travels" />
+
+  <!-- destination-bengaluru-halebidu -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-halebidu-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="827" />
+  <meta property="og:image:alt" content="destination bengaluru halebidu - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-halebidu-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru halebidu - Khushi Travels" />
+
+  <!-- destination-bengaluru-chikmagalur -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-chikmagalur-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru chikmagalur - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-chikmagalur-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru chikmagalur - Khushi Travels" />
+
+  <!-- destination-bengaluru-coorg -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-coorg-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru coorg - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-coorg-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru coorg - Khushi Travels" />
+
+  <!-- destination-bengaluru-dandeli -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-dandeli-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="801" />
+  <meta property="og:image:alt" content="destination bengaluru dandeli - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-dandeli-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru dandeli - Khushi Travels" />
+
+  <!-- destination-bengaluru-dharmasthala -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-dharmasthala-1200w.webp" />
+  <meta property="og:image:width" content="500" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru dharmasthala - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-dharmasthala-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru dharmasthala - Khushi Travels" />
+
+  <!-- destination-bengaluru-goa -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-goa-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru goa - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-goa-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru goa - Khushi Travels" />
+
+  <!-- destination-bengaluru-gokarna -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-gokarna-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:image:alt" content="destination bengaluru gokarna - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-gokarna-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru gokarna - Khushi Travels" />
+
+  <!-- destination-bengaluru-hampi -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-hampi-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:image:alt" content="destination bengaluru hampi - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-hampi-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru hampi - Khushi Travels" />
+
+  <!-- destination-bengaluru-hogenakkal -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-hogenakkal-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru hogenakkal - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-hogenakkal-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru hogenakkal - Khushi Travels" />
+
+  <!-- destination-bengaluru-hyderabad -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-hyderabad-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:image:alt" content="destination bengaluru hyderabad - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-hyderabad-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru hyderabad - Khushi Travels" />
+
+  <!-- destination-bengaluru-kabini -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-kabini-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru kabini - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-kabini-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru kabini - Khushi Travels" />
+
+  <!-- destination-bengaluru-kodaikanal -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-kodaikanal-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru kodaikanal - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-kodaikanal-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru kodaikanal - Khushi Travels" />
+
+  <!-- destination-bengaluru-kudremukh -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-kudremukh-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="destination bengaluru kudremukh - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-kudremukh-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru kudremukh - Khushi Travels" />
+
+  <!-- destination-bengaluru-betta -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-betta-1200w.webp" />
+  <meta property="og:image:width" content="507" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="destination bengaluru betta - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-betta-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru betta - Khushi Travels" />
+
+  <!-- destination-bengaluru-mangalore -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-mangalore-1200w.webp" />
+  <meta property="og:image:width" content="720" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="destination bengaluru mangalore - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-mangalore-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru mangalore - Khushi Travels" />
+
+  <!-- destination-bengaluru-mysore -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-mysore-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru mysore - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-mysore-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru mysore - Khushi Travels" />
+
+  <!-- destination-bengaluru-hills -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-hills-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru hills - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-hills-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru hills - Khushi Travels" />
+
+  <!-- destination-bengaluru-ooty -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-ooty-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru ooty - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-ooty-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru ooty - Khushi Travels" />
+
+  <!-- destination-bengaluru-palani -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-palani-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="destination bengaluru palani - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-palani-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru palani - Khushi Travels" />
+
+  <!-- destination-bengaluru-pondicherry -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-pondicherry-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="735" />
+  <meta property="og:image:alt" content="destination bengaluru pondicherry - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-pondicherry-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru pondicherry - Khushi Travels" />
+
+  <!-- destination-bengaluru-jagannath -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-jagannath-1200w.webp" />
+  <meta property="og:image:width" content="662" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="destination bengaluru jagannath - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-jagannath-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru jagannath - Khushi Travels" />
+
+  <!-- destination-bengaluru-rameswaram -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-rameswaram-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:image:alt" content="destination bengaluru rameswaram - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-rameswaram-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru rameswaram - Khushi Travels" />
+
+  <!-- destination-bengaluru-sakleshpur -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-sakleshpur-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru sakleshpur - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-sakleshpur-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru sakleshpur - Khushi Travels" />
+
+  <!-- destination-bengaluru-shirdi -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-shirdi-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="destination bengaluru shirdi - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-shirdi-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru shirdi - Khushi Travels" />
+
+  <!-- destination-bengaluru-shivanasamudra -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-shivanasamudra-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru shivanasamudra - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-shivanasamudra-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru shivanasamudra - Khushi Travels" />
+
+  <!-- destination-bengaluru-srisailam -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-srisailam-1200w.webp" />
+  <meta property="og:image:width" content="505" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="destination bengaluru srisailam - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-srisailam-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru srisailam - Khushi Travels" />
+
+  <!-- destination-bengaluru-tirupati -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-tirupati-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru tirupati - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-tirupati-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru tirupati - Khushi Travels" />
+
+  <!-- destination-bengaluru-varanasi -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-varanasi-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="destination bengaluru varanasi - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-varanasi-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru varanasi - Khushi Travels" />
+
+  <!-- destination-bengaluru-wayanad -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-wayanad-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru wayanad - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-wayanad-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru wayanad - Khushi Travels" />
+
+  <!-- destination-bengaluru-yelagiri -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/destination-bengaluru-yelagiri-1200w.webp" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="destination bengaluru yelagiri - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/destination-bengaluru-yelagiri-1200w.webp" />
+  <meta name="twitter:image:alt" content="destination bengaluru yelagiri - Khushi Travels" />
+
+  <!-- fleet-bengaluru-seater -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-seater-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru seater - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-seater-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru seater - Khushi Travels" />
+
+  <!-- fleet-bengaluru-1 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-1-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 1 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-1-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 1 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-4 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-4-1200w.webp" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="810" />
+  <meta property="og:image:alt" content="fleet bengaluru 4 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-4-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 4 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-12 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-12-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 12 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-12-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 12 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-13 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-13-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 13 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-13-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 13 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-14 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-14-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 14 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-14-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 14 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-2 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-2-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 2 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-2-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 2 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-3 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-3-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 3 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-3-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 3 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-5 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-5-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 5 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-5-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 5 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-6 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-6-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+  <meta property="og:image:alt" content="fleet bengaluru 6 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-6-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 6 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-7 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-7-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 7 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-7-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 7 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-8 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-8-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 8 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-8-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 8 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-9 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-9-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 9 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-9-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 9 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-10 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-10-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 10 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-10-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 10 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-11 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-11-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 11 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-11-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 11 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-15 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-15-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 15 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-15-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 15 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-16 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-16-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 16 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-16-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 16 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-17 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-17-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 17 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-17-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 17 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-18 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-18-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 18 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-18-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 18 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-19 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-19-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 19 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-19-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 19 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-20 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-20-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 20 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-20-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 20 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-rental -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-rental-1200w.webp" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="810" />
+  <meta property="og:image:alt" content="fleet bengaluru rental - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-rental-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru rental - Khushi Travels" />
+
+  <!-- fleet-bengaluru-urbania -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-urbania-1200w.webp" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="810" />
+  <meta property="og:image:alt" content="fleet bengaluru urbania - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-urbania-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru urbania - Khushi Travels" />
+
+  <!-- fleet-bengaluru-21 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-21-1200w.webp" />
+  <meta property="og:image:width" content="900" />
+  <meta property="og:image:height" content="1600" />
+  <meta property="og:image:alt" content="fleet bengaluru 21 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-21-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 21 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-22 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-22-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 22 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-22-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 22 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-23 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-23-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 23 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-23-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 23 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-24 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-24-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 24 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-24-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 24 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-25 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-25-1200w.webp" />
+  <meta property="og:image:width" content="675" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 25 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-25-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 25 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-26 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-26-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 26 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-26-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 26 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-27 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-27-1200w.webp" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="784" />
+  <meta property="og:image:alt" content="fleet bengaluru 27 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-27-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 27 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-28 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-28-1200w.webp" />
+  <meta property="og:image:width" content="511" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 28 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-28-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 28 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-29 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-29-1200w.webp" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="804" />
+  <meta property="og:image:alt" content="fleet bengaluru 29 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-29-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 29 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-30 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-30-1200w.webp" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:image:alt" content="fleet bengaluru 30 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-30-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 30 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-31 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-31-1200w.webp" />
+  <meta property="og:image:width" content="406" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 31 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-31-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 31 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-32 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-32-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="541" />
+  <meta property="og:image:alt" content="fleet bengaluru 32 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-32-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 32 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-33 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-33-1200w.webp" />
+  <meta property="og:image:width" content="406" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 33 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-33-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 33 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-bus -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-bus-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru bus - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-bus-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru bus - Khushi Travels" />
+
+  <!-- fleet-bengaluru-34 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-34-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 34 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-34-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 34 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-35 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-35-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 35 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-35-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 35 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-36 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-36-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 36 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-36-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 36 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-37 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-37-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 37 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-37-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 37 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-bangalore -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-bangalore-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:image:alt" content="fleet bengaluru bangalore - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-bangalore-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru bangalore - Khushi Travels" />
+
+  <!-- fleet-bengaluru-38 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-38-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 38 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-38-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 38 - Khushi Travels" />
+
+  <!-- fleet-bengaluru-39 -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/fleet-bengaluru-39-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="fleet bengaluru 39 - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/fleet-bengaluru-39-1200w.webp" />
+  <meta name="twitter:image:alt" content="fleet bengaluru 39 - Khushi Travels" />
+
+  <!-- image-bengaluru-bg -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/image-bengaluru-bg-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="685" />
+  <meta property="og:image:alt" content="image bengaluru bg - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/image-bengaluru-bg-1200w.webp" />
+  <meta name="twitter:image:alt" content="image bengaluru bg - Khushi Travels" />
+
+  <!-- image-bengaluru-logo -->
+  <meta property="og:image" content="https://khushitravel.in/optimized/image-bengaluru-logo-1200w.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:image:alt" content="image bengaluru logo - Khushi Travels" />
+  <meta name="twitter:image" content="https://khushitravel.in/optimized/image-bengaluru-logo-1200w.webp" />
+  <meta name="twitter:image:alt" content="image bengaluru logo - Khushi Travels" />
