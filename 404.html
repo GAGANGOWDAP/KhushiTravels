@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MD7GBMCS');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | Khushi Travels Bangalore</title>
+  <meta name="description"
+    content="The page you requested could not be found. Return to Khushi Travels homepage or explore our luxury tempo traveller fleet, tour packages, and rental pricing in Bangalore." />
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gagangowdap.github.io/KhushiTravels/404.html" />
+  <meta property="og:title" content="404 - Page Not Found | Khushi Travels" />
+  <meta property="og:description"
+    content="The requested page could not be found. Return to Khushi Travels homepage to book luxury tempo travellers in Bangalore." />
+  <meta property="og:image" content="https://khushitravel.in/images/destinations/mysore.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="404 - Page Not Found | Khushi Travels" />
+  <meta name="twitter:description" content="Return to Khushi Travels homepage to book luxury tempo travellers in Bangalore." />
+
+  <!-- Fonts -->
+  <link href="assets/css/fonts.css" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="assets/js/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#1a365d',
+              blue: '#2b6cb0',
+              amber: '#f59e0b',
+              'amber-light': '#fbbf24',
+              emerald: '#10b981',
+            },
+          },
+          fontSize: {
+            'display': ['clamp(2.75rem, 2rem + 3vw, 6rem)', { lineHeight: '1.05', letterSpacing: '-0.03em', fontWeight: '800' }],
+            'h1': ['clamp(2rem, 1.2rem + 3vw, 3.5rem)', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '800' }],
+            'h2': ['clamp(1.5rem, 1rem + 2vw, 2.5rem)', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '700' }],
+            'h3': ['clamp(1.25rem, 1rem + 1vw, 1.75rem)', { lineHeight: '1.25', fontWeight: '600' }],
+            'h4': ['clamp(1.125rem, 0.9rem + 0.5vw, 1.375rem)', { lineHeight: '1.35', fontWeight: '600' }],
+            'body': ['clamp(1rem, 0.9rem + 0.5vw, 1.125rem)', { lineHeight: '1.6' }],
+            'sm': ['clamp(0.8rem, 0.75rem + 0.25vw, 0.875rem)', { lineHeight: '1.5' }],
+          },
+          spacing: {
+            'section': 'clamp(2.5rem, 1.5rem + 3vw, 6rem)',
+            'section-mobile': '2.5rem',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      color: #1f2937;
+      background-color: #0f1f38;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container-custom {
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .container-custom {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container-custom {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    .gradient-amber {
+      background: linear-gradient(135deg, #f59e0b, #f97316);
+    }
+
+    /* HEADER */
+    .site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      padding: 1.25rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .site-header.scrolled {
+      position: fixed;
+      padding: 0.75rem 0;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      z-index: 10;
+    }
+
+    .nav-pill {
+      display: none;
+      position: relative;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 9999px;
+      padding: 4px;
+    }
+
+    @media (min-width: 768px) {
+      .nav-pill {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .site-header.scrolled .nav-pill {
+      background: rgba(0, 0, 0, 0.05);
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-pill a {
+      position: relative;
+      z-index: 2;
+      padding: 0.5rem 1.15rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      border-radius: 9999px;
+      transition: color 0.25s ease;
+    }
+
+    .site-header.scrolled .nav-pill a {
+      color: #111;
+      font-weight: 700;
+    }
+
+    .nav-pill a:hover {
+      color: #fff;
+    }
+
+    .site-header.scrolled .nav-pill a:hover {
+      color: #f59e0b;
+    }
+
+    .pill-backdrop {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      height: calc(100% - 8px);
+      background: #f59e0b;
+      border-radius: 9999px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .nav-pill a.active {
+      color: #1a365d !important;
+      font-weight: 700;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      z-index: 10;
+    }
+
+    .phone-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #f59e0b;
+      color: #1a365d;
+      font-weight: 700;
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .phone-btn:hover {
+      background: #fbbf24;
+      transform: translateY(-1px);
+    }
+
+    .soc-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: all 0.25s ease;
+    }
+
+    .site-header.scrolled .soc-icon {
+      color: #111;
+      background: rgba(0, 0, 0, 0.05);
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .soc-icon:hover {
+      color: #f59e0b;
+      border-color: #f59e0b;
+    }
+
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    .site-header.scrolled .menu-toggle {
+      color: #111;
+      background: rgba(0, 0, 0, 0.05);
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .menu-toggle .close-icon {
+      display: none;
+    }
+
+    .menu-toggle.active .ham-icon {
+      display: none;
+    }
+
+    .menu-toggle.active .close-icon {
+      display: block;
+      color: #1a365d;
+    }
+
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      z-index: 40;
+      padding: 6rem 2rem 2rem;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1.5rem;
+    }
+
+    .mobile-overlay.active {
+      display: flex;
+    }
+
+    .mobile-overlay nav {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-overlay nav a {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a365d;
+      text-decoration: none;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      transition: color 0.2s;
+    }
+
+    .mobile-overlay nav a:hover {
+      color: #f59e0b;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD7GBMCS" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ===== HEADER ===== -->
+  <header id="site-header" class="site-header">
+    <div class="container-custom header-inner">
+      <!-- Logo -->
+      <a href="https://gagangowdap.github.io/KhushiTravels/" class="site-logo">
+        <img src="images/khushi-tours-and-travels-logo.webp" alt="Khushi Travels" class="h-9 md:h-10 w-auto" />
+      </a>
+
+      <!-- Pill Nav -->
+      <nav class="nav-pill" id="navPill">
+        <div class="pill-backdrop" id="pillBackdrop"></div>
+        <a href="https://gagangowdap.github.io/KhushiTravels/" data-index="0">Home</a>
+        <a href="https://gagangowdap.github.io/KhushiTravels/best-tempo-traveller-fleet-bangalore.html" data-index="1">Fleet</a>
+        <a href="https://gagangowdap.github.io/KhushiTravels/tour-packages-from-bangalore.html" data-index="2">Packages</a>
+        <a href="https://gagangowdap.github.io/KhushiTravels/tempo-traveller-rent-price-bangalore.html" data-index="3">Pricing</a>
+        <a href="https://gagangowdap.github.io/KhushiTravels/hire-tempo-traveller-bangalore.html" data-index="4">Contact</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <a href="https://wa.me/919901333113" target="_blank" class="soc-icon" aria-label="WhatsApp">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+        </a>
+        <a href="tel:+919901333113" class="phone-btn hidden sm:flex">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+          </svg>
+          +91 99013 33113
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <svg class="ham-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <nav>
+      <a href="https://gagangowdap.github.io/KhushiTravels/">Home</a>
+      <a href="https://gagangowdap.github.io/KhushiTravels/best-tempo-traveller-fleet-bangalore.html">Fleet</a>
+      <a href="https://gagangowdap.github.io/KhushiTravels/tour-packages-from-bangalore.html">Packages</a>
+      <a href="https://gagangowdap.github.io/KhushiTravels/tempo-traveller-rent-price-bangalore.html">Pricing</a>
+      <a href="https://gagangowdap.github.io/KhushiTravels/hire-tempo-traveller-bangalore.html">Contact</a>
+    </nav>
+  </div>
+
+  <!-- ===== 404 MAIN CONTENT ===== -->
+  <main class="flex-grow pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
+    <!-- Ambient Background Blobs -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-amber/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 left-1/4 w-80 h-80 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="container-custom relative z-10 text-center max-w-3xl mx-auto">
+      <!-- 404 Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-amber/15 border border-brand-amber/30 text-brand-amber text-xs font-bold tracking-wider uppercase mb-6">
+        <span class="w-2 h-2 rounded-full bg-brand-amber animate-pulse"></span>
+        Error 404 &bull; Page Not Found
+      </div>
+
+      <!-- Main Heading -->
+      <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight mb-4">
+        Looks Like You've Taken a <span class="text-brand-amber">Detour</span>
+      </h1>
+
+      <!-- Description -->
+      <p class="text-base sm:text-lg text-white/70 max-w-xl mx-auto mb-10 leading-relaxed">
+        The page you are looking for might have been moved, renamed, or is temporarily unavailable. Let us help you get your group travel back on track.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <a href="https://gagangowdap.github.io/KhushiTravels/"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-brand-amber hover:bg-brand-amber-light text-brand-navy font-bold text-base transition-all duration-200 shadow-lg shadow-brand-amber/20 hover:-translate-y-0.5">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          Return to Homepage
+        </a>
+        <a href="https://wa.me/919901333113" target="_blank"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base transition-all duration-200 shadow-lg shadow-emerald-600/20 hover:-translate-y-0.5">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Instant WhatsApp Help
+        </a>
+      </div>
+
+      <!-- Quick Navigation Section -->
+      <div class="border-t border-white/10 pt-12 text-left">
+        <h2 class="text-white/60 text-xs font-bold uppercase tracking-widest text-center mb-8">
+          Explore Popular Khushi Travels Destinations &amp; Pages
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <!-- Fleet Card -->
+          <a href="https://gagangowdap.github.io/KhushiTravels/best-tempo-traveller-fleet-bangalore.html"
+            class="group block p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-amber/50 hover:bg-white/10 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-brand-amber/20 flex items-center justify-center text-brand-amber mb-3 group-hover:scale-110 transition-transform">
+              <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8m-8 4h8m-5 4h5M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-white font-bold text-base mb-1 group-hover:text-brand-amber transition-colors">Our Fleet</h3>
+            <p class="text-white/50 text-xs leading-relaxed">9, 12, 14 &amp; 16 Seater Maharaja seats, Urbania &amp; luxury buses.</p>
+          </a>
+
+          <!-- Packages Card -->
+          <a href="https://gagangowdap.github.io/KhushiTravels/tour-packages-from-bangalore.html"
+            class="group block p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-amber/50 hover:bg-white/10 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 mb-3 group-hover:scale-110 transition-transform">
+              <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-white font-bold text-base mb-1 group-hover:text-brand-amber transition-colors">Tour Packages</h3>
+            <p class="text-white/50 text-xs leading-relaxed">Outstation getaways, Coorg, Ooty, Mysore &amp; pilgrimage darshanas.</p>
+          </a>
+
+          <!-- Pricing Card -->
+          <a href="https://gagangowdap.github.io/KhushiTravels/tempo-traveller-rent-price-bangalore.html"
+            class="group block p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-amber/50 hover:bg-white/10 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 mb-3 group-hover:scale-110 transition-transform">
+              <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-white font-bold text-base mb-1 group-hover:text-brand-amber transition-colors">Rental Pricing</h3>
+            <p class="text-white/50 text-xs leading-relaxed">Starting from ₹18/km with zero hidden charges &amp; free driver allowance.</p>
+          </a>
+
+          <!-- Contact Card -->
+          <a href="https://gagangowdap.github.io/KhushiTravels/hire-tempo-traveller-bangalore.html"
+            class="group block p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-amber/50 hover:bg-white/10 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 mb-3 group-hover:scale-110 transition-transform">
+              <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+            </div>
+            <h3 class="text-white font-bold text-base mb-1 group-hover:text-brand-amber transition-colors">Contact Us</h3>
+            <p class="text-white/50 text-xs leading-relaxed">24/7 reservation desk, instant quotes &amp; corporate booking desk.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-brand-navy border-t border-white/10 pt-16 pb-12 relative overflow-hidden">
+    <div class="container-custom relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-white/10">
+        <!-- Col 1: Brand Info -->
+        <div class="lg:col-span-5 space-y-6 text-center md:text-left">
+          <a href="https://gagangowdap.github.io/KhushiTravels/" class="inline-block">
+            <img src="images/khushi-tours-and-travels-logo.webp" alt="Khushi Travels" class="h-10 w-auto mx-auto md:mx-0" />
+          </a>
+          <p class="text-white/60 text-sm max-w-sm mx-auto md:mx-0 leading-relaxed">
+            Bangalore's trusted luxury tempo traveller rental service. 100% owned fleet of Maharaja seats, Force Urbania, and luxury buses for family trips, outstation tours, and corporate events.
+          </p>
+          <div class="flex items-center justify-center md:justify-start gap-3">
+            <a href="https://www.instagram.com/khushi_travels_" target="_blank"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-amber hover:text-brand-navy hover:-translate-y-1 transition-all duration-300 shadow-lg border border-white/10"
+              aria-label="Instagram">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/khushitravels.in/" target="_blank"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-amber hover:text-brand-navy hover:-translate-y-1 transition-all duration-300 shadow-lg border border-white/10"
+              aria-label="Facebook">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.7 5H18V0h-3.808C10.596 0 9 1.583 9 4.615V8z" />
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@sureshj1169" target="_blank"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-brand-amber hover:text-brand-navy hover:-translate-y-1 transition-all duration-300 shadow-lg border border-white/10"
+              aria-label="YouTube">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="lg:col-span-4 grid grid-cols-2 gap-8 text-center md:text-left pt-2">
+          <div>
+            <h3 class="text-white font-bold tracking-widest text-sm mb-6 uppercase flex items-center justify-center md:justify-start gap-2">
+              <span class="w-2 h-2 rounded-full bg-brand-amber"></span> Company
+            </h3>
+            <ul class="space-y-3">
+              <li><a href="https://gagangowdap.github.io/KhushiTravels/" class="text-white/50 hover:text-brand-amber hover:translate-x-1 inline-block transition-all text-sm">Home</a></li>
+              <li><a href="https://gagangowdap.github.io/KhushiTravels/services/best-tempo-traveller-rental-bangalore.html" class="text-white/50 hover:text-brand-amber hover:translate-x-1 inline-block transition-all text-sm">Our Story</a></li>
+              <li><a href="https://gagangowdap.github.io/KhushiTravels/best-tempo-traveller-fleet-bangalore.html" class="text-white/50 hover:text-brand-amber hover:translate-x-1 inline-block transition-all text-sm">The Fleet</a></li>
+              <li><a href="https://gagangowdap.github.io/KhushiTravels/services/luxury-tempo-traveller-blog.html" class="text-white/50 hover:text-brand-amber hover:translate-x-1 inline-block transition-all text-sm">Blog</a></li>
+              <li><a href="https://gagangowdap.github.io/KhushiTravels/hire-tempo-traveller-bangalore.html" class="text-white/50 hover:text-brand-amber hover:translate-x-1 inline-block transition-all text-sm">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white font-bold tracking-widest text-sm mb-6 uppercase flex items-center justify-center md:justify-start gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Links
+            </h3>
+            <ul class="space-y-3">
+              <li><a href="https://gagangowdap.github.io/KhushiTravels/tour-packages-from-bangalore.html" class="text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all text-sm">Tour Packages</a></li>
+              <li><a href="https://gagangowdap.github.io/KhushiTravels/tempo-traveller-rent-price-bangalore.html" class="text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all text-sm">Pricing &amp; Services</a></li>
+              <li><a href="https://gagangowdap.github.io/KhushiTravels/terms.html" class="text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all text-sm">Terms &amp; Conditions</a></li>
+              <li><a href="https://gagangowdap.github.io/KhushiTravels/privacy.html" class="text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all text-sm">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Col 3: Contact & Booking -->
+        <div class="lg:col-span-3 space-y-4 text-center md:text-left pt-2">
+          <h3 class="text-white font-bold tracking-widest text-sm mb-6 uppercase flex items-center justify-center md:justify-start gap-2">
+            <span class="w-2 h-2 rounded-full bg-brand-blue"></span> 24/7 Desk
+          </h3>
+          <p class="text-white/60 text-xs leading-relaxed">
+            Ground Floor No: 2, Kodigehalli Main Road, Near Railway Station, Vidryanyapura, Virupakshapura, Bengaluru - 560097
+          </p>
+          <div class="pt-2 flex flex-col gap-2">
+            <a href="tel:+919901333113" class="text-white font-bold text-sm hover:text-brand-amber transition-colors flex items-center justify-center md:justify-start gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              +91 99013 33113
+            </a>
+            <a href="mailto:info@khushitravel.in" class="text-white/60 text-xs hover:text-brand-amber transition-colors">info@khushitravel.in</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50 text-center md:text-left">
+        <p>&copy; 2026 Khushi Tours And Travels. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="https://gagangowdap.github.io/KhushiTravels/terms.html" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+          <span>&bull;</span>
+          <a href="https://gagangowdap.github.io/KhushiTravels/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== HEADER JAVASCRIPT ===== -->
+  <script>
+    const header = document.getElementById('site-header');
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    if (menuToggle && mobileOverlay) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        mobileOverlay.classList.toggle('active');
+        document.body.style.overflow = mobileOverlay.classList.contains('active') ? 'hidden' : '';
+      });
+    }
+
+    // Pill nav sliding backdrop
+    const navPill = document.getElementById('navPill');
+    const pillBackdrop = document.getElementById('pillBackdrop');
+    if (navPill && pillBackdrop) {
+      const activeLink = navPill.querySelector('.active') || navPill.querySelector('a');
+      function updateBackdrop(el) {
+        if (!el) return;
+        const pillRect = navPill.getBoundingClientRect();
+        const linkRect = el.getBoundingClientRect();
+        pillBackdrop.style.width = linkRect.width + 'px';
+        pillBackdrop.style.left = (linkRect.left - pillRect.left) + 'px';
+        pillBackdrop.style.opacity = '1';
+      }
+      if (activeLink) {
+        updateBackdrop(activeLink);
+      }
+      navPill.querySelectorAll('a').forEach(a => {
+        a.addEventListener('mouseenter', () => updateBackdrop(a));
+      });
+      navPill.addEventListener('mouseleave', () => {
+        if (activeLink) updateBackdrop(activeLink);
+        else pillBackdrop.style.opacity = '0';
+      });
+    }
+  </script>
+</body>
+
+</html>
