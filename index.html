@@ -42,6 +42,7 @@
 
 
 
+    <link rel="preload" as="image" href="images/hero-bg.webp" type="image/webp" fetchpriority="high" />
   <!-- Fonts -->
   <link href="assets/css/fonts.css" rel="stylesheet" />
 
@@ -655,7 +656,7 @@
     <div class="container-custom header-inner">
       <!-- Logo -->
       <a href="index.html" class="site-logo">
-        <img src="images/khushi-tours-and-travels-logo.webp" alt="Khushi Travels" class="h-9 md:h-10 w-auto" />
+        <img src="images/khushi-tours-and-travels-logo.webp" alt="Khushi Travels" class="h-9 md:h-10 w-auto" width="160" height="40" decoding="async" fetchpriority="high" />
       </a>
 
       <!-- Pill Nav -->
@@ -817,7 +818,7 @@
                 <div class="relative min-h-[200px] md:min-h-full overflow-hidden">
                   <img src="images/destinations/tirupati.webp" alt="12 Jyotirlinga pilgrimage tour"
                     class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy" />
+                    loading="lazy" decoding="async" width="600" height="400" />
                   <div
                     class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0a1628] via-[#0a1628]/40 to-transparent">
                   </div>
@@ -915,8 +916,8 @@
                         <div class="flex items-baseline gap-2.5 flex-wrap">
                           <span class="text-lg md:text-xl font-heading font-extrabold text-white">₹1,49,999</span>
                         </div>
-                        <span class="text-[11px] text-white/50 block mt-0.5">Subject to operator confirmation &bull;
-                          Custom group departures on request</span>
+                        <!-- <span class="text-[11px] text-white/50 block mt-0.5">Subject to operator confirmation &bull;
+                          Custom group departures on request</span> -->
                       </div>
                       <div class="flex flex-wrap items-center gap-2.5">
                         <span
@@ -965,7 +966,7 @@
                 <div class="relative min-h-[200px] md:min-h-full overflow-hidden">
                   <img src="images/destinations/coorg.webp" alt="Upcoming travel packages from Bangalore"
                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    loading="lazy" />
+                    loading="lazy" decoding="async" width="600" height="400" />
                   <div
                     class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0a1628] via-[#0a1628]/40 to-transparent">
                   </div>
@@ -1113,7 +1114,7 @@
                 <div class="relative min-h-[200px] md:min-h-full overflow-hidden">
                   <img src="images/destinations/mysore.webp" alt="Upcoming heritage travel packages"
                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    loading="lazy" />
+                    loading="lazy" decoding="async" width="600" height="400" />
                   <div
                     class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0a1628] via-[#0a1628]/40 to-transparent">
                   </div>
@@ -1260,7 +1261,7 @@
                 <div class="relative min-h-[200px] md:min-h-full overflow-hidden">
                   <img src="images/destinations/gokarna.webp" alt="Upcoming coastal tour packages"
                     class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    loading="lazy" />
+                    loading="lazy" decoding="async" width="600" height="400" />
                   <div
                     class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0a1628] via-[#0a1628]/40 to-transparent">
                   </div>
@@ -1552,18 +1553,18 @@
           <div class="space-y-4 sm:translate-y-8">
             <img src="images/fleet/luxury-10-seater-tempo-traveller-bangalore-1.webp"
               alt="10 seater luxury Tempo Traveller with Maharaja pushback seats - Khushi Travels Bangalore"
-              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
             <img src="images/fleet/standard-12-seater-tempo-traveller-bangalore-1.webp"
               alt="Luxury Tempo Traveller interior with premium seating - Bangalore rentals"
-              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
           </div>
           <div class="space-y-4">
             <img src="images/fleet/luxury-12-seater-tempo-traveller-bangalore-1.webp"
               alt="Comfortable Maharaja seats in 12 seater luxury tempo traveller"
-              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
             <img src="images/fleet/luxury-16-seater-tempo-traveller-bangalore-1.webp"
               alt="16 seater luxury tempo traveller exterior - Khushi Travels Bangalore"
-              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
           </div>
         </div>
       </div>
@@ -1574,18 +1575,18 @@
           <div class="space-y-4 sm:translate-y-8">
             <img src="images/fleet/force-urbania-10-seater-bangalore-1.webp"
               alt="Force Urbania 10 seater luxury rental Bangalore - Exterior"
-              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
             <img src="images/fleet/force urbania (1).webp"
               alt="Force Urbania 16 seater interior - Premium group travel Bangalore"
-              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
           </div>
           <div class="space-y-4">
             <img src="images/fleet/force-urbania-16-seater-bangalore-3.webp"
               alt="Force Urbania luxury seats with ample legroom" class="rounded-2xl shadow-lg w-full h-48 object-cover"
-              loading="lazy" style="aspect-ratio:16/9;" />
+              loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
             <img src="images/fleet/force urbania 2.webp"
               alt="Spacious aisle and standing height interior of Force Urbania"
-              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
           </div>
         </div>
         <div class="lg:w-1/2 order-2 text-center md:text-left">
@@ -1674,18 +1675,18 @@
           <div class="space-y-4 sm:translate-y-8">
             <img src="images/fleet/luxury-minibus-rental-bangalore-1.webp"
               alt="Luxury minibus rental Bangalore - 21 to 33 seater options"
-              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
             <img src="images/fleet/luxury-40-seater-bus-bangalore-1.webp"
               alt="40 seater luxury bus exterior for corporate tours"
-              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
           </div>
           <div class="space-y-4">
             <img src="images/fleet/luxury-50-seater-bus-bangalore-1.webp"
               alt="50 seater luxury bus for large groups and excursions"
-              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
             <img src="images/fleet/luxury-minibus-rental-bangalore-2.webp"
               alt="Premium minibus interior with air suspension and comfort seating"
-              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
           </div>
         </div>
       </div>
@@ -1696,18 +1697,18 @@
           <div class="space-y-4 sm:translate-y-8">
             <img src="images/fleet/toyota-innova-crysta-bangalore-1.webp"
               alt="Toyota Innova Crysta rental Bangalore - Luxury SUV"
-              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
             <img src="images/fleet/toyota-innova-crysta-bangalore-2.webp"
               alt="Luxury sedan car interior for executive travel"
-              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
           </div>
           <div class="space-y-4">
             <img src="images/fleet/toyota-innova-crysta-bangalore-2.webp"
               alt="Toyota Crysta luxury SUV for family outings Bangalore"
-              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
             <img src="images/fleet/toyota-innova-crysta-bangalore-1.webp"
               alt="Premium 4 seater car for airport transfers Bangalore"
-              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" />
+              class="rounded-2xl shadow-lg w-full h-64 object-cover" loading="lazy" style="aspect-ratio:16/9;" decoding="async" width="600" height="338" />
           </div>
         </div>
         <div class="lg:w-1/2 order-2 text-center md:text-left">
@@ -2037,7 +2038,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/nandi-hills.webp" alt="Nandi Hills sunrise trek from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2057,7 +2058,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/mysore.webp" alt="Mysore Palace heritage tour from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2077,7 +2078,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/hogenakkal.webp" alt="Hogenakkal falls boat ride from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2097,7 +2098,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/yelagiri.webp" alt="Yelagiri hills weekend trip from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2117,7 +2118,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/shivanasamudra.webp" alt="Shivanasamudra waterfall trip from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2138,7 +2139,7 @@
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/belur-halebidu.webp"
               alt="Belur Halebidu temple architecture tour from Bangalore" class="w-full h-full object-cover"
-              loading="lazy" />
+              loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2158,7 +2159,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/sakleshpur.webp" alt="Sakleshpur green valley trek from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2178,7 +2179,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/kabini.webp" alt="Kabini wildlife safari from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2198,7 +2199,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/bandipur.webp" alt="Bandipur tiger reserve from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2218,7 +2219,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/chikmagalur.webp" alt="Chikmagalur coffee estate tour from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2238,7 +2239,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/tirupati.webp" alt="Tirupati pilgrimage from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2258,7 +2259,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/coorg.webp" alt="Coorg coffee estate weekend trip from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2278,7 +2279,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/wayanad.webp" alt="Wayanad nature getaway from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2298,7 +2299,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/ooty.webp" alt="Ooty tea garden tour from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2318,7 +2319,7 @@
           class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex">
           <div class="w-24 h-24 shrink-0 overflow-hidden">
             <img src="images/destinations/pondicherry.webp" alt="Pondicherry weekend beach trip from Bangalore"
-              class="w-full h-full object-cover" loading="lazy" />
+              class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
           </div>
           <div class="p-3 flex-1 flex flex-col justify-center min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
@@ -2712,7 +2713,7 @@
             class="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFA10A] rounded-lg"
             aria-label="Khushi Tours &amp; Travels Home">
             <img src="images/khushi-tours-and-travels-logo.webp" alt="Khushi Tours &amp; Travels"
-              class="h-16 md:h-18 w-auto drop-shadow-md" loading="lazy" />
+              class="h-16 md:h-18 w-auto drop-shadow-md" loading="lazy" width="240" height="60" decoding="async" />
           </a>
           <p class="text-[#B8C8DE] text-sm leading-relaxed max-w-sm">
             Bangalore's most trusted premium tempo traveller and luxury car rental service. Owned fleet, professional
