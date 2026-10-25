@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://khushitravel.in/sitemap.xml
+Sitemap: https://gagangowdap.github.io/KhushiTravels/sitemap.xml

@@ -1,260 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://khushitravel.in/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/best-tempo-traveller-fleet-bangalore.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/best-tempo-traveller-fleet-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/tempo-traveller-rent-price-bangalore.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/hire-tempo-traveller-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/hire-tempo-traveller-bangalore.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/privacy.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/tour-packages-from-bangalore.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/spiritual-pilgrimage-tours.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/pilgrimage-packages.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/tempo-traveller-rent-price-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/terms.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/terms.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/privacy.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/tour-packages-from-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/fleet/9-seater-tempo-traveller-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/fleet/12-14-seater-tempo-traveller-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/fleet/12-14-seater-tempo-traveller-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/fleet/16-seater-tempo-traveller-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/fleet/16-seater-tempo-traveller-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/fleet/9-seater-tempo-traveller-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/fleet/force-urbania-rental-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/fleet/bus-rental-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/fleet/toyota-innova-crysta-rental-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/fleet/force-urbania-rental-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/fleet/luxury-car-rental-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/fleet/luxury-car-rental-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/fleet/mini-bus-rental-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/fleet/mini-bus-rental-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/fleet/bus-rental-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/fleet/tempo-traveller-rent-bangalore-outstation.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/fleet/tempo-traveller-rent-bangalore-outstation.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/fleet/toyota-innova-crysta-rental-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-mysore-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-chennai-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-coorg-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-chikmagalur-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-ooty-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-coorg-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-tirupati-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-goa-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-wayanad-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-hampi-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-chennai-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-hyderabad-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-hyderabad-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-kodaikanal-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-pondicherry-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-mangalore-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-goa-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-mysore-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-chikmagalur-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-ooty-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-kodaikanal-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-pondicherry-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-mangalore-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-shirdi-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-shirdi-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-tirupati-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/routes/bangalore-to-hampi-tempo-traveller.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/routes/bangalore-to-wayanad-tempo-traveller.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-marathahalli-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-banashankari-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-whitefield-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-btm-layout-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-koramangala-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-electronic-city-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-hsr-layout-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-hebbal-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-btm-layout-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-hsr-layout-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-electronic-city-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-indiranagar-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-jp-nagar-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-jayanagar-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-jayanagar-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-jp-nagar-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-banashankari-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-koramangala-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-indiranagar-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-marathahalli-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-mg-road-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-mg-road-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-hebbal-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-rajajinagar-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-yelahanka-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-whitefield-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-rajajinagar-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-yelahanka-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/localities/tempo-traveller-in-yeshwanthpur-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/localities/tempo-traveller-in-yeshwanthpur-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/services/airport-transfer-tempo-traveller-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/services/airport-transfer-tempo-traveller-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/services/corporate-tempo-traveller-rental-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/services/best-tempo-traveller-rental-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/services/wedding-guest-transport-tempo-traveller-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/services/corporate-tempo-traveller-rental-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/services/best-tempo-traveller-rental-bangalore.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/services/luxury-tempo-traveller-blog.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
   <url>
-    <loc>https://khushitravel.in/services/luxury-tempo-traveller-blog.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.60</priority>
+    <loc>https://gagangowdap.github.io/KhushiTravels/services/wedding-guest-transport-tempo-traveller-bangalore.html</loc>
+    <lastmod>2026-10-24</lastmod>
   </url>
 </urlset>
