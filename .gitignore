@@ -1,0 +1,8 @@
+# Next.js build and dependencies
+/node_modules
+/.next/
+next-env.d.ts
+
+# OS Files
+.DS_Store
+Thumbs.db

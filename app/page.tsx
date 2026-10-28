@@ -1,0 +1,455 @@
+import React from "react";
+import Link from "next/link";
+import FleetRows from "@/components/FleetRow";
+import FAQAccordion from "@/components/FAQAccordion";
+import ServiceCoverage from "@/components/ServiceCoverage";
+import { FAQS_DATA } from "@/data/faqs";
+import { ROUTES_DATA } from "@/data/routes";
+
+export default function HomePage() {
+  return (
+    <>
+      {/* ===== HERO CINEMATIC ===== */}
+      <section className="hero-cinematic relative overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-36 md:pb-24 lg:pt-36 lg:pb-20">
+        <div className="container-custom w-full relative z-10">
+          <div className="max-w-2xl text-left">
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3 text-amber-500 font-bold text-xs sm:text-sm tracking-wider uppercase mb-5">
+              <span>TRAVEL TOGETHER. TRAVEL BETTER.</span>
+            </div>
+
+            {/* Main Heading */}
+            <h1 className="font-heading hero-title text-white font-extrabold tracking-tight leading-[1.08] mb-6 text-balance">
+              Luxury Tempo <br className="hidden sm:inline" />
+              <span className="text-[#f59e0b]">Traveller</span> in Bangalore
+            </h1>
+
+            {/* Supporting Description */}
+            <p className="hero-desc text-[#CBD5E1] mb-8 leading-relaxed font-normal">
+              Premium tempo travellers and luxury buses for family trips,
+              pilgrimages, corporate tours, and group travel from Bangalore. Safe,
+              comfortable, and reliable travel with professional drivers.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap items-center gap-4 mb-10">
+              <a
+                href="https://wa.me/919901333113?text=Hi%20Khushi%20Travels%2C%20I'm%20interested%20in%20booking%20a%20luxury%20tempo%20traveller."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full gradient-amber text-white font-heading font-bold text-sm shadow-xl shadow-amber-500/25 hover:shadow-amber-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all"
+              >
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <span>Book on WhatsApp</span>
+              </a>
+              <a
+                href="tel:+919901333113"
+                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-sm font-heading font-bold text-sm hover:-translate-y-0.5 active:translate-y-0 transition-all"
+              >
+                <svg
+                  className="w-4 h-4 text-brand-amber"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                </svg>
+                <span>Call +91 99013 33113</span>
+              </a>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="flex flex-wrap items-center gap-4 text-xs text-white/80">
+              <span className="flex items-center gap-1.5 font-semibold">
+                <span className="text-brand-amber">★★★★★</span> 4.9 (63+ Reviews)
+              </span>
+              <span>&bull;</span>
+              <span>100% Owned Fleet</span>
+              <span>&bull;</span>
+              <span>GPS Monitored</span>
+              <span>&bull;</span>
+              <span>Chauffeur Driven</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== QUICK STATS COUNTERS ===== */}
+      <section className="bg-white -mt-10 relative z-20 mb-0 pb-0">
+        <div className="container-custom">
+          <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-100 p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div className="text-center">
+              <p className="font-heading font-bold text-brand-navy text-2xl md:text-3xl">
+                500+
+              </p>
+              <p className="text-xs text-gray-500 mt-1">Tour customers served</p>
+            </div>
+            <div className="text-center">
+              <p className="font-heading font-bold text-brand-navy text-2xl md:text-3xl">
+                28
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                Destinations from Bangalore
+              </p>
+            </div>
+            <div className="text-center">
+              <p className="font-heading font-bold text-brand-navy text-2xl md:text-3xl">
+                4.9★
+              </p>
+              <p className="text-xs text-gray-500 mt-1">Customer rating</p>
+            </div>
+            <div className="text-center">
+              <p className="font-heading font-bold text-brand-navy text-2xl md:text-3xl">
+                100%
+              </p>
+              <p className="text-xs text-gray-500 mt-1">Owned fleet</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FEATURED PILGRIMAGE TOUR BANNER ===== */}
+      <section className="bg-white section-py">
+        <div className="container-custom max-w-6xl">
+          <div
+            className="group relative rounded-3xl shadow-xl border border-brand-amber/35 hover:border-brand-amber/60 hover:shadow-2xl transition-all overflow-hidden"
+            style={{
+              background:
+                "linear-gradient(135deg, #0a1628 0%, #132244 50%, #0f1f3d 100%)",
+            }}
+          >
+            <div className="relative z-10 grid md:grid-cols-[320px_1fr]">
+              <div className="relative min-h-[220px] md:min-h-full overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/destinations/ayodhya.webp"
+                  alt="12 Dwadasha Jyotirlinga Darshana pilgrimage tour"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  width={600}
+                  height={400}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0a1628] via-[#0a1628]/40 to-transparent"></div>
+                <div className="absolute top-3 left-3 gradient-amber text-brand-navy text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-lg">
+                  Featured Yatra
+                </div>
+              </div>
+
+              <div className="p-6 sm:p-8 flex flex-col justify-center text-left">
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <span className="text-[10px] font-bold text-brand-amber bg-brand-amber/10 px-2.5 py-1 rounded-full uppercase tracking-wider border border-brand-amber/15">
+                    Proposed 25-Day Spiritual Pilgrimage
+                  </span>
+                  <span className="text-white/60 text-xs">
+                    Bengaluru Departure &bull; All 12 Sacred Jyotirlingas
+                  </span>
+                </div>
+
+                <h3 className="font-heading text-2xl md:text-3xl font-extrabold text-white mb-2">
+                  <Link
+                    href="/spiritual-pilgrimage-tours/"
+                    className="hover:text-brand-amber transition-colors"
+                  >
+                    25-Day 12 Jyotirlinga{" "}
+                    <span className="text-brand-amber">Spiritual Yatra</span>
+                  </Link>
+                </h3>
+                <p className="text-white/75 text-sm leading-relaxed mb-6 max-w-2xl">
+                  Pan-India devotional tour covering all twelve sacred Jyotirlingas,
+                  Ayodhya Ram Mandir, Mathura, Vrindavan, Gaya, and Puri with luxury
+                  AC Volvo transport and verified 3-star accommodations.
+                </p>
+
+                <div className="flex flex-wrap items-center gap-4">
+                  <Link
+                    href="/spiritual-pilgrimage-tours/"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full gradient-amber text-white font-heading font-bold text-xs shadow hover:-translate-y-0.5 transition-all"
+                  >
+                    View Full Day-by-Day Itinerary &rarr;
+                  </Link>
+                  <a
+                    href="https://wa.me/919901333113?text=Hi%20Khushi%20Travels%2C%20I'm%20interested%20in%20the%2025-Day%2012%20Jyotirlinga%20Yatra."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 text-white font-heading font-bold text-xs hover:bg-white/20 transition-all border border-white/20"
+                  >
+                    WhatsApp Inquiries
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== ABOUT / AEO ANSWER BLOCK ===== */}
+      <section className="bg-white section-py">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-left">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-12 text-left">
+              <strong className="text-brand-navy">Khushi Travels</strong> is
+              Bangalore&apos;s premier provider for{" "}
+              <strong className="text-brand-navy">
+                luxury tempo travellers in Bangalore
+              </strong>
+              . We offer an elite fleet ranging from 7 to 50 seater vehicles,
+              including{" "}
+              <strong className="text-brand-navy">Maharaja pushback seats</strong>,{" "}
+              <strong className="text-brand-navy">Force Urbania</strong>, and
+              premium luxury buses. All our vehicles are 100% owned, sanitized,
+              and staffed with professional chauffeurs. Book instantly via
+              WhatsApp for 24/7 support and the most transparent tempo traveller
+              rental prices in Bangalore.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-brand-amber/10 text-brand-amber flex items-center justify-center mx-auto mb-4">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="font-heading font-bold text-brand-navy mb-2">
+                  100% Owned Fleet
+                </h3>
+                <p className="text-sm text-gray-500">
+                  We don&apos;t use third-party vehicles. You get exactly the luxury
+                  tempo you book.
+                </p>
+              </div>
+              <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-4">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="font-heading font-bold text-brand-navy mb-2">
+                  24/7 WhatsApp Support
+                </h3>
+                <p className="text-sm text-gray-500">
+                  Instant confirmation and support for your luxury tempo traveller
+                  booking.
+                </p>
+              </div>
+              <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-brand-amber/10 text-brand-amber flex items-center justify-center mx-auto mb-4">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <h3 className="font-heading font-bold text-brand-navy mb-2">
+                  Maharaja Seating
+                </h3>
+                <p className="text-sm text-gray-500">
+                  Premium 1x1 Maharaja seats available in our 9, 12, and 14 seater
+                  luxury tempos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FLEET: 4 ALTERNATING ROWS ===== */}
+      <FleetRows />
+
+      {/* ===== HOW IT WORKS ===== */}
+      <section className="bg-white section-py">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <span className="text-brand-amber font-bold text-xs uppercase tracking-widest block mb-2">
+              Simple 3-Step Process
+            </span>
+            <h2 className="font-heading text-h1 text-brand-navy">
+              How Booking Works
+            </h2>
+            <p className="text-gray-500 text-base mt-2">
+              Reserve your tempo traveller in under two minutes.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 text-center">
+              <div className="w-14 h-14 rounded-2xl gradient-amber text-white font-heading font-extrabold text-xl flex items-center justify-center mx-auto mb-6 shadow-md shadow-amber-500/25">
+                1
+              </div>
+              <h3 className="font-heading font-bold text-brand-navy text-lg mb-2">
+                Choose Vehicle &amp; Route
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Select your preferred tempo traveller, Urbania, or bus according
+                to group size and luggage needs.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 text-center">
+              <div className="w-14 h-14 rounded-2xl gradient-amber text-white font-heading font-extrabold text-xl flex items-center justify-center mx-auto mb-6 shadow-md shadow-amber-500/25">
+                2
+              </div>
+              <h3 className="font-heading font-bold text-brand-navy text-lg mb-2">
+                Instant Quote in 5 Mins
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Send a quick WhatsApp with your dates. Get a transparent,
+                itemized rate with zero hidden costs.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 text-center">
+              <div className="w-14 h-14 rounded-2xl gradient-amber text-white font-heading font-extrabold text-xl flex items-center justify-center mx-auto mb-6 shadow-md shadow-amber-500/25">
+                3
+              </div>
+              <h3 className="font-heading font-bold text-brand-navy text-lg mb-2">
+                Confirmed &amp; Dispatched
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Pay a small advance to secure your dates. Chauffeur and sanitized
+                vehicle arrive at your doorstep on time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== POPULAR DESTINATIONS GRID ===== */}
+      <section className="bg-gray-50 section-py">
+        <div className="container-custom">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-4 text-center md:text-left">
+            <div>
+              <span className="text-brand-amber font-bold text-xs uppercase tracking-widest block mb-2">
+                South India Road Trips
+              </span>
+              <h2 className="font-heading text-h1 text-brand-navy">
+                Popular Destinations
+              </h2>
+            </div>
+            <Link
+              href="/tour-packages-from-bangalore/"
+              className="text-brand-navy font-bold flex items-center gap-2 hover:text-brand-amber transition-colors text-sm"
+            >
+              All Packages &rarr;
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {ROUTES_DATA.slice(0, 8).map((route) => (
+              <div
+                key={route.slug}
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={route.image}
+                      alt={`Bangalore to ${route.destination} tempo traveller rental`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      width={400}
+                      height={250}
+                    />
+                    <div className="absolute top-3 left-3 bg-brand-navy/90 text-brand-amber text-xs font-bold px-2.5 py-1 rounded-full">
+                      {route.durationHrs}
+                    </div>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-heading font-bold text-lg text-brand-navy mb-1">
+                      <Link
+                        href={`/routes/${route.slug}/`}
+                        className="hover:text-brand-amber transition-colors"
+                      >
+                        {route.destination}
+                      </Link>
+                    </h3>
+                    <p className="text-xs text-gray-500 mb-3">
+                      Distance: ~{route.distanceKm} km
+                    </p>
+                    <p className="text-xs text-gray-600 line-clamp-2 leading-relaxed">
+                      {route.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-5 pt-0">
+                  <Link
+                    href={`/routes/${route.slug}/`}
+                    className="block text-center py-2.5 rounded-xl border border-gray-200 text-xs font-bold text-brand-navy hover:border-brand-amber hover:text-brand-amber transition-all"
+                  >
+                    View Route Details &rarr;
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== AMBER CTA BANNER ===== */}
+      <section className="gradient-amber py-16 text-white text-center">
+        <div className="container-custom max-w-3xl">
+          <h2 className="font-heading text-h1 font-extrabold mb-4 text-balance">
+            Ready to Travel in Absolute Comfort?
+          </h2>
+          <p className="text-white/90 text-base sm:text-lg mb-8 leading-relaxed font-normal">
+            Whether it&apos;s a family vacation, wedding shuttle, or company offsite,
+            Khushi Travels delivers immaculate vehicles and verified chauffeurs.
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            <a
+              href="https://wa.me/919901333113?text=Hi%20Khushi%20Travels%2C%20I%20need%20a%20tempo%20traveller%20quote."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 rounded-full bg-white text-brand-navy font-heading font-bold text-sm shadow-xl hover:bg-gray-50 transition-all hover:-translate-y-0.5"
+            >
+              Get Instant WhatsApp Quote
+            </a>
+            <Link
+              href="/hire-tempo-traveller-bangalore/"
+              className="px-8 py-4 rounded-full bg-brand-navy/20 hover:bg-brand-navy/30 text-white border border-white/30 font-heading font-bold text-sm transition-all"
+            >
+              Contact Booking Desk
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FAQS ===== */}
+      <FAQAccordion items={FAQS_DATA} />
+
+      {/* ===== SERVICE COVERAGE ===== */}
+      <ServiceCoverage />
+    </>
+  );
+}
