@@ -16,6 +16,7 @@ export default function HomePage() {
             {/* Eyebrow */}
             <div className="flex items-center gap-3 text-amber-500 font-bold text-xs sm:text-sm tracking-wider uppercase mb-5">
               <span>TRAVEL TOGETHER. TRAVEL BETTER.</span>
+              <span className="w-10 h-0.5 bg-amber-500 rounded-full inline-block"></span>
             </div>
 
             {/* Main Heading */}

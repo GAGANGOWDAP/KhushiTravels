@@ -204,4 +204,58 @@
     <loc>https://gagangowdap.github.io/KhushiTravels/services/wedding-guest-transport-tempo-traveller-bangalore.html</loc>
     <lastmod>2026-10-24</lastmod>
   </url>
+  <!-- Packages Directory & Category Hubs -->
+  <url>
+    <loc>https://gagangowdap.github.io/KhushiTravels/packages/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://gagangowdap.github.io/KhushiTravels/packages/special/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <!-- Normal Packages (12) -->
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/tirupati/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/coorg/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/ooty/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/mysore/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/chikmagalur/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/goa/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/pondicherry/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/wayanad/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/hampi/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/shirdi/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/mangalore-udupi/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/normal/kodaikanal/</loc><lastmod>2026-10-29</lastmod></url>
+  <!-- Special Packages (4) -->
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/special/12-jyotirlinga-pilgrimage/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/special/south-india-temple-circuit/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/special/karnataka-heritage-pilgrimage/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/special/shirdi-nashik-trimbakeshwar/</loc><lastmod>2026-10-29</lastmod></url>
+  <!-- Weekend Packages (18) -->
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/kodaikanal/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/gokarna/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/coorg/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/hampi/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/chikmagalur/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/dandeli/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/wayanad/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/ooty/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/sakleshpur/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/yercaud/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/pondicherry-mahabalipuram/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/horsley-hills/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/penukonda-lepakshi-adiyogi/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/gandikota-belum-caves/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/thekkady/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/munnar/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/goa/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gagangowdap.github.io/KhushiTravels/packages/weekend/vellore-tirupati/</loc><lastmod>2026-10-29</lastmod></url>
 </urlset>

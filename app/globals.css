@@ -73,3 +73,342 @@ summary:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================================================
+   Khushi Travels — Clean Modern Header Component Styles
+   ========================================================================== */
+@layer components {
+  /* Header root */
+  .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .site-header.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* Clean Modern Center Navigation Links */
+  .nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 2px;
+    font-size: 0.9375rem; /* 15px */
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.92);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #f59e0b;
+  }
+
+  .nav-link.active {
+    color: #f59e0b;
+    font-weight: 600;
+  }
+
+  .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #f59e0b;
+    border-radius: 9999px;
+  }
+
+  /* Scrolled state for navigation links */
+  .site-header.scrolled .nav-link {
+    color: #1a365d;
+    font-weight: 600;
+  }
+
+  .site-header.scrolled .nav-link:hover {
+    color: #d97706;
+  }
+
+  .site-header.scrolled .nav-link.active {
+    color: #d97706;
+  }
+
+  .site-header.scrolled .nav-link.active::after {
+    background: #d97706;
+  }
+
+  /* Header actions (Right) */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .action-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.25s ease;
+    text-decoration: none;
+  }
+
+  .action-icon:hover {
+    background: rgba(245, 158, 11, 0.25);
+    border-color: #f59e0b;
+    color: #f59e0b;
+    transform: translateY(-1px);
+  }
+
+  .site-header.scrolled .action-icon {
+    background: rgba(26, 54, 93, 0.06);
+    border-color: rgba(26, 54, 93, 0.1);
+    color: #1a365d;
+  }
+
+  .site-header.scrolled .action-icon:hover {
+    background: #1a365d;
+    color: #ffffff;
+    border-color: #1a365d;
+  }
+
+  /* Phone call button */
+  .nav-phone-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.01em;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+  }
+
+  .nav-phone-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(245, 158, 11, 0.45);
+    filter: brightness(1.05);
+  }
+
+  .site-header.scrolled .nav-phone-btn {
+    background: #1a365d;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(26, 54, 93, 0.25);
+  }
+
+  .site-header.scrolled .nav-phone-btn:hover {
+    background: #10213a;
+  }
+
+  /* Mobile menu toggle */
+  .menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffffff;
+    transition: all 0.25s ease;
+  }
+
+  .menu-toggle .close-icon {
+    display: none;
+  }
+
+  .menu-toggle.active {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .menu-toggle.active .ham-icon {
+    display: none;
+  }
+
+  .menu-toggle.active .close-icon {
+    display: block;
+    color: #1a365d;
+  }
+
+  .site-header.scrolled .menu-toggle {
+    color: #1a365d;
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  /* Mobile Overlay */
+  .mobile-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .mobile-overlay nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .mobile-overlay a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a365d;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-overlay a.active,
+  .mobile-overlay a.active-link {
+    color: #f59e0b !important;
+    font-weight: 700;
+  }
+
+  .mobile-overlay a:hover {
+    color: #f59e0b;
+  }
+
+  .mobile-overlay .mobile-socs {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .mobile-overlay .mobile-socs .soc-icon,
+  .mobile-overlay .mobile-socs .action-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 1023px) {
+    .menu-toggle {
+      display: inline-flex;
+    }
+
+    .site-header {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+  /* ==========================================================================
+     Khushi Travels — Hero Cinematic Styles (Restored from Project Git History)
+     ========================================================================== */
+  .hero-cinematic {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #071322;
+    background-image:
+      linear-gradient(90deg, #071322 0%, rgba(7, 19, 34, 0.96) 28%, rgba(7, 19, 34, 0.65) 38%, rgba(7, 19, 34, 0.15) 46%, transparent 52%),
+      linear-gradient(180deg, rgba(7, 19, 34, 0.75) 0%, rgba(7, 19, 34, 0.25) 75px, transparent 135px, transparent calc(100% - 90px), rgba(7, 19, 34, 0.8) 100%),
+      url('/images/hero-bg.webp');
+    background-position: 45% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .hero-title {
+    font-size: clamp(2.35rem, 1.5rem + 3.75vw, 4.25rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+
+  @media (min-width: 1200px) {
+    .hero-title {
+      font-size: 4rem; /* 64px on desktop */
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .hero-title {
+      font-size: 4.25rem; /* 68px on large desktop */
+    }
+  }
+
+  .hero-desc {
+    font-size: clamp(1rem, 0.95rem + 0.35vw, 1.125rem);
+    line-height: 1.65;
+    max-width: 36rem;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-desc {
+      font-size: 1.125rem; /* 18px on desktop */
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .hero-cinematic {
+      min-height: auto;
+      padding-top: 130px;
+      padding-bottom: 70px;
+      background-image:
+        linear-gradient(180deg, rgba(7, 19, 34, 0.88) 0%, rgba(7, 19, 34, 0.9) 45%, rgba(7, 19, 34, 0.98) 100%),
+        url('/images/hero-bg.webp');
+      background-position: 72% center;
+    }
+  }
+}
+

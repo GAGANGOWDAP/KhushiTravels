@@ -8,72 +8,52 @@ export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const navPillRef = useRef<HTMLDivElement>(null);
-  const backdropRef = useRef<HTMLDivElement>(null);
+  const [pkgDropdownOpen, setPkgDropdownOpen] = useState(false);
+  const [mobilePkgExpanded, setMobilePkgExpanded] = useState(false);
 
-  // Scroll listener for blur effect
+  const pkgDropdownRef = useRef<HTMLDivElement>(null);
+
+  // Scroll listener for smooth navbar transition
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
+      setScrolled(window.scrollY > 40);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Avtonova sliding pill backdrop logic
+  // Click outside and Escape key to close desktop dropdown
   useEffect(() => {
-    const navPill = navPillRef.current;
-    const backdrop = backdropRef.current;
-    if (!navPill || !backdrop) return;
-
-    const updateBackdrop = (el: HTMLElement | null) => {
-      if (!el) {
-        backdrop.style.opacity = "0";
-        return;
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (
+        pkgDropdownRef.current &&
+        !pkgDropdownRef.current.contains(e.target as Node)
+      ) {
+        setPkgDropdownOpen(false);
       }
-      const r = el.getBoundingClientRect();
-      const pr = navPill.getBoundingClientRect();
-      backdrop.style.left = `${r.left - pr.left}px`;
-      backdrop.style.width = `${r.width}px`;
-      backdrop.style.opacity = "1";
     };
 
-    const activeEl = navPill.querySelector<HTMLElement>("a.active-link");
-    updateBackdrop(activeEl);
-
-    const links = navPill.querySelectorAll<HTMLAnchorElement>("a");
-    const onEnter = (e: MouseEvent) => updateBackdrop(e.currentTarget as HTMLElement);
-    const onLeave = () => updateBackdrop(activeEl);
-
-    links.forEach((link) => {
-      link.addEventListener("mouseenter", onEnter);
-      link.addEventListener("mouseleave", onLeave);
-    });
-
-    const onResize = () => {
-      const currentActive = navPill.querySelector<HTMLElement>("a.active-link");
-      updateBackdrop(currentActive);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setPkgDropdownOpen(false);
+      }
     };
 
-    window.addEventListener("resize", onResize);
-
+    document.addEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("keydown", handleKeyDown);
     return () => {
-      links.forEach((link) => {
-        link.removeEventListener("mouseenter", onEnter);
-        link.removeEventListener("mouseleave", onLeave);
-      });
-      window.removeEventListener("resize", onResize);
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [pathname]);
+  }, []);
 
-  const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "Fleet", href: "/best-tempo-traveller-fleet-bangalore/" },
-    { label: "Packages", href: "/tour-packages-from-bangalore/" },
-    { label: "Pricing", href: "/tempo-traveller-rent-price-bangalore/" },
-    { label: "Contact", href: "/hire-tempo-traveller-bangalore/" },
-  ];
+  const isPackagesActive = Boolean(
+    pathname?.startsWith("/packages") ||
+      pathname?.startsWith("/tour-packages") ||
+      pathname?.startsWith("/spiritual-pilgrimage-tours") ||
+      pathname?.startsWith("/pilgrimage-packages")
+  );
 
   const isActive = (href: string) => {
     if (href === "/" && (pathname === "/" || pathname === "")) return true;
@@ -88,79 +68,222 @@ export default function Header() {
         className={`site-header ${scrolled ? "scrolled" : ""}`}
       >
         <div className="container-custom header-inner">
-          {/* Logo */}
-          <Link href="/" className="site-logo flex items-center">
+          {/* 1. Brand Logo (Left) */}
+          <Link href="/" className="site-logo flex items-center flex-shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/khushi-tours-and-travels-logo.webp"
               alt="Khushi Travels"
-              className="h-9 md:h-10 w-auto"
+              className="h-9 md:h-10 w-auto transition-transform duration-200 hover:opacity-95"
               width={160}
               height={40}
             />
           </Link>
 
-          {/* Pill Nav */}
-          <nav className="nav-pill" id="navPill" ref={navPillRef}>
+          {/* 2. Modern Open Navigation (Center) */}
+          <nav
+            className="hidden lg:flex items-center gap-7 xl:gap-9"
+            aria-label="Main Navigation"
+          >
+            {/* Home */}
+            <Link
+              href="/"
+              className={`nav-link ${isActive("/") ? "active" : ""}`}
+            >
+              Home
+            </Link>
+
+            {/* Fleet */}
+            <Link
+              href="/best-tempo-traveller-fleet-bangalore/"
+              className={`nav-link ${
+                isActive("/best-tempo-traveller-fleet-bangalore/") ? "active" : ""
+              }`}
+            >
+              Fleet
+            </Link>
+
+            {/* Packages Dropdown */}
             <div
-              className="pill-backdrop"
-              id="pillBackdrop"
-              ref={backdropRef}
-            ></div>
-            {navLinks.map((link, idx) => {
-              const active = isActive(link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  data-index={idx}
-                  className={active ? "active active-link" : ""}
+              ref={pkgDropdownRef}
+              className="relative inline-flex items-center"
+              onMouseEnter={() => setPkgDropdownOpen(true)}
+              onMouseLeave={() => setPkgDropdownOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={() => setPkgDropdownOpen((prev) => !prev)}
+                aria-expanded={pkgDropdownOpen}
+                aria-haspopup="true"
+                className={`nav-link flex items-center gap-1.5 cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-sm ${
+                  isPackagesActive ? "active" : ""
+                }`}
+              >
+                <span>Packages</span>
+                <svg
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                    pkgDropdownOpen ? "rotate-180 text-amber-500" : "opacity-70"
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  viewBox="0 0 24 24"
                 >
-                  {link.label}
-                </Link>
-              );
-            })}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              {/* Clean White Dropdown Menu */}
+              <div
+                className={`dropdown-menu absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-72 bg-white text-slate-800 rounded-2xl shadow-xl border border-gray-100 p-2 z-50 transition-all duration-200 ${
+                  pkgDropdownOpen
+                    ? "opacity-100 visible translate-y-0 pointer-events-auto"
+                    : "opacity-0 invisible -translate-y-2 pointer-events-none"
+                }`}
+                role="menu"
+                aria-orientation="vertical"
+              >
+                <div className="space-y-1">
+                  <Link
+                    href="/packages/normal/"
+                    role="menuitem"
+                    onClick={() => setPkgDropdownOpen(false)}
+                    className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
+                      pathname?.includes("/packages/normal")
+                        ? "bg-amber-50 text-amber-900 font-bold border border-amber-200"
+                        : "hover:bg-slate-50 text-slate-700 hover:text-[#1a365d]"
+                    }`}
+                  >
+                    <span className="text-xs font-bold flex items-center justify-between">
+                      Normal Packages
+                      <span className="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded text-slate-600 font-medium">
+                        Family Tours
+                      </span>
+                    </span>
+                    <span className="text-[11px] text-gray-500 font-normal mt-0.5">
+                      Tirupati, Coorg, Ooty, Mysore & Goa
+                    </span>
+                  </Link>
+
+                  <Link
+                    href="/packages/special/"
+                    role="menuitem"
+                    onClick={() => setPkgDropdownOpen(false)}
+                    className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
+                      pathname?.includes("/packages/special")
+                        ? "bg-amber-50 text-amber-900 font-bold border border-amber-200"
+                        : "hover:bg-slate-50 text-slate-700 hover:text-[#1a365d]"
+                    }`}
+                  >
+                    <span className="text-xs font-bold flex items-center justify-between">
+                      Special Packages
+                      <span className="text-[10px] bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded font-bold">
+                        ★ Pilgrimage
+                      </span>
+                    </span>
+                    <span className="text-[11px] text-gray-500 font-normal mt-0.5">
+                      12 Jyotirlinga Yatra & Sacred Shrines
+                    </span>
+                  </Link>
+
+                  <Link
+                    href="/packages/weekend/"
+                    role="menuitem"
+                    onClick={() => setPkgDropdownOpen(false)}
+                    className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
+                      pathname?.includes("/packages/weekend")
+                        ? "bg-amber-50 text-amber-900 font-bold border border-amber-200"
+                        : "hover:bg-slate-50 text-slate-700 hover:text-[#1a365d]"
+                    }`}
+                  >
+                    <span className="text-xs font-bold flex items-center justify-between">
+                      Weekend Packages
+                      <span className="text-[10px] bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded font-medium border border-emerald-200">
+                        18 Trips
+                      </span>
+                    </span>
+                    <span className="text-[11px] text-gray-500 font-normal mt-0.5">
+                      Gokarna, Dandeli, Hampi, Munnar & more
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Pricing */}
+            <Link
+              href="/tempo-traveller-rent-price-bangalore/"
+              className={`nav-link ${
+                isActive("/tempo-traveller-rent-price-bangalore/") ? "active" : ""
+              }`}
+            >
+              Pricing
+            </Link>
+
+            {/* Contact */}
+            <Link
+              href="/hire-tempo-traveller-bangalore/"
+              className={`nav-link ${
+                isActive("/hire-tempo-traveller-bangalore/") ? "active" : ""
+              }`}
+            >
+              Contact
+            </Link>
           </nav>
 
-          {/* Actions */}
-          <div className="header-actions">
+          {/* 3. Actions (Right) */}
+          <div className="header-actions flex items-center gap-2 sm:gap-2.5">
+            {/* WhatsApp */}
             <a
               href="https://wa.me/919901333113"
               target="_blank"
               rel="noopener noreferrer"
-              className="soc-icon"
+              className="action-icon"
               aria-label="WhatsApp"
             >
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
             </a>
+
+            {/* Instagram */}
             <a
               href="https://www.instagram.com/khushi_travels_"
               target="_blank"
               rel="noopener noreferrer"
-              className="soc-icon hidden sm:flex"
+              className="action-icon hidden sm:flex"
               aria-label="Instagram"
             >
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
               </svg>
             </a>
-            <a href="tel:+919901333113" className="phone-btn hidden sm:flex">
+
+            {/* Phone Button */}
+            <a
+              href="tel:+919901333113"
+              className="nav-phone-btn hidden sm:inline-flex"
+            >
               <svg
-                width="16"
-                height="16"
+                width="14"
+                height="14"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
               </svg>
-              +91 99013 33113
+              <span>+91 99013 33113</span>
             </a>
+
+            {/* Mobile Hamburger Button */}
             <button
               className={`menu-toggle ${mobileMenuOpen ? "active" : ""}`}
               id="menuToggle"
@@ -174,7 +297,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="1.5"
+                strokeWidth="2"
                 strokeLinecap="round"
               >
                 <path d="M4 6h16M4 12h16M4 18h16" />
@@ -186,7 +309,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="1.5"
+                strokeWidth="2"
                 strokeLinecap="round"
               >
                 <path d="M18 6L6 18M6 6l12 12" />
@@ -196,29 +319,142 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile Overlay */}
+      {/* Mobile Menu Overlay */}
       <div
         className={`mobile-overlay ${mobileMenuOpen ? "open" : ""}`}
         id="mobileOverlay"
       >
-        <nav>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={isActive(link.href) ? "active" : ""}
-              onClick={() => setMobileMenuOpen(false)}
+        <nav className="w-full max-w-sm flex flex-col items-center gap-6">
+          <Link
+            href="/"
+            className={isActive("/") ? "active" : ""}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            href="/best-tempo-traveller-fleet-bangalore/"
+            className={
+              isActive("/best-tempo-traveller-fleet-bangalore/") ? "active" : ""
+            }
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Fleet
+          </Link>
+
+          {/* Packages Expandable on Mobile */}
+          <div className="w-full flex flex-col items-center">
+            <button
+              type="button"
+              onClick={() => setMobilePkgExpanded(!mobilePkgExpanded)}
+              className={`flex items-center gap-2 text-xl font-semibold transition-colors ${
+                isPackagesActive ? "text-amber-600 font-bold" : "text-[#1a365d]"
+              }`}
+              aria-expanded={mobilePkgExpanded}
             >
-              {link.label}
-            </Link>
-          ))}
+              <span>Packages</span>
+              <svg
+                className={`w-4 h-4 transition-transform duration-200 ${
+                  mobilePkgExpanded ? "rotate-180 text-amber-500" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            {mobilePkgExpanded && (
+              <div className="flex flex-col items-center gap-3 py-3 px-6 bg-slate-50 rounded-2xl w-full max-w-xs mt-3 border border-slate-200/80 shadow-inner">
+                <Link
+                  href="/packages/normal/"
+                  className={`text-sm font-semibold transition-colors ${
+                    pathname?.includes("/packages/normal")
+                      ? "text-amber-600 font-bold"
+                      : "text-gray-700 hover:text-amber-600"
+                  }`}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobilePkgExpanded(false);
+                  }}
+                >
+                  Normal Packages
+                </Link>
+                <Link
+                  href="/packages/special/"
+                  className={`text-sm font-semibold transition-colors ${
+                    pathname?.includes("/packages/special")
+                      ? "text-amber-600 font-bold"
+                      : "text-gray-700 hover:text-amber-600"
+                  }`}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobilePkgExpanded(false);
+                  }}
+                >
+                  Special Packages
+                </Link>
+                <Link
+                  href="/packages/weekend/"
+                  className={`text-sm font-semibold transition-colors ${
+                    pathname?.includes("/packages/weekend")
+                      ? "text-amber-600 font-bold"
+                      : "text-gray-700 hover:text-amber-600"
+                  }`}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobilePkgExpanded(false);
+                  }}
+                >
+                  Weekend Packages (18)
+                </Link>
+                <Link
+                  href="/packages/"
+                  className="text-xs font-bold text-amber-600 hover:underline pt-2 border-t border-gray-200 w-full text-center"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobilePkgExpanded(false);
+                  }}
+                >
+                  View All Packages →
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <Link
+            href="/tempo-traveller-rent-price-bangalore/"
+            className={
+              isActive("/tempo-traveller-rent-price-bangalore/") ? "active" : ""
+            }
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Pricing
+          </Link>
+          <Link
+            href="/hire-tempo-traveller-bangalore/"
+            className={
+              isActive("/hire-tempo-traveller-bangalore/") ? "active" : ""
+            }
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Contact
+          </Link>
         </nav>
-        <div className="mobile-socs">
+
+        {/* Mobile Contact & Social Actions */}
+        <div className="mobile-socs flex items-center gap-3 mt-8">
           <a
             href="https://wa.me/919901333113"
             target="_blank"
             rel="noopener noreferrer"
-            className="soc-icon"
+            className="action-icon bg-emerald-600 text-white border-none w-11 h-11"
             aria-label="WhatsApp"
           >
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
@@ -227,7 +463,7 @@ export default function Header() {
           </a>
           <a
             href="tel:+919901333113"
-            className="soc-icon"
+            className="action-icon bg-[#1a365d] text-white border-none w-11 h-11"
             aria-label="Call Us"
           >
             <svg
