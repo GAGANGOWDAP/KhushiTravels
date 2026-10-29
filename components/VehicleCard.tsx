@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Vehicle } from "@/data/fleet";
+import { getAssetPath } from "@/lib/assets";
 
 interface VehicleCardProps {
   vehicle: Vehicle;
@@ -13,7 +14,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
         <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={vehicle.image}
+            src={getAssetPath(vehicle.image)}
             alt={vehicle.name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"

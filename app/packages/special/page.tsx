@@ -6,6 +6,7 @@ import PackageBreadcrumbs from "@/components/packages/PackageBreadcrumbs";
 import PackageCategoryHeader from "@/components/packages/PackageCategoryHeader";
 import PackageGrid from "@/components/packages/PackageGrid";
 import PackageEnquiryCTA from "@/components/packages/PackageEnquiryCTA";
+import { getAssetPath } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "Special & Pilgrimage Tour Packages from Bangalore | Khushi Travels",
@@ -125,7 +126,7 @@ export default function SpecialPackagesPage() {
                 <div className="lg:col-span-5 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-white/20">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/images/destinations/ayodhya.webp"
+                    src={getAssetPath("/images/destinations/ayodhya.webp")}
                     alt="12 Jyotirlinga Sacred Pilgrimage"
                     className="w-full h-full object-cover"
                     loading="lazy"

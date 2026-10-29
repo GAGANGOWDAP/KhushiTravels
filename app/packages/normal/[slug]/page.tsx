@@ -12,6 +12,7 @@ import PackageItinerary from "@/components/packages/PackageItinerary";
 import PackageInclusions from "@/components/packages/PackageInclusions";
 import PackageEnquiryCTA from "@/components/packages/PackageEnquiryCTA";
 import PackageCard from "@/components/packages/PackageCard";
+import { getAssetPath } from "@/lib/assets";
 
 interface PageProps {
   params: {
@@ -103,7 +104,7 @@ export default function NormalPackageDetailPage({ params }: PageProps) {
           <div className="absolute inset-0 z-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={pkg.image}
+              src={getAssetPath(pkg.image)}
               alt={pkg.title}
               className="w-full h-full object-cover opacity-25 filter blur-xs"
             />

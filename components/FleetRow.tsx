@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/assets";
 
 export default function FleetRows() {
   return (
@@ -112,7 +113,7 @@ export default function FleetRows() {
             <div className="space-y-4 sm:translate-y-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/luxury-10-seater-tempo-traveller-bangalore-1.webp"
+                src={getAssetPath("/images/fleet/luxury-10-seater-tempo-traveller-bangalore-1.webp")}
                 alt="10 seater luxury Tempo Traveller with Maharaja pushback seats"
                 className="rounded-2xl shadow-lg w-full h-64 object-cover"
                 loading="lazy"
@@ -121,7 +122,7 @@ export default function FleetRows() {
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/standard-12-seater-tempo-traveller-bangalore-1.webp"
+                src={getAssetPath("/images/fleet/standard-12-seater-tempo-traveller-bangalore-1.webp")}
                 alt="Luxury Tempo Traveller interior with premium seating"
                 className="rounded-2xl shadow-lg w-full h-48 object-cover"
                 loading="lazy"
@@ -132,7 +133,7 @@ export default function FleetRows() {
             <div className="space-y-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/luxury-12-seater-tempo-traveller-bangalore-1.webp"
+                src={getAssetPath("/images/fleet/luxury-12-seater-tempo-traveller-bangalore-1.webp")}
                 alt="Comfortable Maharaja seats in 12 seater luxury tempo traveller"
                 className="rounded-2xl shadow-lg w-full h-48 object-cover"
                 loading="lazy"
@@ -141,7 +142,7 @@ export default function FleetRows() {
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/luxury-16-seater-tempo-traveller-bangalore-1.webp"
+                src={getAssetPath("/images/fleet/luxury-16-seater-tempo-traveller-bangalore-1.webp")}
                 alt="16 seater luxury tempo traveller exterior"
                 className="rounded-2xl shadow-lg w-full h-64 object-cover"
                 loading="lazy"
@@ -158,7 +159,7 @@ export default function FleetRows() {
             <div className="space-y-4 sm:translate-y-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/force-urbania-10-seater-bangalore-1.webp"
+                src={getAssetPath("/images/fleet/force-urbania-10-seater-bangalore-1.webp")}
                 alt="Force Urbania 10 seater luxury rental Bangalore"
                 className="rounded-2xl shadow-lg w-full h-64 object-cover"
                 loading="lazy"
@@ -167,7 +168,7 @@ export default function FleetRows() {
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/force-urbania-16-seater-bangalore-3.webp"
+                src={getAssetPath("/images/fleet/force-urbania-16-seater-bangalore-3.webp")}
                 alt="Force Urbania 16 seater interior"
                 className="rounded-2xl shadow-lg w-full h-48 object-cover"
                 loading="lazy"
@@ -178,7 +179,7 @@ export default function FleetRows() {
             <div className="space-y-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/force-urbania-16-seater-bangalore-3.webp"
+                src={getAssetPath("/images/fleet/force-urbania-16-seater-bangalore-3.webp")}
                 alt="Force Urbania luxury seats with ample legroom"
                 className="rounded-2xl shadow-lg w-full h-48 object-cover"
                 loading="lazy"
@@ -187,7 +188,7 @@ export default function FleetRows() {
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/force-urbania-10-seater-bangalore-1.webp"
+                src={getAssetPath("/images/fleet/force-urbania-10-seater-bangalore-1.webp")}
                 alt="Spacious aisle and standing height interior of Force Urbania"
                 className="rounded-2xl shadow-lg w-full h-64 object-cover"
                 loading="lazy"
@@ -353,7 +354,7 @@ export default function FleetRows() {
             <div className="space-y-4 sm:translate-y-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/luxury-minibus-rental-bangalore-1.webp"
+                src={getAssetPath("/images/fleet/luxury-minibus-rental-bangalore-1.webp")}
                 alt="Luxury minibus rental Bangalore - 21 to 33 seater options"
                 className="rounded-2xl shadow-lg w-full h-64 object-cover"
                 loading="lazy"
@@ -362,7 +363,7 @@ export default function FleetRows() {
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/luxury-40-seater-bus-bangalore-1.webp"
+                src={getAssetPath("/images/fleet/luxury-40-seater-bus-bangalore-1.webp")}
                 alt="40 seater luxury bus exterior"
                 className="rounded-2xl shadow-lg w-full h-48 object-cover"
                 loading="lazy"
@@ -373,7 +374,7 @@ export default function FleetRows() {
             <div className="space-y-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/luxury-50-seater-bus-bangalore-1.webp"
+                src={getAssetPath("/images/fleet/luxury-50-seater-bus-bangalore-1.webp")}
                 alt="50 seater luxury bus for large groups"
                 className="rounded-2xl shadow-lg w-full h-48 object-cover"
                 loading="lazy"
@@ -382,7 +383,7 @@ export default function FleetRows() {
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/luxury-minibus-rental-bangalore-2.webp"
+                src={getAssetPath("/images/fleet/luxury-minibus-rental-bangalore-2.webp")}
                 alt="Premium minibus interior with air suspension"
                 className="rounded-2xl shadow-lg w-full h-64 object-cover"
                 loading="lazy"
@@ -399,7 +400,7 @@ export default function FleetRows() {
             <div className="space-y-4 sm:translate-y-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/toyota-innova-crysta-bangalore-1.webp"
+                src={getAssetPath("/images/fleet/toyota-innova-crysta-bangalore-1.webp")}
                 alt="Toyota Innova Crysta rental Bangalore - Luxury SUV"
                 className="rounded-2xl shadow-lg w-full h-64 object-cover"
                 loading="lazy"
@@ -408,7 +409,7 @@ export default function FleetRows() {
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/toyota-innova-crysta-bangalore-2.webp"
+                src={getAssetPath("/images/fleet/toyota-innova-crysta-bangalore-2.webp")}
                 alt="Luxury sedan car interior for executive travel"
                 className="rounded-2xl shadow-lg w-full h-48 object-cover"
                 loading="lazy"
@@ -419,7 +420,7 @@ export default function FleetRows() {
             <div className="space-y-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/toyota-innova-crysta-bangalore-2.webp"
+                src={getAssetPath("/images/fleet/toyota-innova-crysta-bangalore-2.webp")}
                 alt="Toyota Crysta luxury SUV for family outings Bangalore"
                 className="rounded-2xl shadow-lg w-full h-48 object-cover"
                 loading="lazy"
@@ -428,7 +429,7 @@ export default function FleetRows() {
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/fleet/toyota-innova-crysta-bangalore-1.webp"
+                src={getAssetPath("/images/fleet/toyota-innova-crysta-bangalore-1.webp")}
                 alt="Premium car for airport transfers Bangalore"
                 className="rounded-2xl shadow-lg w-full h-64 object-cover"
                 loading="lazy"

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ServiceCoverage from "@/components/ServiceCoverage";
+import { getAssetPath } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "Pilgrimage Tour Packages from Bangalore | Temple Yatras | Khushi Travels",
@@ -167,7 +168,7 @@ export default function PilgrimagePackagesPage() {
         className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 text-center overflow-hidden"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(10,24,46,0.92), rgba(10,24,46,0.85), rgba(10,24,46,0.98)), url('/images/hero-bg.webp') center/cover no-repeat",
+            `linear-gradient(to bottom, rgba(10,24,46,0.92), rgba(10,24,46,0.85), rgba(10,24,46,0.98)), url('${getAssetPath("/images/hero-bg.webp")}') center/cover no-repeat`,
         }}
       >
         <div className="container-custom max-w-4xl relative z-10">
@@ -255,7 +256,7 @@ export default function PilgrimagePackagesPage() {
               <div className="md:col-span-5 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-white/15">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/destinations/ayodhya.webp"
+                  src={getAssetPath("/images/destinations/ayodhya.webp")}
                   alt="25-Day 12 Jyotirlinga Spiritual Yatra"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -292,7 +293,7 @@ export default function PilgrimagePackagesPage() {
                   <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={pkg.image}
+                      src={getAssetPath(pkg.image)}
                       alt={pkg.alt}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"

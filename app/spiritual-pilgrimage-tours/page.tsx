@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ServiceCoverage from "@/components/ServiceCoverage";
 import ItineraryDaysAccordion from "@/components/ItineraryDaysAccordion";
 import SpiritualEnquiryForm from "@/components/SpiritualEnquiryForm";
+import { getAssetPath } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "25-Day 12 Jyotirlinga Spiritual Yatra from Bangalore | Khushi Travels",
@@ -346,7 +347,7 @@ export default function SpiritualPilgrimagePage() {
         className="relative min-h-[82vh] flex items-center overflow-hidden pt-32 pb-20"
         style={{
           background:
-            "linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(26,54,93,0.90) 100%), url('/images/hero-bg.webp') center/cover no-repeat",
+            `linear-gradient(135deg, rgba(10,22,40,0.92) 0%, rgba(26,54,93,0.90) 100%), url('${getAssetPath("/images/hero-bg.webp")}') center/cover no-repeat`,
         }}
       >
         <div className="container-custom relative z-10 text-center">
@@ -489,7 +490,7 @@ export default function SpiritualPilgrimagePage() {
                 <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={j.image}
+                    src={getAssetPath(j.image)}
                     alt={j.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
@@ -560,7 +561,7 @@ export default function SpiritualPilgrimagePage() {
                 <div className="relative h-56 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={dest.image}
+                    src={getAssetPath(dest.image)}
                     alt={dest.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"

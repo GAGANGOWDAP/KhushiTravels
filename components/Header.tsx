@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { getAssetPath } from "@/lib/assets";
 
 export default function Header() {
   const pathname = usePathname();
@@ -72,7 +73,7 @@ export default function Header() {
           <Link href="/" className="site-logo flex items-center flex-shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/khushi-tours-and-travels-logo.webp"
+              src={getAssetPath("/images/khushi-tours-and-travels-logo.webp")}
               alt="Khushi Travels"
               className="h-9 md:h-10 w-auto transition-transform duration-200 hover:opacity-95"
               width={160}

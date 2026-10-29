@@ -4,6 +4,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ServiceCoverage from "@/components/ServiceCoverage";
 import TourDestinationsFilter from "@/components/TourDestinationsFilter";
+import { getAssetPath } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "Tour Packages from Bangalore | Tempo Traveller Outstation | Khushi Travels",
@@ -244,7 +245,7 @@ export default function TourPackagesPage() {
       <section
         className="relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden pt-28 pb-20 sm:pt-32 sm:pb-24 text-center"
         style={{
-          backgroundImage: "url('/images/hero-bg.webp')",
+          backgroundImage: `url('${getAssetPath("/images/hero-bg.webp")}')`,
           backgroundPosition: "center 25%",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -369,7 +370,7 @@ export default function TourPackagesPage() {
                 <div className="relative min-h-[220px] md:min-h-full overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/images/destinations/tirupati.webp"
+                    src={getAssetPath("/images/destinations/tirupati.webp")}
                     alt="12 Dwadasha Jyotirlinga Darshana pilgrimage tour"
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
@@ -984,7 +985,7 @@ export default function TourPackagesPage() {
                 <div className="w-24 h-24 shrink-0 bg-gray-100">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={trip.image}
+                    src={getAssetPath(trip.image)}
                     alt={trip.alt}
                     className="w-full h-full object-cover"
                     loading="lazy"

@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import VehicleCard from "@/components/VehicleCard";
 import ServiceCoverage from "@/components/ServiceCoverage";
 import { FLEET_DATA } from "@/data/fleet";
+import { getAssetPath } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "Tempo Traveller Fleet Bangalore | 9, 12, 14, 16 Seater & Urbania | Khushi Travels",
@@ -28,7 +29,7 @@ export default function FleetPage() {
         className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 text-center overflow-hidden"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(10,24,46,0.92), rgba(10,24,46,0.85), rgba(10,24,46,0.98)), url('/images/hero-bg.webp') center/cover no-repeat",
+            `linear-gradient(to bottom, rgba(10,24,46,0.92), rgba(10,24,46,0.85), rgba(10,24,46,0.98)), url('${getAssetPath("/images/hero-bg.webp")}') center/cover no-repeat`,
         }}
       >
         <div className="container-custom max-w-4xl relative z-10">

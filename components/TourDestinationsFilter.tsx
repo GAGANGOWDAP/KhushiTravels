@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { getAssetPath } from "@/lib/assets";
 
 interface DestinationItem {
   name: string;
@@ -382,7 +383,7 @@ export default function TourDestinationsFilter() {
               <div className="h-44 overflow-hidden bg-gray-100">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={item.image}
+                  src={getAssetPath(item.image)}
                   alt={item.alt}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"

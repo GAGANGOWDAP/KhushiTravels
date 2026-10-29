@@ -6,6 +6,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import ServiceCoverage from "@/components/ServiceCoverage";
 import { ROUTES_DATA } from "@/data/routes";
 import { FAQS_DATA } from "@/data/faqs";
+import { getAssetPath } from "@/lib/assets";
 
 interface RoutePageProps {
   params: {
@@ -105,7 +106,7 @@ export default function RouteDetailPage({ params }: RoutePageProps) {
               <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-lg border border-gray-100 bg-gray-100">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={route.image}
+                  src={getAssetPath(route.image)}
                   alt={`Bangalore to ${route.destination} travel scenery`}
                   className="w-full h-full object-cover"
                   loading="eager"

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContactForm from "@/components/ContactForm";
 import ServiceCoverage from "@/components/ServiceCoverage";
+import { getAssetPath } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: "Hire Tempo Traveller in Bangalore | Instant Booking | Khushi Travels",
@@ -27,7 +28,7 @@ export default function ContactPage() {
         className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 text-center overflow-hidden"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(10,24,46,0.92), rgba(10,24,46,0.85), rgba(10,24,46,0.98)), url('/images/hero-bg.webp') center/cover no-repeat",
+            `linear-gradient(to bottom, rgba(10,24,46,0.92), rgba(10,24,46,0.85), rgba(10,24,46,0.98)), url('${getAssetPath("/images/hero-bg.webp")}') center/cover no-repeat`,
         }}
       >
         <div className="container-custom max-w-4xl relative z-10">

@@ -363,7 +363,7 @@ summary:focus-visible {
     background-image:
       linear-gradient(90deg, #071322 0%, rgba(7, 19, 34, 0.96) 28%, rgba(7, 19, 34, 0.65) 38%, rgba(7, 19, 34, 0.15) 46%, transparent 52%),
       linear-gradient(180deg, rgba(7, 19, 34, 0.75) 0%, rgba(7, 19, 34, 0.25) 75px, transparent 135px, transparent calc(100% - 90px), rgba(7, 19, 34, 0.8) 100%),
-      url('/images/hero-bg.webp');
+      var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
     background-position: 45% center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -402,11 +402,11 @@ summary:focus-visible {
   @media (max-width: 1024px) {
     .hero-cinematic {
       min-height: auto;
-      padding-top: 130px;
-      padding-bottom: 70px;
+      padding-top: 108px;
+      padding-bottom: 60px;
       background-image:
         linear-gradient(180deg, rgba(7, 19, 34, 0.88) 0%, rgba(7, 19, 34, 0.9) 45%, rgba(7, 19, 34, 0.98) 100%),
-        url('/images/hero-bg.webp');
+        var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
       background-position: 72% center;
     }
   }

@@ -6,6 +6,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import ServiceCoverage from "@/components/ServiceCoverage";
 import { FLEET_DATA } from "@/data/fleet";
 import { FAQS_DATA } from "@/data/faqs";
+import { getAssetPath } from "@/lib/assets";
 
 interface FleetPageProps {
   params: {
@@ -133,7 +134,7 @@ export default function VehicleDetailPage({ params }: FleetPageProps) {
               <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 aspect-[16/10] bg-gray-100">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={vehicle.image}
+                  src={getAssetPath(vehicle.image)}
                   alt={vehicle.name}
                   className="w-full h-full object-cover"
                   loading="eager"
@@ -151,7 +152,7 @@ export default function VehicleDetailPage({ params }: FleetPageProps) {
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src={img}
+                        src={getAssetPath(img)}
                         alt={`${vehicle.name} interior / exterior ${i + 1}`}
                         className="w-full h-full object-cover"
                         loading="lazy"

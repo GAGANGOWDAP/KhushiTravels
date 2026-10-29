@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { DetailedPackage } from "@/data/packages";
+import { getAssetPath } from "@/lib/assets";
 
 interface PackageCardProps {
   pkg: DetailedPackage;
@@ -19,7 +20,7 @@ export default function PackageCard({ pkg }: PackageCardProps) {
       <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={pkg.image}
+          src={getAssetPath(pkg.image)}
           alt={`${pkg.title} - ${pkg.destination} tour package`}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy"

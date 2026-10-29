@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/assets";
 
 export default function Footer() {
   const currentYear = 2026;
@@ -47,7 +48,7 @@ export default function Footer() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/khushi-tours-and-travels-logo.webp"
+                src={getAssetPath("/images/khushi-tours-and-travels-logo.webp")}
                 alt="Khushi Tours & Travels"
                 className="h-16 md:h-18 w-auto drop-shadow-md"
                 loading="lazy"

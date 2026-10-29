@@ -5,12 +5,20 @@ import FAQAccordion from "@/components/FAQAccordion";
 import ServiceCoverage from "@/components/ServiceCoverage";
 import { FAQS_DATA } from "@/data/faqs";
 import { ROUTES_DATA } from "@/data/routes";
+import { getAssetPath } from "@/lib/assets";
 
 export default function HomePage() {
   return (
     <>
       {/* ===== HERO CINEMATIC ===== */}
-      <section className="hero-cinematic relative overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-36 md:pb-24 lg:pt-36 lg:pb-20">
+      <section
+        className="hero-cinematic relative overflow-hidden pt-24 pb-14 sm:pt-28 sm:pb-16 md:pt-28 md:pb-16 lg:pt-28 lg:pb-16"
+        style={
+          {
+            "--hero-bg-image": `url(${getAssetPath("/images/hero-bg.webp")})`,
+          } as React.CSSProperties
+        }
+      >
         <div className="container-custom w-full relative z-10">
           <div className="max-w-2xl text-left">
             {/* Eyebrow */}
@@ -126,7 +134,7 @@ export default function HomePage() {
               <div className="relative min-h-[220px] md:min-h-full overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/destinations/ayodhya.webp"
+                  src={getAssetPath("/images/destinations/ayodhya.webp")}
                   alt="12 Dwadasha Jyotirlinga Darshana pilgrimage tour"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
@@ -374,7 +382,7 @@ export default function HomePage() {
                   <div className="relative aspect-[16/10] overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={route.image}
+                      src={getAssetPath(route.image)}
                       alt={`Bangalore to ${route.destination} tempo traveller rental`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
