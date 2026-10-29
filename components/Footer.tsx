@@ -27,15 +27,6 @@ export default function Footer() {
       className="relative pt-16 pb-20 md:pb-12 border-t border-white/10 overflow-hidden text-[#B8C8DE]"
       style={{ background: "linear-gradient(180deg, #1B365D 0%, #142D4F 100%)" }}
     >
-      {/* Subtle decorative glow elements */}
-      <div
-        className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"
-        aria-hidden="true"
-      >
-        <div className="absolute -top-32 -left-32 w-80 h-80 bg-[#FFA10A]/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
-      </div>
-
       <div className="container-custom relative z-10">
         {/* Balanced 4-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">

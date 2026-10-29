@@ -3,6 +3,7 @@ import Link from "next/link";
 import FleetRows from "@/components/FleetRow";
 import FAQAccordion from "@/components/FAQAccordion";
 import ServiceCoverage from "@/components/ServiceCoverage";
+import FeaturedPilgrimageCard from "@/components/FeaturedPilgrimageCard";
 import { FAQS_DATA } from "@/data/faqs";
 import { ROUTES_DATA } from "@/data/routes";
 import { getAssetPath } from "@/lib/assets";
@@ -120,79 +121,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== FEATURED PILGRIMAGE TOUR BANNER ===== */}
-      <section className="bg-white section-py">
-        <div className="container-custom max-w-6xl">
-          <div
-            className="group relative rounded-3xl shadow-xl border border-brand-amber/35 hover:border-brand-amber/60 hover:shadow-2xl transition-all overflow-hidden"
-            style={{
-              background:
-                "linear-gradient(135deg, #0a1628 0%, #132244 50%, #0f1f3d 100%)",
-            }}
-          >
-            <div className="relative z-10 grid md:grid-cols-[320px_1fr]">
-              <div className="relative min-h-[220px] md:min-h-full overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={getAssetPath("/images/destinations/ayodhya.webp")}
-                  alt="12 Dwadasha Jyotirlinga Darshana pilgrimage tour"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                  width={600}
-                  height={400}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0a1628] via-[#0a1628]/40 to-transparent"></div>
-                <div className="absolute top-3 left-3 gradient-amber text-brand-navy text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-lg">
-                  Featured Yatra
-                </div>
-              </div>
-
-              <div className="p-6 sm:p-8 flex flex-col justify-center text-left">
-                <div className="flex flex-wrap items-center gap-2 mb-3">
-                  <span className="text-[10px] font-bold text-brand-amber bg-brand-amber/10 px-2.5 py-1 rounded-full uppercase tracking-wider border border-brand-amber/15">
-                    Proposed 25-Day Spiritual Pilgrimage
-                  </span>
-                  <span className="text-white/60 text-xs">
-                    Bengaluru Departure &bull; All 12 Sacred Jyotirlingas
-                  </span>
-                </div>
-
-                <h3 className="font-heading text-2xl md:text-3xl font-extrabold text-white mb-2">
-                  <Link
-                    href="/spiritual-pilgrimage-tours/"
-                    className="hover:text-brand-amber transition-colors"
-                  >
-                    25-Day 12 Jyotirlinga{" "}
-                    <span className="text-brand-amber">Spiritual Yatra</span>
-                  </Link>
-                </h3>
-                <p className="text-white/75 text-sm leading-relaxed mb-6 max-w-2xl">
-                  Pan-India devotional tour covering all twelve sacred Jyotirlingas,
-                  Ayodhya Ram Mandir, Mathura, Vrindavan, Gaya, and Puri with luxury
-                  AC Volvo transport and verified 3-star accommodations.
-                </p>
-
-                <div className="flex flex-wrap items-center gap-4">
-                  <Link
-                    href="/spiritual-pilgrimage-tours/"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full gradient-amber text-white font-heading font-bold text-xs shadow hover:-translate-y-0.5 transition-all"
-                  >
-                    View Full Day-by-Day Itinerary &rarr;
-                  </Link>
-                  <a
-                    href="https://wa.me/919901333113?text=Hi%20Khushi%20Travels%2C%20I'm%20interested%20in%20the%2025-Day%2012%20Jyotirlinga%20Yatra."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 text-white font-heading font-bold text-xs hover:bg-white/20 transition-all border border-white/20"
-                  >
-                    WhatsApp Inquiries
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ===== FEATURED PILGRIMAGE TOUR SHOWCASE ===== */}
+      <FeaturedPilgrimageCard />
 
       {/* ===== ABOUT / AEO ANSWER BLOCK ===== */}
       <section className="bg-white section-py">
