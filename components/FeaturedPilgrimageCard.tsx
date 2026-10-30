@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { getAssetPath } from "@/lib/assets";
 
@@ -35,8 +35,8 @@ const PILGRIMAGE_SLIDES: PilgrimageTourSlide[] = [
     badgeTop: "FEATURED",
     badgeBottomTitle: "Spiritual",
     badgeBottomSubtitle: "PILGRIMAGE",
-    image: "/images/destinations/Rameswaram.webp",
-    imageAlt: "12 Dwadasha Jyotirlinga Darshana pilgrimage tour temple gopuram",
+    image: "/images/destinations/12-jyotirlinga-shiva.jpg",
+    imageAlt: "Explore 12 Jyotirlingas of India - 25-Day Proposed Spiritual Pilgrimage Yatra",
     tag1: "PROPOSED PILGRIMAGE PACKAGE",
     tag2: "Proposed 25-Day Yatra • Bengaluru Departure",
     titlePart1: "25–Day 12 Jyotirlinga",
@@ -166,17 +166,47 @@ const PILGRIMAGE_SLIDES: PilgrimageTourSlide[] = [
 
 export default function FeaturedPilgrimageCard() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const touchStartX = useRef<number | null>(null);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex((prev) =>
       prev === 0 ? PILGRIMAGE_SLIDES.length - 1 : prev - 1
     );
-  };
+  }, []);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prev) =>
       prev === PILGRIMAGE_SLIDES.length - 1 ? 0 : prev + 1
     );
+  }, []);
+
+  // Automatic slide rotation: advances every 5 seconds, pauses when user hovers or interacts
+  useEffect(() => {
+    if (isPaused) return;
+
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [isPaused, nextSlide]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsPaused(true);
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    setIsPaused(false);
+    if (touchStartX.current === null) return;
+    const diff = e.changedTouches[0].clientX - touchStartX.current;
+    if (diff > 50) {
+      prevSlide();
+    } else if (diff < -50) {
+      nextSlide();
+    }
+    touchStartX.current = null;
   };
 
   const slide = PILGRIMAGE_SLIDES[currentIndex];
@@ -185,15 +215,24 @@ export default function FeaturedPilgrimageCard() {
     <section className="bg-white py-12 sm:py-16 md:py-20" aria-label="Featured Pilgrimage Tour">
       <div className="container-custom max-w-7xl">
         {/* Main Card Container */}
-        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#0a1424] border-2 border-amber-500/80 shadow-2xl">
+        <div
+          className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#0a1424] border-2 border-amber-500/80 shadow-2xl transition-all duration-300"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          onFocus={() => setIsPaused(true)}
+          onBlur={() => setIsPaused(false)}
+        >
           <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] xl:grid-cols-[410px_1fr]">
             {/* Left Column: Image Area */}
             <div className="relative min-h-[300px] sm:min-h-[340px] lg:min-h-[480px] w-full overflow-hidden bg-[#071322]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
+                key={slide.id}
                 src={getAssetPath(slide.image)}
                 alt={slide.imageAlt}
-                className="w-full h-full object-cover object-center transition-all duration-700"
+                className="w-full h-full object-cover object-center transition-all duration-700 animate-fade-in"
                 loading="lazy"
                 width={800}
                 height={600}
@@ -244,7 +283,10 @@ export default function FeaturedPilgrimageCard() {
             </div>
 
             {/* Right Column: Content Area */}
-            <div className="relative p-6 sm:p-8 lg:p-9 xl:p-10 flex flex-col justify-between text-left">
+            <div
+              key={slide.id}
+              className="relative p-6 sm:p-8 lg:p-9 xl:p-10 flex flex-col justify-between text-left animate-fade-in"
+            >
               {/* Right Navigation Arrow Button (Desktop & Tablet) */}
               <button
                 type="button"
