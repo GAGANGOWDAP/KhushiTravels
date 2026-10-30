@@ -124,6 +124,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/packages/"
+                  className="text-[#B8C8DE] hover:text-[#FFA10A] hover:translate-x-1 inline-flex items-center gap-2 transition-all duration-200 text-sm"
+                >
+                  <span className="text-[#FFA10A]/60">&rsaquo;</span> Packages
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/services/luxury-tempo-traveller-blog/"
                   className="text-[#B8C8DE] hover:text-[#FFA10A] hover:translate-x-1 inline-flex items-center gap-2 transition-all duration-200 text-sm"
                 >

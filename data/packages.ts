@@ -1469,7 +1469,7 @@ export const WEEKEND_PACKAGES: DetailedPackage[] = [
 export const NORMAL_PACKAGES: DetailedPackage[] = [
   {
     slug: "tirupati",
-    title: "Tirupati Balaji VIP Darshan Tour Package",
+    title: "Nava Tirupati VIP Darshan Tour Package",
     category: "normal",
     destination: "Tirupati & Tirumala, Andhra Pradesh",
     duration: "1 Day / 2 Days",
@@ -2215,7 +2215,7 @@ export const SPECIAL_PACKAGES: DetailedPackage[] = [
     badge: "Spiritual Classic",
     image: "/images/destinations/Rameswaram.webp",
     description:
-      "A revered pilgrimage through the grandest temple gopurams of South India. Covers Tirupati Balaji, Madurai Meenakshi Amman, Rameswaram Ramanathaswamy Jyotirlinga, Kanyakumari Triveni Sangam, and Thanjavur Brihadeeswarar Temple.",
+      "A revered pilgrimage through the grandest temple gopurams of South India. Covers Nava Tirupati, Madurai Meenakshi Amman, Rameswaram Ramanathaswamy Jyotirlinga, Kanyakumari Triveni Sangam, and Thanjavur Brihadeeswarar Temple.",
     highlights: [
       "Tirumala Sri Venkateswara Temple VIP Darshan",
       "Madurai Meenakshi Amman Temple thousand-pillar hall",

@@ -17,7 +17,7 @@ export default function ServiceCoverage() {
       "bangalore-to-coorg-tempo-traveller": "Bengaluru to Coorg",
       "bangalore-to-ooty-tempo-traveller": "Bengaluru to Ooty",
       "bangalore-to-wayanad-tempo-traveller": "Bengaluru to Wayanad",
-      "bangalore-to-tirupati-tempo-traveller": "Bengaluru to Tirupati Balaji",
+      "bangalore-to-tirupati-tempo-traveller": "Bengaluru to Nava Tirupati",
       "bangalore-to-chikmagalur-tempo-traveller": "Bengaluru to Chikkamagaluru",
       "bangalore-to-pondicherry-tempo-traveller": "Bengaluru to Pondicherry",
       "bangalore-to-goa-tempo-traveller": "Bengaluru to Goa",

@@ -75,7 +75,7 @@ const PILGRIMAGE_SLIDES: PilgrimageTourSlide[] = [
     titlePart1: "7–Day South India",
     titleHighlight: "Temple Circuit",
     tagline:
-      "Tirupati Balaji, Madurai Meenakshi, Rameshwaram & Kanyakumari.",
+      "Nava Tirupati, Madurai Meenakshi, Rameshwaram & Kanyakumari.",
     description:
       "Complete spiritual circuit across the grandest temples of Tamil Nadu and Andhra Pradesh. Chauffeur-driven luxury tempo traveller with dedicated pooja assistance and verified star accommodations.",
     stats: [

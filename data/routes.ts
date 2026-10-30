@@ -67,7 +67,7 @@ export const ROUTES_DATA: RouteItem[] = [
   },
   {
     slug: "bangalore-to-tirupati-tempo-traveller",
-    destination: "Tirupati Balaji",
+    destination: "Nava Tirupati",
     distanceKm: 250,
     durationHrs: "4-5 hrs",
     recommendedDuration: "1 to 2 Days",

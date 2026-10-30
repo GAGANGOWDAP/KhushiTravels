@@ -108,7 +108,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     content: [
       "Planning a holiday to Coorg, Ooty, or Chikmagalur? Our comprehensive road trip guides break down travel times, recommended highway eateries, ghat-section driving tips, and the best seasons to visit.",
       "Compare 9-seater Maharaja seats against 12-seater executive layouts and Force Urbania models to select the perfect vehicle for your group size and budget.",
-      "Read our guides on spiritual pilgrimage planning, including Tirupati Balaji darshan, 12 Jyotirlinga yatras, and temple circuits from Bengaluru.",
+      "Read our guides on spiritual pilgrimage planning, including Nava Tirupati darshan, 12 Jyotirlinga yatras, and temple circuits from Bengaluru.",
     ],
     features: [
       { title: "Detailed Itineraries", desc: "Day-by-day travel plans for weekend getaways and multi-state spiritual yatras." },

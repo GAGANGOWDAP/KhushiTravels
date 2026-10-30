@@ -22,7 +22,7 @@ const DESTINATIONS: DestinationItem[] = [
     badgeLabel: "Pilgrimage",
     badgeClass: "bg-amber-100 text-amber-800",
     image: "/images/destinations/tirupati.webp",
-    alt: "Tirupati Balaji temple tour package from Bangalore",
+    alt: "Nava Tirupati temple tour package from Bangalore",
     distance: "250 km from Bangalore",
     duration: "2D / 1N",
     price: "₹9,500",

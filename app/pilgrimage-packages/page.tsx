@@ -46,9 +46,9 @@ export default function PilgrimagePackagesPage() {
 
   const pilgrimageTours = [
     {
-      name: "Tirupati Balaji VIP Darshan",
+      name: "Nava Tirupati VIP Darshan",
       image: "/images/destinations/tirupati.webp",
-      alt: "Tirupati Balaji temple tour package from Bangalore",
+      alt: "Nava Tirupati temple tour package from Bangalore",
       distance: "250 km from Bangalore",
       duration: "1 or 2 Days",
       price: "₹9,500",
