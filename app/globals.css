@@ -381,18 +381,21 @@ summary:focus-visible {
      ========================================================================== */
   .hero-cinematic {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
+    height: 100svh;
     min-height: 100svh;
+    max-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: calc(var(--navbar-height, 80px) + clamp(0.75rem, 1.75vh, 1.75rem));
-    padding-bottom: clamp(2.5rem, 4.5vh, 4rem);
+    padding-top: var(--navbar-height, 80px);
+    padding-bottom: clamp(1rem, 2vh, 2rem);
     box-sizing: border-box;
+    overflow: hidden;
     background-color: #071322;
     background-image:
       linear-gradient(90deg, #071322 0%, rgba(7, 19, 34, 0.96) 30%, rgba(7, 19, 34, 0.72) 42%, rgba(7, 19, 34, 0.2) 56%, transparent 68%),
-      linear-gradient(180deg, rgba(7, 19, 34, 0.82) 0%, rgba(7, 19, 34, 0.2) 90px, transparent 150px, transparent calc(100% - 100px), rgba(7, 19, 34, 0.9) 100%),
+      linear-gradient(180deg, rgba(7, 19, 34, 0.82) 0%, rgba(7, 19, 34, 0.2) 90px, transparent 150px, transparent calc(100% - 90px), rgba(7, 19, 34, 0.95) 100%),
       var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
     background-position: right 10% center;
     background-size: cover;
@@ -400,7 +403,7 @@ summary:focus-visible {
   }
 
   .hero-title {
-    font-size: clamp(1.85rem, 1.35rem + 2.5vw, 4.25rem);
+    font-size: clamp(1.75rem, 1.4rem + 1.8vw, 4.25rem);
     line-height: 1.08;
     letter-spacing: -0.025em;
   }
@@ -418,8 +421,8 @@ summary:focus-visible {
   }
 
   .hero-desc {
-    font-size: clamp(0.875rem, 0.8rem + 0.35vw, 1.125rem);
-    line-height: 1.6;
+    font-size: clamp(0.85rem, 0.78rem + 0.3vw, 1.125rem);
+    line-height: 1.55;
     max-width: 36rem;
   }
 
@@ -433,13 +436,16 @@ summary:focus-visible {
   /* Tablet optimization (768 x 1024 etc.) */
   @media (min-width: 641px) and (max-width: 1023px) {
     .hero-cinematic {
-      min-height: 100vh;
+      height: 100vh;
+      height: 100svh;
       min-height: 100svh;
-      padding-top: calc(var(--navbar-height, 68px) + clamp(1rem, 2vh, 2rem));
-      padding-bottom: clamp(2.5rem, 4vh, 3.5rem);
+      max-height: 100svh;
+      padding-top: var(--navbar-height, 68px);
+      padding-bottom: clamp(1rem, 2vh, 2rem);
+      justify-content: center;
       background-image:
         linear-gradient(90deg, #071322 0%, rgba(7, 19, 34, 0.94) 40%, rgba(7, 19, 34, 0.7) 60%, rgba(7, 19, 34, 0.35) 80%, transparent 100%),
-        linear-gradient(180deg, rgba(7, 19, 34, 0.8) 0%, transparent 120px, transparent calc(100% - 90px), rgba(7, 19, 34, 0.9) 100%),
+        linear-gradient(180deg, rgba(7, 19, 34, 0.8) 0%, transparent 120px, transparent calc(100% - 90px), rgba(7, 19, 34, 0.95) 100%),
         var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
       background-position: 68% center;
     }
@@ -448,20 +454,35 @@ summary:focus-visible {
   /* Mobile optimization (360x800, 375x812, 390x844, 430x932) */
   @media (max-width: 640px) {
     .hero-cinematic {
-      min-height: 100vh;
+      height: 100vh;
+      height: 100svh;
       min-height: 100svh;
-      padding-top: calc(var(--navbar-height, 68px) + clamp(0.75rem, 1.5vh, 1.25rem));
-      padding-bottom: clamp(2.5rem, 3.5vh, 3.25rem);
+      max-height: 100svh;
+      justify-content: flex-start;
+      padding-top: calc(var(--navbar-height, 68px) + clamp(0.75rem, 2vh, 1.25rem));
+      padding-bottom: clamp(1rem, 2.5vh, 1.75rem);
       background-image:
         linear-gradient(180deg, 
-          rgba(7, 19, 34, 0.94) 0%, 
-          rgba(7, 19, 34, 0.86) 38%, 
-          rgba(7, 19, 34, 0.6) 62%, 
-          rgba(7, 19, 34, 0.28) 78%, 
-          rgba(7, 19, 34, 0.9) 100%
+          rgba(7, 19, 34, 0.95) 0%, 
+          rgba(7, 19, 34, 0.88) 38%, 
+          rgba(7, 19, 34, 0.55) 62%, 
+          rgba(7, 19, 34, 0.22) 78%, 
+          rgba(7, 19, 34, 0.92) 100%
         ),
         var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
       background-position: 74% 65%;
+    }
+  }
+
+  /* Gracefully handle ultra-short screens / landscape mobile */
+  @media (max-height: 580px) {
+    .hero-cinematic {
+      height: auto;
+      min-height: 100svh;
+      max-height: none;
+      overflow: visible;
+      padding-top: calc(var(--navbar-height, 68px) + 12px);
+      padding-bottom: 24px;
     }
   }
 }
