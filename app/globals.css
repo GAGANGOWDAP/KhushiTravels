@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --navbar-height: 80px;
+  }
+
+  @media (max-width: 1023px) {
+    :root {
+      --navbar-height: 68px;
+    }
+  }
+
   html {
     scroll-behavior: smooth;
     font-family: var(--font-body), Inter, sans-serif;
@@ -367,32 +377,37 @@ summary:focus-visible {
   }
 
   /* ==========================================================================
-     Khushi Travels — Hero Cinematic Styles (Restored from Project Git History)
+     Khushi Travels — Full Viewport Hero Section Optimization
      ========================================================================== */
   .hero-cinematic {
     position: relative;
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: calc(var(--navbar-height, 80px) + clamp(0.75rem, 1.75vh, 1.75rem));
+    padding-bottom: clamp(2.5rem, 4.5vh, 4rem);
+    box-sizing: border-box;
     background-color: #071322;
     background-image:
-      linear-gradient(90deg, #071322 0%, rgba(7, 19, 34, 0.96) 28%, rgba(7, 19, 34, 0.65) 38%, rgba(7, 19, 34, 0.15) 46%, transparent 52%),
-      linear-gradient(180deg, rgba(7, 19, 34, 0.75) 0%, rgba(7, 19, 34, 0.25) 75px, transparent 135px, transparent calc(100% - 90px), rgba(7, 19, 34, 0.8) 100%),
+      linear-gradient(90deg, #071322 0%, rgba(7, 19, 34, 0.96) 30%, rgba(7, 19, 34, 0.72) 42%, rgba(7, 19, 34, 0.2) 56%, transparent 68%),
+      linear-gradient(180deg, rgba(7, 19, 34, 0.82) 0%, rgba(7, 19, 34, 0.2) 90px, transparent 150px, transparent calc(100% - 100px), rgba(7, 19, 34, 0.9) 100%),
       var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
-    background-position: 45% center;
+    background-position: right 10% center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .hero-title {
-    font-size: clamp(2.35rem, 1.5rem + 3.75vw, 4.25rem);
+    font-size: clamp(1.85rem, 1.35rem + 2.5vw, 4.25rem);
     line-height: 1.08;
     letter-spacing: -0.025em;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1024px) {
     .hero-title {
-      font-size: 4rem; /* 64px on desktop */
+      font-size: clamp(2.75rem, 1.75rem + 2vw, 3.85rem);
     }
   }
 
@@ -403,26 +418,50 @@ summary:focus-visible {
   }
 
   .hero-desc {
-    font-size: clamp(1rem, 0.95rem + 0.35vw, 1.125rem);
-    line-height: 1.65;
+    font-size: clamp(0.875rem, 0.8rem + 0.35vw, 1.125rem);
+    line-height: 1.6;
     max-width: 36rem;
   }
 
   @media (min-width: 1024px) {
     .hero-desc {
       font-size: 1.125rem; /* 18px on desktop */
+      line-height: 1.65;
     }
   }
 
-  @media (max-width: 1024px) {
+  /* Tablet optimization (768 x 1024 etc.) */
+  @media (min-width: 641px) and (max-width: 1023px) {
     .hero-cinematic {
-      min-height: auto;
-      padding-top: 108px;
-      padding-bottom: 60px;
+      min-height: 100vh;
+      min-height: 100svh;
+      padding-top: calc(var(--navbar-height, 68px) + clamp(1rem, 2vh, 2rem));
+      padding-bottom: clamp(2.5rem, 4vh, 3.5rem);
       background-image:
-        linear-gradient(180deg, rgba(7, 19, 34, 0.88) 0%, rgba(7, 19, 34, 0.9) 45%, rgba(7, 19, 34, 0.98) 100%),
+        linear-gradient(90deg, #071322 0%, rgba(7, 19, 34, 0.94) 40%, rgba(7, 19, 34, 0.7) 60%, rgba(7, 19, 34, 0.35) 80%, transparent 100%),
+        linear-gradient(180deg, rgba(7, 19, 34, 0.8) 0%, transparent 120px, transparent calc(100% - 90px), rgba(7, 19, 34, 0.9) 100%),
         var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
-      background-position: 72% center;
+      background-position: 68% center;
+    }
+  }
+
+  /* Mobile optimization (360x800, 375x812, 390x844, 430x932) */
+  @media (max-width: 640px) {
+    .hero-cinematic {
+      min-height: 100vh;
+      min-height: 100svh;
+      padding-top: calc(var(--navbar-height, 68px) + clamp(0.75rem, 1.5vh, 1.25rem));
+      padding-bottom: clamp(2.5rem, 3.5vh, 3.25rem);
+      background-image:
+        linear-gradient(180deg, 
+          rgba(7, 19, 34, 0.94) 0%, 
+          rgba(7, 19, 34, 0.86) 38%, 
+          rgba(7, 19, 34, 0.6) 62%, 
+          rgba(7, 19, 34, 0.28) 78%, 
+          rgba(7, 19, 34, 0.9) 100%
+        ),
+        var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
+      background-position: 74% 65%;
     }
   }
 }

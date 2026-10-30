@@ -62,6 +62,56 @@ const JYOTIRLINGA_SHRINES = [
   { name: "12. Grishneshwar", location: "Verul / Aurangabad, Maharashtra", img: "/images/destinations/jyotirlingas/grishneshwar.webp", desc: "The 12th and final Jyotirlinga, adjacent to the UNESCO Ellora Caves." },
 ];
 
+const PANCHA_BHOOTA_TEMPLES = [
+  {
+    element: "Earth (Prithvi Lingam)",
+    temple: "Ekambareswarar Temple",
+    location: "Kanchipuram, Tamil Nadu",
+    badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300",
+    desc: "Represents the Earth element. Ancient 3,500-year-old sacred mango tree in the inner prakaram where Goddess Parvati worshipped the Prithvi Lingam.",
+  },
+  {
+    element: "Water (Appu Lingam)",
+    temple: "Jambukeswarar Temple",
+    location: "Tiruvanaikaval, Trichy, Tamil Nadu",
+    badgeColor: "bg-blue-100 text-blue-800 border-blue-300",
+    desc: "Represents the Water element. Perennial natural underground spring constantly fills the sanctum sanctorum submerging the base of the Shiva Lingam.",
+  },
+  {
+    element: "Fire (Agni Lingam)",
+    temple: "Annamalaiyar Temple",
+    location: "Tiruvannamalai, Tamil Nadu",
+    badgeColor: "bg-amber-100 text-amber-900 border-amber-300",
+    desc: "Represents the Fire element. Holy Arunachala hill itself is revered as the fiery manifestation of Lord Shiva, crowned during the Karthigai Deepam beacon.",
+  },
+  {
+    element: "Air (Vayu Lingam)",
+    temple: "Srikalahasteeswara Temple",
+    location: "Srikalahasti (near Nava Tirupati), Andhra Pradesh",
+    badgeColor: "bg-teal-100 text-teal-800 border-teal-300",
+    desc: "Represents the Wind/Air element. The flame of the ghee lamp in the windowless inner sanctum continuously flickers representing the divine breath of Shiva.",
+  },
+  {
+    element: "Space / Ether (Akasha Lingam)",
+    temple: "Thillai Nataraja Temple",
+    location: "Chidambaram, Tamil Nadu",
+    badgeColor: "bg-purple-100 text-purple-800 border-purple-300",
+    desc: "Represents the Space/Cosmic Ether element. Worships the formless cosmic dance (Ananda Tandava) of Lord Shiva through the sacred Chidambara Rahasya.",
+  },
+];
+
+const NAVAGRAHA_TEMPLES = [
+  { planet: "Surya (Sun)", temple: "Suryanar Kovil", deity: "Lord Suryanar", location: "Kumbakonam, Thanjavur District", desc: "Dedicated exclusively to the Sun God with separate shrines for all other grahas." },
+  { planet: "Chandra (Moon)", temple: "Kailasanathar Temple", deity: "Lord Kailasanathar", location: "Thingaloor", desc: "Sacred moon shrine worshipped for peace of mind, maternal blessings, and relief from Chandra dosham." },
+  { planet: "Chevvai / Angarakan (Mars)", temple: "Vaitheeswaran Koil", deity: "Sri Vaidyanatha Swamy", location: "Mayiladuthurai", desc: "The divine supreme healer, worshipped for resolving Sevvai dosham and chronic health difficulties." },
+  { planet: "Budha (Mercury)", temple: "Swetharanyeswarar Temple", deity: "Lord Swetharanyeswarar", location: "Thiruvenkadu", desc: "Holy shrine of Mercury granting high intellect, business acumen, eloquence, and academic excellence." },
+  { planet: "Guru (Jupiter)", temple: "Apatsahayeswarar Temple", deity: "Lord Guru Dakshinamurthy", location: "Alangudi", desc: "Preceptor of the gods, revered for wisdom, virtuous progeny, wealth, and righteous prosperity." },
+  { planet: "Sukra (Venus)", temple: "Agniswarar Temple", deity: "Lord Agniswarar", location: "Kanjanur", desc: "Abode of Venus bestowing matrimonial harmony, fine arts, material luxuries, and aesthetic happiness." },
+  { planet: "Sani (Saturn)", temple: "Darbaranyeswarar Temple", deity: "Lord Saneeswara Bhagavan", location: "Thirunallar", desc: "Celebrated Saturn temple where King Nala washed away his malefic affliction in the sacred Nala Theertham." },
+  { planet: "Rahu (North Node)", temple: "Naganatha Swamy Temple", deity: "Lord Rahu Bhagavan", location: "Tirunageswaram", desc: "World-famed miracle shrine where milk poured during Rahu Kalam abhishekam miraculously turns blue." },
+  { planet: "Ketu (South Node)", temple: "Naganatha Swamy Temple", deity: "Lord Ketu Bhagavan", location: "Keezhperumpallam", desc: "Shrine of Ketu conferring detachment, liberation (moksha), wisdom, and divine spiritual enlightenment." },
+];
+
 export default function SpecialPackageDetailPage({ params }: PageProps) {
   const pkg = getPackageBySlug("special", params.slug);
   if (!pkg) {
@@ -69,6 +119,7 @@ export default function SpecialPackageDetailPage({ params }: PageProps) {
   }
 
   const is12Jyotirlinga = pkg.slug === "12-jyotirlinga-pilgrimage";
+  const isSouthIndiaCircuit = pkg.slug === "south-india-temple-circuit";
   const relatedPackages = getPackagesByCategory("special")
     .filter((p) => p.slug !== pkg.slug)
     .slice(0, 3);
@@ -234,6 +285,95 @@ export default function SpecialPackageDetailPage({ params }: PageProps) {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {/* If South India Circuit, showcase Pancha Bhoota Lingams & Navagraha Temples */}
+          {isSouthIndiaCircuit && (
+            <div className="mb-14 space-y-12">
+              {/* Pancha Bhoota Sthalam Section */}
+              <div>
+                <div className="text-center max-w-3xl mx-auto mb-8">
+                  <span className="text-amber-600 font-bold text-xs uppercase tracking-wider">
+                    Sacred Cosmic Elements of Lord Shiva
+                  </span>
+                  <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#1a365d] mt-1">
+                    Pancha Bhoota Linga Temples
+                  </h2>
+                  <p className="text-gray-600 text-sm mt-2">
+                    Experience the five grand manifestations of Shiva embodying Earth, Water, Fire, Air, and Space across Tamil Nadu &amp; Andhra Pradesh.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {PANCHA_BHOOTA_TEMPLES.map((pb, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                    >
+                      <div>
+                        <div className="flex items-center justify-between gap-2 mb-2">
+                          <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${pb.badgeColor}`}>
+                            {pb.element}
+                          </span>
+                          <span className="text-amber-500 text-xs">ॐ</span>
+                        </div>
+                        <h4 className="font-heading font-bold text-base text-[#1a365d] mb-1">
+                          {pb.temple}
+                        </h4>
+                        <div className="text-xs text-amber-600 font-semibold mb-2">
+                          📍 {pb.location}
+                        </div>
+                        <p className="text-xs text-gray-600 leading-relaxed">
+                          {pb.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Navagraha Temples Section */}
+              <div>
+                <div className="text-center max-w-3xl mx-auto mb-8">
+                  <span className="text-amber-600 font-bold text-xs uppercase tracking-wider">
+                    Ancient Chola Planetary Circuit
+                  </span>
+                  <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#1a365d] mt-1">
+                    Navagraha Temples of Kumbakonam &amp; Thanjavur
+                  </h2>
+                  <p className="text-gray-600 text-sm mt-2">
+                    Consecrated planetary pilgrimage circuit to alleviate planetary afflictions and receive celestial blessings for health, prosperity, and peace.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  {NAVAGRAHA_TEMPLES.map((ng, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+                    >
+                      <div>
+                        <div className="flex items-center justify-between mb-1.5">
+                          <span className="text-[11px] bg-amber-50 text-amber-900 border border-amber-200/80 font-bold px-2 py-0.5 rounded-md">
+                            ★ {ng.planet}
+                          </span>
+                          <span className="text-[10px] text-gray-500 font-medium">#{idx + 1}</span>
+                        </div>
+                        <h4 className="font-heading font-bold text-sm text-[#1a365d] mb-0.5">
+                          {ng.temple}
+                        </h4>
+                        <div className="text-[11px] text-slate-500 mb-1.5">
+                          Deity: <span className="font-semibold text-slate-700">{ng.deity}</span> • 📍 {ng.location}
+                        </div>
+                        <p className="text-[11px] text-gray-600 leading-relaxed">
+                          {ng.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           )}

@@ -75,9 +75,9 @@ const PILGRIMAGE_SLIDES: PilgrimageTourSlide[] = [
     titlePart1: "7–Day South India",
     titleHighlight: "Temple Circuit",
     tagline:
-      "Nava Tirupati, Madurai Meenakshi, Rameshwaram & Kanyakumari.",
+      "Nava Tirupati, Navagraha & Pancha Bhoota Temples, Madurai & Rameshwaram.",
     description:
-      "Complete spiritual circuit across the grandest temples of Tamil Nadu and Andhra Pradesh. Chauffeur-driven luxury tempo traveller with dedicated pooja assistance and verified star accommodations.",
+      "Complete spiritual circuit across Nava Tirupati, the nine Navagraha temples, Pancha Bhoota Lingams, Madurai Meenakshi, and Rameshwaram. Chauffeur-driven luxury tempo traveller with dedicated pooja assistance and verified star accommodations.",
     stats: [
       { value: "7 Days", label: "DURATION", highlight: true },
       { value: "6", label: "TEMPLES", highlight: true },

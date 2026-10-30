@@ -55,6 +55,25 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Measure navbar height dynamically for viewport calculations
+  useEffect(() => {
+    const updateNavbarHeight = () => {
+      const headerEl = document.getElementById("site-header");
+      if (headerEl) {
+        const height = headerEl.getBoundingClientRect().height;
+        if (height > 0) {
+          document.documentElement.style.setProperty(
+            "--navbar-height",
+            `${Math.round(height)}px`
+          );
+        }
+      }
+    };
+    updateNavbarHeight();
+    window.addEventListener("resize", updateNavbarHeight, { passive: true });
+    return () => window.removeEventListener("resize", updateNavbarHeight);
+  }, []);
+
   // Close dropdown on outside click/touch, and handle Escape key
   useEffect(() => {
     const handleOutsideInteraction = (e: MouseEvent | TouchEvent) => {
