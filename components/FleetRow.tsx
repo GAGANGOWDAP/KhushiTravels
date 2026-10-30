@@ -7,7 +7,7 @@ export default function FleetRows() {
     <section id="fleet" className="bg-gray-50 section-py overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Heading */}
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 md:mb-20 gap-6 md:gap-8 text-center md:text-left">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-10 sm:mb-12 md:mb-16 lg:mb-20 gap-6 md:gap-8 text-center md:text-left">
           <div className="max-w-2xl">
             <h2 className="font-heading text-h1 text-brand-navy mb-4 md:mb-6">
               Elite Collection
@@ -26,7 +26,7 @@ export default function FleetRows() {
         </div>
 
         {/* Row 1: Tempo Traveller */}
-        <div className="flex flex-col lg:flex-row items-center gap-16 mb-32">
+        <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-16 mb-8 sm:mb-12 lg:mb-32">
           <div className="lg:w-1/2 order-2 lg:order-1 text-left">
             <span className="text-brand-amber font-bold tracking-wider uppercase text-sm">
               7 to 22 Seaters
@@ -109,13 +109,13 @@ export default function FleetRows() {
               Explore Tempos
             </Link>
           </div>
-          <div className="lg:w-1/2 order-1 lg:order-2 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <div className="space-y-4 sm:translate-y-8">
+          <div className="w-full lg:w-1/2 order-1 lg:order-2 grid grid-cols-2 sm:grid-cols-2 gap-2.5 sm:gap-6">
+            <div className="contents sm:block space-y-0 sm:space-y-4 translate-y-0 sm:translate-y-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getAssetPath("/images/fleet/luxury-10-seater-tempo-traveller-bangalore-1.webp")}
                 alt="10 seater luxury Tempo Traveller with Maharaja pushback seats"
-                className="rounded-2xl shadow-lg w-full h-64 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-64 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
@@ -124,18 +124,18 @@ export default function FleetRows() {
               <img
                 src={getAssetPath("/images/fleet/standard-12-seater-tempo-traveller-bangalore-1.webp")}
                 alt="Luxury Tempo Traveller interior with premium seating"
-                className="rounded-2xl shadow-lg w-full h-48 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-48 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
               />
             </div>
-            <div className="space-y-4">
+            <div className="contents sm:block space-y-0 sm:space-y-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getAssetPath("/images/fleet/luxury-12-seater-tempo-traveller-bangalore-1.webp")}
                 alt="Comfortable Maharaja seats in 12 seater luxury tempo traveller"
-                className="rounded-2xl shadow-lg w-full h-48 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-48 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
@@ -144,7 +144,7 @@ export default function FleetRows() {
               <img
                 src={getAssetPath("/images/fleet/luxury-16-seater-tempo-traveller-bangalore-1.webp")}
                 alt="16 seater luxury tempo traveller exterior"
-                className="rounded-2xl shadow-lg w-full h-64 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-64 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
@@ -154,14 +154,14 @@ export default function FleetRows() {
         </div>
 
         {/* Row 2: Force Urbania */}
-        <div className="flex flex-col lg:flex-row items-center gap-16 mb-32">
-          <div className="lg:w-1/2 order-1 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <div className="space-y-4 sm:translate-y-8">
+        <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-16 mb-8 sm:mb-12 lg:mb-32">
+          <div className="w-full lg:w-1/2 order-1 grid grid-cols-2 sm:grid-cols-2 gap-2.5 sm:gap-6">
+            <div className="contents sm:block space-y-0 sm:space-y-4 translate-y-0 sm:translate-y-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getAssetPath("/images/fleet/force-urbania-10-seater-bangalore-1.webp")}
                 alt="Force Urbania 10 seater luxury rental Bangalore"
-                className="rounded-2xl shadow-lg w-full h-64 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-64 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
@@ -170,18 +170,18 @@ export default function FleetRows() {
               <img
                 src={getAssetPath("/images/fleet/force-urbania-16-seater-bangalore-3.webp")}
                 alt="Force Urbania 16 seater interior"
-                className="rounded-2xl shadow-lg w-full h-48 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-48 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
               />
             </div>
-            <div className="space-y-4">
+            <div className="contents sm:block space-y-0 sm:space-y-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getAssetPath("/images/fleet/force-urbania-16-seater-bangalore-3.webp")}
                 alt="Force Urbania luxury seats with ample legroom"
-                className="rounded-2xl shadow-lg w-full h-48 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-48 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
@@ -190,7 +190,7 @@ export default function FleetRows() {
               <img
                 src={getAssetPath("/images/fleet/force-urbania-10-seater-bangalore-1.webp")}
                 alt="Spacious aisle and standing height interior of Force Urbania"
-                className="rounded-2xl shadow-lg w-full h-64 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-64 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
@@ -274,7 +274,7 @@ export default function FleetRows() {
         </div>
 
         {/* Row 3: Buses */}
-        <div className="flex flex-col lg:flex-row items-center gap-16 mb-32">
+        <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-16 mb-8 sm:mb-12 lg:mb-32">
           <div className="lg:w-1/2 order-2 lg:order-1 text-left">
             <span className="text-brand-amber font-bold tracking-wider uppercase text-sm">
               21 to 50 Seaters
@@ -350,13 +350,13 @@ export default function FleetRows() {
               Explore Buses
             </Link>
           </div>
-          <div className="lg:w-1/2 order-1 lg:order-2 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <div className="space-y-4 sm:translate-y-8">
+          <div className="w-full lg:w-1/2 order-1 lg:order-2 grid grid-cols-2 sm:grid-cols-2 gap-2.5 sm:gap-6">
+            <div className="contents sm:block space-y-0 sm:space-y-4 translate-y-0 sm:translate-y-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getAssetPath("/images/fleet/luxury-minibus-rental-bangalore-1.webp")}
                 alt="Luxury minibus rental Bangalore - 21 to 33 seater options"
-                className="rounded-2xl shadow-lg w-full h-64 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-64 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
@@ -365,18 +365,18 @@ export default function FleetRows() {
               <img
                 src={getAssetPath("/images/fleet/luxury-40-seater-bus-bangalore-1.webp")}
                 alt="40 seater luxury bus exterior"
-                className="rounded-2xl shadow-lg w-full h-48 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-48 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
               />
             </div>
-            <div className="space-y-4">
+            <div className="contents sm:block space-y-0 sm:space-y-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getAssetPath("/images/fleet/luxury-50-seater-bus-bangalore-1.webp")}
                 alt="50 seater luxury bus for large groups"
-                className="rounded-2xl shadow-lg w-full h-48 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-48 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
@@ -385,7 +385,7 @@ export default function FleetRows() {
               <img
                 src={getAssetPath("/images/fleet/luxury-minibus-rental-bangalore-2.webp")}
                 alt="Premium minibus interior with air suspension"
-                className="rounded-2xl shadow-lg w-full h-64 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-64 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
@@ -395,14 +395,14 @@ export default function FleetRows() {
         </div>
 
         {/* Row 4: Executive Cars */}
-        <div className="flex flex-col lg:flex-row items-center gap-16 mb-16">
-          <div className="lg:w-1/2 order-1 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <div className="space-y-4 sm:translate-y-8">
+        <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-16 mb-8 sm:mb-12 lg:mb-16">
+          <div className="w-full lg:w-1/2 order-1 grid grid-cols-2 sm:grid-cols-2 gap-2.5 sm:gap-6">
+            <div className="contents sm:block space-y-0 sm:space-y-4 translate-y-0 sm:translate-y-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getAssetPath("/images/fleet/toyota-innova-crysta-bangalore-1.webp")}
                 alt="Toyota Innova Crysta rental Bangalore - Luxury SUV"
-                className="rounded-2xl shadow-lg w-full h-64 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-64 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
@@ -411,18 +411,18 @@ export default function FleetRows() {
               <img
                 src={getAssetPath("/images/fleet/toyota-innova-crysta-bangalore-2.webp")}
                 alt="Luxury sedan car interior for executive travel"
-                className="rounded-2xl shadow-lg w-full h-48 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-48 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
               />
             </div>
-            <div className="space-y-4">
+            <div className="contents sm:block space-y-0 sm:space-y-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getAssetPath("/images/fleet/toyota-innova-crysta-bangalore-2.webp")}
                 alt="Toyota Crysta luxury SUV for family outings Bangalore"
-                className="rounded-2xl shadow-lg w-full h-48 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-48 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
@@ -431,7 +431,7 @@ export default function FleetRows() {
               <img
                 src={getAssetPath("/images/fleet/toyota-innova-crysta-bangalore-1.webp")}
                 alt="Premium car for airport transfers Bangalore"
-                className="rounded-2xl shadow-lg w-full h-64 object-cover"
+                className="rounded-[16px] sm:rounded-2xl shadow-sm sm:shadow-lg w-full aspect-[4/3] sm:aspect-auto h-auto sm:h-64 object-cover"
                 loading="lazy"
                 width={600}
                 height={338}
