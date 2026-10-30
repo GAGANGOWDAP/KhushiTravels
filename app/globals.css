@@ -454,22 +454,23 @@ summary:focus-visible {
   /* Mobile-only hero refinement (max-width: 767px) */
   @media (max-width: 767px) {
     .hero-cinematic {
-      height: auto;
+      height: 100vh;
+      height: 100svh;
       min-height: 100svh;
-      max-height: none;
+      max-height: 100svh;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      /* 24-32px comfortable spacing below the mobile navbar (68px) */
-      padding-top: calc(var(--navbar-height, 68px) + clamp(18px, 2.5vh, 28px));
-      padding-bottom: clamp(16px, 2.5vh, 24px);
+      /* 35-50px comfortable spacing below the mobile navbar (68px) */
+      padding-top: calc(var(--navbar-height, 68px) + clamp(34px, 5vh, 46px));
+      padding-bottom: clamp(14px, 2.5vh, 22px);
       background-image:
         linear-gradient(180deg, 
-          rgba(7, 19, 34, 0.94) 0%, 
-          rgba(7, 19, 34, 0.88) 36%, 
-          rgba(7, 19, 34, 0.55) 62%, 
-          rgba(7, 19, 34, 0.28) 78%, 
-          rgba(7, 19, 34, 0.92) 100%
+          rgba(7, 19, 34, 0.92) 0%, 
+          rgba(7, 19, 34, 0.84) 40%, 
+          rgba(7, 19, 34, 0.50) 65%, 
+          rgba(7, 19, 34, 0.20) 78%, 
+          rgba(7, 19, 34, 0.90) 100%
         ),
         var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
       background-position: 72% 70%;
@@ -479,15 +480,6 @@ summary:focus-visible {
     }
   }
 
-  /* Hide scrollbars for horizontal scrolling strips while preserving touch interaction */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
   /* Gracefully handle ultra-short screens / landscape mobile */
   @media (max-height: 580px) and (max-width: 767px) {
     .hero-cinematic {
@@ -495,8 +487,8 @@ summary:focus-visible {
       min-height: 100svh;
       max-height: none;
       overflow: visible;
-      padding-top: calc(var(--navbar-height, 68px) + 14px);
-      padding-bottom: 20px;
+      padding-top: calc(var(--navbar-height, 68px) + 16px);
+      padding-bottom: 24px;
     }
   }
 }

@@ -23,7 +23,7 @@ export default function HomePage() {
         <div className="container-custom w-full relative z-10">
           <div className="max-w-2xl text-left">
             {/* Mobile-Only Location Badge */}
-            <div className="inline-flex md:hidden items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md text-[#FBBF24] text-[10px] font-semibold tracking-wider uppercase mb-1.5">
+            <div className="inline-flex md:hidden items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md text-[#FBBF24] text-[10px] font-semibold tracking-wider uppercase mb-2">
               <svg className="w-2.5 h-2.5 fill-current text-amber-400 shrink-0" viewBox="0 0 24 24">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
               </svg>
@@ -31,13 +31,13 @@ export default function HomePage() {
             </div>
 
             {/* Brand Message Eyebrow */}
-            <div className="flex items-center gap-3 text-amber-500 font-bold text-xs sm:text-sm tracking-wider uppercase mb-1 sm:mb-3 lg:mb-4">
+            <div className="flex items-center gap-3 text-amber-500 font-bold text-xs sm:text-sm tracking-wider uppercase mb-1.5 sm:mb-3 lg:mb-4">
               <span>TRAVEL TOGETHER. TRAVEL BETTER.</span>
               {/* <span className="w-10 h-0.5 bg-amber-500 rounded-full inline-block"></span> */}
             </div>
 
             {/* Main Heading (Mobile hierarchy optimized, Desktop preserved) */}
-            <h1 className="block md:hidden font-heading text-[1.65rem] sm:text-3xl text-white font-extrabold tracking-tight leading-[1.12] mb-1.5">
+            <h1 className="block md:hidden font-heading text-2xl sm:text-3xl text-white font-extrabold tracking-tight leading-[1.12] mb-2">
               Luxury Tempo <span className="text-[#f59e0b]">Traveller</span><br />in Bangalore
             </h1>
             <h1 className="hidden md:block font-heading hero-title text-white font-extrabold tracking-tight leading-[1.08] mb-3.5 lg:mb-5 text-balance">
@@ -46,7 +46,7 @@ export default function HomePage() {
             </h1>
 
             {/* Supporting Description (Mobile 3 lines optimized, Desktop preserved) */}
-            <p className="block md:hidden text-[#CBD5E1] text-xs leading-relaxed font-normal mb-2.5 max-w-sm">
+            <p className="block md:hidden text-[#CBD5E1] text-xs leading-relaxed font-normal mb-3 max-w-sm">
               Premium tempo travellers and luxury buses for family trips,
               pilgrimages, corporate tours, and group travel from Bangalore. Safe,
               comfortable, and reliable.
@@ -58,7 +58,7 @@ export default function HomePage() {
             </p>
 
             {/* CTA Buttons - Mobile: side-by-side touch-friendly equal height */}
-            <div className="flex md:hidden flex-row gap-2 mb-2 w-full max-w-sm">
+            <div className="flex md:hidden flex-row gap-2.5 mb-3 w-full max-w-sm">
               <a
                 href="https://wa.me/919901333113?text=Hi%20Khushi%20Travels%2C%20I'm%20interested%20in%20booking%20a%20luxury%20tempo%20traveller."
                 target="_blank"
@@ -117,95 +117,38 @@ export default function HomePage() {
               </a>
             </div>
 
-            {/* Mobile Trust Indicators - Cohesive Two-Column Glassmorphism Panel */}
-            <div className="block md:hidden w-full max-w-sm rounded-xl bg-white/[0.08] border border-white/15 backdrop-blur-md px-3 py-2 shadow-lg mb-2">
-              <div className="grid grid-cols-2 gap-x-2.5 gap-y-1.5">
-                <div className="flex items-center gap-1.5">
-                  <span className="text-amber-400 text-xs shrink-0 font-bold">★★★★★</span>
-                  <span className="text-[10.5px] font-semibold text-white leading-tight">
-                    4.9 <span className="text-white/60 font-normal">(63+ Reviews)</span>
-                  </span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <svg className="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-[10.5px] font-semibold text-white leading-tight">100% Owned Fleet</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <svg className="w-3.5 h-3.5 text-amber-400 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <span className="text-[10.5px] font-semibold text-white leading-tight">GPS Monitored</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <svg className="w-3.5 h-3.5 text-amber-400 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  <span className="text-[10.5px] font-semibold text-white leading-tight">Chauffeur Driven</span>
-                </div>
+            {/* Trust Indicators - Mobile: Compact 2-Column Grid */}
+            <div className="grid md:hidden grid-cols-2 gap-1.5 max-w-sm pt-0.5">
+              <div className="flex items-center gap-1.5 bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-lg px-2 py-1">
+                <span className="text-amber-400 text-[10px] shrink-0">★★★★★</span>
+                <span className="text-[10px] font-semibold text-white leading-tight">
+                  4.9 <span className="text-white/70 font-normal">(63+ Reviews)</span>
+                </span>
               </div>
-            </div>
-
-            {/* Mobile Floating Fleet Information Card */}
-            <div className="block md:hidden w-full max-w-sm rounded-xl bg-[#081528]/85 border border-white/15 backdrop-blur-md p-2.5 shadow-xl">
-              <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-white/10">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-amber-400">Available Fleet</span>
-                </div>
-                <Link
-                  href="/best-tempo-traveller-fleet-bangalore/"
-                  className="text-[10px] text-white/75 hover:text-amber-400 font-medium transition-colors flex items-center gap-0.5"
-                >
-                  <span>Explore All</span>
-                  <svg className="w-2.5 h-2.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+              <div className="flex items-center gap-1.5 bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-lg px-2 py-1">
+                <svg className="w-3 h-3 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-[10px] font-semibold text-white leading-tight">
+                  100% Owned Fleet
+                </span>
               </div>
-              <div className="grid grid-cols-3 gap-1.5">
-                <Link
-                  href="/fleet/12-14-seater-tempo-traveller-bangalore/"
-                  className="flex flex-col items-center justify-center p-1.5 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 transition-all text-center group active:scale-95"
-                >
-                  <div className="w-6 h-6 rounded-md bg-amber-500/15 text-amber-400 flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">
-                    <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                      <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.77l.11.34V17z"/>
-                      <circle cx="7.5" cy="14.5" r="1.5"/>
-                      <circle cx="16.5" cy="14.5" r="1.5"/>
-                    </svg>
-                  </div>
-                  <span className="text-[10px] font-bold text-white leading-tight">Tempo Travellers</span>
-                  <span className="text-[8.5px] text-amber-300/80 mt-0.5 font-medium">9–16 Seater</span>
-                </Link>
-
-                <Link
-                  href="/fleet/mini-bus-rental-bangalore/"
-                  className="flex flex-col items-center justify-center p-1.5 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 transition-all text-center group active:scale-95"
-                >
-                  <div className="w-6 h-6 rounded-md bg-amber-500/15 text-amber-400 flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">
-                    <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                      <path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/>
-                    </svg>
-                  </div>
-                  <span className="text-[10px] font-bold text-white leading-tight">Mini Buses</span>
-                  <span className="text-[8.5px] text-amber-300/80 mt-0.5 font-medium">21–33 Seater</span>
-                </Link>
-
-                <Link
-                  href="/fleet/bus-rental-bangalore/"
-                  className="flex flex-col items-center justify-center p-1.5 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 transition-all text-center group active:scale-95"
-                >
-                  <div className="w-6 h-6 rounded-md bg-amber-500/15 text-amber-400 flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">
-                    <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 2c-4.42 0-8 .5-8 4v10c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4zm-5 14c-.83 0-1.5-.67-1.5-1.5S6.17 13 7 13s1.5.67 1.5 1.5S7.83 16 7 16zm10 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM18 10H6V6h12v4z"/>
-                    </svg>
-                  </div>
-                  <span className="text-[10px] font-bold text-white leading-tight">Group Coaches</span>
-                  <span className="text-[8.5px] text-amber-300/80 mt-0.5 font-medium">40–50 Seater</span>
-                </Link>
+              <div className="flex items-center gap-1.5 bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-lg px-2 py-1">
+                <svg className="w-3 h-3 text-amber-400 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span className="text-[10px] font-semibold text-white leading-tight">
+                  GPS Monitored
+                </span>
+              </div>
+              <div className="flex items-center gap-1.5 bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-lg px-2 py-1">
+                <svg className="w-3 h-3 text-amber-400 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <span className="text-[10px] font-semibold text-white leading-tight">
+                  Chauffeur Driven
+                </span>
               </div>
             </div>
 
@@ -221,79 +164,6 @@ export default function HomePage() {
               <span>&bull;</span>
               <span>Chauffeur Driven</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== MOBILE-ONLY QUICK TRIP DISCOVERY STRIP ===== */}
-      <section className="block md:hidden bg-[#071322] border-t border-b border-white/10 py-3 relative z-20">
-        <div className="container-custom">
-          <div className="flex items-center justify-between mb-2">
-            <div className="flex items-center gap-1.5">
-              <svg className="w-3.5 h-3.5 text-amber-400 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-              </svg>
-              <span className="text-[11px] font-bold uppercase tracking-wider text-white">Quick Trip Discovery</span>
-            </div>
-            <span className="text-[10px] font-medium text-amber-400">Popular Outstation</span>
-          </div>
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 -mx-4 px-4 scroll-smooth">
-            <Link
-              href="/routes/bangalore-to-coorg-tempo-traveller/"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.07] hover:bg-white/[0.12] border border-white/15 hover:border-amber-400/50 text-white text-xs font-semibold whitespace-nowrap active:scale-95 transition-all shadow-sm"
-            >
-              <span className="text-amber-400 font-bold">🌿</span>
-              <span>Coorg</span>
-              <span className="text-[10px] text-white/60 font-normal">265 km</span>
-            </Link>
-            <Link
-              href="/routes/bangalore-to-mysore-tempo-traveller/"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.07] hover:bg-white/[0.12] border border-white/15 hover:border-amber-400/50 text-white text-xs font-semibold whitespace-nowrap active:scale-95 transition-all shadow-sm"
-            >
-              <span className="text-amber-400 font-bold">🏰</span>
-              <span>Mysuru</span>
-              <span className="text-[10px] text-white/60 font-normal">150 km</span>
-            </Link>
-            <Link
-              href="/routes/bangalore-to-ooty-tempo-traveller/"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.07] hover:bg-white/[0.12] border border-white/15 hover:border-amber-400/50 text-white text-xs font-semibold whitespace-nowrap active:scale-95 transition-all shadow-sm"
-            >
-              <span className="text-amber-400 font-bold">⛰️</span>
-              <span>Ooty</span>
-              <span className="text-[10px] text-white/60 font-normal">280 km</span>
-            </Link>
-            <Link
-              href="/routes/bangalore-to-goa-tempo-traveller/"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.07] hover:bg-white/[0.12] border border-white/15 hover:border-amber-400/50 text-white text-xs font-semibold whitespace-nowrap active:scale-95 transition-all shadow-sm"
-            >
-              <span className="text-amber-400 font-bold">🏖️</span>
-              <span>Goa</span>
-              <span className="text-[10px] text-white/60 font-normal">560 km</span>
-            </Link>
-            <Link
-              href="/routes/bangalore-to-chikmagalur-tempo-traveller/"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.07] hover:bg-white/[0.12] border border-white/15 hover:border-amber-400/50 text-white text-xs font-semibold whitespace-nowrap active:scale-95 transition-all shadow-sm"
-            >
-              <span className="text-amber-400 font-bold">☕</span>
-              <span>Chikmagalur</span>
-              <span className="text-[10px] text-white/60 font-normal">245 km</span>
-            </Link>
-            <Link
-              href="/routes/bangalore-to-wayanad-tempo-traveller/"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.07] hover:bg-white/[0.12] border border-white/15 hover:border-amber-400/50 text-white text-xs font-semibold whitespace-nowrap active:scale-95 transition-all shadow-sm"
-            >
-              <span className="text-amber-400 font-bold">🌲</span>
-              <span>Wayanad</span>
-              <span className="text-[10px] text-white/60 font-normal">280 km</span>
-            </Link>
-            <Link
-              href="/routes/bangalore-to-tirupati-tempo-traveller/"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.07] hover:bg-white/[0.12] border border-white/15 hover:border-amber-400/50 text-white text-xs font-semibold whitespace-nowrap active:scale-95 transition-all shadow-sm"
-            >
-              <span className="text-amber-400 font-bold">🛕</span>
-              <span>Tirupati</span>
-              <span className="text-[10px] text-white/60 font-normal">250 km</span>
-            </Link>
           </div>
         </div>
       </section>
