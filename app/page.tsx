@@ -4,8 +4,8 @@ import FleetRows from "@/components/FleetRow";
 import FAQAccordion from "@/components/FAQAccordion";
 import ServiceCoverage from "@/components/ServiceCoverage";
 import FeaturedPilgrimageCard from "@/components/FeaturedPilgrimageCard";
+import PopularDestinationsSection from "@/components/PopularDestinationsSection";
 import { FAQS_DATA } from "@/data/faqs";
-import { ROUTES_DATA } from "@/data/routes";
 import { getAssetPath } from "@/lib/assets";
 
 export default function HomePage() {
@@ -282,78 +282,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== POPULAR DESTINATIONS GRID ===== */}
-      <section className="bg-gray-50 section-py">
-        <div className="container-custom">
-          <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-4 text-center md:text-left">
-            <div>
-              <span className="text-brand-amber font-bold text-xs uppercase tracking-widest block mb-2">
-                South India Road Trips
-              </span>
-              <h2 className="font-heading text-h1 text-brand-navy">
-                Popular Destinations
-              </h2>
-            </div>
-            <Link
-              href="/tour-packages-from-bangalore/"
-              className="text-brand-navy font-bold flex items-center gap-2 hover:text-brand-amber transition-colors text-sm"
-            >
-              All Packages &rarr;
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {ROUTES_DATA.slice(0, 8).map((route) => (
-              <div
-                key={route.slug}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group flex flex-col justify-between"
-              >
-                <div>
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={getAssetPath(route.image)}
-                      alt={`Bangalore to ${route.destination} tempo traveller rental`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                      width={400}
-                      height={250}
-                    />
-                    <div className="absolute top-3 left-3 bg-brand-navy/90 text-brand-amber text-xs font-bold px-2.5 py-1 rounded-full">
-                      {route.durationHrs}
-                    </div>
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-heading font-bold text-lg text-brand-navy mb-1">
-                      <Link
-                        href={`/routes/${route.slug}/`}
-                        className="hover:text-brand-amber transition-colors"
-                      >
-                        {route.destination}
-                      </Link>
-                    </h3>
-                    <p className="text-xs text-gray-500 mb-3">
-                      Distance: ~{route.distanceKm} km
-                    </p>
-                    <p className="text-xs text-gray-600 line-clamp-2 leading-relaxed">
-                      {route.description}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="p-5 pt-0">
-                  <Link
-                    href={`/routes/${route.slug}/`}
-                    className="block text-center py-2.5 rounded-xl border border-gray-200 text-xs font-bold text-brand-navy hover:border-brand-amber hover:text-brand-amber transition-all"
-                  >
-                    View Route Details &rarr;
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ===== POPULAR DESTINATIONS: SOUTH INDIA ROAD TRIPS (Mobile Carousel + Desktop Grid) ===== */}
+      <PopularDestinationsSection />
 
       {/* ===== AMBER CTA BANNER ===== */}
       <section className="gradient-amber py-16 text-white text-center">
