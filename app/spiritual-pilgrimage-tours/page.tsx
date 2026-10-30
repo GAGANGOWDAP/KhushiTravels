@@ -786,70 +786,109 @@ export default function SpiritualPilgrimagePage() {
       </section>
 
       {/* ===== WHY PILGRIMS TRUST KHUSHI TRAVELS ===== */}
-      <section className="bg-white section-py border-t border-gray-200">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-brand-amber font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-brand-amber/10 border border-brand-amber/20">
-              The Khushi Travels Advantage
+      <section className="bg-[#FAFAF7] py-16 sm:py-20 md:py-24 border-t border-[#EAECEF]" aria-labelledby="advantage-heading">
+        <div className="container-custom max-w-7xl">
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <span className="inline-block text-[#F59E0B] font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-[#F59E0B]/10 border border-[#F59E0B]/20">
+              THE KHUSHI TRAVELS ADVANTAGE
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3">
+            <h2
+              id="advantage-heading"
+              className="font-heading text-3xl sm:text-4xl lg:text-[2.5rem] font-extrabold text-[#10213A] tracking-tight leading-tight mt-3 mb-4"
+            >
               Why Pilgrims Trust Khushi Travels
             </h2>
-            <p className="text-body text-gray-600 mt-2">
-              Organizing long-distance devotional group travel from Bengaluru with proven highway standards and verified
-              operations.
+            <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              Organizing long-distance devotional group travel from Bengaluru with proven highway standards and verified operations.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-10">
-            <div className="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-brand-amber transition-all">
-              <div className="w-12 h-12 rounded-xl bg-brand-amber/15 text-brand-navy font-bold flex items-center justify-center text-xl mb-4">
-                🛡️
+          {/* 4 Feature Cards Grid */}
+          <div className="grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-7xl mx-auto mb-12">
+            {/* Card 1: Dedicated In-House Fleet */}
+            <div className="group relative bg-[#FFFFFF] rounded-[20px] border border-[#EAECEF] p-6 sm:p-7 shadow-sm hover:shadow-lg hover:shadow-slate-200/60 hover:border-[#F59E0B]/50 motion-safe:transition-all motion-safe:duration-[250ms] motion-safe:ease-out motion-safe:hover:-translate-y-1 motion-reduce:transform-none flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl sm:rounded-2xl bg-[#F59E0B]/10 border border-[#F59E0B]/20 text-[#F59E0B] flex items-center justify-center mb-5 shrink-0 motion-safe:transition-transform motion-safe:duration-[250ms] group-hover:scale-105">
+                  <svg className="w-6 h-6 stroke-[2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+                <h3 className="font-heading font-bold text-base sm:text-lg text-[#10213A] mb-2 leading-snug">
+                  Dedicated In-House Fleet
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Maintained in-house by expert mechanics with zero sub-contracting risk for maximum reliability on pan-India highways.
+                </p>
               </div>
-              <h3 className="font-heading font-bold text-lg text-brand-navy mb-2">100% Owned Fleet</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                Maintained in-house by expert mechanics with zero sub-contracting risk for maximum reliability on
-                pan-India highways.
-              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-brand-amber transition-all">
-              <div className="w-12 h-12 rounded-xl bg-brand-amber/15 text-brand-navy font-bold flex items-center justify-center text-xl mb-4">
-                🍲
+            {/* Card 2: Pure Vegetarian Dining */}
+            <div className="group relative bg-[#FFFFFF] rounded-[20px] border border-[#EAECEF] p-6 sm:p-7 shadow-sm hover:shadow-lg hover:shadow-slate-200/60 hover:border-[#F59E0B]/50 motion-safe:transition-all motion-safe:duration-[250ms] motion-safe:ease-out motion-safe:hover:-translate-y-1 motion-reduce:transform-none flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl sm:rounded-2xl bg-[#F59E0B]/10 border border-[#F59E0B]/20 text-[#F59E0B] flex items-center justify-center mb-5 shrink-0 motion-safe:transition-transform motion-safe:duration-[250ms] group-hover:scale-105">
+                  <svg className="w-6 h-6 stroke-[2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M18 2v20" />
+                    <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+                    <path d="M4 2v7c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V2" />
+                    <path d="M8 2v20" />
+                  </svg>
+                </div>
+                <h3 className="font-heading font-bold text-base sm:text-lg text-[#10213A] mb-2 leading-snug">
+                  Pure Vegetarian Dining
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Three daily hot, wholesome vegetarian meals freshly prepared and served in compliance with religious traditions.
+                </p>
               </div>
-              <h3 className="font-heading font-bold text-lg text-brand-navy mb-2">Pure Vegetarian Satvik</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                Three daily hot, wholesome vegetarian meals freshly prepared and served in compliance with religious
-                traditions.
-              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-brand-amber transition-all">
-              <div className="w-12 h-12 rounded-xl bg-brand-amber/15 text-brand-navy font-bold flex items-center justify-center text-xl mb-4">
-                👴
+            {/* Card 3: Senior-Friendly Travel */}
+            <div className="group relative bg-[#FFFFFF] rounded-[20px] border border-[#EAECEF] p-6 sm:p-7 shadow-sm hover:shadow-lg hover:shadow-slate-200/60 hover:border-[#F59E0B]/50 motion-safe:transition-all motion-safe:duration-[250ms] motion-safe:ease-out motion-safe:hover:-translate-y-1 motion-reduce:transform-none flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl sm:rounded-2xl bg-[#F59E0B]/10 border border-[#F59E0B]/20 text-[#F59E0B] flex items-center justify-center mb-5 shrink-0 motion-safe:transition-transform motion-safe:duration-[250ms] group-hover:scale-105">
+                  <svg className="w-6 h-6 stroke-[2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                    <path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.86.86 2.22.86 3.08 0L15 8" />
+                    <path d="m8 15 2 2" />
+                    <path d="m14 15-2 2" />
+                  </svg>
+                </div>
+                <h3 className="font-heading font-bold text-base sm:text-lg text-[#10213A] mb-2 leading-snug">
+                  Senior-Friendly Travel
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Experienced tour managers assisting with accessible boarding, luggage coordination, queue guidance, and darshan pacing.
+                </p>
               </div>
-              <h3 className="font-heading font-bold text-lg text-brand-navy mb-2">Senior Citizen Priority</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                Experienced tour managers assisting with accessible boarding, luggage coordination, queue guidance, and
-                darshan pacing.
-              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-brand-amber transition-all">
-              <div className="w-12 h-12 rounded-xl bg-brand-amber/15 text-brand-navy font-bold flex items-center justify-center text-xl mb-4">
-                ⚖️
+            {/* Card 4: Transparent Pricing */}
+            <div className="group relative bg-[#FFFFFF] rounded-[20px] border border-[#EAECEF] p-6 sm:p-7 shadow-sm hover:shadow-lg hover:shadow-slate-200/60 hover:border-[#F59E0B]/50 motion-safe:transition-all motion-safe:duration-[250ms] motion-safe:ease-out motion-safe:hover:-translate-y-1 motion-reduce:transform-none flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl sm:rounded-2xl bg-[#F59E0B]/10 border border-[#F59E0B]/20 text-[#F59E0B] flex items-center justify-center mb-5 shrink-0 motion-safe:transition-transform motion-safe:duration-[250ms] group-hover:scale-105">
+                  <svg className="w-6 h-6 stroke-[2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1Z" />
+                    <path d="M14 8H8" />
+                    <path d="M16 12H8" />
+                    <path d="M13 16H8" />
+                  </svg>
+                </div>
+                <h3 className="font-heading font-bold text-base sm:text-lg text-[#10213A] mb-2 leading-snug">
+                  Transparent Pricing
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Line-item breakdown provided in writing. All confirmed package details, inclusions, and exclusions documented upfront.
+                </p>
               </div>
-              <h3 className="font-heading font-bold text-lg text-brand-navy mb-2">Transparent Quotation</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                Line-item breakdown provided in writing. All confirmed package details, inclusions, and exclusions
-                documented upfront.
-              </p>
             </div>
           </div>
 
           {/* Approved Business Policy Notice */}
-          <div className="max-w-4xl mx-auto p-5 rounded-2xl bg-brand-navy/5 border border-brand-navy/15 text-xs text-gray-700 leading-relaxed">
-            <h4 className="font-heading font-bold text-sm text-brand-navy mb-2">
+          <div className="max-w-4xl mx-auto p-6 rounded-[20px] bg-white border border-[#EAECEF] shadow-sm text-xs text-slate-600 leading-relaxed">
+            <h4 className="font-heading font-bold text-sm text-[#10213A] mb-2 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#F59E0B]" aria-hidden="true" />
               Approved Booking &amp; Cancellation Policy
             </h4>
             <p>
