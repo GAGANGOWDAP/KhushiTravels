@@ -1,12 +1,90 @@
 import React from "react";
 import Link from "next/link";
-import FleetRows from "@/components/FleetRow";
-import FAQAccordion from "@/components/FAQAccordion";
-import ServiceCoverage from "@/components/ServiceCoverage";
-import FeaturedPilgrimageCard from "@/components/FeaturedPilgrimageCard";
-import PopularDestinationsSection from "@/components/PopularDestinationsSection";
+import dynamic from "next/dynamic";
 import { FAQS_DATA } from "@/data/faqs";
 import { getAssetPath } from "@/lib/assets";
+
+// Lazy-loaded below-the-fold components for optimized initial page load performance
+const FeaturedPilgrimageCard = dynamic(
+  () => import("@/components/FeaturedPilgrimageCard"),
+  {
+    loading: () => (
+      <div className="py-12 bg-white">
+        <div className="container-custom max-w-6xl">
+          <div className="h-[480px] bg-slate-900/10 rounded-3xl animate-pulse" />
+        </div>
+      </div>
+    ),
+  }
+);
+
+const FleetRows = dynamic(
+  () => import("@/components/FleetRow"),
+  {
+    loading: () => (
+      <section className="bg-gray-50 section-py">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="h-20 bg-gray-200/60 rounded-xl mb-12 animate-pulse" />
+          <div className="h-[500px] bg-gray-200/40 rounded-2xl animate-pulse" />
+        </div>
+      </section>
+    ),
+  }
+);
+
+const PopularDestinationsSection = dynamic(
+  () => import("@/components/PopularDestinationsSection"),
+  {
+    loading: () => (
+      <section className="section-py bg-white">
+        <div className="container-custom">
+          <div className="h-16 max-w-md mx-auto bg-gray-200/60 rounded-xl mb-12 animate-pulse" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {[1, 2, 3, 4].map((n) => (
+              <div key={n} className="h-72 bg-gray-100 rounded-2xl animate-pulse" />
+            ))}
+          </div>
+        </div>
+      </section>
+    ),
+  }
+);
+
+const FAQAccordion = dynamic(
+  () => import("@/components/FAQAccordion"),
+  {
+    loading: () => (
+      <section className="bg-white py-16">
+        <div className="container-custom max-w-4xl">
+          <div className="h-14 max-w-sm mx-auto bg-gray-200/60 rounded-xl mb-8 animate-pulse" />
+          <div className="space-y-4">
+            {[1, 2, 3, 4].map((n) => (
+              <div key={n} className="h-16 bg-gray-50 rounded-xl animate-pulse border border-gray-100" />
+            ))}
+          </div>
+        </div>
+      </section>
+    ),
+  }
+);
+
+const ServiceCoverage = dynamic(
+  () => import("@/components/ServiceCoverage"),
+  {
+    loading: () => (
+      <section className="bg-slate-50/80 py-16 border-t border-slate-200/80">
+        <div className="container-custom" style={{ maxWidth: "90%" }}>
+          <div className="h-16 max-w-md mx-auto bg-slate-200/60 rounded-xl mb-10 animate-pulse" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[1, 2, 3].map((n) => (
+              <div key={n} className="h-80 bg-white rounded-2xl border border-slate-200/80 animate-pulse" />
+            ))}
+          </div>
+        </div>
+      </section>
+    ),
+  }
+);
 
 export default function HomePage() {
   return (
