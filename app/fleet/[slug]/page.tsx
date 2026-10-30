@@ -86,7 +86,7 @@ export default function VehicleDetailPage({ params }: FleetPageProps) {
         className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 overflow-hidden text-center"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(10,24,46,0.92), rgba(10,24,46,0.85), rgba(10,24,46,0.98)), url('/images/hero-bg.webp') center/cover no-repeat",
+            `linear-gradient(to bottom, rgba(10,24,46,0.92), rgba(10,24,46,0.85), rgba(10,24,46,0.98)), url('${getAssetPath("/images/hero-bg.webp")}') center/cover no-repeat`,
         }}
       >
         <div className="container-custom max-w-4xl relative z-10">

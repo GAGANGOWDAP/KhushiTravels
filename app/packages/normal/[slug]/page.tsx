@@ -107,6 +107,8 @@ export default function NormalPackageDetailPage({ params }: PageProps) {
               src={getAssetPath(pkg.image)}
               alt={pkg.title}
               className="w-full h-full object-cover opacity-25 filter blur-xs"
+            loading="lazy"
+            decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#071322] via-[#071322]/80 to-transparent"></div>
           </div>

@@ -174,6 +174,8 @@ export default function SpecialPackageDetailPage({ params }: PageProps) {
               src={getAssetPath(pkg.image)}
               alt={pkg.title}
               className="w-full h-full object-cover opacity-20 filter blur-xs"
+            loading="lazy"
+            decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#071322] via-[#071322]/80 to-transparent"></div>
           </div>
@@ -264,7 +266,7 @@ export default function SpecialPackageDetailPage({ params }: PageProps) {
                     <div className="aspect-[4/3] relative overflow-hidden bg-slate-900">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src={temple.img}
+                        src={getAssetPath(temple.img)}
                         alt={temple.name}
                         className="w-full h-full object-cover"
                         loading="lazy"
