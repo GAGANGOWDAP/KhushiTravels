@@ -13,6 +13,37 @@ export default function Header() {
   const [mobilePkgExpanded, setMobilePkgExpanded] = useState(false);
 
   const pkgDropdownRef = useRef<HTMLDivElement>(null);
+  const triggerBtnRef = useRef<HTMLButtonElement>(null);
+  const closeTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  const clearCloseTimer = () => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  };
+
+  const openDropdown = () => {
+    clearCloseTimer();
+    setPkgDropdownOpen(true);
+  };
+
+  const scheduleCloseDropdown = (delay = 220) => {
+    clearCloseTimer();
+    closeTimerRef.current = setTimeout(() => {
+      setPkgDropdownOpen(false);
+    }, delay);
+  };
+
+  const toggleDropdown = () => {
+    clearCloseTimer();
+    setPkgDropdownOpen((prev) => !prev);
+  };
+
+  const closeDropdownImmediately = () => {
+    clearCloseTimer();
+    setPkgDropdownOpen(false);
+  };
 
   // Scroll listener for smooth navbar transition
   useEffect(() => {
@@ -24,30 +55,41 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Click outside and Escape key to close desktop dropdown
+  // Close dropdown on outside click/touch, and handle Escape key
   useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
+    const handleOutsideInteraction = (e: MouseEvent | TouchEvent) => {
       if (
         pkgDropdownRef.current &&
         !pkgDropdownRef.current.contains(e.target as Node)
       ) {
-        setPkgDropdownOpen(false);
+        closeDropdownImmediately();
       }
     };
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setPkgDropdownOpen(false);
+      if (e.key === "Escape" && pkgDropdownOpen) {
+        closeDropdownImmediately();
+        triggerBtnRef.current?.focus();
       }
     };
 
-    document.addEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("mousedown", handleOutsideInteraction);
+    document.addEventListener("touchstart", handleOutsideInteraction, { passive: true });
     document.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("mousedown", handleOutsideInteraction);
+      document.removeEventListener("touchstart", handleOutsideInteraction);
       document.removeEventListener("keydown", handleKeyDown);
+      clearCloseTimer();
     };
-  }, []);
+  }, [pkgDropdownOpen]);
+
+  // Close menus on page route changes
+  useEffect(() => {
+    closeDropdownImmediately();
+    setMobileMenuOpen(false);
+    setMobilePkgExpanded(false);
+  }, [pathname]);
 
   const isPackagesActive = Boolean(
     pathname?.startsWith("/packages") ||
@@ -108,14 +150,29 @@ export default function Header() {
             <div
               ref={pkgDropdownRef}
               className="relative inline-flex items-center"
-              onMouseEnter={() => setPkgDropdownOpen(true)}
-              onMouseLeave={() => setPkgDropdownOpen(false)}
+              onMouseEnter={openDropdown}
+              onMouseLeave={() => scheduleCloseDropdown(220)}
             >
               <button
+                ref={triggerBtnRef}
+                id="packages-menu-btn"
                 type="button"
-                onClick={() => setPkgDropdownOpen((prev) => !prev)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleDropdown();
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleDropdown();
+                  } else if (e.key === "ArrowDown") {
+                    e.preventDefault();
+                    openDropdown();
+                  }
+                }}
                 aria-expanded={pkgDropdownOpen}
                 aria-haspopup="true"
+                aria-controls="packages-dropdown-menu"
                 className={`nav-link flex items-center gap-1.5 cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-sm ${
                   isPackagesActive ? "active" : ""
                 }`}
@@ -138,79 +195,88 @@ export default function Header() {
                 </svg>
               </button>
 
-              {/* Clean White Dropdown Menu */}
+              {/* Seamless Dropdown Menu Wrapper - Starts at top-full (0 gap) with pt-2 visual padding */}
               <div
-                className={`dropdown-menu absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-72 bg-white text-slate-800 rounded-2xl shadow-xl border border-gray-100 p-2 z-50 transition-all duration-200 ${
+                className={`dropdown-menu-wrapper absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50 transition-all duration-200 ${
                   pkgDropdownOpen
                     ? "opacity-100 visible translate-y-0 pointer-events-auto"
-                    : "opacity-0 invisible -translate-y-2 pointer-events-none"
+                    : "opacity-0 invisible -translate-y-1 pointer-events-none"
                 }`}
-                role="menu"
-                aria-orientation="vertical"
+                onMouseEnter={openDropdown}
+                onMouseLeave={() => scheduleCloseDropdown(220)}
               >
-                <div className="space-y-1">
-                  <Link
-                    href="/packages/normal/"
-                    role="menuitem"
-                    onClick={() => setPkgDropdownOpen(false)}
-                    className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
-                      pathname?.includes("/packages/normal")
-                        ? "bg-amber-50 text-amber-900 font-bold border border-amber-200"
-                        : "hover:bg-slate-50 text-slate-700 hover:text-[#1a365d]"
-                    }`}
-                  >
-                    <span className="text-xs font-bold flex items-center justify-between">
-                      Normal Packages
-                      <span className="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded text-slate-600 font-medium">
-                        Family Tours
+                {/* Visual Menu Card with hit-bridge */}
+                <div
+                  id="packages-dropdown-menu"
+                  className="w-72 bg-white text-slate-800 rounded-2xl shadow-xl border border-gray-100 p-2 relative before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3 before:bg-transparent"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="packages-menu-btn"
+                >
+                  <div className="space-y-1">
+                    <Link
+                      href="/packages/normal/"
+                      role="menuitem"
+                      onClick={() => closeDropdownImmediately()}
+                      className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
+                        pathname?.includes("/packages/normal")
+                          ? "bg-amber-50 text-amber-900 font-bold border border-amber-200"
+                          : "hover:bg-slate-50 text-slate-700 hover:text-[#1a365d]"
+                      }`}
+                    >
+                      <span className="text-xs font-bold flex items-center justify-between">
+                        Normal Packages
+                        <span className="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded text-slate-600 font-medium">
+                          Family Tours
+                        </span>
                       </span>
-                    </span>
-                    <span className="text-[11px] text-gray-500 font-normal mt-0.5">
-                      Tirupati, Coorg, Ooty, Mysore & Goa
-                    </span>
-                  </Link>
+                      <span className="text-[11px] text-gray-500 font-normal mt-0.5">
+                        Tirupati, Coorg, Ooty, Mysore & Goa
+                      </span>
+                    </Link>
 
-                  <Link
-                    href="/packages/special/"
-                    role="menuitem"
-                    onClick={() => setPkgDropdownOpen(false)}
-                    className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
-                      pathname?.includes("/packages/special")
-                        ? "bg-amber-50 text-amber-900 font-bold border border-amber-200"
-                        : "hover:bg-slate-50 text-slate-700 hover:text-[#1a365d]"
-                    }`}
-                  >
-                    <span className="text-xs font-bold flex items-center justify-between">
-                      Special Packages
-                      <span className="text-[10px] bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded font-bold">
-                        ★ Pilgrimage
+                    <Link
+                      href="/packages/special/"
+                      role="menuitem"
+                      onClick={() => closeDropdownImmediately()}
+                      className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
+                        pathname?.includes("/packages/special")
+                          ? "bg-amber-50 text-amber-900 font-bold border border-amber-200"
+                          : "hover:bg-slate-50 text-slate-700 hover:text-[#1a365d]"
+                      }`}
+                    >
+                      <span className="text-xs font-bold flex items-center justify-between">
+                        Special Packages
+                        <span className="text-[10px] bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded font-bold">
+                          ★ Pilgrimage
+                        </span>
                       </span>
-                    </span>
-                    <span className="text-[11px] text-gray-500 font-normal mt-0.5">
-                      12 Jyotirlinga Yatra & Sacred Shrines
-                    </span>
-                  </Link>
+                      <span className="text-[11px] text-gray-500 font-normal mt-0.5">
+                        12 Jyotirlinga Yatra & Sacred Shrines
+                      </span>
+                    </Link>
 
-                  <Link
-                    href="/packages/weekend/"
-                    role="menuitem"
-                    onClick={() => setPkgDropdownOpen(false)}
-                    className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
-                      pathname?.includes("/packages/weekend")
-                        ? "bg-amber-50 text-amber-900 font-bold border border-amber-200"
-                        : "hover:bg-slate-50 text-slate-700 hover:text-[#1a365d]"
-                    }`}
-                  >
-                    <span className="text-xs font-bold flex items-center justify-between">
-                      Weekend Packages
-                      <span className="text-[10px] bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded font-medium border border-emerald-200">
-                        18 Trips
+                    <Link
+                      href="/packages/weekend/"
+                      role="menuitem"
+                      onClick={() => closeDropdownImmediately()}
+                      className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
+                        pathname?.includes("/packages/weekend")
+                          ? "bg-amber-50 text-amber-900 font-bold border border-amber-200"
+                          : "hover:bg-slate-50 text-slate-700 hover:text-[#1a365d]"
+                      }`}
+                    >
+                      <span className="text-xs font-bold flex items-center justify-between">
+                        Weekend Packages
+                        <span className="text-[10px] bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded font-medium border border-emerald-200">
+                          18 Trips
+                        </span>
                       </span>
-                    </span>
-                    <span className="text-[11px] text-gray-500 font-normal mt-0.5">
-                      Gokarna, Dandeli, Hampi, Munnar & more
-                    </span>
-                  </Link>
+                      <span className="text-[11px] text-gray-500 font-normal mt-0.5">
+                        Gokarna, Dandeli, Hampi, Munnar & more
+                      </span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
