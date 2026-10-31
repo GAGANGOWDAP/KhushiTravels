@@ -236,6 +236,14 @@ export default function SpecialPackageDetailPage({ params }: PageProps) {
                   View Interactive 25-Day Hub →
                 </Link>
               )}
+              {pkg.slug === "kashi-triveni-ayodhya" && (
+                <Link
+                  href="/packages/kashi-triveni-ayodhya/"
+                  className="inline-flex items-center gap-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 font-bold text-sm px-5 py-3.5 rounded-full border border-amber-400/40 transition-colors"
+                >
+                  View Dedicated Yatra Page →
+                </Link>
+              )}
             </div>
           </div>
         </div>

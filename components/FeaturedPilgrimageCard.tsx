@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { getAssetPath } from "@/lib/assets";
 
 interface PilgrimageTourSlide {
@@ -62,6 +63,38 @@ const PILGRIMAGE_SLIDES: PilgrimageTourSlide[] = [
     ],
     ctaText: "View Tour Details & Itinerary",
     href: "/spiritual-pilgrimage-tours/",
+  },
+  {
+    id: "kashi-triveni-ayodhya",
+    badgeTop: "NEW PACKAGE",
+    badgeBottomTitle: "Spiritual",
+    badgeBottomSubtitle: "YATRA",
+    image: "/images/destinations/varanasi-ganga-aarti.jpg",
+    imageAlt: "Kashi Triveni Ayodhya Yatra - Illuminated Dashashwamedh Ghat Evening Ganga Aarti Varanasi",
+    tag1: "NEW PACKAGE",
+    tag2: "4 Days / 3 Nights • Varanasi to Lucknow Drop",
+    titlePart1: "Kashi – Triveni –",
+    titleHighlight: "Ayodhya Yatra",
+    tagline: "Varanasi • Prayagraj • Ayodhya • Lucknow Drop",
+    description:
+      "A sacred 4-day pilgrimage through Kashi Vishwanath, Triveni Sangam, and Ram Janmabhoomi. Includes Shri Kashi Vishwanath Sparsh Darshan assistance, Dashashwamedh Ganga Aarti and Sangam snan boat rides, Ayodhya Sugam Darshan with golf cart, and 20-seater luxury tempo traveller.",
+    stats: [
+      { value: "4D / 3N", label: "DURATION", highlight: true },
+      { value: "16", label: "ADULTS", highlight: true },
+      { value: "All Meals", label: "APAI INCLUDED", highlight: true },
+      { value: "Premium", label: "HOTEL STAY", highlight: true },
+      { value: "20 Seater", label: "TEMPO TRAVELLER", highlight: true },
+      { value: "520 km", label: "ROUTE", highlight: true },
+    ],
+    price: "₹17,900 / Person",
+    priceLabel: "B2B PRICING (+ 5% GST)",
+    guarantees: [
+      "+ 5% GST on total billing",
+      "08 Double-Sharing Rooms",
+      "Boat rides & all tolls included",
+    ],
+    ctaText: "Explore Package →",
+    href: "/packages/kashi-triveni-ayodhya/",
   },
   {
     id: "south-india-circuit",
@@ -165,6 +198,7 @@ const PILGRIMAGE_SLIDES: PilgrimageTourSlide[] = [
 ];
 
 export default function FeaturedPilgrimageCard() {
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef<number | null>(null);
@@ -214,9 +248,44 @@ export default function FeaturedPilgrimageCard() {
   return (
     <section className="bg-white py-6 sm:py-10 md:py-8 lg:py-10 xl:py-20" aria-label="Featured Pilgrimage Tour">
       <div className="container-custom max-w-7xl">
+        {/* Quick Spiritual Tour Selection Tabs */}
+        <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-2">
+          {PILGRIMAGE_SLIDES.map((s, idx) => (
+            <button
+              key={s.id}
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setCurrentIndex(idx);
+              }}
+              className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
+                idx === currentIndex
+                  ? "bg-[#10213A] text-[#E3C77E] border border-[#C6A04A] shadow-md scale-[1.02]"
+                  : "bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200"
+              }`}
+            >
+              {s.badgeTop === "NEW PACKAGE" ? (
+                <span className="inline-flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#f59e0b] animate-pulse" />
+                  <span className="text-[#d97706] font-extrabold">NEW:</span>
+                  <span>{s.titlePart1} {s.titleHighlight}</span>
+                </span>
+              ) : (
+                <span>{s.titlePart1} {s.titleHighlight}</span>
+              )}
+            </button>
+          ))}
+        </div>
+
         {/* Main Card Container */}
         <div
-          className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#0a1424] border-2 border-amber-500/80 shadow-2xl transition-all duration-300"
+          className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#10213A] border-2 border-[#C6A04A]/80 shadow-2xl transition-all duration-300 cursor-pointer group/card"
+          onClick={(e) => {
+            const target = e.target as HTMLElement;
+            if (!target.closest("button") && !target.closest("a")) {
+              router.push(slide.href);
+            }
+          }}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={handleTouchStart}
@@ -251,7 +320,7 @@ export default function FeaturedPilgrimageCard() {
               {/* Left Navigation Arrow Circle Button */}
               <button
                 type="button"
-                onClick={prevSlide}
+                onClick={(e) => { e.stopPropagation(); prevSlide(); }}
                 aria-label="Previous tour"
                 className="absolute left-3 sm:left-4 md:left-3 xl:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-11 sm:h-11 md:w-9 md:h-9 xl:w-11 xl:h-11 rounded-full bg-[#f59e0b] hover:bg-[#d97706] text-slate-950 flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
@@ -269,7 +338,7 @@ export default function FeaturedPilgrimageCard() {
               {/* Right Navigation Arrow Circle Button (Mobile over image) */}
               <button
                 type="button"
-                onClick={nextSlide}
+                onClick={(e) => { e.stopPropagation(); nextSlide(); }}
                 aria-label="Next tour"
                 className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex sm:hidden w-8 h-8 rounded-full bg-[#f59e0b] hover:bg-[#d97706] text-slate-950 items-center justify-center shadow-lg active:scale-95 transition-all outline-none"
               >
@@ -308,7 +377,7 @@ export default function FeaturedPilgrimageCard() {
               {/* Right Navigation Arrow Button (Desktop & Tablet) */}
               <button
                 type="button"
-                onClick={nextSlide}
+                onClick={(e) => { e.stopPropagation(); nextSlide(); }}
                 aria-label="Next tour"
                 className="absolute right-3 md:right-3.5 xl:right-4 top-1/2 -translate-y-1/2 z-20 hidden sm:flex w-9 h-9 sm:w-11 sm:h-11 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-11 xl:h-11 rounded-full bg-slate-900/80 hover:bg-slate-800 text-white items-center justify-center border border-white/20 shadow-xl hover:scale-105 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
               >
@@ -442,7 +511,7 @@ export default function FeaturedPilgrimageCard() {
             <button
               key={dotIdx}
               type="button"
-              onClick={() => setCurrentIndex(dotIdx)}
+              onClick={(e) => { e.stopPropagation(); setCurrentIndex(dotIdx); }}
               aria-label={`Go to slide ${dotIdx + 1}`}
               className={`transition-all duration-300 rounded-full ${
                 dotIdx === currentIndex

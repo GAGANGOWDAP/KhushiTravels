@@ -8,7 +8,12 @@ interface PackageCardProps {
 }
 
 export default function PackageCard({ pkg }: PackageCardProps) {
-  const detailUrl = `/packages/${pkg.category}/${pkg.slug}/`;
+  const detailUrl =
+    pkg.slug === "kashi-triveni-ayodhya"
+      ? "/packages/kashi-triveni-ayodhya/"
+      : pkg.slug === "12-jyotirlinga-pilgrimage"
+      ? "/spiritual-pilgrimage-tours/"
+      : `/packages/${pkg.category}/${pkg.slug}/`;
   const whatsappText = encodeURIComponent(
     `Hello Khushi Travels, I want to enquire about the ${pkg.title} (${pkg.duration}). Please share vehicle availability and quotation.`
   );
