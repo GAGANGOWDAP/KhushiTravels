@@ -365,7 +365,7 @@ summary:focus-visible {
     justify-content: center;
   }
 
-  @media (max-width: 1023px) {
+    @media (max-width: 1023px) {
     .menu-toggle {
       display: inline-flex;
     }
@@ -373,6 +373,18 @@ summary:focus-visible {
     .site-header {
       padding-top: 16px;
       padding-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 639px) {
+    .site-header {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .site-header.scrolled {
+      padding-top: 8px;
+      padding-bottom: 8px;
     }
   }
 
