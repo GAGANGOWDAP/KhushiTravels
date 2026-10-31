@@ -410,9 +410,8 @@ export default function Footer() {
                 Explore
               </span>
               <svg
-                className={`w-4 h-4 transition-transform duration-300 ${
-                  exploreOpen ? "rotate-180 text-[#F59E0B]" : "text-slate-400"
-                }`}
+                className={`w-4 h-4 transition-transform duration-300 ${exploreOpen ? "rotate-180 text-[#F59E0B]" : "text-slate-400"
+                  }`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -422,9 +421,8 @@ export default function Footer() {
             </button>
             <div
               id="mobile-explore-links"
-              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
-                exploreOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-              }`}
+              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${exploreOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                }`}
             >
               <div className="overflow-hidden">
                 <div className="px-4 pb-4 pt-1 space-y-2 border-t border-white/[0.08]">
@@ -456,9 +454,8 @@ export default function Footer() {
                 Customer Support
               </span>
               <svg
-                className={`w-4 h-4 transition-transform duration-300 ${
-                  supportOpen ? "rotate-180 text-[#F59E0B]" : "text-slate-400"
-                }`}
+                className={`w-4 h-4 transition-transform duration-300 ${supportOpen ? "rotate-180 text-[#F59E0B]" : "text-slate-400"
+                  }`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -468,9 +465,8 @@ export default function Footer() {
             </button>
             <div
               id="mobile-support-links"
-              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
-                supportOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-              }`}
+              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${supportOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                }`}
             >
               <div className="overflow-hidden">
                 <div className="px-4 pb-4 pt-1 space-y-2 border-t border-white/[0.08]">
