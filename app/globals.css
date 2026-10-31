@@ -484,30 +484,39 @@ summary:focus-visible {
   /* Mobile optimization (max-width: 767px) */
   @media (max-width: 767px) {
     .hero-cinematic {
-      height: 100vh;
-      height: 100svh;
-      height: 100dvh;
-      min-height: 100vh;
+      height: auto;
       min-height: 100svh;
       min-height: 100dvh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding-top: calc(var(--navbar-height, 68px) + clamp(12px, 2.5vh, 28px));
-      padding-bottom: clamp(14px, 2.5vh, 24px);
+      justify-content: flex-start;
+      padding-top: calc(var(--navbar-height, 68px) + env(safe-area-inset-top, 0px) + clamp(8px, 1.8vh, 16px));
+      padding-bottom: calc(clamp(24px, 4vh, 36px) + env(safe-area-inset-bottom, 0px));
       background-image:
         linear-gradient(180deg, 
-          rgba(8, 8, 120, 0.92) 0%, 
-          rgba(8, 8, 120, 0.84) 40%, 
-          rgba(8, 8, 120, 0.50) 65%, 
-          rgba(8, 8, 120, 0.20) 78%, 
+          rgba(8, 8, 120, 0.96) 0%, 
+          rgba(8, 8, 120, 0.92) 38%, 
+          rgba(8, 8, 120, 0.68) 58%, 
+          rgba(8, 8, 120, 0.28) 76%, 
           rgba(8, 8, 120, 0.92) 100%
         ),
         var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
-      background-position: 72% 70%;
+      background-position: 78% 85%;
       background-size: cover;
       background-repeat: no-repeat;
       overflow: hidden;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 1.7rem + 2vw, 2.5rem); /* ~34px to 40px */
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-desc {
+      font-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem); /* 15px to 17px */
+      line-height: 1.58;
+      max-width: 34rem;
     }
   }
 
@@ -518,7 +527,7 @@ summary:focus-visible {
       min-height: 100vh;
       min-height: 100dvh;
       overflow: visible;
-      padding-top: calc(var(--navbar-height, 68px) + 14px);
+      padding-top: calc(var(--navbar-height, 68px) + 10px);
       padding-bottom: 20px;
     }
   }

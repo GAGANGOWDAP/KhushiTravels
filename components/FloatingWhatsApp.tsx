@@ -2,17 +2,17 @@ import React from "react";
 
 export default function FloatingWhatsApp() {
   return (
-    <div className="fixed bottom-3.5 right-3.5 sm:bottom-6 sm:right-6 md:bottom-7 md:right-7 z-40 flex flex-col items-center gap-2 sm:gap-3">
-      {/* Floating Instagram Button - Positioned above WhatsApp */}
+    <div className="fixed bottom-4 right-3.5 sm:bottom-6 sm:right-6 md:bottom-7 md:right-7 z-40 flex flex-col items-center gap-2.5 sm:gap-3 pointer-events-auto">
+      {/* Floating Instagram Button - Visually secondary on mobile */}
       <a
         href="https://www.instagram.com/khushi_travels_"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-pink-300 group"
+        className="flex w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white items-center justify-center shadow-md hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-pink-300 opacity-90 hover:opacity-100 group"
         aria-label="Follow Khushi Travels on Instagram"
       >
         <svg
-          className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 fill-current drop-shadow-sm group-hover:scale-110 transition-transform duration-200"
+          className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 fill-current drop-shadow-sm group-hover:scale-110 transition-transform duration-200"
           viewBox="0 0 24 24"
           aria-hidden="true"
         >
@@ -20,12 +20,12 @@ export default function FloatingWhatsApp() {
         </svg>
       </a>
 
-      {/* Floating WhatsApp Button - Ergonomic size for mobile, full size on desktop */}
+      {/* Floating WhatsApp Button - Primary shortcut */}
       <a
         href="https://wa.me/919901333113?text=Hi%20Khushi%20Travels%2C%20I'm%20interested%20in%20booking."
         target="_blank"
         rel="noopener noreferrer"
-        className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300 group"
+        className="w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300 group"
         aria-label="Chat with Khushi Travels on WhatsApp"
       >
         <svg
