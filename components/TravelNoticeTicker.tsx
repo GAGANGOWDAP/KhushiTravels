@@ -6,7 +6,7 @@ export default function TravelNoticeTicker() {
 
   return (
     <aside
-      className="relative z-30 bg-[#111318] border-y border-[#C6A04A]/30 text-[#F7F5F0] overflow-hidden select-none"
+      className="relative z-30 bg-[#111318] border-y border-[#D8B43B]/30 text-[#F7F5F0] overflow-hidden select-none"
       aria-label="Important Travel Notice"
     >
       <style
@@ -37,9 +37,9 @@ export default function TravelNoticeTicker() {
 
       <div className="flex items-center w-full h-10 sm:h-11 group">
         {/* Fixed Left Badge: Info Icon + Heading */}
-        <div className="shrink-0 z-20 flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 h-full bg-[#111318] border-r border-[#C6A04A]/30 shadow-[4px_0_12px_rgba(0,0,0,0.5)]">
+        <div className="shrink-0 z-20 flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 h-full bg-[#111318] border-r border-[#D8B43B]/30 shadow-[4px_0_12px_rgba(0,0,0,0.5)]">
           <svg
-            className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C6A04A] shrink-0"
+            className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D8B43B] shrink-0"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -52,7 +52,7 @@ export default function TravelNoticeTicker() {
               d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <span className="font-heading font-extrabold text-[10px] sm:text-xs text-[#C6A04A] uppercase tracking-wider whitespace-nowrap">
+          <span className="font-heading font-extrabold text-[10px] sm:text-xs text-[#D8B43B] uppercase tracking-wider whitespace-nowrap">
             IMPORTANT TRAVEL NOTICE
           </span>
         </div>
@@ -67,7 +67,7 @@ export default function TravelNoticeTicker() {
             <span className="text-[11.5px] sm:text-xs md:text-sm text-[#F7F5F0] font-normal tracking-wide pl-4 sm:pl-6">
               {noticeText}
             </span>
-            <span className="mx-6 sm:mx-8 text-[#C6A04A] text-xs" aria-hidden="true">
+            <span className="mx-6 sm:mx-8 text-[#D8B43B] text-xs" aria-hidden="true">
               ✦
             </span>
           </div>
@@ -79,7 +79,7 @@ export default function TravelNoticeTicker() {
             <span className="text-[11.5px] sm:text-xs md:text-sm text-[#F7F5F0] font-normal tracking-wide pl-4 sm:pl-6">
               {noticeText}
             </span>
-            <span className="mx-6 sm:mx-8 text-[#C6A04A] text-xs" aria-hidden="true">
+            <span className="mx-6 sm:mx-8 text-[#D8B43B] text-xs" aria-hidden="true">
               ✦
             </span>
           </div>

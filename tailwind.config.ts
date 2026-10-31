@@ -11,9 +11,25 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          navy: "#1a365d",
-          amber: "#f59e0b",
-          blue: "#1e40af",
+          // Official Brand Book Primary Palette
+          primary: "#080878",
+          "primary-dark": "#05055C",
+          "primary-light": "#24249B",
+          gold: "#D8B43B",
+          "gold-dark": "#BFA044",
+          white: "#FFFFFF",
+          black: "#111111",
+          // Official Brand Book Supporting Palette
+          ivory: "#F7F7FB",
+          "light-blue": "#E8E8F4",
+          slate: "#55556B",
+          // Mapped aliases for consistent global coverage
+          navy: "#080878",
+          "navy-dark": "#05055C",
+          "navy-light": "#24249B",
+          amber: "#D8B43B",
+          "amber-dark": "#BFA044",
+          blue: "#080878",
         },
       },
       fontFamily: {

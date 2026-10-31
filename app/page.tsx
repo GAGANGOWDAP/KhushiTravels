@@ -101,14 +101,14 @@ export default function HomePage() {
         <div className="container-custom w-full relative z-10">
           <div className="max-w-2xl text-left">
             {/* Brand Message Eyebrow */}
-            <div className="flex items-center gap-3 text-amber-500 font-bold text-xs sm:text-sm tracking-wider uppercase mb-1.5 sm:mb-2.5 lg:mb-3">
+            <div className="flex items-center gap-3 text-brand-gold font-bold text-xs sm:text-sm tracking-wider uppercase mb-1.5 sm:mb-2.5 lg:mb-3">
               <span>TRAVEL TOGETHER. TRAVEL BETTER.</span>
             </div>
 
             {/* Main Heading */}
             <h1 className="font-heading hero-title text-white font-extrabold tracking-tight leading-[1.08] mb-2.5 sm:mb-3.5 lg:mb-5 text-balance">
               Luxury Tempo <br className="hidden sm:inline" />
-              <span className="text-[#f59e0b]">Traveller</span> in Bangalore
+              <span className="text-[#D8B43B]">Traveller</span> in Bangalore
             </h1>
 
             {/* Supporting Description */}

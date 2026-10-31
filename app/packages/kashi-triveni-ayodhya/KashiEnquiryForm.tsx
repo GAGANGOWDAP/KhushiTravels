@@ -52,15 +52,15 @@ Please share the official itemised quotation and availability.`;
 
   return (
     <div
-      className={`bg-white rounded-2xl md:rounded-[22px] border border-[#E8E6E0] p-4 sm:p-6 md:p-7 shadow-xl shadow-slate-900/10 text-left ${className}`}
+      className={`bg-white rounded-2xl md:rounded-[22px] border border-[#E8E8F4] p-4 sm:p-6 md:p-7 shadow-xl shadow-slate-900/10 text-left ${className}`}
     >
       {/* Form Header */}
-      <div className="mb-3.5 sm:mb-5 pb-3 border-b border-[#E8E6E0]">
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#10213A]/5 border border-[#10213A]/10 text-[#10213A] text-[10px] font-bold uppercase tracking-wider mb-1.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+      <div className="mb-3.5 sm:mb-5 pb-3 border-b border-[#E8E8F4]">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#080878]/5 border border-[#080878]/10 text-[#080878] text-[10px] font-bold uppercase tracking-wider mb-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B]" />
           <span>Direct Operator Quote</span>
         </div>
-        <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#10213A] tracking-tight">
+        <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#080878] tracking-tight">
           Book Your Sacred Yatra
         </h3>
         <p className="text-xs text-[#64748B] mt-0.5">
@@ -92,7 +92,7 @@ Please share the official itemised quotation and availability.`;
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               placeholder="e.g. Rajesh Kumar"
-              className="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F7F3] border border-[#E8E6E0] text-[#1E293B] placeholder-slate-400 text-[15px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:bg-white transition-all"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-[#F7F7FB] border border-[#E8E8F4] text-[#1E293B] placeholder-slate-400 text-[15px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#D8B43B] focus:bg-white transition-all"
             />
           </div>
 
@@ -110,7 +110,7 @@ Please share the official itemised quotation and availability.`;
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="+91 98765 43210"
-              className="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F7F3] border border-[#E8E6E0] text-[#1E293B] placeholder-slate-400 text-[15px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:bg-white transition-all"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-[#F7F7FB] border border-[#E8E8F4] text-[#1E293B] placeholder-slate-400 text-[15px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#D8B43B] focus:bg-white transition-all"
             />
           </div>
         </div>
@@ -128,7 +128,7 @@ Please share the official itemised quotation and availability.`;
               id="kashi-travellers"
               value={travellers}
               onChange={(e) => setTravellers(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F7F3] border border-[#E8E6E0] text-[#1E293B] text-[15px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:bg-white transition-all"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-[#F7F7FB] border border-[#E8E8F4] text-[#1E293B] text-[15px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#D8B43B] focus:bg-white transition-all"
             >
               <option value="16 Adults">16 Adults (Standard Group)</option>
               <option value="12–15 Adults">12–15 Adults</option>
@@ -148,7 +148,7 @@ Please share the official itemised quotation and availability.`;
               id="kashi-rooms"
               value={rooms}
               onChange={(e) => setRooms(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F7F3] border border-[#E8E6E0] text-[#1E293B] text-[15px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:bg-white transition-all"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-[#F7F7FB] border border-[#E8E8F4] text-[#1E293B] text-[15px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#D8B43B] focus:bg-white transition-all"
             >
               <option value="08 Double Rooms">08 Double Rooms</option>
               <option value="06–07 Rooms">06–07 Rooms</option>
@@ -171,7 +171,7 @@ Please share the official itemised quotation and availability.`;
             type="date"
             value={travelDate}
             onChange={(e) => setTravelDate(e.target.value)}
-            className="w-full px-3.5 py-2.5 rounded-xl bg-[#F8F7F3] border border-[#E8E6E0] text-[#1E293B] text-[15px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:bg-white transition-all"
+            className="w-full px-3.5 py-2.5 rounded-xl bg-[#F7F7FB] border border-[#E8E8F4] text-[#1E293B] text-[15px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#D8B43B] focus:bg-white transition-all"
           />
         </div>
 
@@ -190,7 +190,7 @@ Please share the official itemised quotation and availability.`;
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="e.g. Senior citizens in family, Jain meal preference, arrival train/flight..."
-              className="w-full px-3.5 py-2 rounded-xl bg-[#F8F7F3] border border-[#E8E6E0] text-[#1E293B] placeholder-slate-400 text-[15px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:bg-white transition-all resize-none"
+              className="w-full px-3.5 py-2 rounded-xl bg-[#F7F7FB] border border-[#E8E8F4] text-[#1E293B] placeholder-slate-400 text-[15px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#D8B43B] focus:bg-white transition-all resize-none"
             />
           </div>
         )}
@@ -198,7 +198,7 @@ Please share the official itemised quotation and availability.`;
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full mt-2 py-3 px-5 rounded-xl bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-slate-950 font-bold text-xs sm:text-sm tracking-wide shadow-md hover:shadow-lg hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2"
+          className="w-full mt-2 py-3 px-5 rounded-xl bg-gradient-to-r from-[#D8B43B] to-[#D97706] text-slate-950 font-bold text-xs sm:text-sm tracking-wide shadow-md hover:shadow-lg hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2"
         >
           <span>Send Booking Enquiry on WhatsApp</span>
           <span className="text-base">&rarr;</span>

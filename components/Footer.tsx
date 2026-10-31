@@ -54,24 +54,24 @@ export default function Footer() {
     <footer
       className="relative pt-12 sm:pt-14 md:pt-16 pb-24 sm:pb-20 md:pb-12 border-t border-white/[0.12] overflow-hidden text-[#CBD5E1]"
       style={{
-        background: "linear-gradient(180deg, #10213A 0%, #0A1626 100%)",
+        background: "linear-gradient(180deg, #080878 0%, #05055C 100%)",
       }}
     >
       <div className="container-custom relative z-10">
         {/* =================================================================== */}
         {/* 3. PREMIUM CTA SECTION (Desktop & Mobile Adaptive)                  */}
         {/* =================================================================== */}
-        <div className="bg-[#193454]/60 border border-white/[0.12] rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 mb-12 sm:mb-14 md:mb-16 backdrop-blur-md shadow-2xl relative overflow-hidden group">
+        <div className="bg-[#05055C]/60 border border-white/[0.12] rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 mb-12 sm:mb-14 md:mb-16 backdrop-blur-md shadow-2xl relative overflow-hidden group">
           {/* Subtle Ambient Decorative Gradient Blob */}
           <div
-            className="absolute -right-20 -top-20 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none transition-opacity duration-500 group-hover:opacity-100 opacity-60"
+            className="absolute -right-20 -top-20 w-64 h-64 bg-[#D8B43B]/10 rounded-full blur-3xl pointer-events-none transition-opacity duration-500 group-hover:opacity-100 opacity-60"
             aria-hidden="true"
           />
 
           <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-8">
             <div className="max-w-2xl text-left">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#F59E0B] mb-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#D8B43B] mb-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B] animate-pulse" />
                 Khushi Tours &amp; Travels Concierge
               </span>
               <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight leading-tight mb-2">
@@ -94,13 +94,13 @@ export default function Footer() {
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 text-white border border-white/20 text-xs sm:text-sm font-heading font-bold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-center shadow-sm"
               >
                 <span>Explore Our Fleet</span>
-                <svg className="w-4 h-4 text-[#F59E0B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4 text-[#D8B43B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </Link>
               <Link
                 href="/hire-tempo-traveller-bangalore/"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full gradient-amber text-white text-xs sm:text-sm font-heading font-bold shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 hover:brightness-105 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-center"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#D8B43B] hover:bg-[#BFA044] text-[#111111] text-xs sm:text-sm font-heading font-bold shadow-lg shadow-[#D8B43B]/25 hover:shadow-[#D8B43B]/40 hover:brightness-105 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-center"
               >
                 <span>Get a Travel Quote</span>
               </Link>
@@ -116,7 +116,7 @@ export default function Footer() {
           <div className="space-y-4 text-left">
             <Link
               href="/"
-              className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B] rounded-lg"
+              className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8B43B] rounded-lg"
               aria-label="Khushi Tours & Travels Home"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -130,7 +130,7 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="text-xs font-semibold tracking-wider uppercase text-[#F59E0B]">
+            <p className="text-xs font-semibold tracking-wider uppercase text-[#D8B43B]">
               &ldquo;Every Journey Deserves Comfort.&rdquo;
             </p>
 
@@ -147,7 +147,7 @@ export default function Footer() {
                   href="https://www.instagram.com/khushi_travels_"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white/[0.06] hover:bg-[#F59E0B] text-[#CBD5E1] hover:text-[#10213A] flex items-center justify-center transition-all duration-200 border border-white/10 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B]"
+                  className="w-9 h-9 rounded-full bg-white/[0.06] hover:bg-[#D8B43B] text-[#CBD5E1] hover:text-[#080878] flex items-center justify-center transition-all duration-200 border border-white/10 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8B43B]"
                   aria-label="Follow Khushi Travels on Instagram"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -158,7 +158,7 @@ export default function Footer() {
                   href="https://www.facebook.com/p/Khushi-tours-and-travels-61566515977365/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white/[0.06] hover:bg-[#F59E0B] text-[#CBD5E1] hover:text-[#10213A] flex items-center justify-center transition-all duration-200 border border-white/10 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B]"
+                  className="w-9 h-9 rounded-full bg-white/[0.06] hover:bg-[#D8B43B] text-[#CBD5E1] hover:text-[#080878] flex items-center justify-center transition-all duration-200 border border-white/10 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8B43B]"
                   aria-label="Follow Khushi Travels on Facebook"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -169,7 +169,7 @@ export default function Footer() {
                   href="https://www.youtube.com/@sureshj1169"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white/[0.06] hover:bg-[#F59E0B] text-[#CBD5E1] hover:text-[#10213A] flex items-center justify-center transition-all duration-200 border border-white/10 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B]"
+                  className="w-9 h-9 rounded-full bg-white/[0.06] hover:bg-[#D8B43B] text-[#CBD5E1] hover:text-[#080878] flex items-center justify-center transition-all duration-200 border border-white/10 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8B43B]"
                   aria-label="Subscribe to Khushi Travels on YouTube"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -183,7 +183,7 @@ export default function Footer() {
           {/* Column 2 – Explore */}
           <div>
             <h4 className="text-white font-heading font-bold text-sm tracking-wider uppercase mb-5 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B]" />
               Explore
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -191,9 +191,9 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-[#CBD5E1] hover:text-[#F59E0B] hover:translate-x-1 inline-flex items-center gap-2 transition-all duration-200"
+                    className="text-[#CBD5E1] hover:text-[#D8B43B] hover:translate-x-1 inline-flex items-center gap-2 transition-all duration-200"
                   >
-                    <span className="text-[#F59E0B]/60 text-xs">&rsaquo;</span>
+                    <span className="text-[#D8B43B]/60 text-xs">&rsaquo;</span>
                     {item.name}
                   </Link>
                 </li>
@@ -204,7 +204,7 @@ export default function Footer() {
           {/* Column 3 – Customer Support */}
           <div>
             <h4 className="text-white font-heading font-bold text-sm tracking-wider uppercase mb-5 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B]" />
               Customer Support
             </h4>
             <ul className="space-y-2.5 text-sm mb-5">
@@ -212,9 +212,9 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-[#CBD5E1] hover:text-[#F59E0B] hover:translate-x-1 inline-flex items-center gap-2 transition-all duration-200"
+                    className="text-[#CBD5E1] hover:text-[#D8B43B] hover:translate-x-1 inline-flex items-center gap-2 transition-all duration-200"
                   >
-                    <span className="text-[#F59E0B]/60 text-xs">&rsaquo;</span>
+                    <span className="text-[#D8B43B]/60 text-xs">&rsaquo;</span>
                     {item.name}
                   </Link>
                 </li>
@@ -230,13 +230,13 @@ export default function Footer() {
           {/* Column 4 – Reach Us */}
           <div className="space-y-4">
             <h4 className="text-white font-heading font-bold text-sm tracking-wider uppercase mb-5 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B]" />
               Reach Us
             </h4>
 
             <div className="space-y-3 text-xs sm:text-sm">
               <div className="flex items-start gap-3">
-                <div className="w-7 h-7 rounded-lg bg-white/[0.06] text-[#F59E0B] flex items-center justify-center shrink-0 border border-white/10 mt-0.5">
+                <div className="w-7 h-7 rounded-lg bg-white/[0.06] text-[#D8B43B] flex items-center justify-center shrink-0 border border-white/10 mt-0.5">
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -248,7 +248,7 @@ export default function Footer() {
                     href="https://maps.google.com/?q=Khushi+tours+and+Travels+Kodigehalli+Bengaluru"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#94A3B8] hover:text-[#F59E0B] transition-colors leading-relaxed block text-xs mt-0.5"
+                    className="text-[#94A3B8] hover:text-[#D8B43B] transition-colors leading-relaxed block text-xs mt-0.5"
                   >
                     Ground Floor No: 2, Kodigehalli Main Road, Near Railway Station, Vidyaranyapura, Virupakshapura, Bengaluru – 560097.
                   </a>
@@ -256,7 +256,7 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-7 h-7 rounded-lg bg-white/[0.06] text-[#F59E0B] flex items-center justify-center shrink-0 border border-white/10">
+                <div className="w-7 h-7 rounded-lg bg-white/[0.06] text-[#D8B43B] flex items-center justify-center shrink-0 border border-white/10">
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
@@ -267,28 +267,28 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-7 h-7 rounded-lg bg-white/[0.06] text-[#F59E0B] flex items-center justify-center shrink-0 border border-white/10">
+                <div className="w-7 h-7 rounded-lg bg-white/[0.06] text-[#D8B43B] flex items-center justify-center shrink-0 border border-white/10">
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
                 <a
                   href="tel:+919901333113"
-                  className="text-white font-medium hover:text-[#F59E0B] transition-colors text-xs sm:text-sm"
+                  className="text-white font-medium hover:text-[#D8B43B] transition-colors text-xs sm:text-sm"
                 >
                   +91 99013 33113
                 </a>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-7 h-7 rounded-lg bg-white/[0.06] text-[#F59E0B] flex items-center justify-center shrink-0 border border-white/10">
+                <div className="w-7 h-7 rounded-lg bg-white/[0.06] text-[#D8B43B] flex items-center justify-center shrink-0 border border-white/10">
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <a
                   href="mailto:info@khushitravel.in"
-                  className="text-[#CBD5E1] hover:text-[#F59E0B] transition-colors text-xs"
+                  className="text-[#CBD5E1] hover:text-[#D8B43B] transition-colors text-xs"
                 >
                   info@khushitravel.in
                 </a>
@@ -311,7 +311,7 @@ export default function Footer() {
               </a>
               <a
                 href="tel:+919901333113"
-                className="h-9 px-2 rounded-lg bg-[#F59E0B] hover:bg-amber-500 text-[#10213A] text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-md hover:shadow-amber-500/20 transition-all duration-200"
+                className="h-9 px-2 rounded-lg bg-[#D8B43B] hover:bg-amber-500 text-[#080878] text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-md hover:shadow-amber-500/20 transition-all duration-200"
                 aria-label="Call Khushi Travels"
               >
                 <svg className="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24">
@@ -326,7 +326,7 @@ export default function Footer() {
                 className="h-9 px-2 rounded-lg bg-white/[0.08] hover:bg-white/[0.14] text-white border border-white/15 text-[11px] font-semibold flex items-center justify-center gap-1 transition-all duration-200"
                 aria-label="Get Directions to Office"
               >
-                <svg className="w-3.5 h-3.5 text-[#F59E0B] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-3.5 h-3.5 text-[#D8B43B] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
                 <span>Directions</span>
@@ -352,7 +352,7 @@ export default function Footer() {
                 height={50}
               />
             </Link>
-            <p className="text-xs font-semibold tracking-wider uppercase text-[#F59E0B]">
+            <p className="text-xs font-semibold tracking-wider uppercase text-[#D8B43B]">
               &ldquo;Every Journey Deserves Comfort.&rdquo;
             </p>
             <p className="text-xs text-[#94A3B8] max-w-sm mx-auto leading-relaxed">
@@ -397,20 +397,20 @@ export default function Footer() {
           </div>
 
           {/* Accordion 1: Explore */}
-          <div className="bg-[#193454]/40 border border-white/[0.12] rounded-xl overflow-hidden">
+          <div className="bg-[#05055C]/40 border border-white/[0.12] rounded-xl overflow-hidden">
             <button
               type="button"
               onClick={() => setExploreOpen(!exploreOpen)}
               aria-expanded={exploreOpen}
               aria-controls="mobile-explore-links"
-              className="w-full flex items-center justify-between p-4 text-left font-heading font-bold text-sm text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B]"
+              className="w-full flex items-center justify-between p-4 text-left font-heading font-bold text-sm text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8B43B]"
             >
               <span className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B]" />
                 Explore
               </span>
               <svg
-                className={`w-4 h-4 transition-transform duration-300 ${exploreOpen ? "rotate-180 text-[#F59E0B]" : "text-slate-400"
+                className={`w-4 h-4 transition-transform duration-300 ${exploreOpen ? "rotate-180 text-[#D8B43B]" : "text-slate-400"
                   }`}
                 fill="none"
                 viewBox="0 0 24 24"
@@ -430,7 +430,7 @@ export default function Footer() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block py-2 text-xs text-[#CBD5E1] hover:text-[#F59E0B] active:text-[#F59E0B] transition-colors"
+                      className="block py-2 text-xs text-[#CBD5E1] hover:text-[#D8B43B] active:text-[#D8B43B] transition-colors"
                     >
                       &rsaquo; {item.name}
                     </Link>
@@ -441,20 +441,20 @@ export default function Footer() {
           </div>
 
           {/* Accordion 2: Customer Support */}
-          <div className="bg-[#193454]/40 border border-white/[0.12] rounded-xl overflow-hidden">
+          <div className="bg-[#05055C]/40 border border-white/[0.12] rounded-xl overflow-hidden">
             <button
               type="button"
               onClick={() => setSupportOpen(!supportOpen)}
               aria-expanded={supportOpen}
               aria-controls="mobile-support-links"
-              className="w-full flex items-center justify-between p-4 text-left font-heading font-bold text-sm text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B]"
+              className="w-full flex items-center justify-between p-4 text-left font-heading font-bold text-sm text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8B43B]"
             >
               <span className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B]" />
                 Customer Support
               </span>
               <svg
-                className={`w-4 h-4 transition-transform duration-300 ${supportOpen ? "rotate-180 text-[#F59E0B]" : "text-slate-400"
+                className={`w-4 h-4 transition-transform duration-300 ${supportOpen ? "rotate-180 text-[#D8B43B]" : "text-slate-400"
                   }`}
                 fill="none"
                 viewBox="0 0 24 24"
@@ -474,7 +474,7 @@ export default function Footer() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block py-2 text-xs text-[#CBD5E1] hover:text-[#F59E0B] active:text-[#F59E0B] transition-colors"
+                      className="block py-2 text-xs text-[#CBD5E1] hover:text-[#D8B43B] active:text-[#D8B43B] transition-colors"
                     >
                       &rsaquo; {item.name}
                     </Link>
@@ -485,9 +485,9 @@ export default function Footer() {
           </div>
 
           {/* Mobile Contact Information Card */}
-          <div className="bg-[#193454]/40 border border-white/[0.12] rounded-2xl p-5 space-y-4">
+          <div className="bg-[#05055C]/40 border border-white/[0.12] rounded-2xl p-5 space-y-4">
             <h4 className="text-white font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B]" />
               Office &amp; Support
             </h4>
 
@@ -500,10 +500,10 @@ export default function Footer() {
                 GST: <strong className="text-white font-medium">29JPFPK4060F1ZQ</strong>
               </p>
               <div className="flex flex-col gap-1.5 pt-1">
-                <a href="tel:+919901333113" className="text-white font-semibold text-sm hover:text-[#F59E0B]">
+                <a href="tel:+919901333113" className="text-white font-semibold text-sm hover:text-[#D8B43B]">
                   📞 +91 99013 33113
                 </a>
-                <a href="mailto:info@khushitravel.in" className="text-[#94A3B8] hover:text-[#F59E0B]">
+                <a href="mailto:info@khushitravel.in" className="text-[#94A3B8] hover:text-[#D8B43B]">
                   ✉️ info@khushitravel.in
                 </a>
               </div>
@@ -521,7 +521,7 @@ export default function Footer() {
               </a>
               <a
                 href="tel:+919901333113"
-                className="h-10 rounded-xl bg-[#F59E0B] text-[#10213A] text-xs font-bold flex items-center justify-center gap-1 active:scale-95 shadow-sm"
+                className="h-10 rounded-xl bg-[#D8B43B] text-[#080878] text-xs font-bold flex items-center justify-center gap-1 active:scale-95 shadow-sm"
               >
                 <span>Call Now</span>
               </a>
@@ -542,16 +542,16 @@ export default function Footer() {
         {/* =================================================================== */}
         <div className="border-t border-white/[0.12] pt-8 sm:pt-10 mb-8 sm:mb-10">
           <h4 className="text-white text-xs font-bold uppercase tracking-widest text-center mb-5 flex items-center justify-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B]" />
             Popular Routes from Bangalore
-            <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B]" />
           </h4>
           <div className="flex flex-wrap justify-center gap-2 max-w-5xl mx-auto">
             {popularRoutes.map((route) => (
               <Link
                 key={route.name}
                 href={route.href}
-                className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-white/[0.04] text-[#CBD5E1] border border-white/[0.12] hover:border-[#F59E0B]/60 hover:bg-[#F59E0B]/10 hover:text-[#F59E0B] transition-all duration-200"
+                className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-white/[0.04] text-[#CBD5E1] border border-white/[0.12] hover:border-[#D8B43B]/60 hover:bg-[#D8B43B]/10 hover:text-[#D8B43B] transition-all duration-200"
               >
                 {route.name}
               </Link>
@@ -569,11 +569,11 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center justify-center gap-4 order-1 md:order-2">
-              <Link href="/terms/" className="hover:text-[#F59E0B] transition-colors focus:outline-none focus-visible:underline">
+              <Link href="/terms/" className="hover:text-[#D8B43B] transition-colors focus:outline-none focus-visible:underline">
                 Terms &amp; Conditions
               </Link>
               <span className="text-white/20">|</span>
-              <Link href="/privacy/" className="hover:text-[#F59E0B] transition-colors focus:outline-none focus-visible:underline">
+              <Link href="/privacy/" className="hover:text-[#D8B43B] transition-colors focus:outline-none focus-visible:underline">
                 Privacy Policy
               </Link>
             </div>
@@ -586,7 +586,7 @@ export default function Footer() {
                 type="button"
                 onClick={scrollToTop}
                 aria-label="Back to top"
-                className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-white/[0.08] hover:bg-[#F59E0B] hover:text-[#10213A] text-slate-300 transition-all duration-200 border border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B]"
+                className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-white/[0.08] hover:bg-[#D8B43B] hover:text-[#080878] text-slate-300 transition-all duration-200 border border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8B43B]"
                 title="Back to top"
               >
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -607,7 +607,7 @@ export default function Footer() {
               href="https://www.coreforgeindia.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-[#F59E0B] hover:text-amber-400 hover:underline transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#10213A] rounded px-1"
+              className="font-semibold text-[#D8B43B] hover:text-[#D8B43B] hover:underline transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8B43B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080878] rounded px-1"
             >
               CoreForge
             </a>

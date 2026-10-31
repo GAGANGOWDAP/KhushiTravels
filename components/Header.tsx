@@ -199,7 +199,7 @@ export default function Header() {
                 <span>Packages</span>
                 <svg
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                    pkgDropdownOpen ? "rotate-180 text-amber-500" : "opacity-70"
+                    pkgDropdownOpen ? "rotate-180 text-[#D8B43B]" : "opacity-70"
                   }`}
                   fill="none"
                   stroke="currentColor"
@@ -239,8 +239,8 @@ export default function Header() {
                       onClick={() => closeDropdownImmediately()}
                       className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
                         pathname?.includes("/packages/normal")
-                          ? "bg-amber-50 text-amber-900 font-bold border border-amber-200"
-                          : "hover:bg-slate-50 text-slate-700 hover:text-[#1a365d]"
+                          ? "bg-[#D8B43B]/10 text-[#080878] font-bold border border-[#D8B43B]/30"
+                          : "hover:bg-slate-50 text-slate-700 hover:text-[#080878]"
                       }`}
                     >
                       <span className="text-xs font-bold flex items-center justify-between">
@@ -260,13 +260,13 @@ export default function Header() {
                       onClick={() => closeDropdownImmediately()}
                       className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
                         pathname?.includes("/packages/special")
-                          ? "bg-amber-50 text-amber-900 font-bold border border-amber-200"
-                          : "hover:bg-slate-50 text-slate-700 hover:text-[#1a365d]"
+                          ? "bg-[#D8B43B]/10 text-[#080878] font-bold border border-[#D8B43B]/30"
+                          : "hover:bg-slate-50 text-slate-700 hover:text-[#080878]"
                       }`}
                     >
                       <span className="text-xs font-bold flex items-center justify-between">
                         Special Packages
-                        <span className="text-[10px] bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded font-bold">
+                        <span className="text-[10px] bg-[#D8B43B]/20 text-[#080878] px-1.5 py-0.5 rounded font-bold">
                           ★ Pilgrimage
                         </span>
                       </span>
@@ -281,8 +281,8 @@ export default function Header() {
                       onClick={() => closeDropdownImmediately()}
                       className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
                         pathname?.includes("/packages/weekend")
-                          ? "bg-amber-50 text-amber-900 font-bold border border-amber-200"
-                          : "hover:bg-slate-50 text-slate-700 hover:text-[#1a365d]"
+                          ? "bg-[#D8B43B]/10 text-[#080878] font-bold border border-[#D8B43B]/30"
+                          : "hover:bg-slate-50 text-slate-700 hover:text-[#080878]"
                       }`}
                     >
                       <span className="text-xs font-bold flex items-center justify-between">
@@ -408,14 +408,14 @@ export default function Header() {
               type="button"
               onClick={() => setMobilePkgExpanded(!mobilePkgExpanded)}
               className={`flex items-center gap-2 text-xl font-semibold transition-colors ${
-                isPackagesActive ? "text-amber-600 font-bold" : "text-[#1a365d]"
+                isPackagesActive ? "text-[#D8B43B] font-bold" : "text-[#080878]"
               }`}
               aria-expanded={mobilePkgExpanded}
             >
               <span>Packages</span>
               <svg
                 className={`w-4 h-4 transition-transform duration-200 ${
-                  mobilePkgExpanded ? "rotate-180 text-amber-500" : ""
+                  mobilePkgExpanded ? "rotate-180 text-[#D8B43B]" : ""
                 }`}
                 fill="none"
                 stroke="currentColor"
@@ -436,8 +436,8 @@ export default function Header() {
                   href="/packages/normal/"
                   className={`text-sm font-semibold transition-colors ${
                     pathname?.includes("/packages/normal")
-                      ? "text-amber-600 font-bold"
-                      : "text-gray-700 hover:text-amber-600"
+                      ? "text-[#D8B43B] font-bold"
+                      : "text-gray-700 hover:text-[#D8B43B]"
                   }`}
                   onClick={() => {
                     setMobileMenuOpen(false);
@@ -450,8 +450,8 @@ export default function Header() {
                   href="/packages/special/"
                   className={`text-sm font-semibold transition-colors ${
                     pathname?.includes("/packages/special")
-                      ? "text-amber-600 font-bold"
-                      : "text-gray-700 hover:text-amber-600"
+                      ? "text-[#D8B43B] font-bold"
+                      : "text-gray-700 hover:text-[#D8B43B]"
                   }`}
                   onClick={() => {
                     setMobileMenuOpen(false);
@@ -464,8 +464,8 @@ export default function Header() {
                   href="/packages/weekend/"
                   className={`text-sm font-semibold transition-colors ${
                     pathname?.includes("/packages/weekend")
-                      ? "text-amber-600 font-bold"
-                      : "text-gray-700 hover:text-amber-600"
+                      ? "text-[#D8B43B] font-bold"
+                      : "text-gray-700 hover:text-[#D8B43B]"
                   }`}
                   onClick={() => {
                     setMobileMenuOpen(false);
@@ -476,7 +476,7 @@ export default function Header() {
                 </Link>
                 <Link
                   href="/packages/"
-                  className="text-xs font-bold text-amber-600 hover:underline pt-2 border-t border-gray-200 w-full text-center"
+                  className="text-xs font-bold text-[#D8B43B] hover:underline pt-2 border-t border-gray-200 w-full text-center"
                   onClick={() => {
                     setMobileMenuOpen(false);
                     setMobilePkgExpanded(false);
@@ -523,7 +523,7 @@ export default function Header() {
           </a>
           <a
             href="tel:+919901333113"
-            className="action-icon bg-[#1a365d] text-white border-none w-11 h-11"
+            className="action-icon bg-[#080878] text-white border-none w-11 h-11"
             aria-label="Call Us"
           >
             <svg

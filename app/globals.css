@@ -5,6 +5,16 @@
 @layer base {
   :root {
     --navbar-height: 80px;
+    --brand-primary: #080878;
+    --brand-primary-dark: #05055C;
+    --brand-primary-light: #24249B;
+    --brand-gold: #D8B43B;
+    --brand-gold-dark: #BFA044;
+    --brand-white: #FFFFFF;
+    --brand-black: #111111;
+    --brand-ivory: #F7F7FB;
+    --brand-light-blue: #E8E8F4;
+    --brand-slate: #55556B;
   }
 
   @media (max-width: 1023px) {
@@ -49,7 +59,7 @@
 }
 
 .gradient-amber {
-  background: linear-gradient(135deg, #f59e0b, #f97316);
+  background: linear-gradient(135deg, #D8B43B, #BFA044);
 }
 
 .section-py {
@@ -83,7 +93,7 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 summary:focus-visible {
-  outline: 2px solid #f59e0b;
+  outline: 2px solid #D8B43B;
   outline-offset: 3px;
 }
 
@@ -151,11 +161,11 @@ summary:focus-visible {
   }
 
   .nav-link:hover {
-    color: #f59e0b;
+    color: #D8B43B;
   }
 
   .nav-link.active {
-    color: #f59e0b;
+    color: #D8B43B;
     font-weight: 600;
   }
 
@@ -166,26 +176,26 @@ summary:focus-visible {
     left: 0;
     right: 0;
     height: 2px;
-    background: #f59e0b;
+    background: #D8B43B;
     border-radius: 9999px;
   }
 
   /* Scrolled state for navigation links */
   .site-header.scrolled .nav-link {
-    color: #1a365d;
+    color: #080878;
     font-weight: 600;
   }
 
   .site-header.scrolled .nav-link:hover {
-    color: #d97706;
+    color: #D8B43B;
   }
 
   .site-header.scrolled .nav-link.active {
-    color: #d97706;
+    color: #D8B43B;
   }
 
   .site-header.scrolled .nav-link.active::after {
-    background: #d97706;
+    background: #D8B43B;
   }
 
   /* Header actions (Right) */
@@ -212,22 +222,22 @@ summary:focus-visible {
   }
 
   .action-icon:hover {
-    background: rgba(245, 158, 11, 0.25);
-    border-color: #f59e0b;
-    color: #f59e0b;
+    background: rgba(216, 180, 59, 0.25);
+    border-color: #D8B43B;
+    color: #D8B43B;
     transform: translateY(-1px);
   }
 
   .site-header.scrolled .action-icon {
-    background: rgba(26, 54, 93, 0.06);
-    border-color: rgba(26, 54, 93, 0.1);
-    color: #1a365d;
+    background: rgba(8, 8, 120, 0.06);
+    border-color: rgba(8, 8, 120, 0.12);
+    color: #080878;
   }
 
   .site-header.scrolled .action-icon:hover {
-    background: #1a365d;
+    background: #080878;
     color: #ffffff;
-    border-color: #1a365d;
+    border-color: #080878;
   }
 
   /* Phone call button */
@@ -237,12 +247,12 @@ summary:focus-visible {
     gap: 8px;
     padding: 8px 18px;
     border-radius: 9999px;
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-    color: #ffffff;
+    background: linear-gradient(135deg, #D8B43B, #BFA044);
+    color: #111111;
     font-weight: 700;
     font-size: 0.8125rem;
     letter-spacing: 0.01em;
-    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    box-shadow: 0 4px 14px rgba(216, 180, 59, 0.35);
     text-decoration: none;
     white-space: nowrap;
     transition: all 0.25s ease;
@@ -250,18 +260,18 @@ summary:focus-visible {
 
   .nav-phone-btn:hover {
     transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(245, 158, 11, 0.45);
+    box-shadow: 0 6px 18px rgba(216, 180, 59, 0.45);
     filter: brightness(1.05);
   }
 
   .site-header.scrolled .nav-phone-btn {
-    background: #1a365d;
+    background: #080878;
     color: #ffffff;
-    box-shadow: 0 4px 12px rgba(26, 54, 93, 0.25);
+    box-shadow: 0 4px 12px rgba(8, 8, 120, 0.25);
   }
 
   .site-header.scrolled .nav-phone-btn:hover {
-    background: #10213a;
+    background: #05055C;
   }
 
   /* Mobile menu toggle */
@@ -294,11 +304,11 @@ summary:focus-visible {
 
   .menu-toggle.active .close-icon {
     display: block;
-    color: #1a365d;
+    color: #080878;
   }
 
   .site-header.scrolled .menu-toggle {
-    color: #1a365d;
+    color: #080878;
     background: rgba(0, 0, 0, 0.05);
     border-color: rgba(0, 0, 0, 0.08);
   }
@@ -337,19 +347,19 @@ summary:focus-visible {
   .mobile-overlay a {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1a365d;
+    color: #080878;
     text-decoration: none;
     transition: color 0.2s ease;
   }
 
   .mobile-overlay a.active,
   .mobile-overlay a.active-link {
-    color: #f59e0b !important;
+    color: #D8B43B !important;
     font-weight: 700;
   }
 
   .mobile-overlay a:hover {
-    color: #f59e0b;
+    color: #D8B43B;
   }
 
   .mobile-overlay .mobile-socs {
@@ -408,10 +418,10 @@ summary:focus-visible {
     box-sizing: border-box;
     overflow: hidden;
     margin-bottom: -1px;
-    background-color: #071322;
+    background-color: #080878;
     background-image:
-      linear-gradient(90deg, #071322 0%, rgba(7, 19, 34, 0.96) 30%, rgba(7, 19, 34, 0.72) 42%, rgba(7, 19, 34, 0.2) 56%, transparent 68%),
-      linear-gradient(180deg, rgba(7, 19, 34, 0.82) 0%, rgba(7, 19, 34, 0.2) 90px, transparent 150px, transparent calc(100% - 90px), rgba(7, 19, 34, 0.95) 100%),
+      linear-gradient(90deg, #080878 0%, rgba(8, 8, 120, 0.96) 30%, rgba(8, 8, 120, 0.72) 42%, rgba(8, 8, 120, 0.2) 56%, transparent 68%),
+      linear-gradient(180deg, rgba(8, 8, 120, 0.82) 0%, rgba(8, 8, 120, 0.2) 90px, transparent 150px, transparent calc(100% - 90px), rgba(8, 8, 120, 0.95) 100%),
       var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
     background-position: right 10% center;
     background-size: cover;
@@ -462,8 +472,8 @@ summary:focus-visible {
       padding-bottom: clamp(1rem, 2vh, 2rem);
       justify-content: center;
       background-image:
-        linear-gradient(90deg, #071322 0%, rgba(7, 19, 34, 0.94) 40%, rgba(7, 19, 34, 0.7) 60%, rgba(7, 19, 34, 0.35) 80%, transparent 100%),
-        linear-gradient(180deg, rgba(7, 19, 34, 0.8) 0%, transparent 120px, transparent calc(100% - 90px), rgba(7, 19, 34, 0.95) 100%),
+        linear-gradient(90deg, #080878 0%, rgba(8, 8, 120, 0.94) 40%, rgba(8, 8, 120, 0.7) 60%, rgba(8, 8, 120, 0.35) 80%, transparent 100%),
+        linear-gradient(180deg, rgba(8, 8, 120, 0.8) 0%, transparent 120px, transparent calc(100% - 90px), rgba(8, 8, 120, 0.95) 100%),
         var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
       background-position: 68% center;
     }
@@ -485,11 +495,11 @@ summary:focus-visible {
       padding-bottom: clamp(14px, 2.5vh, 24px);
       background-image:
         linear-gradient(180deg, 
-          rgba(7, 19, 34, 0.92) 0%, 
-          rgba(7, 19, 34, 0.84) 40%, 
-          rgba(7, 19, 34, 0.50) 65%, 
-          rgba(7, 19, 34, 0.20) 78%, 
-          rgba(7, 19, 34, 0.92) 100%
+          rgba(8, 8, 120, 0.92) 0%, 
+          rgba(8, 8, 120, 0.84) 40%, 
+          rgba(8, 8, 120, 0.50) 65%, 
+          rgba(8, 8, 120, 0.20) 78%, 
+          rgba(8, 8, 120, 0.92) 100%
         ),
         var(--hero-bg-image, url('/KhushiTravels/images/hero-bg.webp'));
       background-position: 72% 70%;

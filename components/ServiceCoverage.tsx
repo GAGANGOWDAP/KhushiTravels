@@ -50,12 +50,12 @@ export default function ServiceCoverage() {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/80 text-amber-800 text-xs font-bold uppercase tracking-wider mb-3">
-            <span className="w-2 h-2 rounded-full bg-[#f59e0b]"></span>
+            <span className="w-2 h-2 rounded-full bg-[#D8B43B]"></span>
             Doorstep Pickup &amp; South India Network
           </div>
           <h2
             id="service-coverage-heading"
-            className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1a365d] tracking-tight"
+            className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#080878] tracking-tight"
           >
             Bangalore Service Coverage &amp; Routes
           </h2>
@@ -95,7 +95,7 @@ export default function ServiceCoverage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base sm:text-lg text-[#1a365d]">
+                    <h3 className="font-heading font-bold text-base sm:text-lg text-[#080878]">
                       Bengaluru Localities
                     </h3>
                     <p className="text-[11px] text-slate-500 font-normal">
@@ -116,7 +116,7 @@ export default function ServiceCoverage() {
                     <Link
                       key={loc.slug}
                       href={`/localities/${loc.slug}/`}
-                      className={`group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-50 text-slate-700 border border-slate-200/80 hover:bg-amber-50 hover:border-amber-400 hover:text-[#1a365d] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 ${
+                      className={`group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-50 text-slate-700 border border-slate-200/80 hover:bg-amber-50 hover:border-amber-400 hover:text-[#080878] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 ${
                         isHidden ? "hidden" : "inline-flex"
                       }`}
                     >
@@ -188,7 +188,7 @@ export default function ServiceCoverage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base sm:text-lg text-[#1a365d]">
+                    <h3 className="font-heading font-bold text-base sm:text-lg text-[#080878]">
                       Outstation Routes
                     </h3>
                     <p className="text-[11px] text-slate-500 font-normal">
@@ -209,7 +209,7 @@ export default function ServiceCoverage() {
                     <Link
                       key={route.slug}
                       href={`/routes/${route.slug}/`}
-                      className={`group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-50 text-slate-700 border border-slate-200/80 hover:bg-amber-50 hover:border-amber-400 hover:text-[#1a365d] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 ${
+                      className={`group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-50 text-slate-700 border border-slate-200/80 hover:bg-amber-50 hover:border-amber-400 hover:text-[#080878] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 ${
                         isHidden ? "hidden" : "inline-flex"
                       }`}
                     >
@@ -281,7 +281,7 @@ export default function ServiceCoverage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base sm:text-lg text-[#1a365d]">
+                    <h3 className="font-heading font-bold text-base sm:text-lg text-[#080878]">
                       Fleet Categories
                     </h3>
                     <p className="text-[11px] text-slate-500 font-normal">
@@ -300,7 +300,7 @@ export default function ServiceCoverage() {
                   <Link
                     key={vehicle.slug}
                     href={`/fleet/${vehicle.slug}/`}
-                    className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-50 text-slate-700 border border-slate-200/80 hover:bg-amber-50 hover:border-amber-400 hover:text-[#1a365d] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+                    className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-50 text-slate-700 border border-slate-200/80 hover:bg-amber-50 hover:border-amber-400 hover:text-[#080878] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
                     <span>{getFleetLabel(vehicle)}</span>
@@ -317,7 +317,7 @@ export default function ServiceCoverage() {
               </span>
               <Link
                 href="/best-tempo-traveller-fleet-bangalore/"
-                className="font-bold text-[#1a365d] hover:text-amber-600 transition-colors"
+                className="font-bold text-[#080878] hover:text-brand-gold transition-colors"
               >
                 View Full Fleet &rarr;
               </Link>
