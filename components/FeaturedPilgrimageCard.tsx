@@ -202,13 +202,21 @@ export default function FeaturedPilgrimageCard() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragOffset, setDragOffset] = useState(0);
 
-  // Drag / swipe gesture states
-  const touchStartX = useRef<number | null>(null);
-  const touchStartY = useRef<number | null>(null);
-  const mouseStartX = useRef<number | null>(null);
-  const isDragging = useRef<boolean>(false);
-  const dragDistance = useRef<number>(0);
+  // Gesture tracking refs
+  const dragStartX = useRef<number>(0);
+  const dragStartY = useRef<number>(0);
+  const lastPointerX = useRef<number>(0);
+  const lastPointerTime = useRef<number>(0);
+  const dragStartTime = useRef<number>(0);
+  const velocity = useRef<number>(0);
+  const hasMoved = useRef<boolean>(false);
+  const isLockedVertical = useRef<boolean>(false);
+  const isLockedHorizontal = useRef<boolean>(false);
+  const autoplayTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const stageRef = useRef<HTMLDivElement | null>(null);
 
   // Resize listener for responsive 3D geometry
   useEffect(() => {
@@ -220,26 +228,38 @@ export default function FeaturedPilgrimageCard() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const total = PILGRIMAGE_SLIDES.length;
+
   const prevSlide = useCallback(() => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? PILGRIMAGE_SLIDES.length - 1 : prev - 1
-    );
-  }, []);
+    setCurrentIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
+  }, [total]);
 
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) =>
-      prev === PILGRIMAGE_SLIDES.length - 1 ? 0 : prev + 1
-    );
-  }, []);
+    setCurrentIndex((prev) => (prev === total - 1 ? 0 : prev + 1));
+  }, [total]);
 
-  // Automatic slide rotation: advances every 6 seconds, pauses on interaction
-  useEffect(() => {
-    if (isPaused) return;
-    const timer = setInterval(() => {
+  const goToSlide = useCallback(
+    (index: number) => {
+      setCurrentIndex(((index % total) + total) % total);
+    },
+    [total]
+  );
+
+  // Autoplay management: 5000ms interval, pause on hover/drag, smooth reset
+  const startAutoplay = useCallback(() => {
+    if (autoplayTimerRef.current) clearInterval(autoplayTimerRef.current);
+    if (isPaused || isDragging) return;
+    autoplayTimerRef.current = setInterval(() => {
       nextSlide();
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [isPaused, nextSlide]);
+    }, 5000);
+  }, [isPaused, isDragging, nextSlide]);
+
+  useEffect(() => {
+    startAutoplay();
+    return () => {
+      if (autoplayTimerRef.current) clearInterval(autoplayTimerRef.current);
+    };
+  }, [currentIndex, isPaused, isDragging, startAutoplay]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -254,67 +274,124 @@ export default function FeaturedPilgrimageCard() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [prevSlide, nextSlide]);
 
-  // Touch handlers
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setIsPaused(true);
-    touchStartX.current = e.touches[0].clientX;
-    touchStartY.current = e.touches[0].clientY;
+  // Dynamic stride for 1:1 physical tracking
+  const getStride = () => {
+    if (stageRef.current) {
+      const width = stageRef.current.clientWidth;
+      return isMobile ? Math.max(260, width * 0.72) : Math.max(480, width * 0.52);
+    }
+    return isMobile ? 300 : 540;
   };
 
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    setIsPaused(false);
-    if (touchStartX.current === null || touchStartY.current === null) return;
-    const diffX = e.changedTouches[0].clientX - touchStartX.current;
-    const diffY = e.changedTouches[0].clientY - touchStartY.current;
+  // Pointer Handlers for Butter-Smooth Direct Dragging
+  const handlePointerDown = (e: React.PointerEvent) => {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    dragStartX.current = e.clientX;
+    dragStartY.current = e.clientY;
+    lastPointerX.current = e.clientX;
+    lastPointerTime.current = performance.now();
+    dragStartTime.current = performance.now();
+    velocity.current = 0;
+    hasMoved.current = false;
+    isLockedVertical.current = false;
+    isLockedHorizontal.current = false;
+    setIsDragging(true);
+    setDragOffset(0);
 
-    // Check if primarily horizontal swipe
-    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
-      if (diffX > 0) {
-        prevSlide();
-      } else {
-        nextSlide();
+    try {
+      (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    } catch {
+      // Ignore fallback
+    }
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    if (!isDragging) return;
+
+    const dx = e.clientX - dragStartX.current;
+    const dy = e.clientY - dragStartY.current;
+
+    // Detect gesture orientation lock
+    if (!isLockedHorizontal.current && !isLockedVertical.current) {
+      if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 9) {
+        // Natural page vertical scroll: release gesture lock
+        isLockedVertical.current = true;
+        setIsDragging(false);
+        setDragOffset(0);
+        return;
+      } else if (Math.abs(dx) > 7) {
+        isLockedHorizontal.current = true;
+        hasMoved.current = true;
       }
     }
-    touchStartX.current = null;
-    touchStartY.current = null;
+
+    if (isLockedVertical.current) return;
+
+    // Calculate instantaneous velocity for spring/flick momentum
+    const now = performance.now();
+    const dt = now - lastPointerTime.current;
+    if (dt > 12) {
+      const v = (e.clientX - lastPointerX.current) / dt;
+      velocity.current = velocity.current * 0.35 + v * 0.65;
+      lastPointerX.current = e.clientX;
+      lastPointerTime.current = now;
+    }
+
+    setDragOffset(dx);
   };
 
-  // Mouse drag handlers (Desktop)
-  const handleMouseDown = (e: React.MouseEvent) => {
-    isDragging.current = true;
-    dragDistance.current = 0;
-    mouseStartX.current = e.clientX;
-    setIsPaused(true);
-  };
+  const finishDrag = (e?: React.PointerEvent) => {
+    if (!isDragging) return;
+    setIsDragging(false);
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging.current || mouseStartX.current === null) return;
-    dragDistance.current = e.clientX - mouseStartX.current;
-  };
-
-  const handleMouseUp = () => {
-    if (isDragging.current) {
-      if (dragDistance.current < -50) {
-        nextSlide();
-      } else if (dragDistance.current > 50) {
-        prevSlide();
+    if (e) {
+      try {
+        (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
+      } catch {
+        // Ignore fallback
       }
     }
-    isDragging.current = false;
-    mouseStartX.current = null;
-    dragDistance.current = 0;
-    setIsPaused(false);
+
+    const dx = dragOffset;
+    const vel = velocity.current;
+    const threshold = isMobile ? 38 : 60;
+    const flickSpeed = 0.22;
+
+    if (dx < -threshold || vel < -flickSpeed) {
+      nextSlide();
+    } else if (dx > threshold || vel > flickSpeed) {
+      prevSlide();
+    }
+
+    setDragOffset(0);
+    velocity.current = 0;
+
+    // Brief cooldown prevents false link click triggers on release
+    setTimeout(() => {
+      hasMoved.current = false;
+    }, 70);
   };
+
+  const handlePointerUp = (e: React.PointerEvent) => {
+    finishDrag(e);
+  };
+
+  const handlePointerCancel = (e: React.PointerEvent) => {
+    finishDrag(e);
+  };
+
+  // Normalized continuous drag offset
+  const stride = getStride();
+  const dragProgress = isDragging
+    ? Math.max(-1.3, Math.min(1.3, dragOffset / stride))
+    : 0;
 
   return (
     <section
       className="bg-slate-50 py-4 sm:py-6 md:py-8 lg:py-10 select-none overflow-hidden"
       aria-label="Featured Pilgrimage Tour Packages"
       onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => {
-        setIsPaused(false);
-        if (isDragging.current) handleMouseUp();
-      }}
+      onMouseLeave={() => setIsPaused(false)}
     >
       <div className="container-custom max-w-7xl px-3 sm:px-4 md:px-6">
         {/* =================================================================== */}
@@ -334,20 +411,22 @@ export default function FeaturedPilgrimageCard() {
         {/* 2. 3D STACKED CARD CAROUSEL STAGE */}
         {/* =================================================================== */}
         <div
-          className="relative w-full flex items-center justify-center my-1 sm:my-2"
+          ref={stageRef}
+          className="relative w-full flex items-center justify-center my-1 sm:my-2 cursor-grab active:cursor-grabbing select-none"
           style={{
             perspective: "1400px",
             minHeight: isMobile ? "490px" : "480px",
+            touchAction: "pan-y",
           }}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerCancel}
         >
           {/* Left Arrow Button (Desktop & Tablet) */}
           <button
             type="button"
+            onPointerDown={(e) => e.stopPropagation()}
             onClick={(e) => {
               e.stopPropagation();
               prevSlide();
@@ -369,6 +448,7 @@ export default function FeaturedPilgrimageCard() {
           {/* Right Arrow Button (Desktop & Tablet) */}
           <button
             type="button"
+            onPointerDown={(e) => e.stopPropagation()}
             onClick={(e) => {
               e.stopPropagation();
               nextSlide();
@@ -388,18 +468,20 @@ export default function FeaturedPilgrimageCard() {
           </button>
 
           {/* 3D Stacked Deck of Cards */}
-          <div className="relative w-full h-[475px] sm:h-[490px] md:h-[460px] lg:h-[485px] xl:h-[505px] flex items-center justify-center">
+          <div className="relative w-full h-[475px] sm:h-[490px] md:h-[460px] lg:h-[485px] xl:h-[505px] flex items-center justify-center pointer-events-none">
             {PILGRIMAGE_SLIDES.map((slide, index) => {
               // Calculate modular offset relative to currentIndex
-              let offset = index - currentIndex;
-              const total = PILGRIMAGE_SLIDES.length;
-              if (offset > total / 2) offset -= total;
-              if (offset < -total / 2) offset += total;
+              let diff = index - currentIndex;
+              if (diff > total / 2) diff -= total;
+              if (diff < -total / 2) diff += total;
 
-              const isActive = offset === 0;
-              const isPrev = offset === -1;
-              const isNext = offset === 1;
-              const isHidden = Math.abs(offset) > 1;
+              // Continuous circular offset with dragProgress
+              let u = diff + dragProgress;
+              if (u > total / 2) u -= total;
+              if (u < -total / 2) u += total;
+
+              const t = Math.abs(u);
+              const isCenterActive = !isDragging ? diff === 0 : t < 0.45;
 
               // Responsive 3D transform computation
               let transformStyle = "";
@@ -409,59 +491,76 @@ export default function FeaturedPilgrimageCard() {
               let filter = "none";
               let boxShadow = "none";
 
-              if (isActive) {
-                zIndex = 30;
-                opacity = 1;
+              if (t <= 1.0) {
+                zIndex = Math.round(30 - t * 10);
                 pointerEvents = "auto";
-                transformStyle = "translate3d(0, 0, 0) scale(1) rotateY(0deg)";
-                boxShadow =
-                  "0 25px 60px -15px rgba(8, 8, 120, 0.65), 0 0 30px rgba(216, 180, 59, 0.25)";
-              } else if (isPrev) {
-                zIndex = 20;
-                opacity = isMobile ? 0.75 : 0.85;
-                pointerEvents = "auto";
-                filter = "brightness(0.65)";
+
                 if (isMobile) {
-                  transformStyle =
-                    "translate3d(-52%, 0, -60px) scale(0.88) rotate(-2deg)";
-                  boxShadow = "0 15px 35px -10px rgba(0, 0, 0, 0.6)";
+                  const tx = u * 52;
+                  const tz = -t * 60;
+                  const scale = 1.0 - t * 0.11;
+                  const rot = -u * 2;
+                  transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale}) rotate(${rot}deg)`;
+                  opacity = Math.max(0.68, 1.0 - t * 0.24);
+                  filter = `brightness(${1.0 - t * 0.35})`;
+                  boxShadow =
+                    t <= 0.45
+                      ? "0 25px 60px -15px rgba(8, 8, 120, 0.65), 0 0 30px rgba(216, 180, 59, 0.25)"
+                      : "0 15px 35px -10px rgba(0, 0, 0, 0.6)";
                 } else {
-                  transformStyle =
-                    "translate3d(-38%, 0, -85px) scale(0.89) rotateY(5deg)";
-                  boxShadow = "0 20px 40px -15px rgba(0, 0, 0, 0.7)";
+                  const tx = u * 38;
+                  const tz = -t * 85;
+                  const scale = 1.0 - t * 0.09;
+                  const rotY = -u * 5;
+                  transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale}) rotateY(${rotY}deg)`;
+                  opacity = Math.max(0.72, 1.0 - t * 0.18);
+                  filter = `brightness(${1.0 - t * 0.35})`;
+                  boxShadow =
+                    t <= 0.45
+                      ? "0 25px 60px -15px rgba(8, 8, 120, 0.65), 0 0 30px rgba(216, 180, 59, 0.25)"
+                      : "0 20px 40px -15px rgba(0, 0, 0, 0.7)";
                 }
-              } else if (isNext) {
-                zIndex = 20;
-                opacity = isMobile ? 0.75 : 0.85;
-                pointerEvents = "auto";
-                filter = "brightness(0.65)";
+              } else if (t <= 2.0) {
+                // Secondary tier tucked behind
+                zIndex = 10;
+                pointerEvents = "none";
+                const extra = t - 1.0;
                 if (isMobile) {
-                  transformStyle =
-                    "translate3d(52%, 0, -60px) scale(0.88) rotate(2deg)";
-                  boxShadow = "0 15px 35px -10px rgba(0, 0, 0, 0.6)";
+                  const tx = (u > 0 ? 1 : -1) * (52 + extra * 30);
+                  const tz = -60 - extra * 120;
+                  const scale = Math.max(0.72, 0.89 - extra * 0.14);
+                  transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale})`;
+                  opacity = Math.max(0, 0.75 - extra * 0.75);
+                  filter = "brightness(0.6)";
                 } else {
-                  transformStyle =
-                    "translate3d(38%, 0, -85px) scale(0.89) rotateY(-5deg)";
-                  boxShadow = "0 20px 40px -15px rgba(0, 0, 0, 0.7)";
+                  const tx = (u > 0 ? 1 : -1) * (38 + extra * 36);
+                  const tz = -85 - extra * 140;
+                  const scale = Math.max(0.72, 0.91 - extra * 0.15);
+                  transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale})`;
+                  opacity = Math.max(0, 0.82 - extra * 0.82);
+                  filter = "brightness(0.6)";
                 }
               } else {
-                // Outer cards (tucked further behind)
-                zIndex = 10;
+                // Tucked away completely
+                zIndex = 5;
                 opacity = 0;
                 pointerEvents = "none";
-                transformStyle = `translate3d(${
-                  offset > 0 ? 80 : -80
-                }%, 0, -180px) scale(0.76)`;
+                const tx = u > 0 ? 88 : -88;
+                transformStyle = `translate3d(${tx}%, 0, -220px) scale(0.70)`;
               }
 
               return (
                 <article
                   key={slide.id}
                   onClick={(e) => {
-                    if (Math.abs(dragDistance.current) > 10) return;
-                    if (!isActive) {
+                    if (hasMoved.current) {
+                      e.preventDefault();
                       e.stopPropagation();
-                      setCurrentIndex(index);
+                      return;
+                    }
+                    if (!isCenterActive) {
+                      e.stopPropagation();
+                      goToSlide(index);
                     } else {
                       const target = e.target as HTMLElement;
                       if (!target.closest("button") && !target.closest("a")) {
@@ -476,15 +575,17 @@ export default function FeaturedPilgrimageCard() {
                     filter,
                     boxShadow,
                     pointerEvents,
-                    transition:
-                      "transform 500ms cubic-bezier(0.25, 1, 0.5, 1), opacity 500ms ease, filter 500ms ease, box-shadow 500ms ease",
+                    transition: isDragging
+                      ? "none"
+                      : "transform 950ms cubic-bezier(0.22, 1, 0.36, 1), opacity 950ms cubic-bezier(0.22, 1, 0.36, 1), filter 950ms ease, box-shadow 950ms ease",
+                    willChange: "transform, opacity",
                   }}
                   className={`absolute top-0 left-0 right-0 bottom-0 m-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-[#080878] border-2 border-[#D8B43B]/80 cursor-pointer ${
                     isMobile
                       ? "w-[84vw] max-w-[340px] sm:max-w-[375px] h-[465px] sm:h-[485px]"
                       : "w-[680px] lg:w-[840px] xl:w-[940px] h-[450px] lg:h-[475px] xl:h-[495px]"
                   }`}
-                  aria-hidden={!isActive}
+                  aria-hidden={!isCenterActive}
                 >
                   {/* Subtle Top Metallic Accent Strip */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#D8B43B] via-[#D8B43B] to-[#D8B43B] z-30" />
@@ -499,8 +600,8 @@ export default function FeaturedPilgrimageCard() {
                       <img
                         src={getAssetPath(slide.image)}
                         alt={slide.imageAlt}
-                        className="w-full h-full object-cover object-center"
-                        loading={isActive ? "eager" : "lazy"}
+                        className="w-full h-full object-cover object-center pointer-events-none"
+                        loading={isCenterActive ? "eager" : "lazy"}
                         width={600}
                         height={400}
                       />
@@ -539,7 +640,16 @@ export default function FeaturedPilgrimageCard() {
 
                         {/* Title */}
                         <h3 className="font-heading text-[16px] sm:text-[18px] font-semibold text-white tracking-tight leading-snug line-clamp-1">
-                          <Link href={slide.href} className="hover:text-[#D8B43B] transition-colors">
+                          <Link
+                            href={slide.href}
+                            onClick={(e) => {
+                              if (hasMoved.current) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                              }
+                            }}
+                            className="hover:text-[#D8B43B] transition-colors"
+                          >
                             {slide.titlePart1} <span className="text-[#D8B43B]">{slide.titleHighlight}</span>
                           </Link>
                         </h3>
@@ -584,6 +694,12 @@ export default function FeaturedPilgrimageCard() {
                         </div>
                         <Link
                           href={slide.href}
+                          onClick={(e) => {
+                            if (hasMoved.current) {
+                              e.preventDefault();
+                              e.stopPropagation();
+                            }
+                          }}
                           className="inline-flex items-center justify-center gap-1 px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#D8B43B] to-[#d97706] text-slate-950 font-semibold text-[11px] shadow-md hover:scale-105 active:scale-95 transition-all whitespace-nowrap"
                         >
                           <span>{slide.ctaText.replace("View Tour Details & Itinerary", "View Tour")}</span>
@@ -603,8 +719,8 @@ export default function FeaturedPilgrimageCard() {
                       <img
                         src={getAssetPath(slide.image)}
                         alt={slide.imageAlt}
-                        className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                        loading={isActive ? "eager" : "lazy"}
+                        className="w-full h-full object-cover object-center transition-transform duration-700 pointer-events-none"
+                        loading={isCenterActive ? "eager" : "lazy"}
                         width={700}
                         height={500}
                       />
@@ -648,7 +764,16 @@ export default function FeaturedPilgrimageCard() {
 
                         {/* Title */}
                         <h3 className="font-heading text-xl lg:text-2xl xl:text-3xl font-semibold text-white tracking-tight leading-tight mb-1">
-                          <Link href={slide.href} className="hover:text-[#D8B43B] transition-colors">
+                          <Link
+                            href={slide.href}
+                            onClick={(e) => {
+                              if (hasMoved.current) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                              }
+                            }}
+                            className="hover:text-[#D8B43B] transition-colors"
+                          >
                             {slide.titlePart1} <span className="text-[#D8B43B]">{slide.titleHighlight}</span>
                           </Link>
                         </h3>
@@ -709,6 +834,12 @@ export default function FeaturedPilgrimageCard() {
                         <div className="shrink-0">
                           <Link
                             href={slide.href}
+                            onClick={(e) => {
+                              if (hasMoved.current) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                              }
+                            }}
                             className="inline-flex items-center justify-center gap-2 px-5 lg:px-6 xl:px-7 py-3 rounded-xl bg-gradient-to-r from-[#D8B43B] to-[#d97706] text-slate-950 font-heading font-semibold text-xs lg:text-sm shadow-lg hover:shadow-amber-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap"
                           >
                             <span>{slide.ctaText}</span>
@@ -732,9 +863,10 @@ export default function FeaturedPilgrimageCard() {
             <button
               key={dotIdx}
               type="button"
+              onPointerDown={(e) => e.stopPropagation()}
               onClick={(e) => {
                 e.stopPropagation();
-                setCurrentIndex(dotIdx);
+                goToSlide(dotIdx);
               }}
               aria-label={`Go to slide ${dotIdx + 1}`}
               className={`transition-all duration-300 rounded-full ${
