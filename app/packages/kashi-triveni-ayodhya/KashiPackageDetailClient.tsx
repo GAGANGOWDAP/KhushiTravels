@@ -195,7 +195,7 @@ export default function KashiPackageDetailClient({
       {/* 1. CINEMATIC HERO SECTION (EDITORIAL + BOOKING CARD) */}
       {/* ================================================================= */}
       <section
-        className="relative overflow-hidden text-white pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-12 lg:pb-20"
+        className="relative overflow-hidden text-white pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20"
         style={{
           background: `linear-gradient(135deg, rgba(16, 33, 58, 0.94) 0%, rgba(19, 42, 74, 0.90) 50%, rgba(10, 22, 40, 0.96) 100%), url('${getAssetPath(
             "/images/destinations/varanasi-ganga-aarti.jpg"
@@ -223,8 +223,9 @@ export default function KashiPackageDetailClient({
                 <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#D8B43B] text-xs font-semibold tracking-wider">
                   ✦ Sacred Pilgrimage Circuit
                 </span>
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-semibold">
-                  ✓ Confirmed Departure
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  Departure on November 30
                 </span>
               </div>
 
