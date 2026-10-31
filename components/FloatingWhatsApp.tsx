@@ -2,7 +2,7 @@ import React from "react";
 
 export default function FloatingWhatsApp() {
   return (
-    <div className="fixed bottom-4 right-3.5 sm:bottom-6 sm:right-6 md:bottom-7 md:right-7 z-40 flex flex-col items-center gap-2.5 sm:gap-3 pointer-events-auto">
+    <div className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom,0px))] right-3.5 sm:bottom-6 sm:right-6 md:bottom-7 md:right-7 z-40 flex flex-col items-center gap-2.5 sm:gap-3 pointer-events-auto">
       {/* Floating Instagram Button - Visually secondary on mobile */}
       <a
         href="https://www.instagram.com/khushi_travels_"
