@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ServiceCoverage from "@/components/ServiceCoverage";
 import ItineraryDaysAccordion from "@/components/ItineraryDaysAccordion";
 import SpiritualEnquiryForm from "@/components/SpiritualEnquiryForm";
+import TravelNoticeTicker from "@/components/TravelNoticeTicker";
 import { getAssetPath } from "@/lib/assets";
 
 export const metadata: Metadata = {
@@ -441,6 +442,9 @@ export default function SpiritualPilgrimagePage() {
           </div>
         </div>
       </section>
+
+      {/* ===== IMPORTANT TRAVEL NOTICE TICKER ===== */}
+      <TravelNoticeTicker />
 
       {/* ===== OPERATOR REVIEW & ROUTING NOTICE ===== */}
       <section className="bg-amber-500/10 border-y border-amber-500/20 py-4">
@@ -1000,8 +1004,8 @@ export default function SpiritualPilgrimagePage() {
                   </h4>
                   <p className="text-sm text-gray-700 leading-relaxed">
                     The itinerary listed above is subject to change based on weather, road conditions, and local
-                    operational factors. In matters concerning the execution of the trip, route changes, and safety,
-                    the tour operator will make decisions based on the circumstances and applicable safety requirements.
+                    operational factors. In all matters regarding the execution, route changes, or safety of this trip,
+                    the tour operator&apos;s decision will be the final decision.
                   </p>
                 </div>
               </div>
