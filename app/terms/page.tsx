@@ -35,7 +35,7 @@ export default function TermsPage() {
             Rental Agreement &amp; Policies
           </span>
 
-          <h1 className="font-heading text-h1 text-white font-extrabold mb-6 text-balance">
+          <h1 className="font-heading text-h1 text-white font-bold mb-6 text-balance">
             Terms &amp; <span className="text-brand-amber">Conditions</span>
           </h1>
 

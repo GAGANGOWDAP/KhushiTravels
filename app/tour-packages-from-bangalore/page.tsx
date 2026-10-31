@@ -270,7 +270,7 @@ export default function TourPackagesPage() {
             </div>
 
             {/* Headline */}
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-white leading-[1.15] tracking-tight max-w-4xl mx-auto mb-5 text-balance">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-[1.15] tracking-tight max-w-4xl mx-auto mb-5 text-balance">
               Tour Packages <span className="text-brand-amber whitespace-nowrap">from Bangalore</span> &mdash; Across India
             </h1>
 
@@ -376,7 +376,7 @@ export default function TourPackagesPage() {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0a1628] via-[#0a1628]/40 to-transparent"></div>
-                  <div className="absolute top-3 left-3 gradient-amber text-brand-navy text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-lg">
+                  <div className="absolute top-3 left-3 gradient-amber text-brand-navy text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-lg">
                     Featured
                   </div>
                   <div className="absolute bottom-3 left-3 right-3 md:top-auto md:bottom-4 md:left-4 md:right-4">
@@ -387,7 +387,7 @@ export default function TourPackagesPage() {
                       <span className="text-white font-heading font-bold text-sm leading-tight">
                         Spiritual
                         <br />
-                        <span className="text-brand-amber text-[10px] uppercase tracking-wider font-extrabold">
+                        <span className="text-brand-amber text-[10px] uppercase tracking-wider font-semibold">
                           Pilgrimage
                         </span>
                       </span>
@@ -407,7 +407,7 @@ export default function TourPackagesPage() {
                     </span>
                   </div>
 
-                  <h3 className="font-heading text-2xl md:text-3xl font-extrabold text-white mb-0.5">
+                  <h3 className="font-heading text-2xl md:text-3xl font-semibold text-white mb-0.5">
                     <Link href="/spiritual-pilgrimage-tours/" className="hover:text-brand-amber transition-colors">
                       25-Day 12 Jyotirlinga <span className="text-brand-amber">Spiritual Yatra</span>
                     </Link>
@@ -425,37 +425,37 @@ export default function TourPackagesPage() {
                   {/* Highlights grid */}
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 mb-4">
                     <div className="bg-white/5 rounded-xl py-2 px-1 text-center border border-white/5">
-                      <span className="block text-brand-amber font-heading font-extrabold text-base">25 Days</span>
+                      <span className="block text-brand-amber font-heading font-semibold text-base">25 Days</span>
                       <span className="text-white/40 text-[9px] font-bold uppercase tracking-widest block leading-tight mt-0.5">
                         Proposed Yatra
                       </span>
                     </div>
                     <div className="bg-white/5 rounded-xl py-2 px-1 text-center border border-white/5">
-                      <span className="block text-brand-amber font-heading font-extrabold text-base">12</span>
+                      <span className="block text-brand-amber font-heading font-semibold text-base">12</span>
                       <span className="text-white/40 text-[9px] font-bold uppercase tracking-widest block leading-tight mt-0.5">
                         Jyotirlingas
                       </span>
                     </div>
                     <div className="bg-white/5 rounded-xl py-2 px-1 text-center border border-white/5">
-                      <span className="block text-brand-amber font-heading font-extrabold text-base">+6</span>
+                      <span className="block text-brand-amber font-heading font-semibold text-base">+6</span>
                       <span className="text-white/40 text-[9px] font-bold uppercase tracking-widest block leading-tight mt-0.5">
                         Sacred Sites
                       </span>
                     </div>
                     <div className="bg-white/5 rounded-xl py-2 px-1 text-center border border-white/5">
-                      <span className="block text-brand-amber font-heading font-extrabold text-base">AC Volvo</span>
+                      <span className="block text-brand-amber font-heading font-semibold text-base">AC Volvo</span>
                       <span className="text-white/40 text-[9px] font-bold uppercase tracking-widest block leading-tight mt-0.5">
                         Transport
                       </span>
                     </div>
                     <div className="bg-white/5 rounded-xl py-2 px-1 text-center border border-white/5">
-                      <span className="block text-brand-amber font-heading font-extrabold text-base">3-Star</span>
+                      <span className="block text-brand-amber font-heading font-semibold text-base">3-Star</span>
                       <span className="text-white/40 text-[9px] font-bold uppercase tracking-widest block leading-tight mt-0.5">
                         Deluxe Stay
                       </span>
                     </div>
                     <div className="bg-white/5 rounded-xl py-2 px-1 text-center border border-white/5">
-                      <span className="block text-brand-amber font-heading font-extrabold text-base">Pure Veg</span>
+                      <span className="block text-brand-amber font-heading font-semibold text-base">Pure Veg</span>
                       <span className="text-white/40 text-[9px] font-bold uppercase tracking-widest block leading-tight mt-0.5">
                         3-Time Food
                       </span>
@@ -467,7 +467,7 @@ export default function TourPackagesPage() {
                     <div>
                       <span className="text-xs uppercase font-bold text-brand-amber tracking-wider block">Pricing</span>
                       <div className="flex items-baseline gap-2.5 flex-wrap">
-                        <span className="text-lg md:text-xl font-heading font-extrabold text-white">₹1,49,999</span>
+                        <span className="text-lg md:text-xl font-heading font-semibold text-white">₹1,49,999</span>
                       </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2.5">
@@ -1015,7 +1015,7 @@ export default function TourPackagesPage() {
       {/* Mid-page CTA */}
       <section className="gradient-amber section-py text-center text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="font-heading text-h2 font-extrabold mb-4">
+          <h2 className="font-heading text-h2 font-bold mb-4">
             Ready to Book Your Tour Package from Bangalore?
           </h2>
           <p className="text-body text-white/90 mb-8">

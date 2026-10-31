@@ -362,7 +362,7 @@ export default function SpiritualPilgrimagePage() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-1.5 sm:mb-2.5 lg:mb-4 text-balance">
+            <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-1.5 sm:mb-2.5 lg:mb-4 text-balance">
               12 Jyotirlinga <span className="text-brand-amber">Spiritual Yatra</span>
             </h1>
 
@@ -451,7 +451,7 @@ export default function SpiritualPilgrimagePage() {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs sm:text-sm text-brand-navy">
             <div className="flex items-center gap-2 font-medium">
-              <span className="shrink-0 w-6 h-6 rounded-full bg-brand-amber text-brand-navy font-extrabold flex items-center justify-center text-xs">
+              <span className="shrink-0 w-6 h-6 rounded-full bg-brand-amber text-brand-navy font-semibold flex items-center justify-center text-xs">
                 !
               </span>
               <span>
@@ -476,7 +476,7 @@ export default function SpiritualPilgrimagePage() {
             <span className="text-brand-amber font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-brand-amber/10 border border-brand-amber/20">
               The Sacred Circuit
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mt-3">
               All 12 Dwadasha Jyotirlingas Covered
             </h2>
             <p className="text-body text-gray-600 mt-2">
@@ -502,7 +502,7 @@ export default function SpiritualPilgrimagePage() {
                     width={600}
                     height={400}
                   />
-                  <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-brand-navy/90 text-brand-amber font-extrabold text-xs flex items-center justify-center border border-brand-amber/40 shadow">
+                  <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-brand-navy/90 text-brand-amber font-semibold text-xs flex items-center justify-center border border-brand-amber/40 shadow">
                     {j.num}
                   </div>
                 </div>
@@ -511,7 +511,7 @@ export default function SpiritualPilgrimagePage() {
                     <div className="text-[11px] font-bold uppercase tracking-wider text-brand-amber mb-1">
                       {j.location}
                     </div>
-                    <h3 className="font-heading font-extrabold text-lg text-brand-navy mb-2">
+                    <h3 className="font-heading font-semibold text-lg text-brand-navy mb-2">
                       {j.name}
                     </h3>
                     <p className="text-xs text-gray-600 leading-relaxed">
@@ -535,7 +535,7 @@ export default function SpiritualPilgrimagePage() {
             <span className="text-brand-amber font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-brand-amber/10 border border-brand-amber/20">
               Conditional Itinerary Extensions
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 text-balance">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mt-3 text-balance">
               Additional Sacred Destinations — Subject to Route Confirmation
             </h2>
             <p className="text-body text-gray-600 mt-3 text-balance">
@@ -547,7 +547,7 @@ export default function SpiritualPilgrimagePage() {
 
           {/* Operational Distinction Callout */}
           <div className="max-w-4xl mx-auto mb-10 p-4 rounded-xl bg-amber-50 border border-amber-300/80 text-xs text-amber-950 flex items-start gap-3">
-            <span className="text-brand-amber font-extrabold text-base leading-none mt-0.5">⚠️</span>
+            <span className="text-brand-amber font-semibold text-base leading-none mt-0.5">⚠️</span>
             <div>
               <strong>Operational Distinction:</strong> The 12 Jyotirlingas form the core guaranteed foundation of this
               pilgrimage circuit. The six destinations below (Mathura, Vrindavan, Ayodhya, Gaya, Bodh Gaya, and Puri) are
@@ -575,12 +575,12 @@ export default function SpiritualPilgrimagePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-transparent to-transparent"></div>
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full bg-amber-500 text-brand-navy text-xs font-extrabold border border-amber-400 shadow-md">
+                    <span className="px-3 py-1 rounded-full bg-amber-500 text-brand-navy text-xs font-semibold border border-amber-400 shadow-md">
                       Conditional Visit &bull; Subject to Time
                     </span>
                   </div>
                   <div className="absolute bottom-3 left-4 right-4 text-white">
-                    <h3 className="font-heading text-2xl font-extrabold">{dest.name}</h3>
+                    <h3 className="font-heading text-2xl font-semibold">{dest.name}</h3>
                     <p className="text-xs text-amber-200 font-medium">{dest.state}</p>
                   </div>
                 </div>
@@ -618,7 +618,7 @@ export default function SpiritualPilgrimagePage() {
             <span className="text-brand-amber font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-brand-amber/10 border border-brand-amber/20">
               Day-by-Day Journey Plan
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 text-balance">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mt-3 text-balance">
               Proposed 25-Day Comprehensive Itinerary
             </h2>
             <p className="text-body text-gray-600 mt-2 text-balance">
@@ -648,7 +648,7 @@ export default function SpiritualPilgrimagePage() {
             <span className="text-brand-amber font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-brand-amber/10 border border-brand-amber/20">
               Clarity &amp; Transparency
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mt-3">
               Package Inclusions &amp; Exclusions — Subject to Final Operator Quotation
             </h2>
             <p className="text-body text-gray-600 mt-2">
@@ -799,7 +799,7 @@ export default function SpiritualPilgrimagePage() {
             </span>
             <h2
               id="advantage-heading"
-              className="font-heading text-3xl sm:text-4xl lg:text-[2.5rem] font-extrabold text-[#080878] tracking-tight leading-tight mt-3 mb-4"
+              className="font-heading text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-[#080878] tracking-tight leading-tight mt-3 mb-4"
             >
               Why Pilgrims Trust Khushi Travels
             </h2>
@@ -913,7 +913,7 @@ export default function SpiritualPilgrimagePage() {
             <span className="text-brand-amber font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-brand-amber/10 border border-brand-amber/20">
               Booking &amp; Policies
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mt-3">
               Booking &amp; Important Travel Information
             </h2>
             <p className="text-body text-gray-600 mt-2">
@@ -949,7 +949,7 @@ export default function SpiritualPilgrimagePage() {
                       <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-50 px-2.5 py-1 rounded-md border border-amber-200/60">
                         Stage 01 &bull; At Confirmation
                       </span>
-                      <span className="font-heading font-black text-3xl sm:text-4xl text-brand-amber tracking-tight">
+                      <span className="font-heading font-bold text-3xl sm:text-4xl text-brand-amber tracking-tight">
                         50%
                       </span>
                     </div>
@@ -967,7 +967,7 @@ export default function SpiritualPilgrimagePage() {
                       <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-brand-navy/80 bg-brand-navy/5 px-2.5 py-1 rounded-md border border-brand-navy/10">
                         Stage 02 &bull; Pre-Departure
                       </span>
-                      <span className="font-heading font-black text-3xl sm:text-4xl text-brand-navy tracking-tight">
+                      <span className="font-heading font-bold text-3xl sm:text-4xl text-brand-navy tracking-tight">
                         50%
                       </span>
                     </div>
@@ -1022,7 +1022,7 @@ export default function SpiritualPilgrimagePage() {
               <span className="text-xs uppercase font-bold text-brand-amber tracking-widest px-3 py-1 rounded-full bg-white/10 border border-white/15 inline-block">
                 Plan Your Yatra
               </span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-white text-balance">
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white text-balance">
                 Enquire for Confirmed Package Price &amp; Departure Dates
               </h2>
               <p className="text-white/70 text-sm leading-relaxed">
@@ -1085,7 +1085,7 @@ export default function SpiritualPilgrimagePage() {
             <span className="text-brand-amber font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-brand-amber/10 border border-brand-amber/20">
               Common Inquiries
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-navy mt-3">
               Frequently Asked Questions
             </h2>
             <p className="text-body text-gray-600 mt-2">

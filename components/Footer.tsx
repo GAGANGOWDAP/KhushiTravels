@@ -74,7 +74,7 @@ export default function Footer() {
                 <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B] animate-pulse" />
                 Khushi Tours &amp; Travels Concierge
               </span>
-              <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight leading-tight mb-2">
+              <h3 className="font-heading font-semibold text-2xl sm:text-3xl text-white tracking-tight leading-tight mb-2">
                 <span className="block sm:hidden">Planning Your Next Trip?</span>
                 <span className="hidden sm:block">Ready for Your Next Journey?</span>
               </h3>

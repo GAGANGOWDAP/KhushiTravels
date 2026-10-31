@@ -77,10 +77,10 @@ export default function SpecialPackagesPage() {
             <div className="mt-6 mb-12 bg-gradient-to-br from-[#10213A] via-[#1a365d] to-[#0b1626] rounded-3xl overflow-hidden shadow-xl border border-amber-500/30 text-white">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 sm:p-8 lg:p-10 items-center">
                 <div className="lg:col-span-7 space-y-4">
-                  <div className="inline-flex items-center gap-2 bg-amber-500 text-slate-950 font-extrabold text-xs uppercase px-3 py-1 rounded-full shadow-md">
+                  <div className="inline-flex items-center gap-2 bg-amber-500 text-slate-950 font-semibold text-xs uppercase px-3 py-1 rounded-full shadow-md">
                     ★ Featured Divine Pilgrimage
                   </div>
-                  <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight">
+                  <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
                     {flagshipJyotirlinga.title}
                   </h2>
                   <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
@@ -89,15 +89,15 @@ export default function SpecialPackagesPage() {
 
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-2">
                     <div className="bg-white/10 rounded-xl p-2.5 border border-white/10 text-center">
-                      <div className="text-amber-400 font-extrabold text-lg">12</div>
+                      <div className="text-amber-400 font-semibold text-lg">12</div>
                       <div className="text-[11px] text-gray-300">Jyotirlingas</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-2.5 border border-white/10 text-center">
-                      <div className="text-amber-400 font-extrabold text-lg">25 Days</div>
+                      <div className="text-amber-400 font-semibold text-lg">25 Days</div>
                       <div className="text-[11px] text-gray-300">Pan-India Yatra</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-2.5 border border-white/10 text-center col-span-2 sm:col-span-1">
-                      <div className="text-amber-400 font-extrabold text-lg">8 States</div>
+                      <div className="text-amber-400 font-semibold text-lg">8 States</div>
                       <div className="text-[11px] text-gray-300">Sacred Transit</div>
                     </div>
                   </div>

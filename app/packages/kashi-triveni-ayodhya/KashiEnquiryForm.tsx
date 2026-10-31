@@ -60,7 +60,7 @@ Please share the official itemised quotation and availability.`;
           <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B]" />
           <span>Direct Operator Quote</span>
         </div>
-        <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#080878] tracking-tight">
+        <h3 className="font-heading text-xl sm:text-2xl font-semibold text-[#080878] tracking-tight">
           Book Your Sacred Yatra
         </h3>
         <p className="text-xs text-[#64748B] mt-0.5">

@@ -7,7 +7,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["500", "600", "700"],
   variable: "--font-heading",
   display: "swap",
 });

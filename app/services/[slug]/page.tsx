@@ -66,7 +66,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
             {service.eyebrow}
           </span>
 
-          <h1 className="font-heading text-h1 text-white font-extrabold mb-4 text-balance">
+          <h1 className="font-heading text-h1 text-white font-bold mb-4 text-balance">
             {service.title}
           </h1>
 

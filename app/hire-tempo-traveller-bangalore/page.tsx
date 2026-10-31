@@ -38,7 +38,7 @@ export default function ContactPage() {
             24/7 Customer Booking Desk
           </span>
 
-          <h1 className="font-heading text-h1 text-white font-extrabold mb-6 text-balance">
+          <h1 className="font-heading text-h1 text-white font-bold mb-6 text-balance">
             Hire Luxury <span className="text-brand-amber">Tempo Traveller</span>{" "}
             in Bangalore
           </h1>
@@ -181,7 +181,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-brand-navy">GST Registration</h3>
-                    <span className="font-mono text-gray-800 text-xs">
+                    <span className="font-medium tracking-wider text-gray-800 text-xs">
                       29JPFPK4060F1ZQ
                     </span>
                   </div>
@@ -201,7 +201,7 @@ export default function ContactPage() {
               <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
               OUR LOCATION
             </span>
-            <h2 id="location-heading" className="font-heading text-3xl sm:text-4xl font-extrabold text-[#10213A] mb-3 sm:mb-4 tracking-tight">
+            <h2 id="location-heading" className="font-heading text-3xl sm:text-4xl font-bold text-[#10213A] mb-3 sm:mb-4 tracking-tight">
               Find Our <span className="text-brand-amber">Office</span>
             </h2>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">

@@ -35,7 +35,7 @@ export default function PrivacyPage() {
             Data Protection &amp; Trust
           </span>
 
-          <h1 className="font-heading text-h1 text-white font-extrabold mb-6 text-balance">
+          <h1 className="font-heading text-h1 text-white font-bold mb-6 text-balance">
             Privacy <span className="text-brand-amber">Policy</span>
           </h1>
 

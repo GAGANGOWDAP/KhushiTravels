@@ -419,7 +419,7 @@ export default function ItineraryDaysAccordion() {
                     aria-expanded={isOpen}
                   >
                     <div className="flex items-center gap-3 pr-2">
-                      <span className={`w-7 h-7 shrink-0 rounded-full ${badgeBg} text-xs font-extrabold flex items-center justify-center`}>
+                      <span className={`w-7 h-7 shrink-0 rounded-full ${badgeBg} text-xs font-semibold flex items-center justify-center`}>
                         D{day.dayNum}
                       </span>
                       <span className="leading-snug">{day.title}</span>

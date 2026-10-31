@@ -33,7 +33,7 @@ export default function PackageCategoryHeader({
         </div>
 
         {/* Title */}
-        <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+        <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
           {title}
         </h1>
 
@@ -65,21 +65,21 @@ export default function PackageCategoryHeader({
         {/* Trust Stats Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-white/10 text-center">
           <div>
-            <div className="text-xl sm:text-2xl font-extrabold text-amber-400">
+            <div className="text-xl sm:text-2xl font-semibold text-amber-400">
               {count !== undefined ? count : "30+"}
             </div>
             <div className="text-[11px] sm:text-xs text-gray-400 uppercase font-medium">Curated Tours</div>
           </div>
           <div>
-            <div className="text-xl sm:text-2xl font-extrabold text-amber-400">Doorstep</div>
+            <div className="text-xl sm:text-2xl font-semibold text-amber-400">Doorstep</div>
             <div className="text-[11px] sm:text-xs text-gray-400 uppercase font-medium">Bangalore Pickup</div>
           </div>
           <div>
-            <div className="text-xl sm:text-2xl font-extrabold text-amber-400">100% Owned</div>
+            <div className="text-xl sm:text-2xl font-semibold text-amber-400">100% Owned</div>
             <div className="text-[11px] sm:text-xs text-gray-400 uppercase font-medium">Sanitized Fleet</div>
           </div>
           <div>
-            <div className="text-xl sm:text-2xl font-extrabold text-amber-400">4.9 ★</div>
+            <div className="text-xl sm:text-2xl font-semibold text-amber-400">4.9 ★</div>
             <div className="text-[11px] sm:text-xs text-gray-400 uppercase font-medium">Verified Reviews</div>
           </div>
         </div>

@@ -66,7 +66,7 @@ export default function WeekendPackagesPage() {
           {/* Quick Filter Info Note */}
           <div className="mt-4 mb-8 bg-amber-50 border border-amber-200 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs sm:text-sm text-slate-800">
             <div className="flex items-center gap-2.5">
-              <span className="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-black flex items-center justify-center flex-shrink-0">
+              <span className="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-semibold flex items-center justify-center flex-shrink-0">
                 18
               </span>
               <div>

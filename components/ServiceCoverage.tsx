@@ -55,7 +55,7 @@ export default function ServiceCoverage() {
           </div>
           <h2
             id="service-coverage-heading"
-            className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#080878] tracking-tight"
+            className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#080878] tracking-tight"
           >
             Bangalore Service Coverage &amp; Routes
           </h2>

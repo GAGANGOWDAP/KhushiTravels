@@ -325,7 +325,7 @@ export default function FeaturedPilgrimageCard() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B] animate-pulse" />
             <span>Curated Pilgrimage Circuits</span>
           </div>
-          <h2 className="font-heading text-lg sm:text-2xl md:text-3xl font-extrabold text-[#080878] tracking-tight">
+          <h2 className="font-heading text-lg sm:text-2xl md:text-3xl font-bold text-[#080878] tracking-tight">
             Featured Spiritual Yatra Packages
           </h2>
         </div>
@@ -508,7 +508,7 @@ export default function FeaturedPilgrimageCard() {
 
                       {/* Top Badges */}
                       <div className="absolute top-2.5 left-2.5 z-20 flex items-center gap-1.5">
-                        <span className="inline-block bg-[#D8B43B] text-slate-950 font-black text-[9.5px] tracking-wider uppercase px-2 py-0.5 rounded shadow">
+                        <span className="inline-block bg-[#D8B43B] text-slate-950 font-semibold text-[9.5px] tracking-wider uppercase px-2 py-0.5 rounded shadow">
                           {slide.badgeTop}
                         </span>
                       </div>
@@ -518,7 +518,7 @@ export default function FeaturedPilgrimageCard() {
                         <div className="w-5 h-5 rounded-full bg-[#D8B43B] text-slate-950 flex items-center justify-center font-bold text-[10px] shadow">
                           ★
                         </div>
-                        <span className="text-[10px] font-extrabold text-[#D8B43B] tracking-wider uppercase drop-shadow">
+                        <span className="text-[10px] font-semibold text-[#D8B43B] tracking-wider uppercase drop-shadow">
                           {slide.badgeBottomTitle} {slide.badgeBottomSubtitle}
                         </span>
                       </div>
@@ -538,7 +538,7 @@ export default function FeaturedPilgrimageCard() {
                         </div>
 
                         {/* Title */}
-                        <h3 className="font-heading text-[16px] sm:text-[18px] font-extrabold text-white tracking-tight leading-snug line-clamp-1">
+                        <h3 className="font-heading text-[16px] sm:text-[18px] font-semibold text-white tracking-tight leading-snug line-clamp-1">
                           <Link href={slide.href} className="hover:text-[#D8B43B] transition-colors">
                             {slide.titlePart1} <span className="text-[#D8B43B]">{slide.titleHighlight}</span>
                           </Link>
@@ -561,7 +561,7 @@ export default function FeaturedPilgrimageCard() {
                               key={sIdx}
                               className="rounded-lg bg-white/5 border border-white/10 px-1 py-1 text-center"
                             >
-                              <span className="font-extrabold text-[10.5px] text-[#D8B43B] block leading-tight">
+                              <span className="font-semibold text-[10.5px] text-[#D8B43B] block leading-tight">
                                 {st.value}
                               </span>
                               <span className="text-[7.5px] uppercase font-bold text-slate-400 block tracking-wider leading-tight">
@@ -578,13 +578,13 @@ export default function FeaturedPilgrimageCard() {
                           <span className="text-[8px] uppercase font-bold text-amber-300/80 tracking-widest block">
                             {slide.priceLabel}
                           </span>
-                          <span className="text-base sm:text-lg font-black text-white leading-tight block">
+                          <span className="text-base sm:text-lg font-bold text-white leading-tight block">
                             {slide.price}
                           </span>
                         </div>
                         <Link
                           href={slide.href}
-                          className="inline-flex items-center justify-center gap-1 px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#D8B43B] to-[#d97706] text-slate-950 font-extrabold text-[11px] shadow-md hover:scale-105 active:scale-95 transition-all whitespace-nowrap"
+                          className="inline-flex items-center justify-center gap-1 px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#D8B43B] to-[#d97706] text-slate-950 font-semibold text-[11px] shadow-md hover:scale-105 active:scale-95 transition-all whitespace-nowrap"
                         >
                           <span>{slide.ctaText.replace("View Tour Details & Itinerary", "View Tour")}</span>
                           <span className="text-xs">&rarr;</span>
@@ -612,7 +612,7 @@ export default function FeaturedPilgrimageCard() {
 
                       {/* Top-Left: "FEATURED" / "NEW" Badge */}
                       <div className="absolute top-3.5 left-3.5 z-20">
-                        <span className="inline-block bg-[#D8B43B] text-slate-950 font-black text-[10px] xl:text-[11px] tracking-wider uppercase px-2.5 py-0.5 rounded-md shadow-md">
+                        <span className="inline-block bg-[#D8B43B] text-slate-950 font-semibold text-[10px] xl:text-[11px] tracking-wider uppercase px-2.5 py-0.5 rounded-md shadow-md">
                           {slide.badgeTop}
                         </span>
                       </div>
@@ -626,7 +626,7 @@ export default function FeaturedPilgrimageCard() {
                           <span className="block font-bold text-white text-xs xl:text-sm leading-tight drop-shadow-sm">
                             {slide.badgeBottomTitle}
                           </span>
-                          <span className="block text-[8.5px] xl:text-[9.5px] font-extrabold text-[#D8B43B] tracking-widest uppercase leading-tight drop-shadow-sm">
+                          <span className="block text-[8.5px] xl:text-[9.5px] font-semibold text-[#D8B43B] tracking-widest uppercase leading-tight drop-shadow-sm">
                             {slide.badgeBottomSubtitle}
                           </span>
                         </div>
@@ -647,7 +647,7 @@ export default function FeaturedPilgrimageCard() {
                         </div>
 
                         {/* Title */}
-                        <h3 className="font-heading text-xl lg:text-2xl xl:text-3xl font-extrabold text-white tracking-tight leading-tight mb-1">
+                        <h3 className="font-heading text-xl lg:text-2xl xl:text-3xl font-semibold text-white tracking-tight leading-tight mb-1">
                           <Link href={slide.href} className="hover:text-[#D8B43B] transition-colors">
                             {slide.titlePart1} <span className="text-[#D8B43B]">{slide.titleHighlight}</span>
                           </Link>
@@ -671,7 +671,7 @@ export default function FeaturedPilgrimageCard() {
                               className="rounded-lg bg-white/5 border border-white/10 px-1.5 py-1.5 text-center flex flex-col justify-center items-center hover:bg-white/10 transition-colors"
                             >
                               <span
-                                className={`font-black text-[11px] lg:text-xs xl:text-sm leading-tight ${
+                                className={`font-semibold text-[11px] lg:text-xs xl:text-sm leading-tight ${
                                   stat.highlight ? "text-[#D8B43B]" : "text-white"
                                 }`}
                               >
@@ -692,7 +692,7 @@ export default function FeaturedPilgrimageCard() {
                           <span className="text-[9px] xl:text-[10px] font-bold text-[#D8B43B]/90 uppercase tracking-widest block">
                             {slide.priceLabel}
                           </span>
-                          <div className="text-2xl lg:text-3xl font-black text-white tracking-tight mt-0.5">
+                          <div className="text-2xl lg:text-3xl font-bold text-white tracking-tight mt-0.5">
                             {slide.price}
                           </div>
                           <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 mt-1 text-emerald-400 text-[10.5px] xl:text-xs font-medium">
@@ -709,7 +709,7 @@ export default function FeaturedPilgrimageCard() {
                         <div className="shrink-0">
                           <Link
                             href={slide.href}
-                            className="inline-flex items-center justify-center gap-2 px-5 lg:px-6 xl:px-7 py-3 rounded-xl bg-gradient-to-r from-[#D8B43B] to-[#d97706] text-slate-950 font-heading font-extrabold text-xs lg:text-sm shadow-lg hover:shadow-amber-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap"
+                            className="inline-flex items-center justify-center gap-2 px-5 lg:px-6 xl:px-7 py-3 rounded-xl bg-gradient-to-r from-[#D8B43B] to-[#d97706] text-slate-950 font-heading font-semibold text-xs lg:text-sm shadow-lg hover:shadow-amber-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap"
                           >
                             <span>{slide.ctaText}</span>
                             <span className="text-sm">&rarr;</span>

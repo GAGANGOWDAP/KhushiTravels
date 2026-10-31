@@ -249,7 +249,7 @@ summary:focus-visible {
     border-radius: 9999px;
     background: linear-gradient(135deg, #D8B43B, #BFA044);
     color: #111111;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.8125rem;
     letter-spacing: 0.01em;
     box-shadow: 0 4px 14px rgba(216, 180, 59, 0.35);
@@ -429,27 +429,29 @@ summary:focus-visible {
   }
 
   .hero-title {
-    font-size: clamp(1.75rem, 1.4rem + 1.8vw, 4rem);
+    font-size: clamp(2rem, 1.5rem + 2.5vw, 3.75rem); /* 32px mobile to 60px desktop */
     line-height: 1.08;
     letter-spacing: -0.025em;
+    font-weight: 700;
   }
 
   @media (min-width: 1024px) {
     .hero-title {
-      font-size: clamp(2.5rem, 1.75rem + 1.8vw, 3.85rem);
+      font-size: clamp(3rem, 2.5rem + 1vw, 3.75rem); /* 48px to 60px desktop */
     }
   }
 
-  @media (min-width: 1400px) {
+  @media (max-width: 767px) {
     .hero-title {
-      font-size: 4rem; /* 64px on large desktop */
+      font-size: clamp(2rem, 1.8rem + 1vw, 2.375rem); /* 32px to 38px mobile */
     }
   }
 
   .hero-desc {
-    font-size: clamp(0.8125rem, 0.75rem + 0.3vw, 1.125rem);
-    line-height: 1.55;
+    font-size: clamp(0.875rem, 0.85rem + 0.15vw, 1.0625rem); /* 14px mobile to 17px desktop */
+    line-height: 1.6;
     max-width: 36rem;
+    font-weight: 400;
   }
 
   @media (min-width: 1024px) {

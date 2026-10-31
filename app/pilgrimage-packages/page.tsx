@@ -181,7 +181,7 @@ export default function PilgrimagePackagesPage() {
             Sacred Temple Tours
           </div>
 
-          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight mb-4 text-balance">
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight mb-4 text-balance">
             Spiritual Pilgrimage <span className="text-brand-amber">Packages from Bangalore</span>
           </h1>
 
@@ -220,10 +220,10 @@ export default function PilgrimagePackagesPage() {
           >
             <div className="grid md:grid-cols-12 gap-8 items-center relative z-10">
               <div className="md:col-span-7 space-y-4">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-brand-amber text-brand-navy uppercase tracking-wider">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-brand-amber text-brand-navy uppercase tracking-wider">
                   Grand Flagship Pilgrimage
                 </span>
-                <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight">
+                <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
                   25-Day 12 Jyotirlinga <span className="text-brand-amber">Spiritual Yatra</span>
                 </h2>
                 <p className="text-sm text-white/80 leading-relaxed">
@@ -276,7 +276,7 @@ export default function PilgrimagePackagesPage() {
             <span className="text-brand-amber font-bold text-xs uppercase tracking-widest block mb-2">
               Sacred Darshans
             </span>
-            <h2 className="font-heading text-h2 font-extrabold text-brand-navy">
+            <h2 className="font-heading text-h2 font-bold text-brand-navy">
               Devotional Temple Packages from Bangalore
             </h2>
             <p className="text-gray-500 text-sm mt-2">
@@ -303,7 +303,7 @@ export default function PilgrimagePackagesPage() {
                     <div className="absolute top-3 left-3 bg-brand-navy/90 text-brand-amber text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
                       {pkg.duration}
                     </div>
-                    <div className="absolute bottom-3 right-3 bg-white/95 text-brand-navy font-heading font-extrabold text-xs px-2.5 py-1 rounded-lg shadow">
+                    <div className="absolute bottom-3 right-3 bg-white/95 text-brand-navy font-heading font-semibold text-xs px-2.5 py-1 rounded-lg shadow">
                       {pkg.price}
                       <span className="text-[10px] font-normal text-gray-400">/group</span>
                     </div>
@@ -363,7 +363,7 @@ export default function PilgrimagePackagesPage() {
             <span className="text-brand-amber font-bold text-xs uppercase tracking-widest block mb-2">
               Devotional Care
             </span>
-            <h2 className="font-heading text-h2 font-extrabold text-brand-navy">
+            <h2 className="font-heading text-h2 font-bold text-brand-navy">
               Why Devotees Trust Khushi Travels
             </h2>
             <p className="text-gray-500 text-sm mt-2">

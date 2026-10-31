@@ -44,7 +44,7 @@ export default function FAQAccordion({
           <span className="text-brand-amber font-bold text-xs uppercase tracking-widest block mb-2">
             Got Questions?
           </span>
-          <h2 className="font-heading text-h2 font-extrabold text-brand-navy">
+          <h2 className="font-heading text-h2 font-bold text-brand-navy">
             {title}
           </h2>
           <p className="text-gray-500 text-sm sm:text-base mt-3 max-w-2xl mx-auto">

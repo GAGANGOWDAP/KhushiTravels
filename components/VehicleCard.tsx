@@ -24,7 +24,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
           <div className="absolute top-3 left-3 bg-brand-navy/90 text-brand-amber text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
             {vehicle.seats}
           </div>
-          <div className="absolute bottom-3 right-3 bg-white/95 text-brand-navy font-heading font-extrabold text-sm px-3 py-1 rounded-xl shadow">
+          <div className="absolute bottom-3 right-3 bg-white/95 text-brand-navy font-heading font-semibold text-sm px-3 py-1 rounded-xl shadow">
             ₹{vehicle.ratePerKm}/km
           </div>
         </div>

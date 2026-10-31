@@ -40,7 +40,7 @@ export default function PricingPage() {
             Honest &amp; Upfront Tariffs
           </span>
 
-          <h1 className="font-heading text-h1 text-white font-extrabold mb-6 text-balance">
+          <h1 className="font-heading text-h1 text-white font-bold mb-6 text-balance">
             Tempo Traveller Rent{" "}
             <span className="text-brand-amber">Price in Bangalore</span>
           </h1>

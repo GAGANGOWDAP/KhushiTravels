@@ -23,7 +23,7 @@ export default function PackageEnquiryCTA({
         <span className="inline-block bg-amber-500/20 text-amber-400 font-bold text-xs uppercase tracking-wider px-3 py-1 rounded-full border border-amber-500/30 mb-3">
           Doorstep Bangalore Dispatch
         </span>
-        <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white mb-3">
+        <h3 className="font-heading font-semibold text-2xl sm:text-3xl text-white mb-3">
           Plan Your {packageTitle} Trip Today
         </h3>
         <p className="text-gray-300 text-sm sm:text-base mb-6 leading-relaxed">

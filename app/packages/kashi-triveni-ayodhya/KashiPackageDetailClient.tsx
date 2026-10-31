@@ -222,7 +222,7 @@ export default function KashiPackageDetailClient({
             <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-left">
               {/* Category Badges */}
               <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#D8B43B] text-slate-950 text-xs font-extrabold uppercase tracking-wider shadow">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#D8B43B] text-slate-950 text-xs font-semibold uppercase tracking-wider shadow">
                   <span className="w-1.5 h-1.5 rounded-full bg-slate-950 animate-pulse" />
                   03 Nights / 04 Days
                 </span>
@@ -239,13 +239,13 @@ export default function KashiPackageDetailClient({
                 <p className="text-[#D8B43B] text-xs sm:text-sm font-bold uppercase tracking-widest mb-1.5">
                   Varanasi &bull; Prayagraj &bull; Ayodhya &bull; Lucknow
                 </p>
-                <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
+                <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.15]">
                   Kashi – Triveni –{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D8B43B] via-[#D8B43B] to-[#D8B43B]">
                     Ayodhya Yatra
                   </span>
                 </h1>
-                <p className="text-amber-100/90 text-sm sm:text-base md:text-lg font-serif italic mt-2.5 max-w-2xl leading-relaxed">
+                <p className="text-amber-100/90 text-sm sm:text-base md:text-lg  italic mt-2.5 max-w-2xl leading-relaxed">
                   A divine journey through Kashi Vishwanath Jyotirlinga, holy Triveni Sangam Snan, and grand Ram Janmabhoomi Mandir.
                 </p>
               </div>
@@ -325,7 +325,7 @@ export default function KashiPackageDetailClient({
                 <span className="text-[10px] uppercase font-bold text-[#D8B43B] tracking-wider block">
                   Duration
                 </span>
-                <span className="text-sm sm:text-base font-extrabold text-[#080878] block mt-0.5">
+                <span className="text-sm sm:text-base font-semibold text-[#080878] block mt-0.5">
                   03 Nights / 04 Days
                 </span>
                 <span className="text-[11px] text-slate-500 block mt-0.5">
@@ -337,7 +337,7 @@ export default function KashiPackageDetailClient({
                 <span className="text-[10px] uppercase font-bold text-[#D8B43B] tracking-wider block">
                   Group Size
                 </span>
-                <span className="text-sm sm:text-base font-extrabold text-[#080878] block mt-0.5">
+                <span className="text-sm sm:text-base font-semibold text-[#080878] block mt-0.5">
                   16 Adults
                 </span>
                 <span className="text-[11px] text-slate-500 block mt-0.5">
@@ -349,7 +349,7 @@ export default function KashiPackageDetailClient({
                 <span className="text-[10px] uppercase font-bold text-[#D8B43B] tracking-wider block">
                   Accommodation
                 </span>
-                <span className="text-sm sm:text-base font-extrabold text-[#080878] block mt-0.5">
+                <span className="text-sm sm:text-base font-semibold text-[#080878] block mt-0.5">
                   08 Double Rooms
                 </span>
                 <span className="text-[11px] text-slate-500 block mt-0.5">
@@ -361,7 +361,7 @@ export default function KashiPackageDetailClient({
                 <span className="text-[10px] uppercase font-bold text-[#D8B43B] tracking-wider block">
                   Meal Plan
                 </span>
-                <span className="text-sm sm:text-base font-extrabold text-[#080878] block mt-0.5">
+                <span className="text-sm sm:text-base font-semibold text-[#080878] block mt-0.5">
                   APAI – All Meals
                 </span>
                 <span className="text-[11px] text-slate-500 block mt-0.5">
@@ -373,7 +373,7 @@ export default function KashiPackageDetailClient({
                 <span className="text-[10px] uppercase font-bold text-[#D8B43B] tracking-wider block">
                   Transport
                 </span>
-                <span className="text-sm sm:text-base font-extrabold text-[#080878] block mt-0.5">
+                <span className="text-sm sm:text-base font-semibold text-[#080878] block mt-0.5">
                   20-Seater Tempo
                 </span>
                 <span className="text-[11px] text-slate-500 block mt-0.5">
@@ -398,7 +398,7 @@ export default function KashiPackageDetailClient({
                 <span>The Sacred Pilgrimage Circuit</span>
               </div>
 
-              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#080878] tracking-tight leading-tight">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-[#080878] tracking-tight leading-tight">
                 Experience the Sacred Trinity of Sanatana Devotion
               </h2>
 
@@ -480,7 +480,7 @@ export default function KashiPackageDetailClient({
                     </span>
                   </div>
                   <div className="absolute bottom-3 left-3 right-3 text-white text-left">
-                    <p className="text-xs font-serif italic text-amber-200">
+                    <p className="text-xs  italic text-amber-200">
                       Dashashwamedh Ghat Evening Ganga Maha Aarti
                     </p>
                     <p className="text-sm font-bold text-white mt-0.5">
@@ -496,7 +496,7 @@ export default function KashiPackageDetailClient({
                   </div>
                   <div className="flex items-center justify-between py-2 text-xs">
                     <span className="text-slate-500">B2B Costing:</span>
-                    <span className="font-extrabold text-[#080878]">
+                    <span className="font-semibold text-[#080878]">
                       ₹17,900 / Person <span className="text-slate-400 font-normal">(+5% GST)</span>
                     </span>
                   </div>
@@ -528,7 +528,7 @@ export default function KashiPackageDetailClient({
               <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B]" />
               <span>Sacred Yatra Day-by-Day Schedule</span>
             </div>
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#080878]">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-[#080878]">
               Detailed 4-Day Pilgrimage Itinerary
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm mt-2">
@@ -556,7 +556,7 @@ export default function KashiPackageDetailClient({
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent lg:hidden" />
                       <div className="absolute top-3 left-3">
-                        <span className="inline-block px-3 py-1 rounded-full text-xs font-black bg-[#D8B43B] text-slate-950 shadow">
+                        <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-[#D8B43B] text-slate-950 shadow">
                           {item.badge}
                         </span>
                       </div>
@@ -569,10 +569,10 @@ export default function KashiPackageDetailClient({
                     <div className="lg:col-span-8 p-5 sm:p-7 text-left space-y-4">
                       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#E8E8F4] pb-3">
                         <div>
-                          <span className="hidden lg:inline-block px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#080878] text-[#D8B43B] uppercase tracking-wider mb-1">
+                          <span className="hidden lg:inline-block px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#080878] text-[#D8B43B] uppercase tracking-wider mb-1">
                             {item.badge}
                           </span>
-                          <h3 className="font-serif text-lg sm:text-xl font-bold text-[#080878] leading-snug">
+                          <h3 className="font-heading text-lg sm:text-xl font-bold text-[#080878] leading-snug">
                             {item.title}
                           </h3>
                         </div>
@@ -649,7 +649,7 @@ export default function KashiPackageDetailClient({
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#D8B43B] mb-2">
               Confirmed Premium Stays
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white">
               Handpicked Hotel Accommodations
             </h2>
             <p className="text-slate-300 text-xs sm:text-sm mt-2">
@@ -661,7 +661,7 @@ export default function KashiPackageDetailClient({
             {/* Hotel 1: Varanasi */}
             <div className="rounded-3xl bg-[#193454] border border-[#D8B43B]/30 p-6 sm:p-8 text-left relative overflow-hidden shadow-xl">
               <div className="flex items-center justify-between mb-4">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-[#D8B43B] text-slate-950">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#D8B43B] text-slate-950">
                   02 Nights Stay
                 </span>
                 <span className="text-xs text-amber-200 font-semibold flex items-center gap-1">
@@ -670,7 +670,7 @@ export default function KashiPackageDetailClient({
                 </span>
               </div>
 
-              <h3 className="font-serif text-2xl font-bold text-white mb-1">
+              <h3 className="font-heading text-2xl font-bold text-white mb-1">
                 Hotel Ananta Kashi
               </h3>
               <p className="text-[#D8B43B] text-xs font-semibold uppercase tracking-wider mb-4">
@@ -700,7 +700,7 @@ export default function KashiPackageDetailClient({
             {/* Hotel 2: Ayodhya */}
             <div className="rounded-3xl bg-[#193454] border border-[#D8B43B]/30 p-6 sm:p-8 text-left relative overflow-hidden shadow-xl">
               <div className="flex items-center justify-between mb-4">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-[#D8B43B] text-slate-950">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#D8B43B] text-slate-950">
                   01 Night Stay
                 </span>
                 <span className="text-xs text-amber-200 font-semibold flex items-center gap-1">
@@ -709,7 +709,7 @@ export default function KashiPackageDetailClient({
                 </span>
               </div>
 
-              <h3 className="font-serif text-2xl font-bold text-white mb-1">
+              <h3 className="font-heading text-2xl font-bold text-white mb-1">
                 Hotel Mosaic
               </h3>
               <p className="text-[#D8B43B] text-xs font-semibold uppercase tracking-wider mb-4">
@@ -750,7 +750,7 @@ export default function KashiPackageDetailClient({
                 <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#080878] text-[#D8B43B]">
                   Dedicated Chauffeur Driven Transport
                 </span>
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#080878]">
+                <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#080878]">
                   20 Seater Luxury Tempo Traveller
                 </h2>
                 <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
@@ -813,7 +813,7 @@ export default function KashiPackageDetailClient({
               <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-[#D8B43B] text-slate-950 mb-3 shadow">
                 FINAL B2B PACKAGE COSTING
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-black text-white">
+              <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-white">
                 ₹17,900{" "}
                 <span className="text-lg sm:text-xl font-normal text-amber-200">
                   / Person
@@ -895,7 +895,7 @@ export default function KashiPackageDetailClient({
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#D8B43B] mb-2">
               Transparency First
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#080878]">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-[#080878]">
               Package Inclusions &amp; Exclusions
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm mt-2">
@@ -911,7 +911,7 @@ export default function KashiPackageDetailClient({
                   ✓
                 </span>
                 <div>
-                  <h3 className="font-serif font-bold text-xl text-[#080878]">
+                  <h3 className="font-heading font-bold text-xl text-[#080878]">
                     Package Inclusions
                   </h3>
                   <p className="text-xs text-slate-500">13 Verified Included Services</p>
@@ -982,7 +982,7 @@ export default function KashiPackageDetailClient({
                     ✕
                   </span>
                   <div>
-                    <h3 className="font-serif font-bold text-xl text-[#080878]">
+                    <h3 className="font-heading font-bold text-xl text-[#080878]">
                       Package Exclusions
                     </h3>
                     <p className="text-xs text-slate-500">Clearly Defined Out-of-Scope Items</p>
@@ -1030,7 +1030,7 @@ export default function KashiPackageDetailClient({
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#D8B43B] mb-2">
               Sacred Vignettes
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#080878]">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-[#080878]">
               Destination Pilgrimage Gallery
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm mt-2">
@@ -1121,7 +1121,7 @@ export default function KashiPackageDetailClient({
             <span className="text-xs font-bold uppercase tracking-widest text-[#D8B43B] block mb-2">
               Trip Clarifications
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#080878]">
+            <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#080878]">
               Frequently Asked Questions
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm mt-2">
@@ -1140,7 +1140,7 @@ export default function KashiPackageDetailClient({
                   <button
                     type="button"
                     onClick={() => setActiveFaq(isOpen ? null : index)}
-                    className="w-full p-4 sm:p-5 flex items-center justify-between gap-4 text-left font-serif font-bold text-sm sm:text-base text-[#080878] hover:text-[#D8B43B] transition-colors"
+                    className="w-full p-4 sm:p-5 flex items-center justify-between gap-4 text-left font-heading font-bold text-sm sm:text-base text-[#080878] hover:text-[#D8B43B] transition-colors"
                   >
                     <span>{faq.question}</span>
                     <span className="w-6 h-6 rounded-full bg-white border border-[#E8E8F4] flex items-center justify-center text-xs shrink-0 text-[#080878]">
@@ -1170,7 +1170,7 @@ export default function KashiPackageDetailClient({
             <span>Ready for the Divine Yatra?</span>
           </div>
 
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-white max-w-2xl mx-auto leading-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white max-w-2xl mx-auto leading-tight">
             Reserve Your 16-Adult Sacred Pilgrimage Departure Today
           </h2>
 

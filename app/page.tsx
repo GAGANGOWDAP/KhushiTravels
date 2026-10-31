@@ -106,7 +106,7 @@ export default function HomePage() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="font-heading hero-title text-white font-extrabold tracking-tight leading-[1.08] mb-2.5 sm:mb-3.5 lg:mb-5 text-balance">
+            <h1 className="font-heading hero-title text-white font-bold tracking-tight leading-[1.08] mb-2.5 sm:mb-3.5 lg:mb-5 text-balance">
               Luxury Tempo <br className="hidden sm:inline" />
               <span className="text-[#D8B43B]">Traveller</span> in Bangalore
             </h1>
@@ -318,7 +318,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 text-center">
-              <div className="w-14 h-14 rounded-2xl gradient-amber text-white font-heading font-extrabold text-xl flex items-center justify-center mx-auto mb-6 shadow-md shadow-amber-500/25">
+              <div className="w-14 h-14 rounded-2xl gradient-amber text-white font-heading font-semibold text-xl flex items-center justify-center mx-auto mb-6 shadow-md shadow-amber-500/25">
                 1
               </div>
               <h3 className="font-heading font-bold text-brand-navy text-lg mb-2">
@@ -331,7 +331,7 @@ export default function HomePage() {
             </div>
 
             <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 text-center">
-              <div className="w-14 h-14 rounded-2xl gradient-amber text-white font-heading font-extrabold text-xl flex items-center justify-center mx-auto mb-6 shadow-md shadow-amber-500/25">
+              <div className="w-14 h-14 rounded-2xl gradient-amber text-white font-heading font-semibold text-xl flex items-center justify-center mx-auto mb-6 shadow-md shadow-amber-500/25">
                 2
               </div>
               <h3 className="font-heading font-bold text-brand-navy text-lg mb-2">
@@ -344,7 +344,7 @@ export default function HomePage() {
             </div>
 
             <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 text-center">
-              <div className="w-14 h-14 rounded-2xl gradient-amber text-white font-heading font-extrabold text-xl flex items-center justify-center mx-auto mb-6 shadow-md shadow-amber-500/25">
+              <div className="w-14 h-14 rounded-2xl gradient-amber text-white font-heading font-semibold text-xl flex items-center justify-center mx-auto mb-6 shadow-md shadow-amber-500/25">
                 3
               </div>
               <h3 className="font-heading font-bold text-brand-navy text-lg mb-2">
@@ -365,7 +365,7 @@ export default function HomePage() {
       {/* ===== AMBER CTA BANNER ===== */}
       <section className="gradient-amber py-16 text-white text-center">
         <div className="container-custom max-w-3xl">
-          <h2 className="font-heading text-h1 font-extrabold mb-4 text-balance">
+          <h2 className="font-heading text-h1 font-bold mb-4 text-balance">
             Ready to Travel in Absolute Comfort?
           </h2>
           <p className="text-white/90 text-base sm:text-lg mb-8 leading-relaxed font-normal">

@@ -18,7 +18,7 @@ export default function PackageInclusions({
       {/* Inclusions Card */}
       <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
         <h3 className="font-heading font-bold text-lg text-[#1a365d] mb-4 flex items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-sm font-black">
+          <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-sm font-semibold">
             ✓
           </span>
           Package Inclusions
@@ -39,7 +39,7 @@ export default function PackageInclusions({
       {exclusions && exclusions.length > 0 && (
         <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
           <h3 className="font-heading font-bold text-lg text-gray-800 mb-4 flex items-center gap-2">
-            <span className="w-7 h-7 rounded-full bg-rose-100 text-rose-700 flex items-center justify-center text-sm font-black">
+            <span className="w-7 h-7 rounded-full bg-rose-100 text-rose-700 flex items-center justify-center text-sm font-semibold">
               ✕
             </span>
             Package Exclusions

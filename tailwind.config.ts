@@ -35,14 +35,21 @@ const config: Config = {
       fontFamily: {
         heading: ["var(--font-heading)", "Plus Jakarta Sans", "sans-serif"],
         body: ["var(--font-body)", "Inter", "sans-serif"],
+        sans: ["var(--font-body)", "Inter", "sans-serif"],
       },
       fontSize: {
-        display: ["clamp(2.5rem, 2rem + 2.5vw, 4.5rem)", { lineHeight: "1.08" }],
-        h1: ["clamp(2rem, 1.5rem + 2vw, 3.5rem)", { lineHeight: "1.12" }],
-        h2: ["clamp(1.5rem, 1.25rem + 1vw, 2.25rem)", { lineHeight: "1.2" }],
-        h3: ["clamp(1.25rem, 1.1rem + 0.5vw, 1.75rem)", { lineHeight: "1.3" }],
-        body: ["clamp(0.95rem, 0.9rem + 0.2vw, 1.125rem)", { lineHeight: "1.6" }],
-        sm: ["clamp(0.8125rem, 0.8rem + 0.1vw, 0.875rem)", { lineHeight: "1.5" }],
+        // Fluid typography matching desktop 48-60px / mobile 32-38px
+        display: ["clamp(2rem, 1.5rem + 2.5vw, 3.75rem)", { lineHeight: "1.08" }],
+        // H1: Desktop 40-48px, Mobile 30-34px
+        h1: ["clamp(1.875rem, 1.5rem + 1.8vw, 3rem)", { lineHeight: "1.15" }],
+        // H2: Desktop 32-36px, Mobile 25-29px
+        h2: ["clamp(1.5625rem, 1.35rem + 1vw, 2.25rem)", { lineHeight: "1.22" }],
+        // H3: Desktop 20-24px, Mobile 18-20px
+        h3: ["clamp(1.125rem, 1.05rem + 0.4vw, 1.5rem)", { lineHeight: "1.3" }],
+        // Body: Desktop 16-17px, Mobile 14-16px
+        body: ["clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem)", { lineHeight: "1.6" }],
+        // Caption / Small: Desktop 13-14px, Mobile 12-13px
+        sm: ["clamp(0.75rem, 0.72rem + 0.15vw, 0.875rem)", { lineHeight: "1.5" }],
       },
     },
   },

@@ -66,7 +66,7 @@ export default function LocalityDetailPage({ params }: LocalityPageProps) {
             Doorstep Pickup in {loc.name}
           </span>
 
-          <h1 className="font-heading text-h1 text-white font-extrabold mb-4 text-balance">
+          <h1 className="font-heading text-h1 text-white font-bold mb-4 text-balance">
             Tempo Traveller in{" "}
             <span className="text-brand-amber">{loc.name}</span>, Bangalore
           </h1>

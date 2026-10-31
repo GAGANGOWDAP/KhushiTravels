@@ -46,7 +46,7 @@ export default function ContactForm() {
         <span className="text-brand-amber font-bold text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-widest block mb-1 sm:mb-2">
           Instant Fare Quote
         </span>
-        <h3 className="font-heading text-[22px] sm:text-2xl md:text-3xl font-extrabold text-brand-navy leading-tight">
+        <h3 className="font-heading text-[22px] sm:text-2xl md:text-3xl font-semibold text-brand-navy leading-tight">
           Book Your Luxury Travel
         </h3>
         <p className="text-gray-500 text-xs sm:text-sm mt-1 sm:mt-2">

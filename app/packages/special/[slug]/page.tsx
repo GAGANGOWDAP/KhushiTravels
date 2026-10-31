@@ -191,7 +191,7 @@ export default function SpecialPackageDetailPage({ params }: PageProps) {
             />
 
             <div className="mt-6 flex flex-wrap items-center gap-2 mb-3">
-              <span className="bg-amber-500 text-slate-950 font-extrabold text-xs uppercase px-3 py-1 rounded-full shadow-md">
+              <span className="bg-amber-500 text-slate-950 font-semibold text-xs uppercase px-3 py-1 rounded-full shadow-md">
                 ★ Sacred Pilgrimage Tour
               </span>
               <span className="bg-white/10 backdrop-blur-md text-gray-200 text-xs px-3 py-1 rounded-full border border-white/20">
@@ -202,7 +202,7 @@ export default function SpecialPackageDetailPage({ params }: PageProps) {
               </span>
             </div>
 
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight tracking-tight">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
               {pkg.title}
             </h1>
 
@@ -439,7 +439,7 @@ export default function SpecialPackageDetailPage({ params }: PageProps) {
             <div className="lg:col-span-4 space-y-6">
               <div className="bg-white rounded-2xl border border-gray-200/80 p-6 shadow-sm lg:sticky lg:top-28">
                 <div className="text-xs font-bold text-gray-500 uppercase mb-1">Pilgrimage Tariff</div>
-                <div className="text-lg font-extrabold text-[#1a365d] mb-4">
+                <div className="text-lg font-semibold text-[#1a365d] mb-4">
                   {pkg.priceStatus}
                 </div>
 

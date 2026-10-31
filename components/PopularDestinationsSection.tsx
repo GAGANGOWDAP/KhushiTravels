@@ -113,7 +113,7 @@ export default function PopularDestinationsSection() {
             <span className="text-brand-amber font-bold text-xs uppercase tracking-widest block mb-1.5">
               South India Road Trips
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-h1 text-brand-navy font-extrabold tracking-tight">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-h1 text-brand-navy font-bold tracking-tight">
               Popular Destinations
             </h2>
           </div>

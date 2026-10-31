@@ -136,7 +136,7 @@ export default function WeekendPackageDetailPage({ params }: PageProps) {
               </span>
             </div>
 
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight tracking-tight">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
               {pkg.title}
             </h1>
 
@@ -226,7 +226,7 @@ export default function WeekendPackageDetailPage({ params }: PageProps) {
               {/* Sticky Card */}
               <div className="bg-white rounded-2xl border border-gray-200/80 p-6 shadow-sm lg:sticky lg:top-28">
                 <div className="text-xs font-bold text-gray-500 uppercase mb-1">Package Tariff</div>
-                <div className="text-xl font-extrabold text-[#1a365d] mb-4">
+                <div className="text-xl font-semibold text-[#1a365d] mb-4">
                   {pkg.priceStatus}
                 </div>
 

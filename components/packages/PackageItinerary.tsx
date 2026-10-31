@@ -18,7 +18,7 @@ export default function PackageItinerary({ itinerary }: PackageItineraryProps) {
           {/* Day Header */}
           <div className="flex flex-wrap items-center justify-between gap-2 mb-3 pb-3 border-b border-gray-100">
             <div className="flex items-center gap-3">
-              <span className="bg-[#1a365d] text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+              <span className="bg-[#1a365d] text-white font-semibold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
                 {day.day}
               </span>
               <h3 className="font-heading font-bold text-base sm:text-lg text-[#1a365d]">

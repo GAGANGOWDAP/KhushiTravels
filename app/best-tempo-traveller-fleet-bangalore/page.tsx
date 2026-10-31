@@ -39,7 +39,7 @@ export default function FleetPage() {
             100% Company-Owned Vehicles
           </span>
 
-          <h1 className="font-heading text-h1 text-white font-extrabold mb-6 text-balance">
+          <h1 className="font-heading text-h1 text-white font-bold mb-6 text-balance">
             Bangalore&apos;s Elite{" "}
             <span className="text-brand-amber">Tempo Traveller</span> &amp; Bus Fleet
           </h1>
@@ -73,7 +73,7 @@ export default function FleetPage() {
             <span className="text-brand-amber font-bold text-xs uppercase tracking-widest block mb-2">
               Browse by Seating Capacity
             </span>
-            <h2 className="font-heading text-h2 font-extrabold text-brand-navy">
+            <h2 className="font-heading text-h2 font-bold text-brand-navy">
               Available Fleet for Rent
             </h2>
             <p className="text-gray-500 text-sm mt-2">

@@ -67,7 +67,7 @@ export default function RouteDetailPage({ params }: RoutePageProps) {
             Outstation Road Trip from Bengaluru
           </span>
 
-          <h1 className="font-heading text-h1 text-white font-extrabold mb-4 text-balance">
+          <h1 className="font-heading text-h1 text-white font-bold mb-4 text-balance">
             Bangalore to{" "}
             <span className="text-brand-amber">{route.destination}</span> Tempo
             Traveller Rental

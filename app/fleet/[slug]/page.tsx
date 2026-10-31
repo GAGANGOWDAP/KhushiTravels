@@ -96,7 +96,7 @@ export default function VehicleDetailPage({ params }: FleetPageProps) {
             {vehicle.subtitle}
           </span>
 
-          <h1 className="font-heading text-h1 text-white font-extrabold mb-4 text-balance">
+          <h1 className="font-heading text-h1 text-white font-bold mb-4 text-balance">
             {vehicle.name}
           </h1>
 
@@ -172,7 +172,7 @@ export default function VehicleDetailPage({ params }: FleetPageProps) {
                   Pricing &amp; Rates
                 </span>
                 <div className="flex items-baseline gap-3">
-                  <span className="text-4xl font-heading font-extrabold text-brand-navy">
+                  <span className="text-4xl font-heading font-bold text-brand-navy">
                     ₹{vehicle.ratePerKm}
                   </span>
                   <span className="text-gray-500 font-semibold text-lg">
