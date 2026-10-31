@@ -212,7 +212,7 @@ export default function FeaturedPilgrimageCard() {
   const slide = PILGRIMAGE_SLIDES[currentIndex];
 
   return (
-    <section className="bg-white py-6 sm:py-16 md:py-20" aria-label="Featured Pilgrimage Tour">
+    <section className="bg-white py-6 sm:py-10 md:py-8 lg:py-10 xl:py-20" aria-label="Featured Pilgrimage Tour">
       <div className="container-custom max-w-7xl">
         {/* Main Card Container */}
         <div
@@ -224,9 +224,9 @@ export default function FeaturedPilgrimageCard() {
           onFocus={() => setIsPaused(true)}
           onBlur={() => setIsPaused(false)}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] xl:grid-cols-[410px_1fr]">
+          <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] lg:grid-cols-[340px_1fr] xl:grid-cols-[410px_1fr]">
             {/* Left Column: Image Area */}
-            <div className="relative h-[200px] sm:h-auto sm:min-h-[340px] lg:min-h-[480px] w-full overflow-hidden bg-[#071322]">
+            <div className="relative h-[200px] sm:h-[240px] md:h-full md:min-h-0 xl:min-h-[480px] w-full overflow-hidden bg-[#071322]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 key={slide.id}
@@ -242,8 +242,8 @@ export default function FeaturedPilgrimageCard() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a1424] via-transparent to-black/30 pointer-events-none" />
 
               {/* Top-Left: "FEATURED" Badge */}
-              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20">
-                <span className="inline-block bg-[#f59e0b] text-slate-950 font-black text-[10px] sm:text-[11px] tracking-wider uppercase px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md shadow-md">
+              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-3 md:left-3 xl:top-4 xl:left-4 z-20">
+                <span className="inline-block bg-[#f59e0b] text-slate-950 font-black text-[10px] md:text-[10px] xl:text-[11px] tracking-wider uppercase px-2.5 py-0.5 md:px-2.5 md:py-0.5 xl:px-3 xl:py-1 rounded-md shadow-md">
                   {slide.badgeTop}
                 </span>
               </div>
@@ -253,10 +253,10 @@ export default function FeaturedPilgrimageCard() {
                 type="button"
                 onClick={prevSlide}
                 aria-label="Previous tour"
-                className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-[#f59e0b] hover:bg-[#d97706] text-slate-950 flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="absolute left-3 sm:left-4 md:left-3 xl:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-11 sm:h-11 md:w-9 md:h-9 xl:w-11 xl:h-11 rounded-full bg-[#f59e0b] hover:bg-[#d97706] text-slate-950 flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5"
+                  className="w-4 h-4 sm:w-5 sm:h-5 md:w-4 md:h-4 xl:w-5 xl:h-5"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -285,15 +285,15 @@ export default function FeaturedPilgrimageCard() {
               </button>
 
               {/* Bottom-Left: Star Icon + Spiritual PILGRIMAGE Badge */}
-              <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-20 flex items-center gap-2 sm:gap-2.5">
-                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#f59e0b] text-white flex items-center justify-center shadow-md text-[11px] sm:text-xs font-bold">
+              <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-3 md:left-3 xl:bottom-4 xl:left-4 z-20 flex items-center gap-2 sm:gap-2.5 md:gap-2 xl:gap-2.5">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-6 md:h-6 xl:w-7 xl:h-7 rounded-full bg-[#f59e0b] text-white flex items-center justify-center shadow-md text-[11px] sm:text-xs md:text-[11px] xl:text-xs font-bold">
                   ★
                 </div>
                 <div>
-                  <span className="block font-bold text-white text-xs sm:text-sm leading-tight drop-shadow-sm">
+                  <span className="block font-bold text-white text-xs sm:text-sm md:text-xs xl:text-sm leading-tight drop-shadow-sm">
                     {slide.badgeBottomTitle}
                   </span>
-                  <span className="block text-[8.5px] sm:text-[10px] font-extrabold text-[#f59e0b] tracking-widest uppercase leading-tight drop-shadow-sm">
+                  <span className="block text-[8.5px] sm:text-[10px] md:text-[8.5px] xl:text-[10px] font-extrabold text-[#f59e0b] tracking-widest uppercase leading-tight drop-shadow-sm">
                     {slide.badgeBottomSubtitle}
                   </span>
                 </div>
@@ -303,17 +303,17 @@ export default function FeaturedPilgrimageCard() {
             {/* Right Column: Content Area */}
             <div
               key={slide.id}
-              className="relative p-4 sm:p-8 lg:p-9 xl:p-10 flex flex-col justify-between text-left animate-fade-in"
+              className="relative p-4 sm:p-6 md:p-5 md:pr-14 lg:p-6 lg:pr-14 xl:p-10 flex flex-col justify-between text-left animate-fade-in"
             >
               {/* Right Navigation Arrow Button (Desktop & Tablet) */}
               <button
                 type="button"
                 onClick={nextSlide}
                 aria-label="Next tour"
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 hidden sm:flex w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-900/80 hover:bg-slate-800 text-white items-center justify-center border border-white/20 shadow-xl hover:scale-105 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+                className="absolute right-3 md:right-3.5 xl:right-4 top-1/2 -translate-y-1/2 z-20 hidden sm:flex w-9 h-9 sm:w-11 sm:h-11 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-11 xl:h-11 rounded-full bg-slate-900/80 hover:bg-slate-800 text-white items-center justify-center border border-white/20 shadow-xl hover:scale-105 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 h-4 sm:w-5 sm:h-5 md:w-4 md:h-4 xl:w-5 xl:h-5"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -325,13 +325,13 @@ export default function FeaturedPilgrimageCard() {
 
               <div>
                 {/* Top Eyebrow Row */}
-                <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-                  <span className="inline-block px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-400 text-[9.5px] sm:text-[11px] font-bold uppercase tracking-wider">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 md:gap-2 xl:gap-3 mb-1.5 md:mb-2 xl:mb-3">
+                  <span className="inline-block px-2.5 py-0.5 sm:px-3 sm:py-1 md:px-2.5 md:py-0.5 xl:px-3 xl:py-1 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-400 text-[9.5px] sm:text-[11px] md:text-[10px] xl:text-[11px] font-bold uppercase tracking-wider">
                     {slide.tag1}
                   </span>
-                  <span className="inline-flex items-center gap-1 sm:gap-1.5 text-amber-400/90 text-[11px] sm:text-xs font-semibold tracking-wide">
+                  <span className="inline-flex items-center gap-1 sm:gap-1.5 text-amber-400/90 text-[11px] sm:text-xs md:text-[11px] xl:text-xs font-semibold tracking-wide">
                     <svg
-                      className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-400 shrink-0"
+                      className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-3 md:h-3 xl:w-3.5 xl:h-3.5 text-amber-400 shrink-0"
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
@@ -347,7 +347,7 @@ export default function FeaturedPilgrimageCard() {
                 </div>
 
                 {/* Main Heading */}
-                <h3 className="font-heading text-[21px] sm:text-3xl lg:text-[2.25rem] font-extrabold text-white tracking-tight leading-tight mt-0.5 sm:mt-1 mb-1">
+                <h3 className="font-heading text-[21px] sm:text-2xl md:text-[1.375rem] lg:text-[1.625rem] xl:text-[2.25rem] font-extrabold text-white tracking-tight leading-tight mt-0.5 md:mt-1 mb-1">
                   <Link href={slide.href} className="hover:text-amber-400 transition-colors">
                     {slide.titlePart1}{" "}
                     <span className="text-[#f59e0b]">{slide.titleHighlight}</span>
@@ -355,30 +355,30 @@ export default function FeaturedPilgrimageCard() {
                 </h3>
 
                 {/* Subtitle / Tagline */}
-                <p className="text-amber-200/95 font-semibold text-[12px] sm:text-sm lg:text-base mt-1 sm:mt-2 mb-2 sm:mb-3 leading-snug">
+                <p className="text-amber-200/95 font-semibold text-[12px] sm:text-sm md:text-[12px] lg:text-[13px] xl:text-base mt-0.5 sm:mt-1 md:mt-1 xl:mt-2 mb-1.5 sm:mb-2 md:mb-1.5 xl:mb-3 leading-snug">
                   {slide.tagline}
                 </p>
 
                 {/* Body Paragraph */}
-                <p className="text-slate-300 text-[12px] sm:text-sm leading-relaxed mb-3 sm:mb-6 max-w-3xl font-normal">
+                <p className="text-slate-300 text-[12px] sm:text-sm md:text-[12px] lg:text-[12.5px] xl:text-sm leading-relaxed mb-2.5 sm:mb-4 md:mb-2.5 lg:mb-3 xl:mb-6 max-w-3xl font-normal line-clamp-2 md:line-clamp-2 lg:line-clamp-3 xl:line-clamp-none">
                   {slide.description}
                 </p>
 
-                {/* 6 Feature / Stat Pill Boxes (Mobile: 2 rows of 3; Desktop: 1 row of 6) */}
-                <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5 sm:gap-2.5 mb-3.5 sm:mb-7">
+                {/* 6 Feature / Stat Pill Boxes (Mobile: 2 rows of 3; Tablet: 2 rows of 3; Desktop: 1 row of 6) */}
+                <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-1.5 sm:gap-2 md:gap-2 xl:gap-2.5 mb-2.5 sm:mb-4 md:mb-2.5 lg:mb-3.5 xl:mb-7">
                   {slide.stats.map((stat, idx) => (
                     <div
                       key={idx}
-                      className="rounded-lg sm:rounded-xl bg-white/[0.04] border border-white/10 px-1.5 sm:px-2 py-1.5 sm:py-3 text-center flex flex-col justify-center items-center hover:bg-white/[0.07] transition-colors min-h-[46px] sm:min-h-0"
+                      className="rounded-lg xl:rounded-xl bg-white/[0.04] border border-white/10 px-1.5 sm:px-2 md:px-2 xl:px-2 py-1.5 sm:py-2 md:py-1.5 xl:py-3 text-center flex flex-col justify-center items-center hover:bg-white/[0.07] transition-colors min-h-[44px] md:min-h-[44px] xl:min-h-0"
                     >
                       <span
-                        className={`font-black text-[11px] sm:text-sm lg:text-base leading-tight ${
+                        className={`font-black text-[11px] sm:text-xs md:text-[12px] lg:text-[13px] xl:text-base leading-tight ${
                           stat.highlight ? "text-[#f59e0b]" : "text-white"
                         }`}
                       >
                         {stat.value}
                       </span>
-                      <span className="text-[7.5px] sm:text-[9px] font-bold uppercase tracking-wider text-slate-400 mt-0.5 sm:mt-1 leading-tight">
+                      <span className="text-[7.5px] sm:text-[8px] md:text-[8px] lg:text-[8.5px] xl:text-[9px] font-bold uppercase tracking-wider text-slate-400 mt-0.5 xl:mt-1 leading-tight">
                         {stat.label}
                       </span>
                     </div>
@@ -387,20 +387,20 @@ export default function FeaturedPilgrimageCard() {
               </div>
 
               {/* Bottom Row: Pricing & Checklist (Left) + CTA (Right) */}
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-6 pt-3 sm:pt-4 border-t border-white/10">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4 md:gap-3 xl:gap-6 pt-2.5 sm:pt-3 md:pt-2.5 xl:pt-4 border-t border-white/10">
                 {/* Pricing & Guarantees */}
                 <div className="text-left">
-                  <span className="text-[9px] sm:text-[10px] font-bold text-amber-400/90 uppercase tracking-widest block">
+                  <span className="text-[9px] sm:text-[10px] md:text-[9px] xl:text-[10px] font-bold text-amber-400/90 uppercase tracking-widest block">
                     {slide.priceLabel}
                   </span>
-                  <div className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mt-0.5">
+                  <div className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-white tracking-tight mt-0.5">
                     {slide.price}
                   </div>
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1.5 sm:mt-2.5 text-emerald-400 text-[10px] sm:text-xs font-medium">
+                  <div className="flex flex-wrap items-center gap-x-2.5 sm:gap-x-3 md:gap-x-2.5 xl:gap-3 gap-y-0.5 sm:gap-y-1 mt-1 sm:mt-2 md:mt-1 xl:mt-2.5 text-emerald-400 text-[10px] sm:text-xs md:text-[10px] xl:text-xs font-medium">
                     {slide.guarantees.map((item, i) => (
                       <span key={i} className="flex items-center gap-1">
                         <svg
-                          className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400 shrink-0"
+                          className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-3 md:h-3 xl:w-3.5 xl:h-3.5 text-emerald-400 shrink-0"
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="2.5"
@@ -418,11 +418,11 @@ export default function FeaturedPilgrimageCard() {
                 <div className="shrink-0 w-full sm:w-auto mt-1 sm:mt-0">
                   <Link
                     href={slide.href}
-                    className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-5 sm:px-8 h-12 sm:h-auto sm:py-4 rounded-xl bg-[#f59e0b] hover:bg-[#d97706] text-slate-950 font-heading font-extrabold text-xs sm:text-base shadow-lg shadow-amber-500/20 hover:shadow-amber-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap"
+                    className="inline-flex items-center justify-center gap-1.5 sm:gap-2 w-full sm:w-auto px-4 sm:px-6 md:px-4 lg:px-6 xl:px-8 py-3 sm:py-3.5 md:py-2.5 lg:py-3.5 xl:py-4 rounded-xl bg-[#f59e0b] hover:bg-[#d97706] text-slate-950 font-heading font-extrabold text-xs sm:text-sm md:text-xs lg:text-sm xl:text-base shadow-lg shadow-amber-500/20 hover:shadow-amber-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap"
                   >
                     <span>{slide.ctaText}</span>
                     <svg
-                      className="w-4 h-4 stroke-[3]"
+                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-3.5 md:h-3.5 xl:w-4 xl:h-4 stroke-[3]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -437,7 +437,7 @@ export default function FeaturedPilgrimageCard() {
         </div>
 
         {/* Bottom Pagination Dots */}
-        <div className="flex justify-center items-center gap-1.5 sm:gap-2 mt-3 sm:mt-5">
+        <div className="flex justify-center items-center gap-1.5 sm:gap-2 md:gap-2 mt-3 sm:mt-4 md:mt-3 xl:mt-5">
           {PILGRIMAGE_SLIDES.map((_, dotIdx) => (
             <button
               key={dotIdx}
