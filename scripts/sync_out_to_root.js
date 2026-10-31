@@ -59,3 +59,4 @@ itemsToSync.forEach((item) => {
 });
 
 console.log('Sync completed successfully!');
+

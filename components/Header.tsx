@@ -136,7 +136,7 @@ export default function Header() {
             <img
               src={getAssetPath("/images/khushi-tours-and-travels-logo.webp")}
               alt="Khushi Travels"
-              className="h-9 md:h-10 w-auto transition-transform duration-200 hover:opacity-95"
+              className="h-9 md:h-10 w-auto transition-transform duration-200 hover:opacity-95 rounded-lg"
               width={160}
               height={40}
             />

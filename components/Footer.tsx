@@ -123,7 +123,7 @@ export default function Footer() {
               <img
                 src={getAssetPath("/images/khushi-tours-and-travels-logo.webp")}
                 alt="Khushi Tours & Travels"
-                className="h-16 w-auto drop-shadow-md"
+                className="h-14 sm:h-16 w-auto drop-shadow-md rounded-xl"
                 loading="lazy"
                 width={240}
                 height={60}
@@ -346,7 +346,7 @@ export default function Footer() {
               <img
                 src={getAssetPath("/images/khushi-tours-and-travels-logo.webp")}
                 alt="Khushi Tours & Travels"
-                className="h-14 w-auto mx-auto drop-shadow-md"
+                className="h-12 sm:h-14 w-auto mx-auto drop-shadow-md rounded-xl"
                 loading="lazy"
                 width={200}
                 height={50}
