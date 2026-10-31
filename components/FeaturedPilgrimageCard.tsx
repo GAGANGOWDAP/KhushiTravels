@@ -318,9 +318,9 @@ export default function FeaturedPilgrimageCard() {
     >
       <div className="container-custom max-w-7xl px-3 sm:px-4 md:px-6">
         {/* =================================================================== */}
-        {/* 1. SECTION HEADER & QUICK NAVIGATION PILLS */}
+        {/* 1. SECTION HEADER */}
         {/* =================================================================== */}
-        <div className="text-center max-w-3xl mx-auto mb-2 sm:mb-3 md:mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-3 sm:mb-5 md:mb-6">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#10213A]/5 border border-[#10213A]/10 text-[#10213A] text-[10.5px] sm:text-xs font-bold uppercase tracking-widest mb-1 sm:mb-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#f59e0b] animate-pulse" />
             <span>Curated Pilgrimage Circuits</span>
@@ -328,42 +328,6 @@ export default function FeaturedPilgrimageCard() {
           <h2 className="font-heading text-lg sm:text-2xl md:text-3xl font-extrabold text-[#10213A] tracking-tight">
             Featured Spiritual Yatra Packages
           </h2>
-        </div>
-
-        {/* Quick Tour Selection Tabs (Horizontal Scrollable) */}
-        <div className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-1 mb-2 sm:mb-3">
-          {PILGRIMAGE_SLIDES.map((s, idx) => {
-            const isSelected = idx === currentIndex;
-            return (
-              <button
-                key={s.id}
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setCurrentIndex(idx);
-                }}
-                className={`shrink-0 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 ${
-                  isSelected
-                    ? "bg-[#10213A] text-[#E3C77E] border border-[#C6A04A] shadow-md scale-[1.03]"
-                    : "bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 shadow-xs"
-                }`}
-              >
-                {s.badgeTop === "NEW PACKAGE" ? (
-                  <span className="inline-flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#f59e0b] animate-pulse" />
-                    <span className="text-[#f59e0b] font-black">NEW:</span>
-                    <span>
-                      {s.titlePart1} {s.titleHighlight}
-                    </span>
-                  </span>
-                ) : (
-                  <span>
-                    {s.titlePart1} {s.titleHighlight}
-                  </span>
-                )}
-              </button>
-            );
-          })}
         </div>
 
         {/* =================================================================== */}
