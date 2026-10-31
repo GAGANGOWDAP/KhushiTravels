@@ -163,8 +163,33 @@ export default function PilgrimagePackagesPage() {
     },
   ];
 
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://gagangowdap.github.io/KhushiTravels/" },
+      { "@type": "ListItem", position: 2, name: "Pilgrimage Packages", item: "https://gagangowdap.github.io/KhushiTravels/pilgrimage-packages/" },
+    ],
+  };
+
+  const pilgrimageTripSchema = {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    name: "Spiritual Pilgrimage Tour Packages from Bangalore",
+    description: "All-India sacred temple yatras including 12 Jyotirlinga, Kashi-Ayodhya, South India temple circuit, and Shirdi-Nashik devotional yatras.",
+    provider: {
+      "@type": "TravelAgency",
+      name: "Khushi Tours and Travels",
+      telephone: "+91 99013 33113",
+      url: "https://gagangowdap.github.io/KhushiTravels/",
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pilgrimageTripSchema) }} />
       {/* Hero Section */}
       <section
         className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 text-center overflow-hidden"

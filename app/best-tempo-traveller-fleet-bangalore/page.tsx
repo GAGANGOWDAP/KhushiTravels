@@ -11,8 +11,21 @@ export const metadata: Metadata = {
   description:
     "Explore Bangalore's premier luxury tempo traveller fleet. 100% owned vehicles: 9-16 seater Maharaja tempo travellers, Force Urbania, executive sedans, and luxury buses.",
   alternates: {
-    canonical:
-      "https://gagangowdap.github.io/KhushiTravels/best-tempo-traveller-fleet-bangalore/",
+    canonical: "https://gagangowdap.github.io/KhushiTravels/best-tempo-traveller-fleet-bangalore/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://gagangowdap.github.io/KhushiTravels/best-tempo-traveller-fleet-bangalore/",
+    siteName: "Khushi Tours and Travels",
+    title: "Tempo Traveller Fleet Bangalore | 9, 12, 14, 16 Seater & Urbania | Khushi Travels",
+    description: "Explore Bangalore's premier luxury tempo traveller fleet. 100% owned vehicles: 9-16 seater Maharaja tempo travellers, Force Urbania, and luxury buses.",
+    images: [{ url: "https://gagangowdap.github.io/KhushiTravels/images/fleet/force-urbania-12-seater-bangalore-8.webp", width: 1200, height: 630, alt: "Khushi Travels Tempo Traveller Fleet Bangalore" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tempo Traveller Fleet Bangalore | Khushi Travels",
+    description: "Explore Bangalore's premier luxury tempo traveller fleet. 9-16 seater Maharaja & Force Urbania.",
+    images: ["https://gagangowdap.github.io/KhushiTravels/images/fleet/force-urbania-12-seater-bangalore-8.webp"],
   },
 };
 
@@ -22,8 +35,35 @@ export default function FleetPage() {
     { label: "Fleet", href: "/best-tempo-traveller-fleet-bangalore/" },
   ];
 
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://gagangowdap.github.io/KhushiTravels/" },
+      { "@type": "ListItem", position: 2, name: "Fleet", item: "https://gagangowdap.github.io/KhushiTravels/best-tempo-traveller-fleet-bangalore/" },
+    ],
+  };
+
+  const fleetListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Khushi Travels Fleet Catalog",
+    description: "Complete list of luxury tempo travellers, Force Urbania and buses available for rent in Bangalore.",
+    numberOfItems: FLEET_DATA.length,
+    itemListElement: FLEET_DATA.map((v, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      name: v.name,
+      description: v.description,
+      url: `https://gagangowdap.github.io/KhushiTravels/fleet/${v.slug}/`,
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fleetListSchema) }} />
       {/* Fleet Hero */}
       <section
         className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 text-center overflow-hidden"

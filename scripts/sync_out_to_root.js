@@ -47,6 +47,8 @@ const itemsToSync = [
   'tempo-traveller-rent-price-bangalore',
   'terms',
   'tour-packages-from-bangalore',
+  'sitemap.xml',
+  'robots.txt',
 ];
 
 itemsToSync.forEach((item) => {

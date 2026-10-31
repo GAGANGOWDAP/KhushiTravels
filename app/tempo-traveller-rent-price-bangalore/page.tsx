@@ -12,8 +12,21 @@ export const metadata: Metadata = {
   description:
     "Transparent tempo traveller rent prices in Bangalore starting from ₹18/km. 9, 12, 14, 16 seater Maharaja & Force Urbania rates with zero hidden charges.",
   alternates: {
-    canonical:
-      "https://gagangowdap.github.io/KhushiTravels/tempo-traveller-rent-price-bangalore/",
+    canonical: "https://gagangowdap.github.io/KhushiTravels/tempo-traveller-rent-price-bangalore/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://gagangowdap.github.io/KhushiTravels/tempo-traveller-rent-price-bangalore/",
+    siteName: "Khushi Tours and Travels",
+    title: "Tempo Traveller Rent Price Bangalore | Per Km Rates | Khushi Travels",
+    description: "Transparent tempo traveller rent prices in Bangalore starting from ₹18/km. 9, 12, 14, 16 seater Maharaja & Force Urbania rates with zero hidden charges.",
+    images: [{ url: "https://gagangowdap.github.io/KhushiTravels/images/destinations/mysore.webp", width: 1200, height: 630, alt: "Tempo Traveller Rent Price Bangalore" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tempo Traveller Rent Price Bangalore | Khushi Travels",
+    description: "Standardized per-km rates for luxury tempo travellers in Bangalore. Zero hidden fees.",
+    images: ["https://gagangowdap.github.io/KhushiTravels/images/destinations/mysore.webp"],
   },
 };
 
@@ -23,8 +36,25 @@ export default function PricingPage() {
     { label: "Pricing", href: "/tempo-traveller-rent-price-bangalore/" },
   ];
 
+  
+  const pricingSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Tempo Traveller Rent Price in Bangalore",
+    description: "Standardized per-km pricing for luxury tempo travellers, Force Urbania and buses in Bangalore.",
+    url: "https://gagangowdap.github.io/KhushiTravels/tempo-traveller-rent-price-bangalore/",
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://gagangowdap.github.io/KhushiTravels/" },
+        { "@type": "ListItem", position: 2, name: "Pricing", item: "https://gagangowdap.github.io/KhushiTravels/tempo-traveller-rent-price-bangalore/" },
+      ],
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
       {/* Pricing Hero */}
       <section
         className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 text-center overflow-hidden"

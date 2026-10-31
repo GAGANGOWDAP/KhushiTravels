@@ -23,6 +23,12 @@ export const metadata: Metadata = {
     siteName: "Khushi Travels",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Special & Pilgrimage Packages | Khushi Travels",
+    description: "Curated Special & Pilgrimage Packages from Bangalore with luxury Tempo Traveller and Force Urbania.",
+    images: ["https://gagangowdap.github.io/KhushiTravels/images/destinations/mysore.webp"],
+  },
 };
 
 export default function SpecialPackagesPage() {

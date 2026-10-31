@@ -34,6 +34,12 @@ export function generateMetadata({ params }: LocalityPageProps): Metadata {
       title: `Tempo Traveller in ${loc.name} Bangalore | Khushi Travels`,
       description: loc.heroSummary,
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `Tempo Traveller in ${loc.name} Bangalore | Khushi Travels`,
+      description: loc.heroSummary,
+      images: ["https://gagangowdap.github.io/KhushiTravels/images/destinations/mysore.webp"],
+    },
   };
 }
 
@@ -49,8 +55,39 @@ export default function LocalityDetailPage({ params }: LocalityPageProps) {
     { label: loc.name, href: `/localities/${loc.slug}/` },
   ];
 
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://gagangowdap.github.io/KhushiTravels/" },
+      { "@type": "ListItem", position: 2, name: "Bangalore Localities", item: "https://gagangowdap.github.io/KhushiTravels/#service-coverage" },
+      { "@type": "ListItem", position: 3, name: loc.name, item: `https://gagangowdap.github.io/KhushiTravels/localities/${loc.slug}/` },
+    ],
+  };
+
+  const localServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "TravelAgency"],
+    name: `Khushi Tours and Travels - ${loc.name} Dispatch Desk`,
+    description: `Luxury tempo traveller rental and tour booking service in ${loc.name}, Bangalore. Doorstep vehicle pickup with verified drivers.`,
+    url: `https://gagangowdap.github.io/KhushiTravels/localities/${loc.slug}/`,
+    telephone: "+919901333113",
+    areaServed: {
+      "@type": "Place",
+      name: `${loc.name}, Bangalore`,
+    },
+    parentOrganization: {
+      "@type": "TravelAgency",
+      name: "Khushi Tours and Travels",
+      url: "https://gagangowdap.github.io/KhushiTravels/",
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localServiceSchema) }} />
       {/* Locality Hero */}
       <section
         className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 text-center overflow-hidden"

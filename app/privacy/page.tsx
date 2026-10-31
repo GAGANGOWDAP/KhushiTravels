@@ -11,6 +11,18 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://gagangowdap.github.io/KhushiTravels/privacy/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://gagangowdap.github.io/KhushiTravels/privacy/",
+    siteName: "Khushi Tours and Travels",
+    title: "Privacy Policy | Khushi Travels Bangalore",
+    description: "Privacy Policy of Khushi Tours & Travels Bangalore for vehicle rentals and tour bookings.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy | Khushi Travels Bangalore",
+    description: "Privacy Policy of Khushi Tours & Travels Bangalore.",
+  },
 };
 
 export default function PrivacyPage() {
@@ -19,8 +31,17 @@ export default function PrivacyPage() {
     { label: "Privacy Policy", href: "/privacy/" },
   ];
 
+  
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Privacy Policy",
+    url: "https://gagangowdap.github.io/KhushiTravels/privacy/",
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       <section
         className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 text-center overflow-hidden"
         style={{

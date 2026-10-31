@@ -10,8 +10,21 @@ export const metadata: Metadata = {
   description:
     "Hire luxury tempo travellers and Force Urbania in Bangalore. 24/7 dispatch desk, instant WhatsApp quote, and doorstep pickup across Bengaluru.",
   alternates: {
-    canonical:
-      "https://gagangowdap.github.io/KhushiTravels/hire-tempo-traveller-bangalore/",
+    canonical: "https://gagangowdap.github.io/KhushiTravels/hire-tempo-traveller-bangalore/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://gagangowdap.github.io/KhushiTravels/hire-tempo-traveller-bangalore/",
+    siteName: "Khushi Tours and Travels",
+    title: "Hire Tempo Traveller in Bangalore | Instant Booking | Khushi Travels",
+    description: "Hire luxury tempo travellers and Force Urbania in Bangalore. 24/7 dispatch desk, instant WhatsApp quote, and doorstep pickup across Bengaluru.",
+    images: [{ url: "https://gagangowdap.github.io/KhushiTravels/images/destinations/mysore.webp", width: 1200, height: 630, alt: "Hire Tempo Traveller Bangalore Khushi Travels" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hire Tempo Traveller in Bangalore | Khushi Travels",
+    description: "24/7 customer booking desk for tempo travellers and outstation packages in Bangalore.",
+    images: ["https://gagangowdap.github.io/KhushiTravels/images/destinations/mysore.webp"],
   },
 };
 
@@ -21,8 +34,41 @@ export default function ContactPage() {
     { label: "Contact", href: "/hire-tempo-traveller-bangalore/" },
   ];
 
+  
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Hire Tempo Traveller Bangalore - Khushi Travels Booking Desk",
+    url: "https://gagangowdap.github.io/KhushiTravels/hire-tempo-traveller-bangalore/",
+    mainEntity: {
+      "@type": "TravelAgency",
+      name: "Khushi Tours and Travels",
+      telephone: "+919901333113",
+      email: "info@khushitravel.in",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Ground Floor No: 2, Kodigehalli Main Road, Near Railway Station, Vidryanyapura",
+        addressLocality: "Bangalore",
+        addressRegion: "Karnataka",
+        postalCode: "560097",
+        addressCountry: "IN",
+      },
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://gagangowdap.github.io/KhushiTravels/" },
+      { "@type": "ListItem", position: 2, name: "Contact", item: "https://gagangowdap.github.io/KhushiTravels/hire-tempo-traveller-bangalore/" },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Contact Hero */}
       <section
         className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 text-center overflow-hidden"

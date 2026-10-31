@@ -34,6 +34,12 @@ export function generateMetadata({ params }: ServicePageProps): Metadata {
       title: service.metaTitle,
       description: service.metaDescription,
     },
+    twitter: {
+      card: "summary_large_image",
+      title: service.metaTitle,
+      description: service.metaDescription,
+      images: ["https://gagangowdap.github.io/KhushiTravels/images/destinations/mysore.webp"],
+    },
   };
 }
 
@@ -49,8 +55,38 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
     { label: service.title, href: `/services/${service.slug}/` },
   ];
 
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://gagangowdap.github.io/KhushiTravels/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://gagangowdap.github.io/KhushiTravels/#services" },
+      { "@type": "ListItem", position: 3, name: service.title, item: `https://gagangowdap.github.io/KhushiTravels/services/${service.slug}/` },
+    ],
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.metaDescription,
+    provider: {
+      "@type": "TravelAgency",
+      name: "Khushi Tours and Travels",
+      telephone: "+91 99013 33113",
+      url: "https://gagangowdap.github.io/KhushiTravels/",
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Bangalore",
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       {/* Service Hero */}
       <section
         className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 text-center overflow-hidden"

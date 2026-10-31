@@ -26,13 +26,31 @@ export const metadata: Metadata = {
     siteName: "Khushi Travels",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tour Packages from Bangalore | Khushi Travels",
+    description: "Weekend trips, Pan-India Pilgrimage Yatras & South India family tours by luxury Tempo Traveller.",
+    images: ["https://gagangowdap.github.io/KhushiTravels/images/destinations/mysore.webp"],
+  },
 };
 
 export default function PackagesHubPage() {
   const allCount =
     NORMAL_PACKAGES.length + SPECIAL_PACKAGES.length + WEEKEND_PACKAGES.length;
 
+  
+  const hubBreadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://gagangowdap.github.io/KhushiTravels/" },
+      { "@type": "ListItem", position: 2, name: "Tour Packages", item: "https://gagangowdap.github.io/KhushiTravels/packages/" },
+    ],
+  };
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubBreadcrumbs) }} />
     <main className="min-h-screen bg-slate-50">
       <PackageCategoryHeader
         eyebrow="Complete Tour Directory"
@@ -171,6 +189,7 @@ export default function PackagesHubPage() {
         </div>
       </div>
     </main>
+    </>
   );
 }
 

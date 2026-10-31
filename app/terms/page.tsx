@@ -11,6 +11,18 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://gagangowdap.github.io/KhushiTravels/terms/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://gagangowdap.github.io/KhushiTravels/terms/",
+    siteName: "Khushi Tours and Travels",
+    title: "Terms & Conditions | Khushi Travels Bangalore",
+    description: "Terms & Conditions of Khushi Tours & Travels Bangalore for vehicle rentals and tour bookings.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms & Conditions | Khushi Travels Bangalore",
+    description: "Terms & Conditions of Khushi Tours & Travels Bangalore.",
+  },
 };
 
 export default function TermsPage() {
@@ -19,8 +31,17 @@ export default function TermsPage() {
     { label: "Terms & Conditions", href: "/terms/" },
   ];
 
+  
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Terms & Conditions",
+    url: "https://gagangowdap.github.io/KhushiTravels/terms/",
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       <section
         className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 text-center overflow-hidden"
         style={{

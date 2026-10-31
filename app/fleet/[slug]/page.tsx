@@ -35,6 +35,12 @@ export function generateMetadata({ params }: FleetPageProps): Metadata {
       description: vehicle.description,
       images: [{ url: `https://gagangowdap.github.io/KhushiTravels${vehicle.image}` }],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${vehicle.name} Rental Bangalore | Khushi Travels`,
+      description: vehicle.description,
+      images: [`https://gagangowdap.github.io/KhushiTravels${vehicle.image}`],
+    },
   };
 }
 
@@ -74,8 +80,20 @@ export default function VehicleDetailPage({ params }: FleetPageProps) {
     },
   };
 
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://gagangowdap.github.io/KhushiTravels/" },
+      { "@type": "ListItem", position: 2, name: "Fleet", item: "https://gagangowdap.github.io/KhushiTravels/best-tempo-traveller-fleet-bangalore/" },
+      { "@type": "ListItem", position: 3, name: vehicle.name, item: `https://gagangowdap.github.io/KhushiTravels/fleet/${vehicle.slug}/` },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}

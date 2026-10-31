@@ -4,6 +4,12 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import {
+  SITE_URL,
+  SITE_NAME,
+  DEFAULT_OG_IMAGE,
+  buildLocalBusinessSchema,
+} from "@/lib/seo";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -20,12 +26,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gagangowdap.github.io/KhushiTravels/"),
-  title: "Luxury Tempo Traveller in Bangalore | 9, 12, 16 Seater | Khushi Travels",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Luxury Tempo Traveller in Bangalore | 9, 12, 16 Seater | Khushi Travels",
+    template: "%s | Khushi Travels",
+  },
   description:
-    "Rent luxury tempo travellers, Force Urbania & deluxe buses in Bangalore with Khushi Travels. Premium pushback seats, professional drivers & transparent per-km rates.",
+    "Rent luxury tempo travellers, Force Urbania & deluxe buses in Bangalore with Khushi Travels. Premium pushback seats, professional drivers & transparent per-km rates for local, outstation & pilgrimage tours.",
   keywords: [
     "luxury tempo traveller Bangalore",
+    "tempo traveller rent Bangalore",
+    "travel agency in Bangalore",
+    "tour operators in Bangalore",
+    "holiday packages from Bangalore",
+    "family tour packages from Bangalore",
+    "outstation cab booking Bangalore",
+    "pilgrimage tour operators Bangalore",
     "9 seater tempo traveller",
     "12 seater tempo traveller",
     "14 seater tempo traveller",
@@ -33,20 +49,44 @@ export const metadata: Metadata = {
     "Force Urbania rental Bangalore",
     "Maharaja seats tempo traveller",
     "Khushi Travels",
+    "Khushi Tours and Travels",
   ],
-  authors: [{ name: "Khushi Tours And Travels" }],
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  formatDetection: {
+    telephone: true,
+    address: true,
+    email: true,
+  },
+  alternates: {
+    canonical: "./",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
-    url: "https://gagangowdap.github.io/KhushiTravels/",
+    locale: "en_IN",
+    url: SITE_URL,
+    siteName: SITE_NAME,
     title: "Luxury Tempo Traveller Rental in Bangalore | Khushi Travels",
     description:
-      "Premium tempo travellers, Force Urbania and luxury buses for family trips, pilgrimages, and group outstation travel from Bangalore.",
+      "Premium tempo travellers, Force Urbania and luxury buses for family trips, pilgrimages, and group outstation travel from Bangalore. 100% owned fleet.",
     images: [
       {
-        url: "https://gagangowdap.github.io/KhushiTravels/images/destinations/mysore.webp",
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Khushi Travels Bangalore",
+        alt: "Khushi Tours & Travels Luxury Fleet Bangalore",
       },
     ],
   },
@@ -54,8 +94,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Luxury Tempo Traveller in Bangalore | 9, 12, 16 Seater | Khushi Travels",
     description:
-      "Rent luxury tempo travellers, Force Urbania & deluxe buses in Bangalore with Khushi Travels. Premium pushback seats, professional drivers & transparent per-km rates.",
-    images: ["https://gagangowdap.github.io/KhushiTravels/images/destinations/mysore.webp"],
+      "Rent luxury tempo travellers, Force Urbania & deluxe buses in Bangalore with Khushi Travels. Premium pushback seats, professional drivers & transparent rates.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 
@@ -64,55 +104,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const localBusinessSchema = {
+  const localBusinessSchema = buildLocalBusinessSchema();
+  const websiteSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Khushi Tours And Travels",
-    image: "https://khushitravel.in/images/khushi-tours-and-travels-logo.webp",
-    description:
-      "Bangalore's premier luxury tempo traveller rental service. 100% owned fleet from 7 to 50 seaters including Maharaja seats, Force Urbania, and luxury buses. Chauffeur-driven, sanitized, bookable in 2 minutes on WhatsApp.",
-    url: "https://khushitravel.in/",
-    telephone: "+919901333113",
-    email: "info@khushitravel.in",
-    priceRange: "₹₹",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress:
-        "Ground Floor No: 2, Kodigehalli Main Road, Near Railway Station, Vidryanyapura",
-      addressLocality: "Bangalore",
-      addressRegion: "Karnataka",
-      postalCode: "560097",
-      addressCountry: "IN",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    url: `${SITE_URL}/`,
+    name: SITE_NAME,
+    description: "Bangalore's Premier Luxury Tempo Traveller & Tour Operator",
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 13.0624156,
-      longitude: 77.5742089,
-    },
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-      ],
-      opens: "00:00",
-      closes: "23:59",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      bestRating: "5",
-      reviewCount: "63",
-      ratingCount: "63",
-    },
-    foundingDate: "2018-08-15",
-    taxID: "29JPFPK4060F1ZQ",
-    numberOfEmployees: { "@type": "QuantitativeValue", "value": "15" },
+    inLanguage: "en-IN",
   };
 
   return (
@@ -131,6 +134,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
           }}
         />
       </head>

@@ -1,4 +1,39 @@
 import React from "react";
+import type { Metadata } from "next";
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Luxury Tempo Traveller in Bangalore | 9 to 16 Seater Rental | Khushi Travels",
+  description:
+    "Rent luxury tempo travellers, Force Urbania & deluxe buses in Bangalore with Khushi Travels. Premium pushback Maharaja seats, expert chauffeurs, transparent per-km rates from ₹18/km, and 24/7 doorstep pickup across Bengaluru.",
+  alternates: {
+    canonical: `${SITE_URL}/`,
+  },
+  openGraph: {
+    title: "Luxury Tempo Traveller in Bangalore | Khushi Travels",
+    description:
+      "Premier luxury tempo traveller rental in Bangalore. 9, 12, 14, 16 seater Maharaja & Force Urbania for local, outstation & spiritual pilgrimage yatras.",
+    url: `${SITE_URL}/`,
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Khushi Tours & Travels Bangalore Homepage",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Luxury Tempo Traveller in Bangalore | Khushi Travels",
+    description:
+      "Rent luxury tempo travellers, Force Urbania & deluxe buses in Bangalore. Transparent per-km rates, sanitized fleet, instant WhatsApp booking.",
+    images: [DEFAULT_OG_IMAGE],
+  },
+};
+
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { FAQS_DATA } from "@/data/faqs";

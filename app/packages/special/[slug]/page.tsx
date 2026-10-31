@@ -44,6 +44,12 @@ export function generateMetadata({ params }: PageProps): Metadata {
       siteName: "Khushi Travels",
       type: "website",
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${pkg.title} | Khushi Travels`,
+      description: pkg.description,
+      images: [pkg.image.startsWith("http") ? pkg.image : `https://gagangowdap.github.io/KhushiTravels${pkg.image.startsWith("/") ? "" : "/"}${pkg.image}`],
+    },
   };
 }
 
@@ -158,8 +164,20 @@ export default function SpecialPackageDetailPage({ params }: PageProps) {
   );
   const whatsappUrl = `https://wa.me/919901333113?text=${whatsappMsg}`;
 
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://gagangowdap.github.io/KhushiTravels/" },
+      { "@type": "ListItem", position: 2, name: "Special Packages", item: "https://gagangowdap.github.io/KhushiTravels/packages/special/" },
+      { "@type": "ListItem", position: 3, name: pkg.title, item: `https://gagangowdap.github.io/KhushiTravels/packages/special/${pkg.slug}/` },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
