@@ -5,7 +5,6 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TravelNoticeTicker from "@/components/TravelNoticeTicker";
 import { getAssetPath } from "@/lib/assets";
-import KashiEnquiryForm from "./KashiEnquiryForm";
 
 interface KashiPackageDetailClientProps {
   breadcrumbs: Array<{ label: string; href: string }>;
@@ -193,12 +192,7 @@ export default function KashiPackageDetailClient({
   return (
     <div className="bg-[#F7F7FB] text-slate-800 antialiased font-sans pb-16 sm:pb-0">
       {/* ================================================================= */}
-      {/* 1. IMPORTANT TRAVEL NOTICE TICKER */}
-      {/* ================================================================= */}
-      <TravelNoticeTicker />
-
-      {/* ================================================================= */}
-      {/* 2. CINEMATIC HERO SECTION (TWO-COLUMN EDITORIAL) */}
+      {/* 1. CINEMATIC HERO SECTION (EDITORIAL + BOOKING CARD) */}
       {/* ================================================================= */}
       <section
         className="relative overflow-hidden text-white pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-12 lg:pb-20"
@@ -306,9 +300,124 @@ export default function KashiPackageDetailClient({
               </div>
             </div>
 
-            {/* Right Column: Embedded Immediate Booking / Quote Form */}
+            {/* Right Column: Premium Sacred Yatra Highlight Card */}
             <div className="lg:col-span-5 w-full">
-              <KashiEnquiryForm />
+              <div className="rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-[#D8B43B]/60 bg-white text-slate-800 shadow-2xl shadow-black/40 text-left">
+                {/* Visual Header with Image & Badges */}
+                <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/10] w-full overflow-hidden bg-slate-900">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={getAssetPath("/images/destinations/varanasi-ganga-aarti.jpg")}
+                    alt="Kashi Triveni Ayodhya Sacred Pilgrimage - Dashashwamedh Ghat Evening Ganga Aarti"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    loading="eager"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent pointer-events-none" />
+
+                  {/* Top Badges */}
+                  <div className="absolute top-3 left-3 z-10 flex items-center gap-2">
+                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[10.5px] font-bold uppercase tracking-wider bg-[#D8B43B] text-slate-950 shadow-md">
+                      ★ Official B2B Tour
+                    </span>
+                  </div>
+
+                  <div className="absolute top-3 right-3 z-10 bg-slate-950/80 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
+                    03N / 04D
+                  </div>
+
+                  {/* Bottom Text Over Image */}
+                  <div className="absolute bottom-3 left-3 right-3 text-white text-left z-10">
+                    <p className="text-[11px] font-semibold text-[#D8B43B] tracking-wide uppercase">
+                      Dashashwamedh Ghat &bull; Varanasi
+                    </p>
+                    <p className="text-sm sm:text-base font-bold text-white mt-0.5 leading-snug drop-shadow-md">
+                      3 Sacred Boat Rides Included on Ganga &amp; Sangam
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card Content & Action Area */}
+                <div className="p-4 sm:p-5 md:p-6 bg-white space-y-4">
+                  {/* Pricing Header */}
+                  <div className="pb-3 border-b border-[#E8E8F4] flex items-baseline justify-between">
+                    <div>
+                      <span className="text-[10px] uppercase font-bold text-[#D8B43B] tracking-wider block">
+                        Final B2B All-Inclusive Costing
+                      </span>
+                      <div className="flex items-baseline gap-1.5 mt-0.5">
+                        <span className="text-2xl sm:text-3xl font-extrabold text-[#080878] tracking-tight">
+                          ₹17,900
+                        </span>
+                        <span className="text-xs sm:text-sm font-semibold text-slate-500">
+                          / Person
+                        </span>
+                      </div>
+                    </div>
+                    <span className="text-[10.5px] font-semibold text-amber-900 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">
+                      + 5% GST on Total
+                    </span>
+                  </div>
+
+                  {/* Quick Feature Checklist */}
+                  <div className="space-y-2 text-xs text-slate-700">
+                    <div className="flex items-center gap-2">
+                      <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-[10px] shrink-0">
+                        ✓
+                      </span>
+                      <span><strong>16 Adults Group</strong> with 08 Confirmed Deluxe Rooms</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-[10px] shrink-0">
+                        ✓
+                      </span>
+                      <span><strong>APAI All Meals Plan:</strong> Daily Breakfast, Lunch &amp; Dinner</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-[10px] shrink-0">
+                        ✓
+                      </span>
+                      <span><strong>Dedicated 20-Seater Tempo:</strong> Pushback AC &amp; Tolls Covered</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-[10px] shrink-0">
+                        ✓
+                      </span>
+                      <span><strong>Temple Darshan Support:</strong> Kashi Sparsh &amp; Ayodhya Golf Cart</span>
+                    </div>
+                  </div>
+
+                  {/* Dual Action CTAs */}
+                  <div className="pt-1 space-y-2.5">
+                    <a
+                      href={whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#D8B43B] via-[#D8B43B] to-[#d97706] text-slate-950 font-heading font-bold text-xs sm:text-sm shadow-lg hover:shadow-amber-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all text-center"
+                    >
+                      <span>Book Sacred Yatra on WhatsApp</span>
+                      <span className="text-sm font-bold">&rarr;</span>
+                    </a>
+                    <a
+                      href="tel:+919901333113"
+                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#080878]/5 hover:bg-[#080878]/10 text-[#080878] font-bold text-xs border border-[#080878]/15 transition-all text-center"
+                    >
+                      <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                      </svg>
+                      <span>Call Coordination Desk: +91 99013 33113</span>
+                    </a>
+                  </div>
+
+                  {/* Trust Footer */}
+                  <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500">
+                    <span className="flex items-center gap-1 text-emerald-600 font-semibold">
+                      <span>●</span> Instant Response
+                    </span>
+                    <span>No Obligation</span>
+                    <span>100% Owned Fleet</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -384,6 +493,13 @@ export default function KashiPackageDetailClient({
           </div>
         </div>
       </section>
+
+      {/* ================================================================= */}
+      {/* IMPORTANT TRAVEL NOTICE TICKER (AFTER DURATION & GROUP SIZE CARD) */}
+      {/* ================================================================= */}
+      <div className="pt-4 sm:pt-6">
+        <TravelNoticeTicker />
+      </div>
 
       {/* ================================================================= */}
       {/* 4. COMPREHENSIVE PACKAGE OVERVIEW */}
@@ -468,36 +584,36 @@ export default function KashiPackageDetailClient({
                 <div className="relative aspect-[4/3] overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={getAssetPath("/images/destinations/varanasi-ganga-aarti.jpg")}
-                    alt="Kashi Triveni Ayodhya Pilgrimage Journey"
+                    src={getAssetPath("/images/destinations/ayodhya.webp")}
+                    alt="Grand Shri Ram Janmabhoomi Mandir Ayodhya"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   <div className="absolute top-3 left-3">
                     <span className="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#D8B43B] text-slate-950 shadow">
-                      Curated Spiritual Tour
+                      Ayodhya Dham
                     </span>
                   </div>
                   <div className="absolute bottom-3 left-3 right-3 text-white text-left">
-                    <p className="text-xs  italic text-amber-200">
-                      Dashashwamedh Ghat Evening Ganga Maha Aarti
+                    <p className="text-xs italic text-amber-200">
+                      Shri Ram Janmabhoomi Mandir
                     </p>
                     <p className="text-sm font-bold text-white mt-0.5">
-                      3 Sacred Boat Rides Included on Ganga &amp; Sangam
+                      Sugam Darshan &amp; Golf Cart Transfer Included
                     </p>
                   </div>
                 </div>
 
                 <div className="p-5 text-left bg-white">
                   <div className="flex items-center justify-between pb-3 border-b border-slate-100 text-xs">
-                    <span className="text-slate-500">Presented By:</span>
-                    <span className="font-bold text-[#080878]">Khushi Tours &amp; Travels</span>
+                    <span className="text-slate-500">Confirmed Stays:</span>
+                    <span className="font-bold text-[#080878]">Hotel Ananta &amp; Hotel Mosaic</span>
                   </div>
                   <div className="flex items-center justify-between py-2 text-xs">
-                    <span className="text-slate-500">B2B Costing:</span>
+                    <span className="text-slate-500">Transport:</span>
                     <span className="font-semibold text-[#080878]">
-                      ₹17,900 / Person <span className="text-slate-400 font-normal">(+5% GST)</span>
+                      20-Seater Pushback AC Tempo
                     </span>
                   </div>
                   <div className="pt-3">
@@ -505,7 +621,7 @@ export default function KashiPackageDetailClient({
                       href={whatsappLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#080878] hover:bg-[#193454] text-white text-xs font-bold transition-all shadow"
+                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#080878] hover:bg-[#05055C] text-white text-xs font-bold transition-all shadow"
                     >
                       <span>Inquire Directly on WhatsApp</span>
                       <span>&rarr;</span>
@@ -1202,27 +1318,7 @@ export default function KashiPackageDetailClient({
       </section>
 
       {/* ================================================================= */}
-      {/* 13. FLOATING WHATSAPP BUTTON (DESKTOP & MOBILE) */}
-      {/* ================================================================= */}
-      <aside aria-label="Quick WhatsApp Contact" className="fixed bottom-20 sm:bottom-6 right-5 z-40">
-        <a
-          href={whatsappLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Enquire about Kashi Triveni Ayodhya Yatra on WhatsApp"
-          className="group flex items-center gap-2 px-3.5 py-3 rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-105 active:scale-95 transition-all"
-        >
-          <svg className="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          <span className="hidden md:inline font-bold text-xs tracking-wide">
-            Yatra Inquiry
-          </span>
-        </a>
-      </aside>
-
-      {/* ================================================================= */}
-      {/* 14. MOBILE STICKY BOTTOM ACTION BAR */}
+      {/* 13. MOBILE STICKY BOTTOM ACTION BAR */}
       {/* ================================================================= */}
       <aside aria-label="Mobile Quick Booking" className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-[#E8E8F4] p-2.5 sm:hidden shadow-2xl">
         <div className="flex items-center gap-2">
