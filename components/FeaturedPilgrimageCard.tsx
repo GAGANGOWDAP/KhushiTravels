@@ -314,10 +314,9 @@ export default function FeaturedPilgrimageCard() {
         {/* =================================================================== */}
         <div
           ref={stageRef}
-          className="relative w-full flex items-center justify-center cursor-grab active:cursor-grabbing select-none"
+          className="relative w-full flex items-center justify-center cursor-grab active:cursor-grabbing select-none min-h-[500px] md:min-h-[460px]"
           style={{
             perspective: "1400px",
-            minHeight: isMobile ? "500px" : "460px",
             touchAction: "pan-y",
           }}
           onPointerDown={handlePointerDown}
@@ -478,11 +477,7 @@ export default function FeaturedPilgrimageCard() {
                       : "transform 750ms cubic-bezier(0.22, 1, 0.36, 1), opacity 750ms cubic-bezier(0.22, 1, 0.36, 1), filter 750ms ease, box-shadow 750ms ease",
                     willChange: "transform, opacity",
                   }}
-                  className={`absolute top-0 left-0 right-0 bottom-0 m-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-[#080878] border border-[#D8B43B]/40 cursor-pointer ${
-                    isMobile
-                      ? "w-[88vw] max-w-[360px] h-[480px]"
-                      : "w-[660px] lg:w-[820px] xl:w-[920px] h-[430px] lg:h-[450px]"
-                  }`}
+                  className="absolute top-0 left-0 right-0 bottom-0 m-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-[#080878] border border-[#D8B43B]/40 cursor-pointer w-[88vw] max-w-[360px] h-[480px] md:w-[660px] lg:w-[820px] xl:w-[920px] md:h-[430px] lg:h-[450px]"
                   aria-hidden={!isCenterActive}
                 >
                   {/* ========================================================= */}
