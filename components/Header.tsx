@@ -145,12 +145,12 @@ export default function Header() {
             className="site-logo relative flex items-center flex-shrink-0"
             aria-label="Khushi Tours & Travels Home"
           >
-            {/* White Logo (Initial Hero State & Dark Background) */}
+            {/* White Logo (Initial Hero State & Dark Background - Matched to Section Logo) */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={getAssetPath("/images/khushi-travels-logo-white.png")}
               alt="Khushi Tours & Travels"
-              className={`h-8 sm:h-9 md:h-10 lg:h-11 w-auto max-w-[150px] sm:max-w-[170px] md:max-w-[190px] object-contain transition-opacity duration-300 ease-in-out ${
+              className={`h-10 sm:h-12 md:h-14 lg:h-16 w-auto max-w-[180px] sm:max-w-[220px] lg:max-w-[260px] object-contain transition-opacity duration-300 ease-in-out ${
                 showBlackLogo ? "opacity-0 pointer-events-none" : "opacity-100"
               }`}
               width={1024}
@@ -158,13 +158,13 @@ export default function Header() {
               loading="eager"
             />
 
-            {/* Black Logo (Scrolled State on White/Light Navbar) */}
+            {/* Black Logo (Scrolled State on White/Light Navbar - Optically Matched) */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={getAssetPath("/images/khushi-travels-logo-black.png")}
               alt="Khushi Tours & Travels"
               aria-hidden={!showBlackLogo}
-              className={`absolute left-0 top-1/2 -translate-y-1/2 h-8 sm:h-9 md:h-10 lg:h-11 w-auto max-w-[150px] sm:max-w-[170px] md:max-w-[190px] object-contain transition-opacity duration-300 ease-in-out ${
+              className={`absolute left-0 top-1/2 -translate-y-1/2 h-[34px] sm:h-[41px] md:h-[48px] lg:h-[55px] w-auto max-w-[180px] sm:max-w-[220px] lg:max-w-[260px] object-contain transition-opacity duration-300 ease-in-out ${
                 showBlackLogo ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
               width={1024}
