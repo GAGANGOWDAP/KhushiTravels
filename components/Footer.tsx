@@ -112,12 +112,12 @@ export default function Footer() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={getAssetPath("/images/khushi-tours-and-travels-logo.webp")}
+                src={getAssetPath("/images/khushi-travels-logo-white.png")}
                 alt="Khushi Tours & Travels"
-                className="h-14 sm:h-16 w-auto drop-shadow-md rounded-xl"
+                className="h-12 sm:h-14 lg:h-16 w-auto max-w-[220px] lg:max-w-[260px] object-contain transition-transform duration-200 hover:opacity-95"
                 loading="lazy"
-                width={240}
-                height={60}
+                width={1024}
+                height={512}
               />
             </Link>
 
@@ -350,12 +350,12 @@ export default function Footer() {
             <Link href="/" className="inline-block" aria-label="Khushi Tours & Travels Home">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={getAssetPath("/images/khushi-tours-and-travels-logo.webp")}
+                src={getAssetPath("/images/khushi-travels-logo-white.png")}
                 alt="Khushi Tours & Travels"
-                className="h-12 sm:h-14 w-auto mx-auto drop-shadow-md rounded-xl"
+                className="h-10 sm:h-12 w-auto max-w-[180px] sm:max-w-[200px] mx-auto object-contain transition-transform duration-200 hover:opacity-95"
                 loading="lazy"
-                width={200}
-                height={50}
+                width={1024}
+                height={512}
               />
             </Link>
             <p className="text-xs font-semibold tracking-wider uppercase text-[#D8B43B]">

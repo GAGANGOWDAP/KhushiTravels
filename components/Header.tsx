@@ -130,6 +130,8 @@ export default function Header() {
     return Boolean(pathname?.startsWith(cleanHref));
   };
 
+  const showBlackLogo = scrolled || mobileMenuOpen;
+
   return (
     <>
       <header
@@ -137,17 +139,34 @@ export default function Header() {
         className={`site-header ${scrolled ? "scrolled" : ""}`}
       >
         <div className="container-custom header-inner">
-          {/* 1. Brand Logo (Left) */}
+          {/* 1. Brand Logo (Left) with Smooth Crossfade */}
           <Link
             href="/"
-            className="site-logo flex items-center flex-shrink-0"
+            className="site-logo relative flex items-center flex-shrink-0"
             aria-label="Khushi Tours & Travels Home"
           >
+            {/* White Logo (Initial Hero State & Dark Background) */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={getAssetPath("/images/khushi-travels-transparent-logo.png")}
+              src={getAssetPath("/images/khushi-travels-logo-white.png")}
               alt="Khushi Tours & Travels"
-              className="h-8 sm:h-9 md:h-10 lg:h-11 w-auto max-w-[150px] sm:max-w-[170px] md:max-w-[190px] object-contain transition-transform duration-200 hover:opacity-95"
+              className={`h-8 sm:h-9 md:h-10 lg:h-11 w-auto max-w-[150px] sm:max-w-[170px] md:max-w-[190px] object-contain transition-opacity duration-300 ease-in-out ${
+                showBlackLogo ? "opacity-0 pointer-events-none" : "opacity-100"
+              }`}
+              width={1024}
+              height={512}
+              loading="eager"
+            />
+
+            {/* Black Logo (Scrolled State on White/Light Navbar) */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={getAssetPath("/images/khushi-travels-logo-black.png")}
+              alt="Khushi Tours & Travels"
+              aria-hidden={!showBlackLogo}
+              className={`absolute left-0 top-1/2 -translate-y-1/2 h-8 sm:h-9 md:h-10 lg:h-11 w-auto max-w-[150px] sm:max-w-[170px] md:max-w-[190px] object-contain transition-opacity duration-300 ease-in-out ${
+                showBlackLogo ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
               width={1024}
               height={438}
               loading="eager"
