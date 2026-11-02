@@ -109,7 +109,7 @@ export default function FleetPage() {
       {/* Fleet Grid */}
       <section className="bg-gray-50 section-py">
         <div className="container-custom">
-          <div className="text-center mb-16 max-w-2xl mx-auto">
+          <div className="text-center mb-10 sm:mb-14 max-w-2xl mx-auto">
             <span className="text-brand-amber font-bold text-xs uppercase tracking-widest block mb-2">
               Browse by Seating Capacity
             </span>
@@ -122,7 +122,7 @@ export default function FleetPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6 lg:gap-8">
             {FLEET_DATA.map((vehicle) => (
               <VehicleCard key={vehicle.slug} vehicle={vehicle} />
             ))}

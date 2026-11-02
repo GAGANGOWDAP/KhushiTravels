@@ -22,8 +22,9 @@ export const FLEET_DATA: Vehicle[] = [
     ratePerKm: 32,
     driverAllowance: 600,
     category: "tempo",
-    image: "/images/fleet/luxury-10-seater-tempo-traveller-bangalore-1.webp",
+    image: "/images/fleet/luxury-9-seater-tempo-traveller-bangalore-1.webp",
     gallery: [
+      "/images/fleet/luxury-9-seater-tempo-traveller-bangalore-1.webp",
       "/images/fleet/luxury-10-seater-tempo-traveller-bangalore-1.webp",
       "/images/fleet/luxury-12-seater-tempo-traveller-bangalore-1.webp",
     ],
@@ -199,8 +200,9 @@ export const FLEET_DATA: Vehicle[] = [
     ratePerKm: 14,
     driverAllowance: 500,
     category: "car",
-    image: "/images/fleet/toyota-innova-crysta-bangalore-2.webp",
+    image: "/images/fleet/luxury-car-bangalore-1.webp",
     gallery: [
+      "/images/fleet/luxury-car-bangalore-1.webp",
       "/images/fleet/toyota-innova-crysta-bangalore-2.webp",
       "/images/fleet/toyota-innova-crysta-bangalore-1.webp",
     ],
@@ -223,8 +225,9 @@ export const FLEET_DATA: Vehicle[] = [
     ratePerKm: 26,
     driverAllowance: 600,
     category: "tempo",
-    image: "/images/fleet/luxury-12-seater-tempo-traveller-bangalore-1.webp",
+    image: "/images/fleet/tempo-traveller-bangalore.webp",
     gallery: [
+      "/images/fleet/tempo-traveller-bangalore.webp",
       "/images/fleet/luxury-12-seater-tempo-traveller-bangalore-1.webp",
       "/images/fleet/force-urbania-16-seater-bangalore-3.webp",
     ],
