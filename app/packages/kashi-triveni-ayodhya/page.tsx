@@ -5,7 +5,7 @@ import KashiPackageDetailClient from "./KashiPackageDetailClient";
 export const metadata: Metadata = {
   title: "Kashi – Triveni – Ayodhya Yatra (4D/3N) | Khushi Tours & Travels",
   description:
-    "Sacred 4-Day Kashi Triveni Ayodhya pilgrimage from Varanasi to Lucknow. Shri Kashi Vishwanath Sparsh Darshan, Triveni Sangam snan boat ride, Ram Janmabhoomi Sugam Darshan, 20-seater luxury tempo traveller, and premium hotel stays.",
+    "Sacred 4-Day Kashi Triveni Ayodhya pilgrimage from Varanasi to Lucknow. Shri Kashi Vishwanath Sparsh Darshan, Triveni Sangam snan boat ride, Ram Janmabhoomi Sugam Darshan, 20-seater luxury tempo traveller, and 3-Star Premium Deluxe hotel stays.",
   alternates: {
     canonical:
       "https://gagangowdap.github.io/KhushiTravels/packages/kashi-triveni-ayodhya/",
