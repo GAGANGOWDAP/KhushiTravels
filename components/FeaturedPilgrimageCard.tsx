@@ -106,7 +106,9 @@ export default function FeaturedPilgrimageCard() {
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [screenWidth, setScreenWidth] = useState<number>(1280);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState(0);
 
@@ -126,7 +128,10 @@ export default function FeaturedPilgrimageCard() {
   // Responsive geometry & media queries
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      const w = window.innerWidth;
+      setScreenWidth(w);
+      setIsMobile(w < 768);
+      setIsTablet(w >= 768 && w < 1200);
     };
     handleResize();
 
@@ -188,7 +193,7 @@ export default function FeaturedPilgrimageCard() {
   const getStride = () => {
     if (stageRef.current) {
       const width = stageRef.current.clientWidth;
-      return isMobile ? Math.max(260, width * 0.75) : Math.max(480, width * 0.52);
+      return isMobile ? Math.max(260, width * 0.75) : Math.max(480, width * 0.45);
     }
     return isMobile ? 300 : 540;
   };
@@ -324,7 +329,7 @@ export default function FeaturedPilgrimageCard() {
         {/* =================================================================== */}
         <div
           ref={stageRef}
-          className="relative w-full flex items-center justify-center my-2 sm:my-3 cursor-grab active:cursor-grabbing select-none min-h-[520px] sm:min-h-[540px] md:min-h-[460px] lg:min-h-[480px] xl:min-h-[500px]"
+          className="relative w-full flex items-center justify-center my-2 sm:my-3 cursor-grab active:cursor-grabbing select-none min-h-[520px] sm:min-h-[540px] md:min-h-[460px] lg:min-h-[470px] xl:min-h-[480px]"
           style={{
             perspective: "1400px",
             touchAction: "pan-y",
@@ -343,7 +348,7 @@ export default function FeaturedPilgrimageCard() {
               prevSlide();
             }}
             aria-label="Previous pilgrimage package"
-            className="absolute left-1 sm:left-2 md:left-3 lg:left-4 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-10 h-10 md:w-11 md:h-11 rounded-full bg-[#080878]/90 hover:bg-[#05055C] text-[#D8B43B] border border-[#D8B43B]/60 items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+            className="absolute left-2 sm:left-4 md:left-4 lg:left-6 xl:left-8 top-1/2 -translate-y-1/2 z-50 hidden sm:flex w-10 h-10 md:w-11 md:h-11 rounded-full bg-[#080878]/95 hover:bg-[#05055C] text-[#D8B43B] border border-[#D8B43B]/60 items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
           >
             <svg
               className="w-5 h-5 text-[#D8B43B]"
@@ -365,7 +370,7 @@ export default function FeaturedPilgrimageCard() {
               nextSlide();
             }}
             aria-label="Next pilgrimage package"
-            className="absolute right-1 sm:right-2 md:right-3 lg:right-4 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-10 h-10 md:w-11 md:h-11 rounded-full bg-[#080878]/90 hover:bg-[#05055C] text-[#D8B43B] border border-[#D8B43B]/60 items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+            className="absolute right-2 sm:right-4 md:right-4 lg:right-6 xl:right-8 top-1/2 -translate-y-1/2 z-50 hidden sm:flex w-10 h-10 md:w-11 md:h-11 rounded-full bg-[#080878]/95 hover:bg-[#05055C] text-[#D8B43B] border border-[#D8B43B]/60 items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
           >
             <svg
               className="w-5 h-5 text-[#D8B43B]"
@@ -379,7 +384,7 @@ export default function FeaturedPilgrimageCard() {
           </button>
 
           {/* Overlapping Deck of Cards */}
-          <div className="relative w-full h-[510px] sm:h-[530px] md:h-[440px] lg:h-[460px] xl:h-[480px] flex items-center justify-center pointer-events-none">
+          <div className="relative w-full h-[510px] sm:h-[530px] md:h-[440px] lg:h-[450px] xl:h-[460px] flex items-center justify-center pointer-events-none">
             {PILGRIMAGE_PACKAGES.map((pkg, index) => {
               // Calculate modular offset relative to currentIndex
               let diff = index - currentIndex;
@@ -394,7 +399,7 @@ export default function FeaturedPilgrimageCard() {
               const t = Math.abs(u);
               const isCenterActive = !isDragging ? diff === 0 : t < 0.45;
 
-              // Responsive 3D transform computation (inspired by layered profile reference)
+              // Responsive 3D transform computation (Desktop vs Tablet vs Mobile)
               let transformStyle = "";
               let zIndex = 10;
               let opacity = 0;
@@ -403,38 +408,67 @@ export default function FeaturedPilgrimageCard() {
               let boxShadow = "none";
 
               if (isMobile) {
-                // Mobile: Clean single card view with smooth horizontal slide
-                if (t <= 0.6) {
-                  zIndex = 30;
+                // Mobile (< 768px): Clean single card view with smooth horizontal slide
+                if (t <= 0.5) {
+                  zIndex = 35;
                   pointerEvents = "auto";
                   const tx = u * 105;
                   const scale = Math.max(0.88, 1.0 - t * 0.12);
                   transformStyle = `translate3d(${tx}%, 0, 0) scale(${scale})`;
                   opacity = Math.max(0, 1.0 - t * 0.7);
                   boxShadow = "0 20px 45px -10px rgba(8, 8, 120, 0.45)";
-                } else if (t <= 1.5) {
-                  zIndex = 10;
-                  pointerEvents = "none";
-                  const tx = u * 105;
-                  transformStyle = `translate3d(${tx}%, 0, 0) scale(0.88)`;
-                  opacity = 0;
                 } else {
                   zIndex = 5;
                   opacity = 0;
                   pointerEvents = "none";
-                  const tx = (u > 0 ? 1 : -1) * 120;
-                  transformStyle = `translate3d(${tx}%, 0, 0) scale(0.8)`;
+                  const tx = (u > 0 ? 1 : -1) * 115;
+                  transformStyle = `translate3d(${tx}%, 0, 0) scale(0.88)`;
+                }
+              } else if (isTablet) {
+                // Tablet (768px - 1199px): Spacious active card (540-620px), subtle previews
+                if (t <= 0.45) {
+                  // Active center card
+                  zIndex = 35;
+                  pointerEvents = "auto";
+                  const tx = u * 58;
+                  const tz = -t * 60;
+                  const scale = 1.0 - t * 0.08;
+                  const rotY = -u * 3;
+                  transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale}) rotateY(${rotY}deg)`;
+                  opacity = 1.0;
+                  filter = "brightness(1)";
+                  boxShadow =
+                    "0 25px 60px -15px rgba(8, 8, 120, 0.5), 0 0 25px rgba(216, 180, 59, 0.25)";
+                } else if (t <= 1.25) {
+                  // Tier 1 adjacent preview (subtle preview only, never crowding)
+                  zIndex = 20;
+                  pointerEvents = "auto";
+                  const tx = u * 58;
+                  const tz = -t * 70;
+                  const scale = 0.84;
+                  const rotY = -u * 3;
+                  transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale}) rotateY(${rotY}deg)`;
+                  opacity = screenWidth < 950 ? 0.35 : 0.50;
+                  filter = "brightness(0.65)";
+                  boxShadow = "0 12px 30px -10px rgba(0, 0, 0, 0.35)";
+                } else {
+                  // Tier 2 hidden on tablet to guarantee zero horizontal overflow
+                  zIndex = 5;
+                  opacity = 0;
+                  pointerEvents = "none";
+                  const tx = (u > 0 ? 1 : -1) * 110;
+                  transformStyle = `translate3d(${tx}%, 0, -180px) scale(0.75)`;
                 }
               } else {
-                // Desktop & Tablet: Layered overlapping card depth effect
+                // Desktop (>= 1200px): Spacious active card (640-680px), elegant layered deck
                 if (t <= 0.45) {
                   // Dominant active center card
-                  zIndex = 30;
+                  zIndex = 35;
                   pointerEvents = "auto";
-                  const tx = u * 44;
-                  const tz = -t * 70;
+                  const tx = u * 56;
+                  const tz = -t * 60;
                   const scale = 1.0 - t * 0.08;
-                  const rotY = -u * 4;
+                  const rotY = -u * 3.5;
                   transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale}) rotateY(${rotY}deg)`;
                   opacity = 1.0;
                   filter = "brightness(1)";
@@ -444,12 +478,12 @@ export default function FeaturedPilgrimageCard() {
                   // Tier 1: Immediately adjacent cards tucked slightly behind
                   zIndex = 20;
                   pointerEvents = "auto";
-                  const tx = u * 44;
-                  const tz = -t * 75;
-                  const scale = Math.max(0.88, 1.0 - t * 0.1);
-                  const rotY = -u * 4;
+                  const tx = u * 56;
+                  const tz = -t * 70;
+                  const scale = Math.max(0.86, 0.96 - t * 0.1);
+                  const rotY = -u * 3.5;
                   transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale}) rotateY(${rotY}deg)`;
-                  opacity = Math.max(0.65, 1.0 - t * 0.32);
+                  opacity = Math.max(0.60, 0.90 - t * 0.3);
                   filter = "brightness(0.70)";
                   boxShadow = "0 15px 35px -10px rgba(0, 0, 0, 0.4)";
                 } else if (t <= 2.25) {
@@ -457,12 +491,12 @@ export default function FeaturedPilgrimageCard() {
                   zIndex = 10;
                   pointerEvents = "none";
                   const extra = t - 1.0;
-                  const tx = (u > 0 ? 1 : -1) * (44 + extra * 32);
-                  const tz = -75 - extra * 90;
-                  const scale = Math.max(0.76, 0.90 - extra * 0.12);
-                  const rotY = (u > 0 ? -1 : 1) * 3;
+                  const tx = (u > 0 ? 1 : -1) * (56 + extra * 30);
+                  const tz = -70 - extra * 80;
+                  const scale = Math.max(0.75, 0.86 - extra * 0.11);
+                  const rotY = (u > 0 ? -1 : 1) * 2.5;
                   transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale}) rotateY(${rotY}deg)`;
-                  opacity = Math.max(0, 0.50 - extra * 0.45);
+                  opacity = Math.max(0, 0.35 - extra * 0.35);
                   filter = "brightness(0.50)";
                 } else {
                   // Offstage cards
@@ -507,7 +541,7 @@ export default function FeaturedPilgrimageCard() {
                       : "transform 850ms cubic-bezier(0.22, 1, 0.36, 1), opacity 850ms cubic-bezier(0.22, 1, 0.36, 1), filter 850ms ease, box-shadow 850ms ease",
                     willChange: "transform, opacity",
                   }}
-                  className="absolute top-0 left-0 right-0 bottom-0 m-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-[#080878] border border-[#D8B43B]/60 cursor-pointer w-[88vw] max-w-[360px] h-[510px] sm:h-[530px] md:w-[680px] lg:w-[860px] xl:w-[940px] md:h-[440px] lg:h-[460px] xl:h-[480px]"
+                  className="absolute top-0 left-0 right-0 bottom-0 m-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-[#080878] border border-[#D8B43B]/60 cursor-pointer w-[88vw] max-w-[360px] h-[510px] sm:h-[530px] md:max-w-none md:w-[560px] lg:w-[620px] xl:w-[660px] md:h-[440px] xl:h-[450px]"
                   aria-hidden={!isCenterActive}
                 >
                   {/* Subtle Top Metallic Accent Strip */}
@@ -620,8 +654,8 @@ export default function FeaturedPilgrimageCard() {
                   {/* ========================================================= */}
                   {/* DESKTOP & TABLET TWO-PART COMPOSITION (>= 768px) */}
                   {/* ========================================================= */}
-                  <div className="hidden md:grid md:grid-cols-[40%_60%] lg:grid-cols-[42%_58%] xl:grid-cols-[44%_56%] h-full text-left relative z-10">
-                    {/* Left: Authentic Destination Photograph */}
+                  <div className="hidden md:grid md:grid-cols-[48%_52%] xl:grid-cols-[49%_51%] h-full text-left relative z-10">
+                    {/* Left: Authentic Destination Photograph (48-49% width) */}
                     <div className="relative h-full w-full overflow-hidden bg-[#05055C] shrink-0">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
@@ -642,18 +676,18 @@ export default function FeaturedPilgrimageCard() {
                       </div>
                     </div>
 
-                    {/* Right: Clean, Structured Info (The 7 Requirements) */}
-                    <div className="relative z-10 min-w-0 p-5 lg:p-7 xl:p-8 flex flex-col justify-between text-left h-full bg-[#080878]">
+                    {/* Right: Clean, Structured Info (51-52% width) */}
+                    <div className="relative z-10 min-w-0 p-5 lg:p-6 xl:p-6 flex flex-col justify-between text-left h-full bg-[#080878]">
                       <div>
                         {/* 1. Category Tag */}
                         <div className="mb-2">
-                          <span className="inline-block text-[10px] lg:text-[11px] font-bold uppercase tracking-wider text-[#D8B43B] bg-amber-400/10 border border-amber-400/30 px-3 py-1 rounded-full">
+                          <span className="inline-block text-[10px] sm:text-[10.5px] font-bold uppercase tracking-wider text-[#D8B43B] bg-amber-400/10 border border-amber-400/30 px-2.5 py-0.5 rounded-full">
                             {pkg.category}
                           </span>
                         </div>
 
-                        {/* 2. Package Name */}
-                        <h3 className="font-heading text-xl lg:text-2xl xl:text-[26px] font-bold text-white tracking-tight leading-snug">
+                        {/* 2. Package Name (Prominent 22-26px Plus Jakarta Sans) */}
+                        <h3 className="font-heading text-[21px] md:text-[22px] lg:text-[24px] xl:text-[26px] font-bold text-white tracking-tight leading-[1.22]">
                           <Link
                             href={pkg.href}
                             onClick={(e) => {
@@ -669,42 +703,48 @@ export default function FeaturedPilgrimageCard() {
                         </h3>
 
                         {/* 3. Main Route / Destinations */}
-                        <p className="text-slate-200 text-xs sm:text-sm lg:text-[14px] font-medium mt-1.5 leading-relaxed">
+                        <p className="text-slate-200 text-xs md:text-[13px] font-medium mt-1.5 leading-snug line-clamp-2">
                           {pkg.route}
                         </p>
 
                         {/* 4 & 5. Duration & Up to 2 Useful Highlights */}
-                        <div className="mt-4 pt-3.5 border-t border-white/10 space-y-2">
-                          <div className="flex items-center gap-2.5 text-xs lg:text-sm text-slate-200 font-medium">
+                        <div className="mt-3.5 pt-3 border-t border-white/10 space-y-2">
+                          <div className="flex items-center gap-2.5 text-xs md:text-[13px] text-slate-200 font-medium">
                             <span className="w-2 h-2 rounded-full bg-[#D8B43B] shrink-0" />
                             <span className="text-white font-semibold">Duration:</span>
                             <span>{pkg.duration}</span>
                           </div>
-                          <div className="flex items-center gap-2.5 text-xs lg:text-sm text-slate-200 font-medium">
+                          <div className="flex items-center gap-2.5 text-xs md:text-[13px] text-slate-200 font-medium">
                             <span className="w-2 h-2 rounded-full bg-[#D8B43B] shrink-0" />
-                            <span>{pkg.highlights[0]}</span>
+                            <span className="line-clamp-1">{pkg.highlights[0]}</span>
                           </div>
-                          <div className="flex items-center gap-2.5 text-xs lg:text-sm text-slate-200 font-medium">
+                          <div className="flex items-center gap-2.5 text-xs md:text-[13px] text-slate-200 font-medium">
                             <span className="w-2 h-2 rounded-full bg-[#D8B43B] shrink-0" />
-                            <span>{pkg.highlights[1]}</span>
+                            <span className="line-clamp-1">{pkg.highlights[1]}</span>
                           </div>
                         </div>
                       </div>
 
                       {/* 6 & 7. Price & One Explore Package Button */}
-                      <div className="pt-3.5 border-t border-white/10 flex items-center justify-between gap-4 mt-auto shrink-0">
+                      <div className="pt-3 border-t border-white/10 flex items-center justify-between gap-3 mt-auto shrink-0">
                         {/* Price */}
-                        <div>
-                          <span className="text-[9px] lg:text-[10px] font-bold uppercase tracking-wider text-amber-300/80 block">
+                        <div className="min-w-0">
+                          <span className="text-[9px] uppercase font-bold tracking-wider text-amber-300/80 block">
                             Package Fare
                           </span>
-                          <div className="text-xl lg:text-2xl font-bold text-white tracking-tight mt-0.5">
-                            {pkg.price}
-                          </div>
-                          {pkg.priceNote && (
-                            <span className="text-xs text-slate-300 font-normal block mt-0.5">
-                              {pkg.priceNote}
-                            </span>
+                          {pkg.price.includes("enquiry") ? (
+                            <div className="text-xs md:text-[13px] font-semibold text-amber-200/90 leading-tight mt-0.5">
+                              Fare on enquiry
+                            </div>
+                          ) : (
+                            <div className="text-lg md:text-xl xl:text-[22px] font-bold text-white tracking-tight mt-0.5 leading-tight">
+                              {pkg.price}
+                              {pkg.priceNote && (
+                                <span className="text-xs text-slate-300 font-normal ml-1">
+                                  ({pkg.priceNote})
+                                </span>
+                              )}
+                            </div>
                           )}
                         </div>
 
@@ -718,10 +758,10 @@ export default function FeaturedPilgrimageCard() {
                                 e.stopPropagation();
                               }
                             }}
-                            className="inline-flex items-center justify-center gap-2 px-5 lg:px-6 py-2.5 lg:py-3 rounded-xl bg-gradient-to-r from-[#D8B43B] to-[#d97706] text-slate-950 font-heading font-bold text-xs lg:text-sm shadow-md hover:shadow-amber-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap"
+                            className="inline-flex items-center justify-center gap-1.5 px-3.5 md:px-4 lg:px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#D8B43B] to-[#d97706] text-slate-950 font-heading font-bold text-xs md:text-sm shadow-md hover:shadow-amber-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap"
                           >
                             <span>Explore Package</span>
-                            <span className="text-sm font-bold">&rarr;</span>
+                            <span className="font-bold">&rarr;</span>
                           </Link>
                         </div>
                       </div>
