@@ -23,6 +23,7 @@ export default function PackageInclusions({
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {inclusions.map((item, idx) => (
             <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" aria-hidden="true" />
               <span>{item}</span>
             </li>
           ))}
@@ -33,17 +34,12 @@ export default function PackageInclusions({
       {exclusions && exclusions.length > 0 && (
         <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
           <h3 className="font-heading font-bold text-lg text-gray-800 mb-4 flex items-center gap-2">
-            <span className="w-7 h-7 rounded-full bg-rose-100 text-rose-700 flex items-center justify-center text-sm font-semibold">
-              ✕
-            </span>
             Package Exclusions
           </h3>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {exclusions.map((item, idx) => (
               <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-600">
-                <svg className="w-4 h-4 text-rose-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <span className="w-2 h-2 rounded-full bg-rose-500 mt-1.5 shrink-0" aria-hidden="true" />
                 <span>{item}</span>
               </li>
             ))}

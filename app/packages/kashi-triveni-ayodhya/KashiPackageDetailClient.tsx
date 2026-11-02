@@ -793,55 +793,55 @@ export default function KashiPackageDetailClient({
 
               <ul className="space-y-3 text-xs sm:text-sm text-slate-700">
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span>3-Star Premium Deluxe hotel accommodations (2 Nights Varanasi + 1 Night Ayodhya across 08 Double Rooms).</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span><strong>APAI Meal Plan:</strong> Daily pure vegetarian satvik Breakfast, Lunch, and Dinner.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span><strong>Varanasi Evening Boat Ride</strong> for Ganga Maha Aarti at Dashashwamedh Ghat.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span><strong>Varanasi Morning Sunrise Boat Ride</strong> along the sacred ghats.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span><strong>Triveni Sangam Snan Boat Ride</strong> in Prayagraj.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span>Dedicated 20-Seater Pushback AC Tempo Traveller for all transfers and sightseeing.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span>All Highway FASTag and State Toll Charges.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span>All Temple &amp; Hotel Parking Charges.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span>Driver Allowances, night charges &amp; fuel costs.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span><strong>Sugam Darshan Assistance</strong> at Ayodhya Ram Janmabhoomi.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span><strong>Dedicated Golf Cart in Ayodhya</strong> for senior citizen comfort.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span>Sparsh Darshan protocol assistance at Kashi Vishwanath.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-2 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
                   <span>Experienced pilgrimage chauffeur and on-ground coordination.</span>
                 </li>
               </ul>
@@ -859,23 +859,23 @@ export default function KashiPackageDetailClient({
 
                 <ul className="space-y-3.5 text-xs sm:text-sm text-slate-700">
                   <li className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-rose-500 mt-1.5 shrink-0" />
                     <span><strong>5% Government GST Extra</strong> on Total Invoice Billing.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-rose-500 mt-1.5 shrink-0" />
                     <span>Train tickets or Airfare to Varanasi / from Lucknow.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-rose-500 mt-1.5 shrink-0" />
                     <span>Entry tickets at archaeological monuments, museums, or special pooja samagri.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-rose-500 mt-1.5 shrink-0" />
                     <span>Personal expenses like laundry, phone calls, priest dakshina, and mineral water bottles.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-rose-500 mt-1.5 shrink-0" />
                     <span>Any item or service not explicitly listed under inclusions above.</span>
                   </li>
                 </ul>
