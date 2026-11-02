@@ -138,14 +138,19 @@ export default function Header() {
       >
         <div className="container-custom header-inner">
           {/* 1. Brand Logo (Left) */}
-          <Link href="/" className="site-logo flex items-center flex-shrink-0">
+          <Link
+            href="/"
+            className="site-logo flex items-center flex-shrink-0"
+            aria-label="Khushi Tours & Travels Home"
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={getAssetPath("/images/khushi-tours-and-travels-logo.webp")}
-              alt="Khushi Travels"
-              className="h-9 md:h-10 w-auto transition-transform duration-200 hover:opacity-95 rounded-lg"
-              width={160}
-              height={40}
+              src={getAssetPath("/images/khushi-travels-transparent-logo.png")}
+              alt="Khushi Tours & Travels"
+              className="h-8 sm:h-9 md:h-10 lg:h-11 w-auto max-w-[150px] sm:max-w-[170px] md:max-w-[190px] object-contain transition-transform duration-200 hover:opacity-95"
+              width={1024}
+              height={438}
+              loading="eager"
             />
           </Link>
 
