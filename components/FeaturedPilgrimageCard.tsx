@@ -585,14 +585,14 @@ export default function FeaturedPilgrimageCard() {
                   aria-hidden={!isCenterActive}
                 >
                   {/* Subtle Top Metallic Accent Strip */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#D8B43B] via-[#D8B43B] to-[#D8B43B] z-30" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#D8B43B] via-[#D8B43B] to-[#D8B43B] z-30 pointer-events-none" />
 
                   {/* ========================================================= */}
                   {/* MOBILE VERTICAL CARD LAYOUT (< 768px) */}
                   {/* ========================================================= */}
-                  <div className="flex flex-col h-full md:hidden text-left">
+                  <div className="flex flex-col h-full md:hidden text-left relative z-10">
                     {/* Top Image Container */}
-                    <div className="relative h-[180px] sm:h-[195px] w-full shrink-0 overflow-hidden bg-[#05055C]">
+                    <div className="relative h-[175px] sm:h-[190px] w-full shrink-0 overflow-hidden bg-[#05055C]">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={getAssetPath(slide.image)}
@@ -605,14 +605,14 @@ export default function FeaturedPilgrimageCard() {
                       <div className="absolute inset-0 bg-gradient-to-t from-[#080878] via-[#080878]/20 to-transparent pointer-events-none" />
 
                       {/* Top Badges */}
-                      <div className="absolute top-2.5 left-2.5 z-20 flex items-center gap-1.5">
-                        <span className="inline-block bg-[#D8B43B] text-slate-950 font-semibold text-[9.5px] tracking-wider uppercase px-2 py-0.5 rounded shadow">
+                      <div className="absolute top-2.5 left-2.5 z-20 flex items-center gap-1.5 pointer-events-none">
+                        <span className="inline-block bg-[#D8B43B] text-slate-950 font-bold text-[9px] tracking-wider uppercase px-2 py-0.5 rounded shadow">
                           {slide.badgeTop}
                         </span>
                       </div>
 
                       {/* Bottom-Left Image Star Badge */}
-                      <div className="absolute bottom-2 left-2.5 z-20 flex items-center gap-1.5">
+                      <div className="absolute bottom-2 left-2.5 z-20 flex items-center gap-1.5 pointer-events-none">
                         <div className="w-5 h-5 rounded-full bg-[#D8B43B] text-slate-950 flex items-center justify-center font-bold text-[10px] shadow">
                           ★
                         </div>
@@ -622,20 +622,20 @@ export default function FeaturedPilgrimageCard() {
                       </div>
 
                       {/* Duration Tag */}
-                      <div className="absolute top-2.5 right-2.5 z-20 bg-[#080878]/90 border border-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full backdrop-blur-sm">
+                      <div className="absolute top-2.5 right-2.5 z-20 bg-[#080878]/90 border border-white/20 text-white text-[10px] font-bold px-2 py-0.5 rounded-full backdrop-blur-sm pointer-events-none">
                         {slide.stats[0]?.value}
                       </div>
                     </div>
 
                     {/* Bottom Content Area */}
-                    <div className="p-3 sm:p-3.5 flex flex-col justify-between flex-1">
+                    <div className="p-3 sm:p-3.5 flex flex-col justify-between flex-1 relative z-10 min-w-0">
                       <div>
-                        {/* Eyebrow */}
+                        {/* 1. Category label */}
                         <div className="flex items-center gap-1 text-[9.5px] font-bold text-[#D8B43B] uppercase tracking-wide mb-1">
                           <span className="truncate">{slide.tag1}</span>
                         </div>
 
-                        {/* Title */}
+                        {/* 2. Package title */}
                         <h3 className="font-heading text-[16px] sm:text-[18px] font-semibold text-white tracking-tight leading-snug line-clamp-1">
                           <Link
                             href={slide.href}
@@ -651,7 +651,7 @@ export default function FeaturedPilgrimageCard() {
                           </Link>
                         </h3>
 
-                        {/* Subtitle */}
+                        {/* 3. Destination / Itinerary */}
                         <p className="text-amber-200/90 text-[11px] font-semibold mt-0.5 line-clamp-1">
                           {slide.tagline}
                         </p>
@@ -661,8 +661,8 @@ export default function FeaturedPilgrimageCard() {
                           {slide.description}
                         </p>
 
-                        {/* 3 Compact Stats Chips */}
-                        <div className="grid grid-cols-3 gap-1.5 mt-2.5">
+                        {/* 4 & 5. Duration & Key Package Inclusions */}
+                        <div className="grid grid-cols-3 gap-1.5 mt-2">
                           {slide.stats.slice(0, 3).map((st, sIdx) => (
                             <div
                               key={sIdx}
@@ -679,8 +679,8 @@ export default function FeaturedPilgrimageCard() {
                         </div>
                       </div>
 
-                      {/* Bottom Pricing & CTA */}
-                      <div className="flex items-center justify-between gap-2 pt-2.5 border-t border-white/10 mt-2">
+                      {/* 6 & 7. Price or enquiry text & CTA Button */}
+                      <div className="flex items-center justify-between gap-2 pt-2 border-t border-white/10 mt-1.5 shrink-0">
                         <div>
                           <span className="text-[8px] uppercase font-bold text-amber-300/80 tracking-widest block">
                             {slide.priceLabel}
@@ -709,9 +709,9 @@ export default function FeaturedPilgrimageCard() {
                   {/* ========================================================= */}
                   {/* DESKTOP & TABLET SPLIT LAYOUT (>= 768px) */}
                   {/* ========================================================= */}
-                  <div className="hidden md:grid md:grid-cols-[280px_1fr] lg:grid-cols-[330px_1fr] xl:grid-cols-[380px_1fr] h-full text-left">
+                  <div className="hidden md:grid md:grid-cols-[280px_1fr] lg:grid-cols-[330px_1fr] xl:grid-cols-[380px_1fr] h-full text-left relative z-10">
                     {/* Left Column: Image Area */}
-                    <div className="relative h-full w-full overflow-hidden bg-[#05055C]">
+                    <div className="relative h-full w-full overflow-hidden bg-[#05055C] shrink-0">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={getAssetPath(slide.image)}
@@ -724,14 +724,14 @@ export default function FeaturedPilgrimageCard() {
                       <div className="absolute inset-0 bg-gradient-to-t from-[#080878] via-transparent to-black/30 pointer-events-none" />
 
                       {/* Top-Left: "FEATURED" / "NEW" Badge */}
-                      <div className="absolute top-3.5 left-3.5 z-20">
+                      <div className="absolute top-3.5 left-3.5 z-20 pointer-events-none">
                         <span className="inline-block bg-[#D8B43B] text-slate-950 font-semibold text-[10px] xl:text-[11px] tracking-wider uppercase px-2.5 py-0.5 rounded-md shadow-md">
                           {slide.badgeTop}
                         </span>
                       </div>
 
                       {/* Bottom-Left: Star Icon + Spiritual Badge */}
-                      <div className="absolute bottom-3.5 left-3.5 z-20 flex items-center gap-2">
+                      <div className="absolute bottom-3.5 left-3.5 z-20 flex items-center gap-2 pointer-events-none">
                         <div className="w-6 h-6 xl:w-7 xl:h-7 rounded-full bg-[#D8B43B] text-slate-950 flex items-center justify-center shadow-md text-xs font-bold">
                           ★
                         </div>
@@ -747,19 +747,19 @@ export default function FeaturedPilgrimageCard() {
                     </div>
 
                     {/* Right Column: Information & Actions */}
-                    <div className="relative p-5 md:pr-6 lg:p-6 lg:pr-8 xl:p-8 flex flex-col justify-between text-left">
+                    <div className="relative z-10 min-w-0 p-5 md:pr-6 lg:p-6 lg:pr-8 xl:p-8 flex flex-col justify-between text-left h-full">
                       <div>
-                        {/* Top Eyebrow Tag */}
+                        {/* 1. Category label & Itinerary Sub-route */}
                         <div className="flex flex-wrap items-center gap-2 mb-1.5 xl:mb-2">
                           <span className="inline-block px-2.5 py-0.5 rounded-full border border-amber-500/40 bg-amber-500/10 text-[#D8B43B] text-[10px] xl:text-[11px] font-bold uppercase tracking-wider">
                             {slide.tag1}
                           </span>
-                          <span className="text-[#D8B43B] text-xs font-medium">
+                          <span className="text-[#D8B43B] text-xs font-medium truncate">
                             &bull; {slide.tag2}
                           </span>
                         </div>
 
-                        {/* Title */}
+                        {/* 2. Package title */}
                         <h3 className="font-heading text-xl lg:text-2xl xl:text-3xl font-semibold text-white tracking-tight leading-tight mb-1">
                           <Link
                             href={slide.href}
@@ -775,25 +775,25 @@ export default function FeaturedPilgrimageCard() {
                           </Link>
                         </h3>
 
-                        {/* Subtitle / Tagline */}
-                        <p className="text-amber-100 font-semibold text-xs lg:text-sm mb-2 leading-snug line-clamp-1">
+                        {/* 3. Destination / Itinerary (Tagline) */}
+                        <p className="text-amber-100 font-semibold text-xs lg:text-sm mb-1.5 lg:mb-2 leading-snug line-clamp-1">
                           {slide.tagline}
                         </p>
 
                         {/* Description */}
-                        <p className="text-slate-300 text-xs lg:text-[13px] leading-relaxed mb-3 xl:mb-4 max-w-2xl font-normal line-clamp-2 xl:line-clamp-3">
+                        <p className="text-slate-300 text-xs lg:text-[13px] leading-relaxed mb-2.5 lg:mb-3 xl:mb-4 max-w-2xl font-normal line-clamp-2">
                           {slide.description}
                         </p>
 
-                        {/* 6 Feature / Stat Pill Boxes */}
-                        <div className="grid grid-cols-3 lg:grid-cols-6 gap-1.5 lg:gap-2 mb-3 xl:mb-4">
+                        {/* 4 & 5. Duration & Key Package Inclusions (6 Stat Pill Boxes) */}
+                        <div className="grid grid-cols-3 lg:grid-cols-6 gap-1.5 lg:gap-2 mb-2.5 lg:mb-3 xl:mb-4">
                           {slide.stats.map((stat, sIdx) => (
                             <div
                               key={sIdx}
-                              className="rounded-lg bg-white/5 border border-white/10 px-1.5 py-1.5 text-center flex flex-col justify-center items-center hover:bg-white/10 transition-colors"
+                              className="rounded-lg bg-white/5 border border-white/10 px-1.5 py-1 lg:py-1.5 text-center flex flex-col justify-center items-center hover:bg-white/10 transition-colors"
                             >
                               <span
-                                className={`font-semibold text-[11px] lg:text-xs xl:text-sm leading-tight ${
+                                className={`font-semibold text-[10.5px] lg:text-xs xl:text-sm leading-tight ${
                                   stat.highlight ? "text-[#D8B43B]" : "text-white"
                                 }`}
                               >
@@ -807,17 +807,17 @@ export default function FeaturedPilgrimageCard() {
                         </div>
                       </div>
 
-                      {/* Bottom Pricing & Guarantees + CTA Button */}
-                      <div className="flex items-end justify-between gap-4 pt-3 border-t border-white/10">
+                      {/* 6 & 7. Price or enquiry text & CTA Button */}
+                      <div className="flex items-end justify-between gap-3 lg:gap-4 pt-2.5 lg:pt-3 border-t border-white/10 shrink-0">
                         {/* Price & Guarantees */}
                         <div>
-                          <span className="text-[9px] xl:text-[10px] font-bold text-[#D8B43B]/90 uppercase tracking-widest block">
+                          <span className="text-[8.5px] xl:text-[10px] font-bold text-[#D8B43B]/90 uppercase tracking-widest block">
                             {slide.priceLabel}
                           </span>
-                          <div className="text-2xl lg:text-3xl font-bold text-white tracking-tight mt-0.5">
+                          <div className="text-xl lg:text-2xl xl:text-3xl font-bold text-white tracking-tight mt-0.5">
                             {slide.price}
                           </div>
-                          <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 mt-1 text-emerald-400 text-[10.5px] xl:text-xs font-medium">
+                          <div className="flex flex-wrap items-center gap-x-2.5 lg:gap-x-3 gap-y-0.5 mt-1 text-emerald-400 text-[10px] xl:text-xs font-medium">
                             {slide.guarantees.map((item, gIdx) => (
                               <span key={gIdx} className="flex items-center gap-1">
                                 <span>{item}</span>
@@ -836,7 +836,7 @@ export default function FeaturedPilgrimageCard() {
                                 e.stopPropagation();
                               }
                             }}
-                            className="inline-flex items-center justify-center gap-2 px-5 lg:px-6 xl:px-7 py-3 rounded-xl bg-gradient-to-r from-[#D8B43B] to-[#d97706] text-slate-950 font-heading font-semibold text-xs lg:text-sm shadow-lg hover:shadow-amber-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap"
+                            className="inline-flex items-center justify-center gap-2 px-4 lg:px-6 xl:px-7 py-2.5 lg:py-3 rounded-xl bg-gradient-to-r from-[#D8B43B] to-[#d97706] text-slate-950 font-heading font-semibold text-xs lg:text-sm shadow-lg hover:shadow-amber-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap"
                           >
                             <span>{slide.ctaText}</span>
                             <span className="text-sm">&rarr;</span>

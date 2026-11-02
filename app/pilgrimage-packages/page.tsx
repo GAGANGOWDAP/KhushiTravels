@@ -131,7 +131,7 @@ export default function PilgrimagePackagesPage() {
         "Clean highway cruise via Salem & Dindigul",
       ],
     },
-        {
+    {
       name: "Kashi – Triveni – Ayodhya Yatra",
       image: "/images/destinations/varanasi-ganga-aarti.jpg",
       alt: "Kashi Triveni Ayodhya Yatra package by Khushi Travels",
@@ -163,7 +163,7 @@ export default function PilgrimagePackagesPage() {
     },
   ];
 
-  
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
