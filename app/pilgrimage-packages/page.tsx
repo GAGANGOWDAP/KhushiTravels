@@ -219,16 +219,16 @@ export default function PilgrimagePackagesPage() {
           {/* Quick Badges */}
           <div className="flex flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto text-xs text-white/90">
             <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15">
-              ✓ Senior-Citizen Friendly
+              Senior-Citizen Friendly
             </span>
             <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15">
-              ✓ Pure Satvik Meal Stops
+              Pure Satvik Meal Stops
             </span>
             <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15">
-              ✓ Doorstep Pickup Anywhere in Bangalore
+              Doorstep Pickup Anywhere in Bangalore
             </span>
             <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15">
-              ✓ 100% Owned Fleet with Air Suspension
+              100% Owned Fleet with Air Suspension
             </span>
           </div>
         </div>

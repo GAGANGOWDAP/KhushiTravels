@@ -286,17 +286,16 @@ export default function KashiPackageDetailClient({
 
               {/* Reassuring Inclusions Row */}
               <div className="pt-2 border-t border-white/10 flex flex-wrap items-center gap-y-2 gap-x-4 text-xs text-slate-300">
-                <span className="flex items-center gap-1.5">
-                  <span className="text-[#D8B43B] font-bold">✓</span>
-                  <span>APAI All Meals (Breakfast + Lunch + Dinner)</span>
+                <span>
+                  APAI All Meals (Breakfast + Lunch + Dinner)
                 </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="text-[#D8B43B] font-bold">✓</span>
-                  <span>08 Deluxe Rooms (16 Adults)</span>
+                <span className="text-white/30 hidden sm:inline">&bull;</span>
+                <span>
+                  08 Deluxe Rooms (16 Adults)
                 </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="text-[#D8B43B] font-bold">✓</span>
-                  <span>Tolls, Parking &amp; Driver Covered</span>
+                <span className="text-white/30 hidden sm:inline">&bull;</span>
+                <span>
+                  Tolls, Parking &amp; Driver Covered
                 </span>
               </div>
             </div>
@@ -361,28 +360,16 @@ export default function KashiPackageDetailClient({
 
                   {/* Quick Feature Checklist */}
                   <div className="space-y-2 text-xs text-slate-700">
-                    <div className="flex items-center gap-2">
-                      <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-[10px] shrink-0">
-                        ✓
-                      </span>
+                    <div className="py-0.5">
                       <span><strong>16 Adults Group</strong> with 08 Confirmed Deluxe Rooms</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-[10px] shrink-0">
-                        ✓
-                      </span>
+                    <div className="py-0.5">
                       <span><strong>APAI All Meals Plan:</strong> Daily Breakfast, Lunch &amp; Dinner</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-[10px] shrink-0">
-                        ✓
-                      </span>
+                    <div className="py-0.5">
                       <span><strong>Dedicated 20-Seater Tempo:</strong> Pushback AC &amp; Tolls Covered</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-[10px] shrink-0">
-                        ✓
-                      </span>
+                    <div className="py-0.5">
                       <span><strong>Temple Darshan Support:</strong> Kashi Sparsh &amp; Ayodhya Golf Cart</span>
                     </div>
                   </div>
@@ -529,10 +516,7 @@ export default function KashiPackageDetailClient({
 
               {/* 4 Key Pillars */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-[#E8E8F4]">
-                  <span className="w-6 h-6 rounded-full bg-amber-50 text-[#D8B43B] font-bold text-xs flex items-center justify-center shrink-0">
-                    ✓
-                  </span>
+                <div className="p-3 rounded-xl bg-white border border-[#E8E8F4]">
                   <div>
                     <h4 className="font-bold text-xs text-[#080878]">Priority Temple Support</h4>
                     <p className="text-[11px] text-slate-500 mt-0.5">
@@ -541,10 +525,7 @@ export default function KashiPackageDetailClient({
                   </div>
                 </div>
 
-                <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-[#E8E8F4]">
-                  <span className="w-6 h-6 rounded-full bg-amber-50 text-[#D8B43B] font-bold text-xs flex items-center justify-center shrink-0">
-                    ✓
-                  </span>
+                <div className="p-3 rounded-xl bg-white border border-[#E8E8F4]">
                   <div>
                     <h4 className="font-bold text-xs text-[#080878]">Satvik APAI Meals</h4>
                     <p className="text-[11px] text-slate-500 mt-0.5">
@@ -553,10 +534,7 @@ export default function KashiPackageDetailClient({
                   </div>
                 </div>
 
-                <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-[#E8E8F4]">
-                  <span className="w-6 h-6 rounded-full bg-amber-50 text-[#D8B43B] font-bold text-xs flex items-center justify-center shrink-0">
-                    ✓
-                  </span>
+                <div className="p-3 rounded-xl bg-white border border-[#E8E8F4]">
                   <div>
                     <h4 className="font-bold text-xs text-[#080878]">Senior-Friendly Pace</h4>
                     <p className="text-[11px] text-slate-500 mt-0.5">
@@ -565,10 +543,7 @@ export default function KashiPackageDetailClient({
                   </div>
                 </div>
 
-                <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white border border-[#E8E8F4]">
-                  <span className="w-6 h-6 rounded-full bg-amber-50 text-[#D8B43B] font-bold text-xs flex items-center justify-center shrink-0">
-                    ✓
-                  </span>
+                <div className="p-3 rounded-xl bg-white border border-[#E8E8F4]">
                   <div>
                     <h4 className="font-bold text-xs text-[#080878]">All-Inclusive Pricing</h4>
                     <p className="text-[11px] text-slate-500 mt-0.5">
@@ -796,19 +771,15 @@ export default function KashiPackageDetailClient({
 
               <div className="space-y-2.5 text-xs sm:text-sm text-slate-200 border-t border-white/10 pt-4">
                 <div className="flex items-center gap-2">
-                  <span className="text-[#D8B43B] font-bold">✓</span>
                   <span><strong>08 Double-Sharing Deluxe Rooms</strong> (16 Adults)</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#D8B43B] font-bold">✓</span>
                   <span><strong>APAI Meal Plan:</strong> Daily Breakfast, Lunch &amp; Dinner</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#D8B43B] font-bold">✓</span>
                   <span>Convenient access to Kashi Vishwanath Corridor &amp; Ghats</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#D8B43B] font-bold">✓</span>
                   <span>Elevator access, 24/7 hot water, pure vegetarian restaurant</span>
                 </div>
               </div>
@@ -835,19 +806,15 @@ export default function KashiPackageDetailClient({
 
               <div className="space-y-2.5 text-xs sm:text-sm text-slate-200 border-t border-white/10 pt-4">
                 <div className="flex items-center gap-2">
-                  <span className="text-[#D8B43B] font-bold">✓</span>
                   <span><strong>08 Double-Sharing Deluxe Rooms</strong> (16 Adults)</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#D8B43B] font-bold">✓</span>
                   <span><strong>APAI Meal Plan:</strong> Dinner &amp; Next Morning Breakfast</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#D8B43B] font-bold">✓</span>
                   <span>Close proximity to Shri Ram Janmabhoomi &amp; Saryu River</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#D8B43B] font-bold">✓</span>
                   <span>Modern comforts, sanitized premises, friendly hospitality</span>
                 </div>
               </div>
@@ -876,19 +843,19 @@ export default function KashiPackageDetailClient({
 
                 <div className="grid grid-cols-2 gap-3 pt-2">
                   <div className="bg-white rounded-xl p-3 border border-[#E8E8F4]">
-                    <div className="text-[#080878] font-bold text-xs sm:text-sm">✓ Pushback Recliners</div>
+                    <div className="text-[#080878] font-bold text-xs sm:text-sm">Pushback Recliners</div>
                     <div className="text-[11px] text-slate-500 mt-0.5">2x1 layout for legroom</div>
                   </div>
                   <div className="bg-white rounded-xl p-3 border border-[#E8E8F4]">
-                    <div className="text-[#080878] font-bold text-xs sm:text-sm">✓ Fuel &amp; Driver</div>
+                    <div className="text-[#080878] font-bold text-xs sm:text-sm">Fuel &amp; Driver</div>
                     <div className="text-[11px] text-slate-500 mt-0.5">All driver allowances paid</div>
                   </div>
                   <div className="bg-white rounded-xl p-3 border border-[#E8E8F4]">
-                    <div className="text-[#080878] font-bold text-xs sm:text-sm">✓ All Tolls Included</div>
+                    <div className="text-[#080878] font-bold text-xs sm:text-sm">All Tolls Included</div>
                     <div className="text-[11px] text-slate-500 mt-0.5">State &amp; highway FASTag</div>
                   </div>
                   <div className="bg-white rounded-xl p-3 border border-[#E8E8F4]">
-                    <div className="text-[#080878] font-bold text-xs sm:text-sm">✓ Parking Included</div>
+                    <div className="text-[#080878] font-bold text-xs sm:text-sm">Parking Included</div>
                     <div className="text-[11px] text-slate-500 mt-0.5">All temple &amp; hotel parking</div>
                   </div>
                 </div>
@@ -1024,9 +991,7 @@ export default function KashiPackageDetailClient({
             {/* Inclusions Card */}
             <div className="bg-[#F7F7FB] rounded-3xl p-6 sm:p-8 border border-[#E8E8F4] shadow-sm text-left">
               <div className="flex items-center gap-2.5 mb-6">
-                <span className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm">
-                  ✓
-                </span>
+                
                 <div>
                   <h3 className="font-heading font-bold text-xl text-[#080878]">
                     Package Inclusions
@@ -1037,55 +1002,42 @@ export default function KashiPackageDetailClient({
 
               <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700">
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span>Two nights stay at Hotel Ananta Kashi, Varanasi (08 Double Rooms).</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span>One night stay at Hotel Mosaic, Ayodhya (08 Double Rooms).</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span><strong>APAI Meal Plan:</strong> Daily satvik Breakfast, Lunch, and Dinner included.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span><strong>Varanasi Ganga Aarti Evening Boat Ride</strong> Included.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span><strong>Varanasi Morning Sunrise Boat Ride</strong> Included.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span><strong>Triveni Sangam Snan Boat Ride</strong> in Prayagraj Included.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span>Dedicated 20-Seater Luxury Tempo Traveller from Varanasi to Lucknow.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span>All Highway FASTag and State Toll Charges Included.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span>All Temple &amp; Hotel Parking Charges Included.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span>Driver Allowances, night charges &amp; fuel included.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span><strong>Sugam Darshan Assistance</strong> at Ayodhya Ram Janmabhoomi.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span><strong>Dedicated Golf Cart in Ayodhya</strong> Included for elders.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✓</span>
                   <span>Sparsh Darshan protocol assistance at Kashi Vishwanath.</span>
                 </li>
               </ul>

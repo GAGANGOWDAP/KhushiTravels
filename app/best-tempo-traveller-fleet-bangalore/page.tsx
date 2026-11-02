@@ -90,17 +90,17 @@ export default function FleetPage() {
             regularly serviced, and sanitized before departure.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-white/90">
-            <span className="flex items-center gap-1.5 font-semibold">
-              <span className="text-brand-amber">✓</span> Pushback Recliner Seats
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs text-white/90">
+            <span className="font-semibold">
+              Pushback Recliner Seats
             </span>
-            <span>&bull;</span>
-            <span className="flex items-center gap-1.5 font-semibold">
-              <span className="text-brand-amber">✓</span> Individual AC Vents
+            <span className="text-white/40">&bull;</span>
+            <span className="font-semibold">
+              Individual AC Vents
             </span>
-            <span>&bull;</span>
-            <span className="flex items-center gap-1.5 font-semibold">
-              <span className="text-brand-amber">✓</span> All-India Tourist Permit
+            <span className="text-white/40">&bull;</span>
+            <span className="font-semibold">
+              All-India Tourist Permit
             </span>
           </div>
         </div>

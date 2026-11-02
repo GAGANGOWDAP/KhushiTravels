@@ -216,9 +216,7 @@ export default function RouteDetailPage({ params }: RoutePageProps) {
                 </div>
                 <div className="flex items-center justify-between pt-3">
                   <span className="text-gray-500">Doorstep Pickup</span>
-                  <span className="text-emerald-600 font-bold">
-                    ✓ Anywhere in Bangalore
-                  </span>
+                  <span className="text-emerald-700 font-semibold">Anywhere in Bangalore</span>
                 </div>
               </div>
 

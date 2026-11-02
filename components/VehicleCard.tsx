@@ -51,7 +51,6 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
                 key={feat}
                 className="text-xs text-gray-600 flex items-center gap-2"
               >
-                <span className="text-emerald-500 font-bold">✓</span>
                 <span>{feat}</span>
               </li>
             ))}

@@ -663,21 +663,16 @@ export default function SpiritualPilgrimagePage() {
             <div className="bg-white rounded-2xl p-6 sm:p-8 border border-emerald-200/80 shadow-sm flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-6 pb-3 border-b border-gray-100">
-                  <span className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 font-bold flex items-center justify-center text-base">
-                    ✓
-                  </span>
                   <h3 className="font-heading text-2xl font-bold text-brand-navy">Package Inclusions (If Confirmed)</h3>
                 </div>
                 <ul className="space-y-3.5 text-sm text-gray-700">
                   <li className="flex items-start gap-3">
-                    <span className="text-emerald-500 font-bold mt-0.5">✓</span>
                     <span>
                       <strong>AC Volvo Transportation:</strong> Dedicated AC Volvo coach as specified in the confirmed
                       operator quotation, equipped with reclining seats and air suspension.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-emerald-500 font-bold mt-0.5">✓</span>
                     <span>
                       <strong>Driver Charges &amp; Allowances:</strong> Professional commercial driver fees, driver
                       night allowances, interstate road permits, toll charges, and parking fees according to the final
@@ -685,21 +680,18 @@ export default function SpiritualPilgrimagePage() {
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-emerald-500 font-bold mt-0.5">✓</span>
                     <span>
                       <strong>Temple Entry &amp; Local Fares:</strong> Applicable general temple entry tickets and
                       authorized local auto-rickshaw or connecting shuttle bus fares, if confirmed in the final voucher.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-emerald-500 font-bold mt-0.5">✓</span>
                     <span>
                       <strong>Deluxe Accommodation:</strong> 3-star deluxe hotel rooms on a double-sharing basis with
                       attached bathrooms and running hot water, if confirmed.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-emerald-500 font-bold mt-0.5">✓</span>
                     <span>
                       <strong>Three Pure Vegetarian Meals:</strong> Wholesome daily breakfast, lunch, and dinner served
                       as 100% pure vegetarian satvik meals, according to the final meal plan.
@@ -1031,15 +1023,9 @@ export default function SpiritualPilgrimagePage() {
               </p>
               <div className="space-y-3 pt-2">
                 <div className="flex items-center gap-3 text-sm">
-                  <span className="w-8 h-8 rounded-full bg-brand-amber/20 text-brand-amber flex items-center justify-center font-bold">
-                    ✓
-                  </span>
                   <span>Dedicated Kannada, Telugu, Hindi &amp; English coordinators</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
-                  <span className="w-8 h-8 rounded-full bg-brand-amber/20 text-brand-amber flex items-center justify-center font-bold">
-                    ✓
-                  </span>
                   <span>Transparent custom quotes for families &amp; devotional groups</span>
                 </div>
               </div>

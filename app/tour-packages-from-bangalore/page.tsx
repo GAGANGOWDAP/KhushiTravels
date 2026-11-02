@@ -315,13 +315,13 @@ export default function TourPackagesPage() {
               <div className="inline-flex items-center gap-2 text-white/80">
                 <span className="hidden sm:inline w-1 h-1 rounded-full bg-white/30" aria-hidden="true"></span>
                 <span>
-                  <span className="text-emerald-400 font-bold">✓</span> 100% Own Fleet
+                  100% Own Fleet
                 </span>
               </div>
               <div className="inline-flex items-center gap-2 text-white/80">
                 <span className="hidden sm:inline w-1 h-1 rounded-full bg-white/30" aria-hidden="true"></span>
                 <span>
-                  <span className="text-emerald-400 font-bold">✓</span> Hotel Booking Available
+                  Hotel Booking Available
                 </span>
               </div>
               <div className="inline-flex items-center gap-2 text-emerald-300 font-medium">
@@ -482,11 +482,11 @@ export default function TourPackagesPage() {
 
                   {/* Guarantees */}
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 pt-3 border-t border-white/5">
-                    <span className="flex items-center gap-1 text-[11px] text-emerald-400">✓ No hidden charges</span>
+                    <span className="flex items-center gap-1 text-[11px] text-emerald-400">No hidden charges</span>
                     <span className="flex items-center gap-1 text-[11px] text-emerald-400">
-                      ✓ Free cancellation 7 days prior
+                      Free cancellation 7 days prior
                     </span>
-                    <span className="flex items-center gap-1 text-[11px] text-emerald-400">✓ 24/7 support</span>
+                    <span className="flex items-center gap-1 text-[11px] text-emerald-400">24/7 support</span>
                   </div>
                 </div>
               </div>
@@ -610,33 +610,18 @@ export default function TourPackagesPage() {
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     100% owned fleet — 9 seater to 50 seater buses
                   </li>
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Verified hotel booking included in packages
                   </li>
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Experienced tour guides for groups of 15+
                   </li>
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Professional drivers, GPS tracking, 24/7 support
                   </li>
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Custom itineraries for families, corporate, &amp; student groups
                   </li>
                 </ul>
@@ -752,21 +737,12 @@ export default function TourPackagesPage() {
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Vehicle + driver + fuel + tolls
                   </li>
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     GPS-tracked, sanitized vehicle
                   </li>
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Professional chauffeur
                   </li>
                   <li className="flex items-start gap-3 text-sm text-gray-400">
@@ -809,27 +785,15 @@ export default function TourPackagesPage() {
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start gap-3 text-sm text-white/80">
-                    <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Vehicle + driver + fuel + tolls
                   </li>
                   <li className="flex items-start gap-3 text-sm text-white/80">
-                    <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     GPS-tracked, sanitized vehicle
                   </li>
                   <li className="flex items-start gap-3 text-sm text-white/80">
-                    <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Professional chauffeur
                   </li>
                   <li className="flex items-start gap-3 text-sm text-white/80">
-                    <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Verified hotel booking (3★/4★)
                   </li>
                   <li className="flex items-start gap-3 text-sm text-white/40">
@@ -863,33 +827,18 @@ export default function TourPackagesPage() {
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Vehicle + driver + fuel + tolls
                   </li>
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     GPS-tracked, sanitized vehicle
                   </li>
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Professional chauffeur
                   </li>
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Verified hotel booking (3★/4★)
                   </li>
                   <li className="flex items-start gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
                     Dedicated tour guide (15+ groups)
                   </li>
                 </ul>
@@ -932,7 +881,7 @@ export default function TourPackagesPage() {
             </div>
             <div className="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100">
               <div className="w-16 h-16 mx-auto rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 text-2xl">
-                ✓
+                🏨
               </div>
               <h3 className="font-heading font-bold text-brand-navy text-base mb-2">Verified Hotels</h3>
               <p className="text-sm text-gray-500 leading-relaxed">

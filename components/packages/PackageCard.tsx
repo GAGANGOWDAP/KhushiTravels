@@ -77,9 +77,6 @@ export default function PackageCard({ pkg }: PackageCardProps) {
           <div className="space-y-1.5 mb-5 pt-3 border-t border-gray-100">
             {pkg.highlights.slice(0, 3).map((hl, i) => (
               <div key={i} className="flex items-start gap-2 text-xs text-gray-700">
-                <svg className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
-                </svg>
                 <span className="line-clamp-1">{hl}</span>
               </div>
             ))}

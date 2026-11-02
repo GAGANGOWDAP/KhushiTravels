@@ -56,7 +56,7 @@ export default function ContactForm() {
 
       {submitted && (
         <div className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm">
-          ✓ Thank you! We have opened WhatsApp to connect your booking with our dispatch team.
+          Thank you! We have opened WhatsApp to connect your booking with our dispatch team.
         </div>
       )}
 

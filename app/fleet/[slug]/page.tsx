@@ -209,8 +209,7 @@ export default function VehicleDetailPage({ params }: FleetPageProps) {
                 </h3>
                 <ul className="grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
                   {vehicle.features.map((feat) => (
-                    <li key={feat} className="flex items-start gap-2.5">
-                      <span className="text-emerald-500 font-bold mt-0.5">✓</span>
+                    <li key={feat} className="flex items-start">
                       <span>{feat}</span>
                     </li>
                   ))}

@@ -183,19 +183,19 @@ export default function PricingTable() {
         </h4>
         <ul className="grid sm:grid-cols-2 gap-3 text-sm text-gray-600">
           <li className="flex items-start gap-2">
-            <span className="text-emerald-500 font-bold">✓</span> Minimum 300 km
+            Minimum 300 km
             billed per calendar day for outstation trips.
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-emerald-500 font-bold">✓</span> Driver allowance
+            Driver allowance
             (batta) covers 6:00 AM to 10:00 PM duty.
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-emerald-500 font-bold">✓</span> Highway tolls,
+            Highway tolls,
             inter-state permit fees &amp; parking charges as per actual FASTag bills.
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-emerald-500 font-bold">✓</span> Zero hidden
+            Zero hidden
             surcharges. GST tax invoice provided for all bookings.
           </li>
         </ul>

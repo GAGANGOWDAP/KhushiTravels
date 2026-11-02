@@ -155,9 +155,6 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 key={feat.title}
                 className="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-md transition-all"
               >
-                <div className="w-8 h-8 rounded-lg bg-amber-100 text-brand-amber font-bold flex items-center justify-center mb-3">
-                  ✓
-                </div>
                 <h3 className="font-heading font-bold text-brand-navy text-base mb-1">
                   {feat.title}
                 </h3>

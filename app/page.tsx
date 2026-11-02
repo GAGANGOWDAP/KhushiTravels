@@ -344,7 +344,7 @@ export default function HomePage() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d="M5 13l4 4L19 7"
+                      d="M5 12V7a3 3 0 013-3h8a3 3 0 013 3v5m-14 0h14m-14 0a2 2 0 00-2 2v4a2 2 0 002 2h1m12-8a2 2 0 012 2v4a2 2 0 01-2 2h-1m-12 0v2m12-2v2m-12-2h12"
                     />
                   </svg>
                 </div>

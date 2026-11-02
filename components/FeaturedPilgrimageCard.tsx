@@ -823,7 +823,6 @@ export default function FeaturedPilgrimageCard() {
                           <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 mt-1 text-emerald-400 text-[10.5px] xl:text-xs font-medium">
                             {slide.guarantees.map((item, gIdx) => (
                               <span key={gIdx} className="flex items-center gap-1">
-                                <span className="text-emerald-400 font-bold">✓</span>
                                 <span>{item}</span>
                               </span>
                             ))}

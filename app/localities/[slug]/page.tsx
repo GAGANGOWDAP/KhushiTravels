@@ -175,28 +175,24 @@ export default function LocalityDetailPage({ params }: LocalityPageProps) {
                 Why Residents in {loc.name} Choose Us
               </h3>
               <ul className="space-y-3 text-xs sm:text-sm text-gray-600">
-                <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-500 font-bold">✓</span>
+                <li className="flex items-start">
                   <span>
                     Zero dead-mileage billing from garage to {loc.name}.
                   </span>
                 </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-500 font-bold">✓</span>
+                <li className="flex items-start">
                   <span>
                     Direct expressway access for quick exits toward Mysore,
                     Tirupati, and airport corridors.
                   </span>
                 </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-500 font-bold">✓</span>
+                <li className="flex items-start">
                   <span>
                     100% company-owned luxury fleet with authenticated Maharaja
                     recliners.
                   </span>
                 </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="text-emerald-500 font-bold">✓</span>
+                <li className="flex items-start">
                   <span>
                     Transparent distance rates starting at ₹18/km with GST
                     invoicing.
