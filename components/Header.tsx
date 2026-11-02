@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getAssetPath } from "@/lib/assets";
+import { MAIN_NAV_ITEMS } from "@/data/navigation";
 
 export default function Header() {
   const pathname = usePathname();
@@ -118,9 +119,15 @@ export default function Header() {
   );
 
   const isActive = (href: string) => {
-    if (href === "/" && (pathname === "/" || pathname === "")) return true;
-    if (href !== "/" && pathname?.includes(href.replace(/\/$/, ""))) return true;
-    return false;
+    if (href === "/") {
+      return pathname === "/" || pathname === "";
+    }
+    if (href.includes("fleet")) {
+      return Boolean(pathname?.includes("fleet"));
+    }
+    const cleanHref = href.replace(/\/$/, "");
+    if (!cleanHref) return false;
+    return Boolean(pathname?.startsWith(cleanHref));
   };
 
   return (
@@ -142,183 +149,126 @@ export default function Header() {
             />
           </Link>
 
-          {/* 2. Modern Open Navigation (Center) */}
+          {/* 2. Modern Open Navigation (Center) - Shared Single Source of Truth */}
           <nav
-            className="hidden lg:flex items-center gap-7 xl:gap-9"
+            className="hidden lg:flex items-center gap-6 xl:gap-8"
             aria-label="Main Navigation"
           >
-            {/* Home */}
-            <Link
-              href="/"
-              className={`nav-link ${isActive("/") ? "active" : ""}`}
-            >
-              Home
-            </Link>
-
-            {/* Fleet */}
-            <Link
-              href="/best-tempo-traveller-fleet-bangalore/"
-              className={`nav-link ${
-                isActive("/best-tempo-traveller-fleet-bangalore/") ? "active" : ""
-              }`}
-            >
-              Fleet
-            </Link>
-
-            {/* Packages Dropdown */}
-            <div
-              ref={pkgDropdownRef}
-              className="relative inline-flex items-center"
-              onMouseEnter={openDropdown}
-              onMouseLeave={() => scheduleCloseDropdown(220)}
-            >
-              <button
-                ref={triggerBtnRef}
-                id="packages-menu-btn"
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  toggleDropdown();
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    toggleDropdown();
-                  } else if (e.key === "ArrowDown") {
-                    e.preventDefault();
-                    openDropdown();
-                  }
-                }}
-                aria-expanded={pkgDropdownOpen}
-                aria-haspopup="true"
-                aria-controls="packages-dropdown-menu"
-                className={`nav-link flex items-center gap-1.5 cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-sm ${
-                  isPackagesActive ? "active" : ""
-                }`}
-              >
-                <span>Packages</span>
-                <svg
-                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                    pkgDropdownOpen ? "rotate-180 text-[#D8B43B]" : "opacity-70"
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              {/* Seamless Dropdown Menu Wrapper - Starts at top-full (0 gap) with pt-2 visual padding */}
-              <div
-                className={`dropdown-menu-wrapper absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50 transition-all duration-200 ${
-                  pkgDropdownOpen
-                    ? "opacity-100 visible translate-y-0 pointer-events-auto"
-                    : "opacity-0 invisible -translate-y-1 pointer-events-none"
-                }`}
-                onMouseEnter={openDropdown}
-                onMouseLeave={() => scheduleCloseDropdown(220)}
-              >
-                {/* Visual Menu Card with hit-bridge */}
-                <div
-                  id="packages-dropdown-menu"
-                  className="w-72 bg-white text-slate-800 rounded-2xl shadow-xl border border-gray-100 p-2 relative before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3 before:bg-transparent"
-                  role="menu"
-                  aria-orientation="vertical"
-                  aria-labelledby="packages-menu-btn"
-                >
-                  <div className="space-y-1">
-                    <Link
-                      href="/packages/normal/"
-                      role="menuitem"
-                      onClick={() => closeDropdownImmediately()}
-                      className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
-                        pathname?.includes("/packages/normal")
-                          ? "bg-[#D8B43B]/10 text-[#080878] font-bold border border-[#D8B43B]/30"
-                          : "hover:bg-slate-50 text-slate-700 hover:text-[#080878]"
+            {MAIN_NAV_ITEMS.map((item) => {
+              if (item.children) {
+                return (
+                  <div
+                    key={item.name}
+                    ref={pkgDropdownRef}
+                    className="relative inline-flex items-center"
+                    onMouseEnter={openDropdown}
+                    onMouseLeave={() => scheduleCloseDropdown(220)}
+                  >
+                    <button
+                      ref={triggerBtnRef}
+                      id="packages-menu-btn"
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleDropdown();
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          toggleDropdown();
+                        } else if (e.key === "ArrowDown") {
+                          e.preventDefault();
+                          openDropdown();
+                        }
+                      }}
+                      aria-expanded={pkgDropdownOpen}
+                      aria-haspopup="true"
+                      aria-controls="packages-dropdown-menu"
+                      className={`nav-link flex items-center gap-1.5 cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-sm ${
+                        isPackagesActive ? "active" : ""
                       }`}
                     >
-                      <span className="text-xs font-bold flex items-center justify-between">
-                        Normal Packages
-                        <span className="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded text-slate-600 font-medium">
-                          Family Tours
-                        </span>
-                      </span>
-                      <span className="text-[11px] text-gray-500 font-normal mt-0.5">
-                        Tirupati, Coorg, Ooty, Mysore & Goa
-                      </span>
-                    </Link>
+                      <span>{item.name}</span>
+                      <svg
+                        className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                          pkgDropdownOpen ? "rotate-180 text-[#D8B43B]" : "opacity-70"
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
 
-                    <Link
-                      href="/packages/special/"
-                      role="menuitem"
-                      onClick={() => closeDropdownImmediately()}
-                      className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
-                        pathname?.includes("/packages/special")
-                          ? "bg-[#D8B43B]/10 text-[#080878] font-bold border border-[#D8B43B]/30"
-                          : "hover:bg-slate-50 text-slate-700 hover:text-[#080878]"
+                    {/* Seamless Dropdown Menu Wrapper */}
+                    <div
+                      className={`dropdown-menu-wrapper absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50 transition-all duration-200 ${
+                        pkgDropdownOpen
+                          ? "opacity-100 visible translate-y-0 pointer-events-auto"
+                          : "opacity-0 invisible -translate-y-1 pointer-events-none"
                       }`}
+                      onMouseEnter={openDropdown}
+                      onMouseLeave={() => scheduleCloseDropdown(220)}
                     >
-                      <span className="text-xs font-bold flex items-center justify-between">
-                        Special Packages
-                        <span className="text-[10px] bg-[#D8B43B]/20 text-[#080878] px-1.5 py-0.5 rounded font-bold">
-                          ★ Pilgrimage
-                        </span>
-                      </span>
-                      <span className="text-[11px] text-gray-500 font-normal mt-0.5">
-                        12 Jyotirlinga Yatra & Sacred Shrines
-                      </span>
-                    </Link>
-
-                    <Link
-                      href="/packages/weekend/"
-                      role="menuitem"
-                      onClick={() => closeDropdownImmediately()}
-                      className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
-                        pathname?.includes("/packages/weekend")
-                          ? "bg-[#D8B43B]/10 text-[#080878] font-bold border border-[#D8B43B]/30"
-                          : "hover:bg-slate-50 text-slate-700 hover:text-[#080878]"
-                      }`}
-                    >
-                      <span className="text-xs font-bold flex items-center justify-between">
-                        Weekend Packages
-                        <span className="text-[10px] bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded font-medium border border-emerald-200">
-                          18 Trips
-                        </span>
-                      </span>
-                      <span className="text-[11px] text-gray-500 font-normal mt-0.5">
-                        Gokarna, Dandeli, Hampi, Munnar & more
-                      </span>
-                    </Link>
+                      {/* Visual Menu Card with hit-bridge */}
+                      <div
+                        id="packages-dropdown-menu"
+                        className="w-72 bg-white text-slate-800 rounded-2xl shadow-xl border border-gray-100 p-2 relative before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3 before:bg-transparent"
+                        role="menu"
+                        aria-orientation="vertical"
+                        aria-labelledby="packages-menu-btn"
+                      >
+                        <div className="space-y-1">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              href={child.href}
+                              role="menuitem"
+                              onClick={() => closeDropdownImmediately()}
+                              className={`flex flex-col px-3.5 py-2.5 rounded-xl transition-all ${
+                                isActive(child.href)
+                                  ? "bg-[#D8B43B]/10 text-[#080878] font-bold border border-[#D8B43B]/30"
+                                  : "hover:bg-slate-50 text-slate-700 hover:text-[#080878]"
+                              }`}
+                            >
+                              <span className="text-xs font-bold flex items-center justify-between">
+                                {child.name}
+                                {child.badge && (
+                                  <span className="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded text-slate-600 font-medium">
+                                    {child.badge}
+                                  </span>
+                                )}
+                              </span>
+                              {child.description && (
+                                <span className="text-[11px] text-gray-500 font-normal mt-0.5">
+                                  {child.description}
+                                </span>
+                              )}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
+                );
+              }
 
-            {/* Pricing */}
-            <Link
-              href="/tempo-traveller-rent-price-bangalore/"
-              className={`nav-link ${
-                isActive("/tempo-traveller-rent-price-bangalore/") ? "active" : ""
-              }`}
-            >
-              Pricing
-            </Link>
-
-            {/* Contact */}
-            <Link
-              href="/hire-tempo-traveller-bangalore/"
-              className={`nav-link ${
-                isActive("/hire-tempo-traveller-bangalore/") ? "active" : ""
-              }`}
-            >
-              Contact
-            </Link>
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`nav-link ${isActive(item.href) ? "active" : ""}`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* 3. Actions (Right) */}
@@ -385,127 +335,84 @@ export default function Header() {
         id="mobileOverlay"
       >
         <nav className="w-full max-w-sm flex flex-col items-center gap-6">
-          <Link
-            href="/"
-            className={isActive("/") ? "active" : ""}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Home
-          </Link>
-          <Link
-            href="/best-tempo-traveller-fleet-bangalore/"
-            className={
-              isActive("/best-tempo-traveller-fleet-bangalore/") ? "active" : ""
-            }
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Fleet
-          </Link>
+          {MAIN_NAV_ITEMS.map((item) => {
+            if (item.children) {
+              return (
+                <div key={item.name} className="w-full flex flex-col items-center">
+                  <button
+                    type="button"
+                    onClick={() => setMobilePkgExpanded(!mobilePkgExpanded)}
+                    className={`flex items-center gap-2 text-xl font-semibold transition-colors ${
+                      isPackagesActive ? "text-[#D8B43B] font-bold" : "text-[#080878]"
+                    }`}
+                    aria-expanded={mobilePkgExpanded}
+                  >
+                    <span>{item.name}</span>
+                    <svg
+                      className={`w-4 h-4 transition-transform duration-200 ${
+                        mobilePkgExpanded ? "rotate-180 text-[#D8B43B]" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
 
-          {/* Packages Expandable on Mobile */}
-          <div className="w-full flex flex-col items-center">
-            <button
-              type="button"
-              onClick={() => setMobilePkgExpanded(!mobilePkgExpanded)}
-              className={`flex items-center gap-2 text-xl font-semibold transition-colors ${
-                isPackagesActive ? "text-[#D8B43B] font-bold" : "text-[#080878]"
-              }`}
-              aria-expanded={mobilePkgExpanded}
-            >
-              <span>Packages</span>
-              <svg
-                className={`w-4 h-4 transition-transform duration-200 ${
-                  mobilePkgExpanded ? "rotate-180 text-[#D8B43B]" : ""
+                  {mobilePkgExpanded && (
+                    <div className="flex flex-col items-center gap-3 py-3 px-6 bg-slate-50 rounded-2xl w-full max-w-xs mt-3 border border-slate-200/80 shadow-inner">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.name}
+                          href={child.href}
+                          className={`text-sm font-semibold transition-colors ${
+                            isActive(child.href)
+                              ? "text-[#D8B43B] font-bold"
+                              : "text-gray-700 hover:text-[#D8B43B]"
+                          }`}
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setMobilePkgExpanded(false);
+                          }}
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
+                      <Link
+                        href={item.href}
+                        className="text-xs font-bold text-[#D8B43B] hover:underline pt-2 border-t border-gray-200 w-full text-center"
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          setMobilePkgExpanded(false);
+                        }}
+                      >
+                        View All Packages →
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`text-xl font-semibold transition-colors ${
+                  isActive(item.href) ? "text-[#D8B43B] font-bold" : "text-[#080878]"
                 }`}
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                viewBox="0 0 24 24"
+                onClick={() => setMobileMenuOpen(false)}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-
-            {mobilePkgExpanded && (
-              <div className="flex flex-col items-center gap-3 py-3 px-6 bg-slate-50 rounded-2xl w-full max-w-xs mt-3 border border-slate-200/80 shadow-inner">
-                <Link
-                  href="/packages/normal/"
-                  className={`text-sm font-semibold transition-colors ${
-                    pathname?.includes("/packages/normal")
-                      ? "text-[#D8B43B] font-bold"
-                      : "text-gray-700 hover:text-[#D8B43B]"
-                  }`}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    setMobilePkgExpanded(false);
-                  }}
-                >
-                  Normal Packages
-                </Link>
-                <Link
-                  href="/packages/special/"
-                  className={`text-sm font-semibold transition-colors ${
-                    pathname?.includes("/packages/special")
-                      ? "text-[#D8B43B] font-bold"
-                      : "text-gray-700 hover:text-[#D8B43B]"
-                  }`}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    setMobilePkgExpanded(false);
-                  }}
-                >
-                  Special Packages
-                </Link>
-                <Link
-                  href="/packages/weekend/"
-                  className={`text-sm font-semibold transition-colors ${
-                    pathname?.includes("/packages/weekend")
-                      ? "text-[#D8B43B] font-bold"
-                      : "text-gray-700 hover:text-[#D8B43B]"
-                  }`}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    setMobilePkgExpanded(false);
-                  }}
-                >
-                  Weekend Packages (18)
-                </Link>
-                <Link
-                  href="/packages/"
-                  className="text-xs font-bold text-[#D8B43B] hover:underline pt-2 border-t border-gray-200 w-full text-center"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    setMobilePkgExpanded(false);
-                  }}
-                >
-                  View All Packages →
-                </Link>
-              </div>
-            )}
-          </div>
-
-          <Link
-            href="/tempo-traveller-rent-price-bangalore/"
-            className={
-              isActive("/tempo-traveller-rent-price-bangalore/") ? "active" : ""
-            }
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Pricing
-          </Link>
-          <Link
-            href="/hire-tempo-traveller-bangalore/"
-            className={
-              isActive("/hire-tempo-traveller-bangalore/") ? "active" : ""
-            }
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Contact
-          </Link>
+                {item.name}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Mobile Contact & Social Actions */}

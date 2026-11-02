@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { getAssetPath } from "@/lib/assets";
+import { MAIN_NAV_ITEMS } from "@/data/navigation";
 
 export default function Footer() {
   const currentYear = 2026;
@@ -30,16 +31,6 @@ export default function Footer() {
     { name: "Mangalore", href: "/routes/bangalore-to-mangalore-tempo-traveller/" },
     { name: "Kodaikanal", href: "/routes/bangalore-to-kodaikanal-tempo-traveller/" },
     { name: "Shirdi", href: "/routes/bangalore-to-shirdi-tempo-traveller/" },
-  ];
-
-  const exploreLinks = [
-    { name: "Home", href: "/" },
-    { name: "Our Story", href: "/services/best-tempo-traveller-rental-bangalore/" },
-    { name: "Our Fleet", href: "/best-tempo-traveller-fleet-bangalore/" },
-    { name: "Holiday Packages", href: "/tour-packages-from-bangalore/" },
-    { name: "Pilgrimage Tours", href: "/spiritual-pilgrimage-tours/" },
-    { name: "Pricing", href: "/tempo-traveller-rent-price-bangalore/" },
-    { name: "Contact Us", href: "/hire-tempo-traveller-bangalore/" },
   ];
 
   const supportLinks = [
@@ -180,15 +171,15 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2 – Explore */}
+          {/* Column 2 – Explore (Synchronized Single Source of Truth) */}
           <div>
             <h4 className="text-white font-heading font-bold text-sm tracking-wider uppercase mb-5 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B]" />
               Explore
             </h4>
             <ul className="space-y-2.5 text-sm">
-              {exploreLinks.map((item) => (
-                <li key={item.name}>
+              {MAIN_NAV_ITEMS.map((item) => (
+                <li key={item.name} className="space-y-1.5">
                   <Link
                     href={item.href}
                     className="text-[#CBD5E1] hover:text-[#D8B43B] hover:translate-x-1 inline-flex items-center gap-2 transition-all duration-200"
@@ -196,6 +187,21 @@ export default function Footer() {
                     <span className="text-[#D8B43B]/60 text-xs">&rsaquo;</span>
                     {item.name}
                   </Link>
+                  {item.children && (
+                    <ul className="pl-4 space-y-1.5 border-l border-white/10 ml-2 mt-1">
+                      {item.children.map((child) => (
+                        <li key={child.name}>
+                          <Link
+                            href={child.href}
+                            className="text-[#94A3B8] hover:text-[#D8B43B] hover:translate-x-1 inline-flex items-center gap-1.5 text-xs transition-all duration-200"
+                          >
+                            <span className="text-[#D8B43B]/40 text-[10px]">&rsaquo;</span>
+                            {child.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>
@@ -425,15 +431,29 @@ export default function Footer() {
                 }`}
             >
               <div className="overflow-hidden">
-                <div className="px-4 pb-4 pt-1 space-y-2 border-t border-white/[0.08]">
-                  {exploreLinks.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="block py-2 text-xs text-[#CBD5E1] hover:text-[#D8B43B] active:text-[#D8B43B] transition-colors"
-                    >
-                      &rsaquo; {item.name}
-                    </Link>
+                <div className="px-4 pb-4 pt-1 space-y-2.5 border-t border-white/[0.08]">
+                  {MAIN_NAV_ITEMS.map((item) => (
+                    <div key={item.name} className="space-y-1">
+                      <Link
+                        href={item.href}
+                        className="block py-1.5 text-xs text-[#CBD5E1] hover:text-[#D8B43B] active:text-[#D8B43B] transition-colors"
+                      >
+                        &rsaquo; {item.name}
+                      </Link>
+                      {item.children && (
+                        <div className="pl-4 space-y-1 border-l border-white/10 ml-2 my-1">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              href={child.href}
+                              className="block py-1 text-[11px] text-[#94A3B8] hover:text-[#D8B43B] active:text-[#D8B43B] transition-colors"
+                            >
+                              &rsaquo; {child.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
