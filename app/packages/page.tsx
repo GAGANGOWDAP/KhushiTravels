@@ -10,6 +10,7 @@ import PackageBreadcrumbs from "@/components/packages/PackageBreadcrumbs";
 import PackageCategoryHeader from "@/components/packages/PackageCategoryHeader";
 import PackageCard from "@/components/packages/PackageCard";
 import PackageEnquiryCTA from "@/components/packages/PackageEnquiryCTA";
+import WeekendDestinationCarousel from "@/components/WeekendDestinationCarousel";
 
 export const metadata: Metadata = {
   title: "Tour Packages from Bangalore | Normal, Special & Weekend Trips | Khushi Travels",
@@ -131,29 +132,16 @@ export default function PackagesHubPage() {
           </div>
         </div>
 
-        {/* Weekend Highlights Preview */}
+        {/* Weekend Highlights Preview: Airbnb-style Horizontal Destination Carousel */}
         <div className="my-12">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#1a365d]">
-                Trending Weekend Getaways
-              </h3>
-              <p className="text-xs sm:text-sm text-gray-500">
-                Friday night departures with homestays, breakfast & sightseeing
-              </p>
-            </div>
-            <Link
-              href="/packages/weekend/"
-              className="text-xs sm:text-sm font-bold text-amber-600 hover:text-amber-700"
-            >
-              View all 18 →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {WEEKEND_PACKAGES.slice(0, 3).map((pkg) => (
-              <PackageCard key={pkg.slug} pkg={pkg} />
-            ))}
-          </div>
+          <WeekendDestinationCarousel
+            withinContainer={true}
+            eyebrow=""
+            title="Trending Weekend Getaways"
+            subtitle="Friday night departures with homestays, breakfast & sightseeing."
+            viewAllText="View all 18 →"
+            viewAllHref="/packages/weekend/"
+          />
         </div>
 
         {/* Normal Packages Preview */}

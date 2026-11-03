@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { WEEKEND_PACKAGES } from "@/data/packages";
 import PackageBreadcrumbs from "@/components/packages/PackageBreadcrumbs";
 import PackageCategoryHeader from "@/components/packages/PackageCategoryHeader";
-import PackageGrid from "@/components/packages/PackageGrid";
 import PackageEnquiryCTA from "@/components/packages/PackageEnquiryCTA";
+import WeekendDestinationCarousel from "@/components/WeekendDestinationCarousel";
 
 export const metadata: Metadata = {
   title: "Weekend Tour Packages from Bangalore | 2 to 3 Day Trips | Khushi Travels",
@@ -92,8 +92,16 @@ export default function WeekendPackagesPage() {
             </a>
           </div>
 
-          <div className="mb-16">
-            <PackageGrid packages={WEEKEND_PACKAGES} />
+          {/* Airbnb-style Destination Discovery Carousel: All 18 Destinations */}
+          <div className="mb-16 bg-white rounded-3xl p-5 sm:p-7 md:p-8 border border-gray-100 shadow-sm">
+            <WeekendDestinationCarousel
+              withinContainer={true}
+              eyebrow="18 Friday-Night Destinations"
+              title="Browse All 18 Weekend Getaways"
+              subtitle="Swipe or scroll through our complete collection of verified weekend road trips from Bangalore."
+              viewAllHref=""
+              showHeader={true}
+            />
           </div>
 
           <div className="mb-16">

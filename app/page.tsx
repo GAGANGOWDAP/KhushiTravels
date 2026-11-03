@@ -67,6 +67,24 @@ const FleetRows = dynamic(
   }
 );
 
+const WeekendDestinationCarousel = dynamic(
+  () => import("@/components/WeekendDestinationCarousel"),
+  {
+    loading: () => (
+      <section className="py-10 sm:py-14 md:py-16 bg-white">
+        <div className="container-custom">
+          <div className="h-16 max-w-md bg-gray-200/60 rounded-xl mb-8 animate-pulse" />
+          <div className="flex gap-4 overflow-hidden">
+            {[1, 2, 3, 4, 5, 6].map((n) => (
+              <div key={n} className="w-36 h-48 bg-gray-100 rounded-2xl animate-pulse flex-none" />
+            ))}
+          </div>
+        </div>
+      </section>
+    ),
+  }
+);
+
 const PopularDestinationsSection = dynamic(
   () => import("@/components/PopularDestinationsSection"),
   {
@@ -424,6 +442,9 @@ export default function HomePage() {
 
       {/* ===== POPULAR DESTINATIONS: SOUTH INDIA ROAD TRIPS (Mobile Carousel + Desktop Grid) ===== */}
       <PopularDestinationsSection />
+
+      {/* ===== TRENDING WEEKEND GETAWAYS: AIRBNB-STYLE DESTINATION DISCOVERY CAROUSEL ===== */}
+      <WeekendDestinationCarousel />
 
       {/* ===== AMBER CTA BANNER ===== */}
       <section className="gradient-amber py-16 text-white text-center">
