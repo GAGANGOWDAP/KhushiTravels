@@ -193,9 +193,11 @@ export default function FeaturedPilgrimageCard() {
   const getStride = () => {
     if (stageRef.current) {
       const width = stageRef.current.clientWidth;
-      return isMobile ? Math.max(260, width * 0.75) : Math.max(480, width * 0.45);
+      if (isMobile) return Math.max(260, width * 0.85);
+      if (isTablet) return Math.max(400, width * 0.70);
+      return Math.max(480, width * 0.45);
     }
-    return isMobile ? 300 : 540;
+    return isMobile ? 300 : isTablet ? 450 : 540;
   };
 
   // Pointer Handlers for Butter-Smooth Direct Dragging
@@ -329,9 +331,9 @@ export default function FeaturedPilgrimageCard() {
         {/* =================================================================== */}
         <div
           ref={stageRef}
-          className="relative w-full flex items-center justify-center my-2 sm:my-3 cursor-grab active:cursor-grabbing select-none min-h-[520px] sm:min-h-[540px] md:min-h-[460px] lg:min-h-[470px] xl:min-h-[480px]"
+          className="relative w-full flex items-center justify-center my-2 sm:my-3 cursor-grab active:cursor-grabbing select-none min-h-[490px] sm:min-h-[500px] md:min-h-[450px] lg:min-h-[460px] xl:min-h-[470px] 2xl:min-h-[480px]"
           style={{
-            perspective: "1400px",
+            perspective: isTablet ? "1000px" : "1400px",
             touchAction: "pan-y",
           }}
           onPointerDown={handlePointerDown}
@@ -339,7 +341,7 @@ export default function FeaturedPilgrimageCard() {
           onPointerUp={handlePointerUp}
           onPointerCancel={handlePointerCancel}
         >
-          {/* Left Arrow Button (Desktop & Tablet) */}
+          {/* Left Arrow Button (Desktop & Tablet: safely outside active card) */}
           <button
             type="button"
             onPointerDown={(e) => e.stopPropagation()}
@@ -348,7 +350,7 @@ export default function FeaturedPilgrimageCard() {
               prevSlide();
             }}
             aria-label="Previous pilgrimage package"
-            className="absolute left-2 sm:left-4 md:left-4 lg:left-6 xl:left-8 top-1/2 -translate-y-1/2 z-50 hidden sm:flex w-10 h-10 md:w-11 md:h-11 rounded-full bg-[#080878]/95 hover:bg-[#05055C] text-[#D8B43B] border border-[#D8B43B]/60 items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+            className="absolute left-1.5 md:left-2 lg:left-4 xl:left-8 top-1/2 -translate-y-1/2 z-50 hidden md:flex w-9 h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-full bg-[#080878]/95 hover:bg-[#05055C] text-[#D8B43B] border border-[#D8B43B]/60 items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
           >
             <svg
               className="w-5 h-5 text-[#D8B43B]"
@@ -361,7 +363,7 @@ export default function FeaturedPilgrimageCard() {
             </svg>
           </button>
 
-          {/* Right Arrow Button (Desktop & Tablet) */}
+          {/* Right Arrow Button (Desktop & Tablet: safely outside active card) */}
           <button
             type="button"
             onPointerDown={(e) => e.stopPropagation()}
@@ -370,7 +372,7 @@ export default function FeaturedPilgrimageCard() {
               nextSlide();
             }}
             aria-label="Next pilgrimage package"
-            className="absolute right-2 sm:right-4 md:right-4 lg:right-6 xl:right-8 top-1/2 -translate-y-1/2 z-50 hidden sm:flex w-10 h-10 md:w-11 md:h-11 rounded-full bg-[#080878]/95 hover:bg-[#05055C] text-[#D8B43B] border border-[#D8B43B]/60 items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+            className="absolute right-1.5 md:right-2 lg:right-4 xl:right-8 top-1/2 -translate-y-1/2 z-50 hidden md:flex w-9 h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-full bg-[#080878]/95 hover:bg-[#05055C] text-[#D8B43B] border border-[#D8B43B]/60 items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
           >
             <svg
               className="w-5 h-5 text-[#D8B43B]"
@@ -384,7 +386,7 @@ export default function FeaturedPilgrimageCard() {
           </button>
 
           {/* Overlapping Deck of Cards */}
-          <div className="relative w-full h-[510px] sm:h-[530px] md:h-[440px] lg:h-[450px] xl:h-[460px] flex items-center justify-center pointer-events-none">
+          <div className="relative w-full h-[480px] sm:h-[490px] md:h-[440px] lg:h-[450px] xl:h-[460px] 2xl:h-[470px] flex items-center justify-center pointer-events-none">
             {PILGRIMAGE_PACKAGES.map((pkg, index) => {
               // Calculate modular offset relative to currentIndex
               let diff = index - currentIndex;
@@ -408,103 +410,96 @@ export default function FeaturedPilgrimageCard() {
               let boxShadow = "none";
 
               if (isMobile) {
-                // Mobile (< 768px): Clean single card view with smooth horizontal slide
+                // Mobile (< 768px): Dedicated single-card view with smooth horizontal slide
                 if (t <= 0.5) {
                   zIndex = 35;
                   pointerEvents = "auto";
                   const tx = u * 105;
-                  const scale = Math.max(0.88, 1.0 - t * 0.12);
-                  transformStyle = `translate3d(${tx}%, 0, 0) scale(${scale})`;
+                  transformStyle = `translate3d(${tx}%, 0, 0)`;
                   opacity = Math.max(0, 1.0 - t * 0.7);
-                  boxShadow = "0 20px 45px -10px rgba(8, 8, 120, 0.45)";
+                  boxShadow = "0 15px 35px -10px rgba(8, 8, 120, 0.4)";
                 } else {
                   zIndex = 5;
                   opacity = 0;
                   pointerEvents = "none";
                   const tx = (u > 0 ? 1 : -1) * 115;
-                  transformStyle = `translate3d(${tx}%, 0, 0) scale(0.88)`;
+                  transformStyle = `translate3d(${tx}%, 0, 0)`;
                 }
               } else if (isTablet) {
-                // Tablet (768px - 1199px): Spacious active card (540-620px), subtle previews
+                // Tablet (768px - 1199px): Dedicated tablet layout. Active card is 88-90% width.
+                // Side cards hidden at rest to prevent clipping and give 100% room to active card.
                 if (t <= 0.45) {
-                  // Active center card
                   zIndex = 35;
                   pointerEvents = "auto";
-                  const tx = u * 58;
-                  const tz = -t * 60;
+                  const tx = u * 105;
                   const scale = 1.0 - t * 0.08;
-                  const rotY = -u * 3;
-                  transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale}) rotateY(${rotY}deg)`;
+                  transformStyle = `translate3d(${tx}%, 0, 0) scale(${scale})`;
                   opacity = 1.0;
                   filter = "brightness(1)";
                   boxShadow =
-                    "0 25px 60px -15px rgba(8, 8, 120, 0.5), 0 0 25px rgba(216, 180, 59, 0.25)";
+                    "0 20px 45px -10px rgba(8, 8, 120, 0.45), 0 0 20px rgba(216, 180, 59, 0.2)";
                 } else if (t <= 1.25) {
-                  // Tier 1 adjacent preview (subtle preview only, never crowding)
+                  // Subtle preview during dragging/sliding
                   zIndex = 20;
-                  pointerEvents = "auto";
-                  const tx = u * 58;
-                  const tz = -t * 70;
-                  const scale = 0.84;
-                  const rotY = -u * 3;
-                  transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale}) rotateY(${rotY}deg)`;
-                  opacity = screenWidth < 950 ? 0.35 : 0.50;
+                  pointerEvents = isDragging ? "auto" : "none";
+                  const tx = u * 105;
+                  const scale = 0.92;
+                  transformStyle = `translate3d(${tx}%, 0, 0) scale(${scale})`;
+                  opacity = isDragging ? Math.max(0, 0.4 - (t - 0.5) * 0.8) : 0;
                   filter = "brightness(0.65)";
-                  boxShadow = "0 12px 30px -10px rgba(0, 0, 0, 0.35)";
                 } else {
-                  // Tier 2 hidden on tablet to guarantee zero horizontal overflow
                   zIndex = 5;
                   opacity = 0;
                   pointerEvents = "none";
-                  const tx = (u > 0 ? 1 : -1) * 110;
-                  transformStyle = `translate3d(${tx}%, 0, -180px) scale(0.75)`;
+                  const tx = (u > 0 ? 1 : -1) * 120;
+                  transformStyle = `translate3d(${tx}%, 0, 0) scale(0.85)`;
                 }
               } else {
-                // Desktop (>= 1200px): Spacious active card (640-680px), elegant layered deck
+                // Desktop (>= 1200px): Spacious active card (680-760px), elegant layered deck
                 if (t <= 0.45) {
                   // Dominant active center card
                   zIndex = 35;
                   pointerEvents = "auto";
-                  const tx = u * 56;
-                  const tz = -t * 60;
+                  const tx = u * 52;
+                  const tz = -t * 50;
                   const scale = 1.0 - t * 0.08;
-                  const rotY = -u * 3.5;
+                  const rotY = -u * 2.5;
                   transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale}) rotateY(${rotY}deg)`;
                   opacity = 1.0;
                   filter = "brightness(1)";
                   boxShadow =
                     "0 25px 60px -15px rgba(8, 8, 120, 0.5), 0 0 25px rgba(216, 180, 59, 0.25)";
                 } else if (t <= 1.25) {
-                  // Tier 1: Immediately adjacent cards tucked slightly behind
+                  // Tier 1: Immediately adjacent cards tucked slightly behind with reduced width & opacity
                   zIndex = 20;
                   pointerEvents = "auto";
-                  const tx = u * 56;
-                  const tz = -t * 70;
-                  const scale = Math.max(0.86, 0.96 - t * 0.1);
-                  const rotY = -u * 3.5;
+                  const tx = u * 52;
+                  const tz = -t * 60;
+                  const scale = 0.85;
+                  const rotY = -u * 2.5;
                   transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale}) rotateY(${rotY}deg)`;
-                  opacity = Math.max(0.60, 0.90 - t * 0.3);
-                  filter = "brightness(0.70)";
-                  boxShadow = "0 15px 35px -10px rgba(0, 0, 0, 0.4)";
+                  opacity = 0.48;
+                  filter = "brightness(0.60)";
+                  boxShadow = "0 12px 30px -10px rgba(0, 0, 0, 0.35)";
                 } else if (t <= 2.25) {
                   // Tier 2: Secondary cards further behind
                   zIndex = 10;
                   pointerEvents = "none";
                   const extra = t - 1.0;
-                  const tx = (u > 0 ? 1 : -1) * (56 + extra * 30);
-                  const tz = -70 - extra * 80;
-                  const scale = Math.max(0.75, 0.86 - extra * 0.11);
-                  const rotY = (u > 0 ? -1 : 1) * 2.5;
+                  const tx = (u > 0 ? 1 : -1) * (52 + extra * 28);
+                  const tz = -60 - extra * 60;
+                  const scale = 0.74;
+                  const rotY = (u > 0 ? -1 : 1) * 2;
                   transformStyle = `translate3d(${tx}%, 0, ${tz}px) scale(${scale}) rotateY(${rotY}deg)`;
-                  opacity = Math.max(0, 0.35 - extra * 0.35);
-                  filter = "brightness(0.50)";
+                  opacity = Math.max(0, 0.20 - extra * 0.20);
+                  filter = "brightness(0.40)";
                 } else {
                   // Offstage cards
                   zIndex = 5;
                   opacity = 0;
                   pointerEvents = "none";
                   const tx = (u > 0 ? 1 : -1) * 110;
-                  transformStyle = `translate3d(${tx}%, 0, -200px) scale(0.70)`;
+                  transformStyle = `translate3d(${tx}%, 0, -180px) scale(0.70)`;
                 }
               }
 
@@ -541,7 +536,7 @@ export default function FeaturedPilgrimageCard() {
                       : "transform 850ms cubic-bezier(0.22, 1, 0.36, 1), opacity 850ms cubic-bezier(0.22, 1, 0.36, 1), filter 850ms ease, box-shadow 850ms ease",
                     willChange: "transform, opacity",
                   }}
-                  className="absolute top-0 left-0 right-0 bottom-0 m-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-[#080878] border border-[#D8B43B]/60 cursor-pointer w-[88vw] max-w-[360px] h-[510px] sm:h-[530px] md:max-w-none md:w-[560px] lg:w-[620px] xl:w-[660px] md:h-[440px] xl:h-[450px]"
+                  className="absolute top-0 left-0 right-0 bottom-0 m-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-[#080878] border border-[#D8B43B]/60 cursor-pointer w-[92vw] max-w-[390px] h-[480px] sm:h-[490px] md:max-w-[670px] md:w-[88%] lg:max-w-[700px] lg:w-[88%] xl:max-w-none xl:w-[720px] 2xl:w-[740px] md:h-[440px] lg:h-[450px] xl:h-[460px] 2xl:h-[470px]"
                   aria-hidden={!isCenterActive}
                 >
                   {/* Subtle Top Metallic Accent Strip */}
@@ -552,7 +547,7 @@ export default function FeaturedPilgrimageCard() {
                   {/* ========================================================= */}
                   <div className="flex flex-col h-full md:hidden text-left relative z-10">
                     {/* Destination Photograph (Top) */}
-                    <div className="relative h-[190px] sm:h-[200px] w-full shrink-0 overflow-hidden bg-[#05055C]">
+                    <div className="relative h-[180px] sm:h-[190px] w-full shrink-0 overflow-hidden bg-[#05055C]">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={getAssetPath(pkg.image)}
@@ -578,10 +573,10 @@ export default function FeaturedPilgrimageCard() {
                     </div>
 
                     {/* Information Area (Bottom) */}
-                    <div className="p-4 sm:p-5 flex flex-col justify-between flex-1 relative z-10 min-w-0">
+                    <div className="p-3.5 sm:p-4 flex flex-col justify-between flex-1 relative z-10 min-w-0">
                       <div>
                         {/* Package Title */}
-                        <h3 className="font-heading text-lg sm:text-xl font-bold text-white tracking-tight leading-snug line-clamp-1">
+                        <h3 className="font-heading text-base sm:text-lg font-bold text-white tracking-tight leading-snug line-clamp-2">
                           <Link
                             href={pkg.href}
                             onClick={(e) => {
@@ -597,12 +592,12 @@ export default function FeaturedPilgrimageCard() {
                         </h3>
 
                         {/* Main Route / Destinations */}
-                        <p className="text-slate-200 text-xs sm:text-[13px] font-medium mt-1 leading-relaxed line-clamp-1">
+                        <p className="text-slate-200 text-xs font-medium mt-1 leading-snug line-clamp-1">
                           {pkg.route}
                         </p>
 
                         {/* Duration & Highlights */}
-                        <div className="mt-3 pt-3 border-t border-white/10 space-y-1.5 text-xs text-slate-200">
+                        <div className="mt-2.5 pt-2 border-t border-white/10 space-y-1.5 text-xs text-slate-200">
                           <div className="flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#D8B43B] shrink-0" />
                             <span className="text-white font-semibold">Duration:</span>
@@ -620,7 +615,7 @@ export default function FeaturedPilgrimageCard() {
                       </div>
 
                       {/* Price & One Full-Width CTA */}
-                      <div className="pt-3 border-t border-white/10 mt-auto flex flex-col gap-2 shrink-0">
+                      <div className="pt-2.5 border-t border-white/10 mt-auto flex flex-col gap-2 shrink-0">
                         <div className="flex items-baseline justify-between">
                           <span className="text-[9.5px] uppercase font-bold tracking-wider text-amber-300/80">
                             Package Fare
@@ -654,8 +649,8 @@ export default function FeaturedPilgrimageCard() {
                   {/* ========================================================= */}
                   {/* DESKTOP & TABLET TWO-PART COMPOSITION (>= 768px) */}
                   {/* ========================================================= */}
-                  <div className="hidden md:grid md:grid-cols-[48%_52%] xl:grid-cols-[49%_51%] h-full text-left relative z-10">
-                    {/* Left: Authentic Destination Photograph (48-49% width) */}
+                  <div className="hidden md:grid md:grid-cols-[48%_52%] h-full text-left relative z-10">
+                    {/* Left: Authentic Destination Photograph (48% width) */}
                     <div className="relative h-full w-full overflow-hidden bg-[#05055C] shrink-0">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
@@ -676,18 +671,18 @@ export default function FeaturedPilgrimageCard() {
                       </div>
                     </div>
 
-                    {/* Right: Clean, Structured Info (51-52% width) */}
-                    <div className="relative z-10 min-w-0 p-5 lg:p-6 xl:p-6 flex flex-col justify-between text-left h-full bg-[#080878]">
+                    {/* Right: Clean, Structured Info (52% width) */}
+                    <div className="relative z-10 min-w-0 p-5 md:p-5 lg:p-6 xl:p-7 flex flex-col justify-between text-left h-full bg-[#080878]">
                       <div>
                         {/* 1. Category Tag */}
                         <div className="mb-2">
-                          <span className="inline-block text-[10px] sm:text-[10.5px] font-bold uppercase tracking-wider text-[#D8B43B] bg-amber-400/10 border border-amber-400/30 px-2.5 py-0.5 rounded-full">
+                          <span className="inline-block text-[10px] md:text-[10.5px] font-bold uppercase tracking-wider text-[#D8B43B] bg-amber-400/10 border border-amber-400/30 px-2.5 py-0.5 rounded-full">
                             {pkg.category}
                           </span>
                         </div>
 
-                        {/* 2. Package Name (Prominent 22-26px Plus Jakarta Sans) */}
-                        <h3 className="font-heading text-[21px] md:text-[22px] lg:text-[24px] xl:text-[26px] font-bold text-white tracking-tight leading-[1.22]">
+                        {/* 2. Package Name (Prominent Plus Jakarta Sans) */}
+                        <h3 className="font-heading text-[20px] md:text-[22px] lg:text-[24px] xl:text-[26px] font-bold text-white tracking-tight leading-[1.22]">
                           <Link
                             href={pkg.href}
                             onClick={(e) => {
@@ -726,7 +721,7 @@ export default function FeaturedPilgrimageCard() {
                       </div>
 
                       {/* 6 & 7. Price & One Explore Package Button */}
-                      <div className="pt-3 border-t border-white/10 flex items-center justify-between gap-3 mt-auto shrink-0">
+                      <div className="pt-3.5 border-t border-white/10 flex items-center justify-between gap-3 mt-auto shrink-0">
                         {/* Price */}
                         <div className="min-w-0">
                           <span className="text-[9px] uppercase font-bold tracking-wider text-amber-300/80 block">
