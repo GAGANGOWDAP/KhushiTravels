@@ -25,8 +25,10 @@ export const FLEET_DATA: Vehicle[] = [
     image: "/images/fleet/luxury-9-seater-tempo-traveller-bangalore-1.webp",
     gallery: [
       "/images/fleet/luxury-9-seater-tempo-traveller-bangalore-1.webp",
-      "/images/fleet/luxury-10-seater-tempo-traveller-bangalore-1.webp",
-      "/images/fleet/luxury-12-seater-tempo-traveller-bangalore-1.webp",
+      "/images/fleet/luxury-9-seater-tempo-traveller-bangalore-2.webp",
+      "/images/fleet/luxury-9-seater-tempo-traveller-bangalore-3.webp",
+      "/images/fleet/luxury-9-seater-tempo-traveller-bangalore-4.webp",
+      "/images/fleet/luxury-9-seater-tempo-traveller-bangalore-5.webp",
     ],
     features: [
       "1x1 Maharaja pushback recliner seats",
