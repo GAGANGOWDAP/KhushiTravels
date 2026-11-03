@@ -132,7 +132,7 @@ export function buildLocalBusinessSchema() {
           name: "Tempo Traveller Rentals",
           itemListElement: [
             { "@type": "Offer", name: "9 Seater Luxury Tempo Traveller" },
-            { "@type": "Offer", name: "12-14 Seater Tempo Traveller" },
+            { "@type": "Offer", name: "12-13 Seater Tempo Traveller" },
             { "@type": "Offer", name: "16 Seater Maharaja Tempo Traveller" },
             { "@type": "Offer", name: "Force Urbania Luxury Van" },
           ],

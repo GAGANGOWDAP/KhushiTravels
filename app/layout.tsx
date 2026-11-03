@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "pilgrimage tour operators Bangalore",
     "9 seater tempo traveller",
     "12 seater tempo traveller",
-    "14 seater tempo traveller",
+    "13 seater tempo traveller",
     "16 seater tempo traveller",
     "Force Urbania rental Bangalore",
     "Maharaja seats tempo traveller",

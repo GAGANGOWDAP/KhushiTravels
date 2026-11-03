@@ -10,7 +10,7 @@ import { getAssetPath } from "@/lib/assets";
 export const metadata: Metadata = {
   title: "Tempo Traveller Rent Price Bangalore | Per Km Rates | Khushi Travels",
   description:
-    "Transparent tempo traveller rent prices in Bangalore starting from ₹18/km. 9, 12, 14, 16 seater Maharaja & Force Urbania rates with zero hidden charges.",
+    "Transparent tempo traveller rent prices in Bangalore starting from ₹18/km. 9, 12, 13, 16 seater Maharaja & Force Urbania rates with zero hidden charges.",
   alternates: {
     canonical: "https://gagangowdap.github.io/KhushiTravels/tempo-traveller-rent-price-bangalore/",
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: "https://gagangowdap.github.io/KhushiTravels/tempo-traveller-rent-price-bangalore/",
     siteName: "Khushi Tours and Travels",
     title: "Tempo Traveller Rent Price Bangalore | Per Km Rates | Khushi Travels",
-    description: "Transparent tempo traveller rent prices in Bangalore starting from ₹18/km. 9, 12, 14, 16 seater Maharaja & Force Urbania rates with zero hidden charges.",
+    description: "Transparent tempo traveller rent prices in Bangalore starting from ₹18/km. 9, 12, 13, 16 seater Maharaja & Force Urbania rates with zero hidden charges.",
     images: [{ url: "https://gagangowdap.github.io/KhushiTravels/images/destinations/mysore.webp", width: 1200, height: 630, alt: "Tempo Traveller Rent Price Bangalore" }],
   },
   twitter: {

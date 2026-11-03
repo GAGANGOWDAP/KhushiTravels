@@ -55,7 +55,7 @@ export default function TourPackagesPage() {
     },
     {
       name: "12-13 Seater Tempo Traveller",
-      image: "/images/fleet/force-urbania-12-seater-bangalore-8.webp",
+      image: "/images/fleet/luxury-12-seater-tempo-traveller-bangalore-1.webp",
       desc: "Pushback seats · AC · Panoramic windows",
       rate: "₹22",
       unit: "/km",
@@ -208,7 +208,7 @@ export default function TourPackagesPage() {
         name: "What vehicles are available for tour packages from Bangalore?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Depending on your group size — 9 seater luxury tempo traveller (Maharaja pushback seats, LED TV, USB), 12-14 seater tempo traveller (pushback seats, panoramic windows), Force Urbania (air suspension, standing height, panoramic windows), 16 seater tempo traveller, 20 seater mini bus, 35-50 seater luxury bus, and Toyota Innova Crysta for smaller groups. All 100% owned, sanitized, and GPS-tracked.",
+          text: "Depending on your group size — 9 seater luxury tempo traveller (Maharaja pushback seats, LED TV, USB), 12-13 seater tempo traveller (pushback seats, panoramic windows), Force Urbania (air suspension, standing height, panoramic windows), 16 seater tempo traveller, 20 seater mini bus, 35-50 seater luxury bus, and Toyota Innova Crysta for smaller groups. All 100% owned, sanitized, and GPS-tracked.",
         },
       },
       {
@@ -1053,7 +1053,7 @@ export default function TourPackagesPage() {
               <div className="mt-4 text-body text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
                 <p>
                   Depending on your group size — <strong>9 seater luxury tempo traveller</strong> (Maharaja pushback
-                  seats, LED TV, USB), <strong>12-14 seater tempo traveller</strong> (pushback seats, panoramic
+                  seats, LED TV, USB), <strong>12-13 seater tempo traveller</strong> (pushback seats, panoramic
                   windows), <strong>Force Urbania</strong> (air suspension, standing height, panoramic windows),{" "}
                   <strong>16 seater tempo traveller</strong>, <strong>20 seater mini bus</strong>,{" "}
                   <strong>35-50 seater luxury bus</strong>, and <strong>Toyota Innova Crysta</strong> for smaller

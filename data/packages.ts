@@ -1619,7 +1619,7 @@ export const NORMAL_PACKAGES: DetailedPackage[] = [
       "Tamil Nadu state road permit and toll taxes",
     ],
     priceStatus: "Starting from ₹18 / km",
-    suggestedVehicles: ["12-14 Seater TT", "Force Urbania", "Innova Crysta"],
+    suggestedVehicles: ["12-13 Seater TT", "Force Urbania", "Innova Crysta"],
   },
   {
     slug: "mysore",

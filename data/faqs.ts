@@ -12,7 +12,7 @@ export const FAQS_DATA: FAQItem[] = [
   {
     question: "Do you have Maharaja seats tempo traveller?",
     answer:
-      "Yes. Our 9 seater, 12 seater, and 14 seater luxury tempo travellers come with Maharaja pushback seats in 1x1 configuration. Features include individual AC vents, USB charging ports, 21-inch LED TV, premium leather upholstery, and roof-top luggage carrier.",
+      "Yes. Our 9 seater, 12 seater, and 13 seater luxury tempo travellers come with Maharaja pushback seats in 1x1 configuration. Features include individual AC vents, USB charging ports, 21-inch LED TV, premium leather upholstery, and roof-top luggage carrier.",
   },
   {
     question: "How do I book a tempo traveller in Bangalore?",

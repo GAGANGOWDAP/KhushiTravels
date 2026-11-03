@@ -44,16 +44,18 @@ export const FLEET_DATA: Vehicle[] = [
   },
   {
     slug: "12-14-seater-tempo-traveller-bangalore",
-    name: "12 & 14 Seater Tempo Traveller",
+    name: "12 & 13 Seater Tempo Traveller",
     subtitle: "Most Popular Group Choice • Luxury Interior",
-    seats: "12-14 Passengers + Driver",
+    seats: "12-13 Passengers + Driver",
     ratePerKm: 28,
     driverAllowance: 600,
     category: "tempo",
     image: "/images/fleet/luxury-12-seater-tempo-traveller-bangalore-1.webp",
     gallery: [
-      "/images/fleet/luxury-12-seater-tempo-traveller-bangalore-1.webp",
-      "/images/fleet/standard-12-seater-tempo-traveller-bangalore-1.webp",
+      "/images/fleet/luxury-12-seater-tempo-traveller-bangalore-2.webp",
+      "/images/fleet/luxury-12-seater-tempo-traveller-bangalore-3.webp",
+      "/images/fleet/luxury-12-seater-tempo-traveller-bangalore-4.webp",
+      "/images/fleet/luxury-12-seater-tempo-traveller-bangalore-5.webp",
     ],
     features: [
       "Ergonomic pushback seats with neck supports",
@@ -64,7 +66,7 @@ export const FLEET_DATA: Vehicle[] = [
       "Experienced highway chauffeur with hill driving expertise",
     ],
     description:
-      "The undisputed gold standard for family vacations and group getaways from Bangalore. Our 100% company-owned 12 and 14 seater tempo travellers deliver unmatched legroom, soft recliners, and powerful AC that keeps everyone cool on long highway runs to Mysore, Wayanad, and Tirupati.",
+      "The undisputed gold standard for family vacations and group getaways from Bangalore. Our 100% company-owned 12 and 13 seater tempo travellers deliver unmatched legroom, soft recliners, and powerful AC that keeps everyone cool on long highway runs to Mysore, Wayanad, and Tirupati.",
     idealFor: "Family trips (8-13 pax), friends getaways, temple darshans",
   },
   {

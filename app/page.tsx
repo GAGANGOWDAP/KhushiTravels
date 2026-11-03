@@ -352,7 +352,7 @@ export default function HomePage() {
                   Maharaja Seating
                 </h3>
                 <p className="text-sm text-gray-500">
-                  Premium 1x1 Maharaja seats available in our 9, 12, and 14 seater
+                  Premium 1x1 Maharaja seats available in our 9, 12, and 13 seater
                   luxury tempos.
                 </p>
               </div>
