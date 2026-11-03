@@ -100,12 +100,12 @@ export const FLEET_DATA: Vehicle[] = [
     ratePerKm: 45,
     driverAllowance: 700,
     category: "urbania",
-    image: "/images/fleet/force-urbania-10-seater-bangalore-1.webp",
+    image: "/images/fleet/force-urbania-luxury-van-bangalore-1.webp",
     gallery: [
-      "/images/fleet/force-urbania-10-seater-bangalore-1.webp",
-      "/images/fleet/force-urbania-16-seater-bangalore-3.webp",
-      "/images/fleet/force urbania (1).webp",
-      "/images/fleet/force urbania 2.webp",
+      "/images/fleet/force-urbania-luxury-van-bangalore-2.webp",
+      "/images/fleet/force-urbania-luxury-van-bangalore-3.webp",
+      "/images/fleet/force-urbania-luxury-van-bangalore-4.webp",
+      "/images/fleet/force-urbania-luxury-van-bangalore-5.webp",
     ],
     features: [
       "European monocoque body with car-like ride quality",
