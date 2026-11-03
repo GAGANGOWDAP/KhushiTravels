@@ -30,7 +30,7 @@ export const PILGRIMAGE_PACKAGES: PilgrimagePackage[] = [
       "AC Volvo Coach Transit",
       "3-Star Deluxe Stays & Satvik Meals",
     ],
-    price: "Owner-approved fare available on enquiry",
+    price: "₹1,49,999",
     image: "/images/destinations/12-jyotirlinga-shiva.jpg",
     imageAlt: "12 Jyotirlinga Spiritual Yatra - Proposed All-India Pilgrimage Circuit",
     href: "/spiritual-pilgrimage-tours/",
@@ -331,7 +331,7 @@ export default function FeaturedPilgrimageCard() {
         {/* =================================================================== */}
         <div
           ref={stageRef}
-          className="relative w-full flex items-center justify-center my-2 sm:my-3 cursor-grab active:cursor-grabbing select-none min-h-[490px] sm:min-h-[500px] md:min-h-[450px] lg:min-h-[460px] xl:min-h-[470px] 2xl:min-h-[480px]"
+          className="relative w-full flex items-center justify-center my-2 sm:my-3 cursor-grab active:cursor-grabbing select-none min-h-[500px] sm:min-h-[510px] md:min-h-[470px] lg:min-h-[480px] xl:min-h-[490px] 2xl:min-h-[500px]"
           style={{
             perspective: isTablet ? "1000px" : "1400px",
             touchAction: "pan-y",
@@ -386,7 +386,7 @@ export default function FeaturedPilgrimageCard() {
           </button>
 
           {/* Overlapping Deck of Cards */}
-          <div className="relative w-full h-[480px] sm:h-[490px] md:h-[440px] lg:h-[450px] xl:h-[460px] 2xl:h-[470px] flex items-center justify-center pointer-events-none">
+          <div className="relative w-full h-[490px] sm:h-[500px] md:h-[460px] lg:h-[470px] xl:h-[480px] 2xl:h-[490px] flex items-center justify-center pointer-events-none">
             {PILGRIMAGE_PACKAGES.map((pkg, index) => {
               // Calculate modular offset relative to currentIndex
               let diff = index - currentIndex;
@@ -536,7 +536,7 @@ export default function FeaturedPilgrimageCard() {
                       : "transform 850ms cubic-bezier(0.22, 1, 0.36, 1), opacity 850ms cubic-bezier(0.22, 1, 0.36, 1), filter 850ms ease, box-shadow 850ms ease",
                     willChange: "transform, opacity",
                   }}
-                  className="absolute top-0 left-0 right-0 bottom-0 m-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-[#080878] border border-[#D8B43B]/60 cursor-pointer w-[92vw] max-w-[390px] h-[480px] sm:h-[490px] md:max-w-[670px] md:w-[88%] lg:max-w-[700px] lg:w-[88%] xl:max-w-none xl:w-[720px] 2xl:w-[740px] md:h-[440px] lg:h-[450px] xl:h-[460px] 2xl:h-[470px]"
+                  className="absolute top-0 left-0 right-0 bottom-0 m-auto rounded-2xl sm:rounded-3xl overflow-hidden bg-[#080878] border border-[#D8B43B]/60 cursor-pointer w-[92vw] max-w-[390px] h-[480px] sm:h-[490px] md:max-w-[680px] md:w-[88%] lg:max-w-[720px] lg:w-[88%] xl:max-w-none xl:w-[740px] 2xl:w-[760px] md:h-[460px] lg:h-[470px] xl:h-[480px] 2xl:h-[490px]"
                   aria-hidden={!isCenterActive}
                 >
                   {/* Subtle Top Metallic Accent Strip */}
@@ -672,7 +672,7 @@ export default function FeaturedPilgrimageCard() {
                     </div>
 
                     {/* Right: Clean, Structured Info (52% width) */}
-                    <div className="relative z-10 min-w-0 p-5 md:p-5 lg:p-6 xl:p-7 flex flex-col justify-between text-left h-full bg-[#080878]">
+                    <div className="relative z-10 min-w-0 p-5 md:p-5 lg:p-6 flex flex-col justify-between text-left h-full bg-[#080878]">
                       <div>
                         {/* 1. Category Tag */}
                         <div className="mb-2">
